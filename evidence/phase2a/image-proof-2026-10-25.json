@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-25T06:01:52.211Z",
+  "scope": "Read-only GET of exact image URLs delivered by verified paid artwork resources; no payments",
+  "imageChecks": [
+    {
+      "museum": "Met",
+      "id": "552027",
+      "paidEvidence": "purchases/met-artwork-1792905093025.json",
+      "url": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "evidence": "isPublicDomain=true"
+      },
+      "attempts": [
+        {
+          "transport": "explicit-proxy-fetch",
+          "error": "fetch failed",
+          "durationMs": 3089
+        },
+        {
+          "transport": "curl-read-only-fallback",
+          "error": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted",
+          "durationMs": 1334
+        },
+        {
+          "transport": "direct-read-only-connection",
+          "hypothesis": "The earlier two failures were on the local proxy transport; test the same exact image URL without the proxy, retaining TLS certificate verification",
+          "status": 200,
+          "mime": "image/jpeg",
+          "bytesRead": 37884,
+          "jpegSignature": true,
+          "sha256": "b97a88b6c55fef6e5a69618b64502f24ff90ac2b1e0a04f72a745a83ea76f8ee",
+          "durationMs": 1188,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "museum": "CMA",
+      "id": "152829",
+      "paidEvidence": "purchases/cma-artwork-1792906617520.json",
+      "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "evidence": "share_license_status=\"CC0\""
+      },
+      "attempts": [
+        {
+          "transport": "explicit-proxy-fetch",
+          "status": 200,
+          "mime": "image/jpeg",
+          "bytesRead": 351386,
+          "jpegSignature": true,
+          "sha256": "23c023abaf6965ff3ba653a860a0124491f4c61facb6f35c1c9818da10745c6c",
+          "durationMs": 4521,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "museum": "SMK",
+      "id": "KMS3402",
+      "paidEvidence": "purchases/smk-artwork-1792908060324.json",
+      "url": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "evidence": "public_domain=true"
+      },
+      "attempts": [
+        {
+          "transport": "explicit-proxy-fetch",
+          "status": 200,
+          "mime": "image/jpeg",
+          "bytesRead": 116312,
+          "jpegSignature": true,
+          "sha256": "9f96e3e2f83a71df973395838fa3173c5c13d9e7b22ba20c2ebd1a8239d58879",
+          "durationMs": 9405,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "completedAt": "2026-10-25T06:03:58.134Z"
+}

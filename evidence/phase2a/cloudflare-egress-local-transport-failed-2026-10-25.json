@@ -1,0 +1,86 @@
+{
+  "startedAt": "2026-10-25T04:41:50.997Z",
+  "baseUrl": "https://yoyo-minicurator-egress.accessible-trip.workers.dev",
+  "scope": "Real Cloudflare Workers outbound fetches; no payment",
+  "rounds": 2,
+  "records": [
+    {
+      "round": 1,
+      "service": "met-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "met-artwork",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "met-departments",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "cma-artwork-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "cma-artwork",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "cma-artist-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "cma-artist",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "smk-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 1,
+      "service": "smk-artwork",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 2,
+      "service": "met-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 2,
+      "service": "met-artwork",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 2,
+      "service": "met-departments",
+      "clientValidated": false,
+      "error": "fetch failed"
+    },
+    {
+      "round": 2,
+      "service": "cma-artwork-search",
+      "clientValidated": false,
+      "error": "fetch failed"
+    }
+  ]
+}

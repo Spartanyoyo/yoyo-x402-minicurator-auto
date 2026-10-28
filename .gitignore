@@ -1,0 +1,27 @@
+# Local credentials and private deployment material
+.env*
+!.env.example
+!.env.cloudflare.example
+.dev.vars*
+private/
+local-only/
+*.key
+*.pem
+*.pfx
+*.p12
+
+# Installed dependencies and generated build/deploy state
+node_modules/
+dist/
+.wrangler/
+coverage/
+.npm/
+evidence/**/rpc-health-latest.json
+
+# Logs and OS/editor files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

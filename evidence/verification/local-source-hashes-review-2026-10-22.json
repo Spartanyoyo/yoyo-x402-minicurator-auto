@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-22T03:59:37.579Z",
+  "deployEvidence": "evidence/verification/deployment-review-2026-10-22.json",
+  "currentFiles": {
+    "src/app.mjs": "00a5b3cf5e83fa315b92835a2b4bb50af8e66d657665333e46a51c810df0c024",
+    "src/weather.mjs": "164cded66e257474e334d783fc280d3ed405af9f95d1412cd24c8f9806372866",
+    "src/worker.mjs": "6b67096b9a60eb5a837d48100104a83e1283963cb3b8468aa2aa810cb016372b",
+    "scripts/audit.mjs": "c71daa2995401f5c2132690a74a092e1543aa5b3a151e8327ceb966b01293ed4",
+    "scripts/buy.mjs": "ee78264559bd60a06a2b8e0be80c00fc890bf48770ae07da17ad809e79375dc4",
+    "scripts/chain.mjs": "cf8a5822790318ad6d2f0cfc9cae44ab978f89025ea5174e94616079baa1b0cc",
+    "scripts/create-wallets.mjs": "ef3964e2f1e4c75cf5f6c018ee151ece040a8d6bf5bd2b624f61b55e0b84b02a",
+    "scripts/dev.mjs": "9b744e249c24505ac6c711de2bc81d268fd954963dbe1252f4bb9f7a70445388",
+    "scripts/probe-checks.mjs": "3ef18277df1a5f7f73484e4d8f2fc2009752a8dde988130a59bfddbaa7583c02",
+    "scripts/probe.mjs": "fe0ba593b019f83f898c851ffe9ab8ad547fe3544c6da8ee7075ca5ff7e3ad6c",
+    "scripts/purchase.mjs": "c8fc1622d406978374dedd05018b5703038eb3d7614f06d2ad85647799546140",
+    "docs/F-02_weather-service.md": "6d0d035ee609d165df7840e85709554e619cfda0e9c4ae7c050de97eeaaa6435",
+    "wrangler.jsonc": "d92cfb6a8a77de381b0bd15701cb12107deea0e2b49be422624cbc8c53027f33",
+    "package.json": "e7037b1113619288409dc0270864bb9cd514ae5f83c6a3f63b4c275099f29c7a",
+    "package-lock.json": "6b52ad21922d1a7aa0ebac76fcf49edbc8ceadb6defc6d8112aaedf6438618b7"
+  },
+  "changedSinceDeployment": [
+    "scripts/buy.mjs",
+    "scripts/chain.mjs",
+    "scripts/create-wallets.mjs",
+    "scripts/probe.mjs",
+    "scripts/purchase.mjs",
+    "wrangler.jsonc",
+    "package.json"
+  ],
+  "runtimeFilesStillMatchDeployment": true,
+  "runtimeFiles": [
+    "src/app.mjs",
+    "src/weather.mjs",
+    "src/worker.mjs"
+  ],
+  "expectedPublicCleanupChanges": [
+    "wrangler.jsonc: Cloudflare account identifier removed from public repository"
+  ],
+  "notes": "Client buyer/audit tools and package metadata also changed after deployment. Runtime Worker files still match the deployed hashes."
+}

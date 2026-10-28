@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="read-only RPC falls back once when the primary endpoint is unavailable" time="0.075213" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="JSON-RPC rate-limit errors switch to the next endpoint" time="0.016937" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="RPC configuration preserves legacy variables and accepts an ordered override" time="0.000597" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="unsafe or empty RPC lists are rejected without making requests" time="0.000630" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="RPC list skips unavailable and rate-limited endpoints in order and stops after success" time="0.025719" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="a single configured RPC is not automatically retried" time="0.007322" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit requires both confirmed payment and matching weather delivery" time="0.004342" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit does not mark missing weather as a complete purchase" time="0.000688" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit does not mark wrong coordinates as a complete purchase" time="0.000495" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit does not mark wrong request ID as a complete purchase" time="0.000466" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit does not mark failed HTTP delivery as a complete purchase" time="0.000407" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="historical delivery is validated at its original response time" time="0.000528" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="offsetting unrelated transfers cannot pass a balance-only audit" time="0.000506" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="initial balance snapshots are checked against the original block" time="0.000355" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="failed chain receipt cannot pass the audit" time="0.000370" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="audit failures cannot preserve a stale verified status" time="0.000433" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="wrong-chain RPC is rejected before receipt or balance claims" time="0.000141" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="transfer log queries are paginated within the public RPC limit" time="0.000500" classname="test" file="test/chain.test.mjs"/>
+	<testcase name="probe validates documentation, health and quote beyond HTTP status codes" time="0.001086" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with missing quote" time="0.000299" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with wrong price" time="0.000105" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with wrong seller" time="0.000183" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with empty documentation" time="0.000107" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with unresolved document template" time="0.000084" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="probe cannot pass with cacheable quote" time="0.000118" classname="test" file="test/probe.test.mjs"/>
+	<testcase name="buyer reads documentation, signs once and verifies payment plus delivery" time="0.036530" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="documentation connection failure permits one recorded read-only retry" time="0.007686" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="persistent documentation connection failure stops before signing" time="0.000438" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="quote connection failure permits one recorded retry without duplicate payment" time="0.002619" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="persistent quote connection failure stops after one retry and never signs" time="0.000658" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects excessive amount before signing" time="0.000674" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects wrong seller before signing" time="0.000606" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects wrong asset before signing" time="0.000564" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects mainnet before signing" time="0.000695" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects excessive authorization lifetime before signing" time="0.000663" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects upfront payment before signing" time="0.000580" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer rejects different resource before signing" time="0.000472" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="malformed weather body preserves and audits the successful payment receipt" time="0.002625" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="successful payment with empty JSON is never marked as a complete purchase" time="0.002267" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="lost paid response preserves public authorization and forbids automatic repayment" time="0.001718" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="RPC failure after settlement leaves a receipt available for read-only recovery" time="0.001590" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="buyer refuses mismatched documentation without starting weather requests" time="0.000241" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="insufficient funds stop the buyer before payment creation" time="0.000219" classname="test" file="test/purchase.test.mjs"/>
+	<testcase name="RPC health records a working chain and an unavailable endpoint independently" time="0.081100" classname="test" file="test/rpc-health.test.mjs"/>
+	<testcase name="unpaid valid query returns exact quote without reading weather" time="0.026026" classname="test" file="test/service.test.mjs"/>
+	<testcase name="F-02 is free and resolves the actual base URL and seller" time="0.002160" classname="test" file="test/service.test.mjs"/>
+	<testcase name="missing and out-of-range coordinates are rejected before payment" time="0.002169" classname="test" file="test/service.test.mjs"/>
+	<testcase name="unsupported weather methods never execute the paid handler" time="0.001489" classname="test" file="test/service.test.mjs"/>
+	<testcase name="ambiguous and non-decimal coordinates are rejected before payment" time="0.000898" classname="test" file="test/service.test.mjs"/>
+	<testcase name="rejected payment never runs the weather handler" time="0.030813" classname="test" file="test/service.test.mjs"/>
+	<testcase name="settlement failure withholds weather body" time="0.004277" classname="test" file="test/service.test.mjs"/>
+	<testcase name="upstream failure returns an error without settling exact payment" time="0.003164" classname="test" file="test/service.test.mjs"/>
+	<testcase name="successful simulated settlement includes payment receipt" time="0.003834" classname="test" file="test/service.test.mjs"/>
+	<testcase name="weather adapter retains units, provenance, forecast time and caches upstream" time="0.005732" classname="test" file="test/service.test.mjs"/>
+	<testcase name="weather adapter rejects missing humidity without caching invalid data" time="0.025789" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects missing wind without caching invalid data" time="0.000657" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects null temperature without caching invalid data" time="0.000578" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects invalid humidity without caching invalid data" time="0.000478" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects negative wind without caching invalid data" time="0.000676" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects invalid forecast time without caching invalid data" time="0.000362" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects stale forecast without caching invalid data" time="0.000651" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects stale model without caching invalid data" time="0.001134" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="weather adapter rejects wrong source units without caching invalid data" time="0.000560" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="provider failure is not converted to cached weather" time="0.000593" classname="test" file="test/weather.test.mjs"/>
+	<testcase name="expired cache is conditionally revalidated and preserves retrieval time" time="0.000356" classname="test" file="test/weather.test.mjs"/>
+	<!-- tests 65 -->
+	<!-- suites 0 -->
+	<!-- pass 65 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 1696.2876 -->
+</testsuites>

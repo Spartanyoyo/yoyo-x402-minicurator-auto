@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-22T04:07:01.2324687Z",
+  "command": "npm audit --json --audit-level=low --fetch-retries=1 --fetch-timeout=30000",
+  "exitCode": 0,
+  "status": "passed_no_known_vulnerabilities",
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 33,
+      "dev": 91,
+      "optional": 60,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 123
+    }
+  },
+  "advisories": {},
+  "passed": true
+}

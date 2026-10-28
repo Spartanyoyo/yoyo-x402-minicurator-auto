@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-22T07:34:48.253Z",
+  "intent": "查询杭州现在的天气",
+  "location": {
+    "latitude": 30.2937,
+    "longitude": 120.1614
+  },
+  "baseUrl": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "not_verified",
+  "http": [],
+  "preflightErrors": [
+    {
+      "operation": "read_documentation",
+      "attempt": 1,
+      "at": "2026-10-22T07:34:59.180Z",
+      "message": "fetch failed",
+      "cause": "Client network socket disconnected before secure TLS connection was established"
+    },
+    {
+      "operation": "read_documentation",
+      "attempt": 2,
+      "at": "2026-10-22T07:35:26.206Z",
+      "message": "fetch failed",
+      "cause": "other side closed"
+    }
+  ],
+  "error": "fetch failed"
+}

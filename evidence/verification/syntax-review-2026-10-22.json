@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-22T04:14:13.2723252Z",
+  "results": [
+    {
+      "file": "scripts/audit.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/build-evidence-manifest.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/buy.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/chain.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/check-docs.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/check-public-files.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/create-wallets.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/dev.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/probe-checks.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/probe.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/purchase.mjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/rpc-health.mjs",
+      "passed": true
+    },
+    {
+      "file": "src/app.mjs",
+      "passed": true
+    },
+    {
+      "file": "src/weather.mjs",
+      "passed": true
+    },
+    {
+      "file": "src/worker.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/chain.test.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/fixtures.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/probe.test.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/purchase.test.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/rpc-health.test.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/service.test.mjs",
+      "passed": true
+    },
+    {
+      "file": "test/weather.test.mjs",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

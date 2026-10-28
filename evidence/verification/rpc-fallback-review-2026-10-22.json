@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-22T03:03:51.868Z",
+  "endpoint": "https://base-sepolia-rpc.publicnode.com",
+  "chainId": 84532,
+  "balances": {
+    "block": "48581985",
+    "buyer": "19998000",
+    "seller": "2000"
+  },
+  "passed": true,
+  "elapsedMs": 42639
+}

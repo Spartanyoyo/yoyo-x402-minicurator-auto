@@ -1,0 +1,18 @@
+{
+  "kind": "review_summary_of_earlier_attempts",
+  "recordedAt": "2026-10-22T03:38:03.435Z",
+  "command": "npm audit",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "connection_failed"
+    },
+    {
+      "attempt": 2,
+      "result": "timed_out"
+    }
+  ],
+  "outcome": "No vulnerability conclusion was drawn from these failed attempts.",
+  "laterResult": "dependency-audit-2026-10-22.json",
+  "laterStatus": "passed_no_known_vulnerabilities"
+}

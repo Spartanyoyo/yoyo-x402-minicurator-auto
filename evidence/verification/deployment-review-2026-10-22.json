@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-22T02:46:27.886Z",
+  "worker": "yoyo-x402-weather",
+  "expectedVersion": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+  "deployments": [
+    {
+      "id": "103020af-c162-4e2c-911f-eb386a42d9d5",
+      "createdOn": "2026-10-22T02:41:43.509739Z",
+      "versions": [
+        {
+          "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "id": "f7a4ffe6-47a8-4185-b514-6e892ae3e5e3",
+      "createdOn": "2026-10-16T12:51:23.757052Z",
+      "versions": [
+        {
+          "version_id": "4adf8c60-ff8e-4337-a3b6-1ef566f30e29",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "id": "c5a8c6cb-8f8c-4527-9b09-24fca093e99b",
+      "createdOn": "2026-10-16T10:57:47.758225Z",
+      "versions": [
+        {
+          "version_id": "c9531b6a-25f1-4bb5-be67-89bc512a59e3",
+          "percentage": 100
+        }
+      ]
+    }
+  ],
+  "version": {
+    "id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+    "number": 3,
+    "metadata": {
+      "created_on": "2026-10-22T02:41:42.223133Z",
+      "source": "wrangler",
+      "has_preview": true,
+      "identityRedacted": "Removed from public repository"
+    },
+    "script": {
+      "etag": "0f06f518274cadad2c4cd0c680515d555985daa5cc478f8adf7157e9a5864ed7",
+      "handlers": [
+        "fetch"
+      ],
+      "last_deployed_from": "wrangler"
+    },
+    "runtime": {
+      "compatibility_date": "2026-10-16",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard"
+    },
+    "bindings": [
+      {
+        "name": "SELLER_ADDRESS",
+        "type": "plain_text",
+        "text": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f"
+      }
+    ]
+  },
+  "onlySellerBinding": true,
+  "activeVersionMatches": true,
+  "sourceHashes": {
+    "src/app.mjs": "00a5b3cf5e83fa315b92835a2b4bb50af8e66d657665333e46a51c810df0c024",
+    "src/weather.mjs": "164cded66e257474e334d783fc280d3ed405af9f95d1412cd24c8f9806372866",
+    "src/worker.mjs": "6b67096b9a60eb5a837d48100104a83e1283963cb3b8468aa2aa810cb016372b",
+    "scripts/audit.mjs": "c71daa2995401f5c2132690a74a092e1543aa5b3a151e8327ceb966b01293ed4",
+    "scripts/buy.mjs": "ff59f131d5ca017171f13d5a20c397bfba044e6ec3a5256ddf512f3c27005400",
+    "scripts/chain.mjs": "0feb0253df66f84ed2177f63be899de4c1a6d80f8eea5611202be58fddd2ba0f",
+    "scripts/create-wallets.mjs": "7f52729bcb03ae4d99b512fb88b2806f96fb91bd1a8ff8877a6ff6ec1b2ae7cd",
+    "scripts/dev.mjs": "9b744e249c24505ac6c711de2bc81d268fd954963dbe1252f4bb9f7a70445388",
+    "scripts/probe-checks.mjs": "3ef18277df1a5f7f73484e4d8f2fc2009752a8dde988130a59bfddbaa7583c02",
+    "scripts/probe.mjs": "059c03c0111e48c3e8a35931cd0784ca5e8cd5c90bb4bc2a00a91bab2ca64bc0",
+    "scripts/purchase.mjs": "16f0b312bb3d6a5a40a7412465ffea285dc54ea4a4f9ec44d8361afdc4469858",
+    "docs/F-02_weather-service.md": "6d0d035ee609d165df7840e85709554e619cfda0e9c4ae7c050de97eeaaa6435",
+    "wrangler.jsonc": "853063dab96bd93fcb85c8c8dd9805d0c4e4d033bf492432557a7b16230bd98f",
+    "package.json": "d41b387db3df760528c4417f2205a392ec08cb1f0c1b512c98a4e396bbbf1b79",
+    "package-lock.json": "6b52ad21922d1a7aa0ebac76fcf49edbc8ceadb6defc6d8112aaedf6438618b7"
+  },
+  "observations": [
+    {
+      "path": "/deployments",
+      "status": 200,
+      "success": true
+    },
+    {
+      "path": "/versions/15b034a3-a6bc-4850-befe-1d2f66fbae88",
+      "status": 200,
+      "success": true
+    }
+  ],
+  "publicRepositorySanitization": {
+    "fieldsRemoved": [
+      "Cloudflare account identifier",
+      "author identifier",
+      "author email"
+    ],
+    "rawCopy": "local-only (gitignored)"
+  }
+}

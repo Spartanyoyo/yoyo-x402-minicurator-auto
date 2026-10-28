@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-23T08:37:47.7110208+00:00",
+  "scope": "Official provider documentation used for free access, licensing, and API behavior claims",
+  "sources": [
+    {
+      "provider": "Met Museum",
+      "kind": "API documentation",
+      "url": "https://metmuseum.github.io/",
+      "retrievedAt": "2026-10-23T08:32:34.4117784Z",
+      "bytes": 84532,
+      "sha256": "6fbfe3a7620d9b79bbc49e68313d33ce10410aabbacf38e5e5f1f6349b942ff2"
+    },
+    {
+      "provider": "Cleveland Museum of Art",
+      "kind": "Open Access API documentation",
+      "url": "https://openaccess-api.clevelandart.org/",
+      "retrievedAt": "2026-10-23T08:32:37.8729433Z",
+      "bytes": 107334,
+      "sha256": "a307b878e4d88437547cf67a825e9ce2af60087174a63aa133b3865dfbf6e0dd"
+    },
+    {
+      "provider": "Cleveland Museum of Art",
+      "kind": "Open Access policy",
+      "url": "https://www.clevelandart.org/open-access",
+      "retrievedAt": "2026-10-23T08:32:38.7370908Z",
+      "bytes": 680501,
+      "sha256": "9f5969ffc1fbaa0e32786d5c05d6cf2021d9ba60488db8286f32aabdd8959381"
+    },
+    {
+      "provider": "SMK",
+      "kind": "API documentation",
+      "url": "https://www.smk.dk/en/article/smk-api/",
+      "retrievedAt": "2026-10-23T08:32:42.9678855Z",
+      "bytes": 153979,
+      "sha256": "77ecbdb1dae1c758b4b07a6dcbd85d7c69469d04b0400a67389390644079572f"
+    }
+  ]
+}

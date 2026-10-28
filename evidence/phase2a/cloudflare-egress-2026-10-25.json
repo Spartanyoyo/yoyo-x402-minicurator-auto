@@ -1,0 +1,4114 @@
+{
+  "startedAt": "2026-10-25T04:48:09.328Z",
+  "baseUrl": "https://yoyo-minicurator-egress.accessible-trip.workers.dev",
+  "scope": "Real Cloudflare Workers outbound fetches; no payment",
+  "rounds": 2,
+  "records": [
+    {
+      "round": 1,
+      "service": "met-search",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=5&offset=0",
+      "startedAt": "2026-10-25T04:48:09.636Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "total": 1591,
+        "objectIDs": [
+          91120,
+          552027,
+          570722,
+          570749,
+          552028
+        ]
+      },
+      "bytes": 63,
+      "sha256": "6e1e6150955ed4b420bf804f8dc112230262bf195e5f6d98c2b4177025664c49",
+      "validPayload": true,
+      "durationMs": 575,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "met-artwork",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+      "startedAt": "2026-10-25T04:48:10.695Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "objectID": 552027,
+        "isHighlight": false,
+        "accessionNumber": "04.2.472",
+        "accessionYear": "1904",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031195.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031193.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031194.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031192.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031196.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031191.jpg"
+        ],
+        "constituents": null,
+        "department": "Egyptian Art",
+        "objectName": "Figurine, cat",
+        "title": "Cat",
+        "culture": "",
+        "period": "Late Period–Ptolemaic Period",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "",
+        "artistPrefix": "",
+        "artistDisplayName": "",
+        "artistDisplayBio": "",
+        "artistSuffix": "",
+        "artistAlphaSort": "",
+        "artistNationality": "",
+        "artistBeginDate": "",
+        "artistEndDate": "",
+        "artistGender": "",
+        "artistWikidata_URL": "",
+        "artistULAN_URL": "",
+        "objectDate": "664–30 BCE",
+        "objectBeginDate": -664,
+        "objectEndDate": -30,
+        "medium": "Cupreous metal",
+        "dimensions": "H. 13.7 cm (5 3/8 in.); W. 5.6 cm (2 3/16 in.); L. 8.4 cm (3 5/16 in.)\r\nH. (with tang): 15 cm (5 7/8 in.)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 13.7,
+              "Length": 8.4,
+              "Width": 5.6
+            }
+          },
+          {
+            "elementName": "Height",
+            "elementDescription": "with tang",
+            "elementMeasurements": {
+              "Height": 15
+            }
+          }
+        ],
+        "creditLine": "Gift of Darius Ogden Mills, 1904",
+        "geographyType": "From",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "Egypt",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2026-07-30T04:49:13.073Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/552027",
+        "tags": [
+          {
+            "term": "Cats",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300265960",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q146"
+          }
+        ],
+        "objectWikidata_URL": "",
+        "isTimelineWork": false,
+        "GalleryNumber": "130"
+      },
+      "bytes": 2236,
+      "sha256": "2a52dab8deb630c7ece7d832503682965df2f7d774198aa6f9714c6437679ae1",
+      "validPayload": true,
+      "durationMs": 358,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "met-departments",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1/departments",
+      "startedAt": "2026-10-25T04:48:18.683Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "departments": [
+          {
+            "departmentId": 1,
+            "displayName": "American Decorative Arts"
+          },
+          {
+            "departmentId": 3,
+            "displayName": "Ancient West Asian Art"
+          },
+          {
+            "departmentId": 4,
+            "displayName": "Arms and Armor"
+          },
+          {
+            "departmentId": 5,
+            "displayName": "Arts of Africa, Oceania, and the Americas"
+          },
+          {
+            "departmentId": 6,
+            "displayName": "Asian Art"
+          },
+          {
+            "departmentId": 7,
+            "displayName": "The Cloisters"
+          },
+          {
+            "departmentId": 8,
+            "displayName": "The Costume Institute"
+          },
+          {
+            "departmentId": 9,
+            "displayName": "Drawings and Prints"
+          },
+          {
+            "departmentId": 10,
+            "displayName": "Egyptian Art"
+          },
+          {
+            "departmentId": 11,
+            "displayName": "European Paintings"
+          },
+          {
+            "departmentId": 12,
+            "displayName": "European Sculpture and Decorative Arts"
+          },
+          {
+            "departmentId": 13,
+            "displayName": "Greek and Roman Art"
+          },
+          {
+            "departmentId": 14,
+            "displayName": "Islamic Art"
+          },
+          {
+            "departmentId": 15,
+            "displayName": "The Robert Lehman Collection"
+          },
+          {
+            "departmentId": 16,
+            "displayName": "The Libraries"
+          },
+          {
+            "departmentId": 17,
+            "displayName": "Medieval Art"
+          },
+          {
+            "departmentId": 18,
+            "displayName": "Musical Instruments"
+          },
+          {
+            "departmentId": 19,
+            "displayName": "Photographs"
+          },
+          {
+            "departmentId": 21,
+            "displayName": "Modern Art"
+          }
+        ]
+      },
+      "bytes": 1067,
+      "sha256": "b5a60d5715ae725acd47acf071db4e112535d6cf08663cc18088f916dcadf12b",
+      "validPayload": true,
+      "durationMs": 349,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "cma-artwork-search",
+      "upstream": "https://openaccess-api.clevelandart.org/api/artworks/?title=cat&cc0=1&has_image=1&limit=3",
+      "startedAt": "2026-10-25T04:48:26.699Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "info": {
+          "total": 35,
+          "parameters": {
+            "skip": 0,
+            "limit": 3,
+            "cc0": "1",
+            "title": "cat",
+            "has_image": "1",
+            "select": "accession_number,accession_number_sortable,cover_accession_number,department,department,gallery,collection,classification_type"
+          }
+        },
+        "data": [
+          {
+            "id": 98363,
+            "accession_number": "1917.998",
+            "share_license_status": "CC0",
+            "tombstone": "Cat Coffin, 305–30 BCE. Egypt, Greco-Roman period (332 BCE–395 CE), Ptolemaic dynasty (305–30 BCE). Bronze, hollow cast; overall: 51 x 14.1 x 24 cm (20 1/16 x 5 9/16 x 9 7/16 in.). The Cleveland Museum of Art, Gift of the John Huntington Art and Polytechnic Trust, 1917.998",
+            "current_location": "107 Egyptian",
+            "title": "Cat Coffin",
+            "creation_date": "305–30 BCE",
+            "creation_date_earliest": -305,
+            "creation_date_latest": -30,
+            "artists_tags": [],
+            "culture": [
+              "Egypt, Greco-Roman period (332 BCE–395 CE), Ptolemaic dynasty (305–30 BCE)"
+            ],
+            "technique": "bronze, hollow cast",
+            "support_materials": [],
+            "department": "Egyptian and Ancient Near Eastern Art",
+            "collection": "Egypt - Greco-Roman",
+            "type": "Funerary Equipment",
+            "measurements": "Overall: 51 x 14.1 x 24 cm (20 1/16 x 5 9/16 x 9 7/16 in.)",
+            "dimensions": {
+              "overall": {
+                "height": 0.51,
+                "height_inch": 20,
+                "height_inch_fraction": 0.0625,
+                "width": 0.141,
+                "width_inch": 5,
+                "width_inch_fraction": 0.5625,
+                "depth": 0.24,
+                "depth_inch": 9,
+                "depth_inch_fraction": 0.4375
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 312341,
+                  "title": "The Silver Jubilee Exhibition",
+                  "description": "<i>The Silver Jubilee Exhibition</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (June 23-September 28, 1941).",
+                  "opening_date": "1941-06-23T04:00:00"
+                },
+                {
+                  "id": 304550,
+                  "title": "A Cleveland Bestiary",
+                  "description": "<i>A Cleveland Bestiary</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (October 15-December 16, 1981).",
+                  "opening_date": "1981-10-15T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "The Cleveland Museum of Art, Cleveland, OH (1916). no. 163, p. 225",
+                  "opening_date": "1916-01-01T00:00:00"
+                },
+                {
+                  "description": "Museum of Fine Arts, Boston, MA (29 August 1952 - 2 April 1953).",
+                  "opening_date": "1952-08-29T00:00:00"
+                },
+                {
+                  "description": "Cleveland Museum of Art, Cleveland, OH (1981b). no. 31",
+                  "opening_date": "1981-01-01T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Dikran G. Kelekian, New York, NY, sold to the Cleveland Museum of Art",
+                "citations": [],
+                "footnotes": [],
+                "date": "?-1917",
+                "sortorder": 1
+              },
+              {
+                "description": "The Cleveland Museum of Art, Cleveland, OH",
+                "citations": [],
+                "footnotes": [],
+                "date": "1917-",
+                "sortorder": 2
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [
+              "1584.17"
+            ],
+            "did_you_know": "A necklace appears to have been incised or scratched into the finished bronze; faint traces are visible on the chest.",
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Although the cat is considered the most Egyptian of animals, as an object of worship the cat does not appear until late in Egyptian history. This unusually large statue of a cat was made to hold the mummified remains of a sacred cat. The coffin is, of course, hollow, with an open bottom. As usual, the animal’s tail is curled around its right side.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60741470"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1917.998-cat-coffin"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "The Cleveland Museum of Art. <em>The Cleveland Museum of Art Handbook.</em> Cleveland, OH: The Cleveland Museum of Art, 1958.",
+                "page_number": "Mentioned and Reproduced: cat. no. 7",
+                "url": "https://archive.org/details/CMAHandbook1958/page/n18"
+              },
+              {
+                "citation": "Kathman, Barbara A. <em>A Cleveland Bestiary</em>. Cleveland, OH; Cleveland Museum of Art, 1981.",
+                "page_number": "Reproduced: p. 37; Mentioned: p. 33, p. 62",
+                "url": null
+              },
+              {
+                "citation": "Berman, Lawrence M., and Kenneth J. Bohač.<em> Catalogue of Egyptian Art: The Cleveland Museum of Art.</em> Cleveland, OH: Cleveland Museum of Art, 1999",
+                "page_number": "Reproduced and Mentioned: p. 438",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1917.998",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_web.jpg",
+                "width": "630",
+                "height": "893",
+                "filesize": "268555",
+                "filename": "1917.998_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_print.jpg",
+                "width": "2398",
+                "height": "3400",
+                "filesize": "3941618",
+                "filename": "1917.998_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_full.tif",
+                "width": "4232",
+                "height": "6000",
+                "filesize": "76206172",
+                "filename": "1917.998_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_web.jpg",
+                  "width": "583",
+                  "height": "893",
+                  "filesize": "260397"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_print.jpg",
+                  "width": "2218",
+                  "height": "3400",
+                  "filesize": "3901355"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_full.tif",
+                  "width": "4567",
+                  "height": "7000",
+                  "filesize": "95937332"
+                },
+                "date_created": "2007-04-25T16:52:34",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_web.jpg",
+                  "width": "689",
+                  "height": "893",
+                  "filesize": "312097"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_print.jpg",
+                  "width": "2624",
+                  "height": "3400",
+                  "filesize": "4632187"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_full.tif",
+                  "width": "4631",
+                  "height": "6000",
+                  "filesize": "83388788"
+                },
+                "date_created": "2007-04-25T17:20:46",
+                "annotation": ""
+              }
+            ],
+            "creditline": "Gift of the John Huntington Art and Polytechnic Trust",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 98363,
+            "creators": [],
+            "legal_status": "accessioned",
+            "accession_date": "1917-02-14T00:00:00",
+            "sortable_date": -305,
+            "date_added_to_oa": null,
+            "date_text": "305–30 BCE",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "object",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": null,
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 05:18:37.616000"
+          },
+          {
+            "id": 152829,
+            "accession_number": "1985.71.5",
+            "share_license_status": "CC0",
+            "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+            "current_location": null,
+            "title": "Cat and Butterfly",
+            "series_in_original_language": "雑畫圖冊",
+            "creation_date": "1788",
+            "creation_date_earliest": 1788,
+            "creation_date_latest": 1788,
+            "artists_tags": [
+              "male"
+            ],
+            "culture": [
+              "China, Qing dynasty (1644-1911)"
+            ],
+            "technique": "album leaf, ink on paper",
+            "support_materials": [],
+            "department": "Chinese Art",
+            "collection": "ASIAN - Album leaf",
+            "type": "Painting",
+            "measurements": "Sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.)",
+            "dimensions": {
+              "sheet": {
+                "height": 0.29,
+                "height_inch": 11,
+                "height_inch_fraction": 0.4375,
+                "width": 0.184,
+                "width_inch": 7,
+                "width_inch_fraction": 0.25
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [
+              {
+                "inscription": "Six seals appearing on the leaves:\n\nMin Zhen 閔貞; Zheng zhai 正齋; Qingqiao 青橋; Zhen 貞; Liao tang 蓼塘; Min Zhen zhi yin 閔貞之印。",
+                "inscription_translation": null,
+                "inscription_remark": null,
+                "sortorder": 1
+              }
+            ],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 521183,
+                  "title": "When Salt was Gold: Yangzhou, City of Riches and Art",
+                  "description": "<i>When Salt was Gold: Yangzhou, City of Riches and Art</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (May 12-November 5, 2023).",
+                  "opening_date": "2023-05-12T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (October 29, 1999–January 24, 2000).",
+                  "opening_date": "1999-10-29T00:00:00"
+                },
+                {
+                  "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (November 15, 2000–March 26, 2001).",
+                  "opening_date": "2000-11-15T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Daili Shanren 戴笠山人 [active late 1700s]",
+                "citations": [],
+                "footnotes": null,
+                "date": "1788–?",
+                "sortorder": 1
+              },
+              {
+                "description": "Ni Yun 倪耘 [d. 1864]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 2
+              },
+              {
+                "description": "Yan Shiqing 顏世清 [1873–1929]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 3
+              },
+              {
+                "description": "Xu Xiaopu 徐小圃 [1887–1961]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 4
+              },
+              {
+                "description": "Ding Nianxian 丁念先 [1906–1969]",
+                "citations": [],
+                "footnotes": null,
+                "date": "c. mid-1900s",
+                "sortorder": 5
+              },
+              {
+                "description": "(Eskenazi Ltd., London, England, sold to the Cleveland Museum of Art)",
+                "citations": [],
+                "footnotes": null,
+                "date": "?–1985",
+                "sortorder": 6
+              },
+              {
+                "description": "The Cleveland Museum of Art, Cleveland, OH",
+                "citations": [],
+                "footnotes": null,
+                "date": "1985–",
+                "sortorder": 7
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [
+              "85.71e"
+            ],
+            "did_you_know": "Cat and butterfly are homophones for the characters “mao die” 耄耋 (octogenarian), so this painting expresses hope that the artist's friend will live a long life.",
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Min Zhen, who was orphaned at age 12 and developed an eccentric personality, was trained by Tang Yin (1682–1756), a writer, playwright, and superintendent of the imperial porcelain workshops in Jingdezhen. The connection to him may have enabled Min to stay in Beijing for a decade from around 1773. It is not clear whether he ever resided in Yangzhou, but his style is in many instances reminiscent of that of Yangzhou artist Huang Shen. <br><br>The album was painted for his friend Dailili Shanren in exchange for a scholar’s stone. The paintings demonstrate the artist’s versatility and mature style in the last years of his life. While two leaves are rendered in unconventional compositions seen from above (<em>Cat and Butterfly </em><a href=\"https://www.clevelandart.org/art/1985.71.5\">CMA 1985.71.5</a>) and below (<em>Banana Plant </em><a href=\"https://www.clevelandart.org/art/1985.71.11\">CMA 1985.71.11</a>), they have a humorous touch. “Cat and butterfly” is a homophone for the Chinese characters “mao die,” meaning “octogenarian,” and express the wish for the recipient’s longevity. The banana plant stands for the world of literati but can also allude to Buddhism.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60475747"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1985.71.5-cat-and-butterfly"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "Ding, Nianxian 丁念先. <em>Nian sheng lou du hua xiao ji</em> [念聖樓讀畫小紀 = Chinese calligraphy and painting of various dynasties in the collection of Nianshenglou]. Taibei: Wen xing za zhi she, 1961.",
+                "page_number": "Mentioned: p. 41, no. 85",
+                "url": null
+              },
+              {
+                "citation": "Fukunaga, Takehiko 福永武彥, and Howard L. Rogers. <em>Kinnō,</em> <em>Bunjinga suihen. chiyūgo (9)</em> 金農, 文人画粋編. 中国篇 9. Tōkyō: Chūōkoronsha, 1976.",
+                "page_number": "Mentioned and Reproduced: pls. 94–97, p. 179, fig. 30",
+                "url": null
+              },
+              {
+                "citation": "Sotheby's, Parke, Bernet, New York. <em>Fine Chinese Paintings</em>. June 3, 1985 sale.",
+                "page_number": "Mentioned and Reproduced: cat. no. 69",
+                "url": null
+              },
+              {
+                "citation": "Chou, Ju-hsi and Anita Chung. <em>Silent poetry: Chinese paintings from the collection of the Cleveland Museum of Art</em>. Cleveland, OH: Cleveland Museum of Art, 2015.",
+                "page_number": "Reproduced: pp. 462–465",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1985.71.5",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+                "width": "572",
+                "height": "893",
+                "filesize": "347970",
+                "filename": "1985.71.5_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_print.jpg",
+                "width": "2179",
+                "height": "3400",
+                "filesize": "4795378",
+                "filename": "1985.71.5_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_full.tif",
+                "width": "4307",
+                "height": "6720",
+                "filesize": "86850188",
+                "filename": "1985.71.5_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_web.jpg",
+                  "width": "554",
+                  "height": "893",
+                  "filesize": "333234"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_print.jpg",
+                  "width": "2109",
+                  "height": "3400",
+                  "filesize": "5982499"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_full.tif",
+                  "width": "3969",
+                  "height": "6398",
+                  "filesize": "76210456"
+                },
+                "date_created": "2010-04-21T18:08:04",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_web.jpg",
+                  "width": "573",
+                  "height": "893",
+                  "filesize": "353650"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_print.jpg",
+                  "width": "2183",
+                  "height": "3400",
+                  "filesize": "5857218"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_full.tif",
+                  "width": "4188",
+                  "height": "6522",
+                  "filesize": "81971656"
+                },
+                "date_created": "2010-04-20T19:52:12",
+                "annotation": ""
+              }
+            ],
+            "creditline": "John L. Severance Fund",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 152829,
+            "creators": [
+              {
+                "id": 31140,
+                "description": "Min Zhen (Chinese, 1730–after 1788)",
+                "extent": null,
+                "qualifier": null,
+                "role": "artist",
+                "biography": null,
+                "name_in_original_language": "閔貞",
+                "birth_year": "1730",
+                "death_year": "1788",
+                "use_in_caption": true,
+                "include_extent": false,
+                "weight": 1
+              }
+            ],
+            "legal_status": "accessioned",
+            "accession_date": "1985-06-03T00:00:00",
+            "sortable_date": 1788,
+            "date_added_to_oa": null,
+            "date_text": "1788",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "component",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": "1985.71",
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [
+              "Cat and Butterfly (Longevity)"
+            ],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 07:54:10.231000"
+          },
+          {
+            "id": 122512,
+            "accession_number": "1942.776",
+            "share_license_status": "CC0",
+            "tombstone": "Cat, 664–30 BCE OR 664–330 BCE. Egypt, Late period (715–332 BCE), Dynasty 26 or later. Bronze and gold; overall: 9.2 x 2.3 x 5.5 cm (3 5/8 x 7/8 x 2 3/16 in.); without tang: 7.5 cm (2 15/16 in.). The Cleveland Museum of Art, Bequest of John L. Severance, 1942.776",
+            "current_location": "107 Egyptian",
+            "title": "Cat",
+            "creation_date": "664–30 BCE OR 664–330 BCE",
+            "creation_date_earliest": -664,
+            "creation_date_latest": -30,
+            "artists_tags": [],
+            "culture": [
+              "Egypt, Late period (715–332 BCE), Dynasty 26 or later"
+            ],
+            "technique": "bronze and gold",
+            "support_materials": [],
+            "department": "Egyptian and Ancient Near Eastern Art",
+            "collection": "Egypt - Late Period",
+            "type": "Sculpture",
+            "measurements": "Overall: 9.2 x 2.3 x 5.5 cm (3 5/8 x 7/8 x 2 3/16 in.); without tang: 7.5 cm (2 15/16 in.)",
+            "dimensions": {
+              "overall": {
+                "height": 0.092,
+                "height_inch": 3,
+                "height_inch_fraction": 0.625,
+                "width": 0.023,
+                "width_inch": 0,
+                "width_inch_fraction": 0.875,
+                "depth": 0.055,
+                "depth_inch": 2,
+                "depth_inch_fraction": 0.1875
+              },
+              "without tang": {
+                "height": 0.075,
+                "height_inch": 2,
+                "height_inch_fraction": 0.9375
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 335856,
+                  "title": "Exhibition of the John L. Severance Collection",
+                  "description": "<i>Exhibition of the John L. Severance Collection</i>. The Cleveland Museum of Art, Cleveland, OH (November 12, 1942-March 14, 1943).",
+                  "opening_date": "1942-11-12T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "CMA 1942, no. 265",
+                  "opening_date": "1942-01-01T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Purchased from R.H. Blanchard, Blanchard's Egyptian Museum, Cairo, by John L. Severance",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": null
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [],
+            "did_you_know": null,
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Cats were the sacred animal of Bastet, Egyptian goddess of fire, cats, and protector of the home. Sitting upright in a pose characteristic of these feline figurines, this bronze cat adorned with an embossed pendant and gold earring was made as a votive offering to be deposited with the deceased.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60763484"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1942.776-cat"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "<em>Catalogue of the John L. Severance Collection: Bequest of John L. Severance, 1936.</em> [Cleveland, Ohio]: Cleveland Museum of Art, 1942.",
+                "page_number": "Mentioned: p. 86, cat. no. 265",
+                "url": "https://archive.org/details/SeveranceBequest/page/n90"
+              },
+              {
+                "citation": "Wunderlich, Silvia. \"Department of Egyptian Art: Bronzes.\" <em>The Bulletin of the Cleveland Museum of Art </em>29, no. 9 (November 1942): 158-159",
+                "page_number": "Mentioned: p. 158",
+                "url": "https://www.jstor.org/stable/25141020"
+              },
+              {
+                "citation": "Berman, Lawrence M., and Kenneth J. Bohač.<em> Catalogue of Egyptian Art: The Cleveland Museum of Art.</em> Cleveland, OH: Cleveland Museum of Art, 1999",
+                "page_number": "Reproduced and Mentioned: p. 437",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1942.776",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_web.jpg",
+                "width": "915",
+                "height": "893",
+                "filesize": "351320",
+                "filename": "1942.776_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_print.jpg",
+                "width": "2221",
+                "height": "2167",
+                "filesize": "2239602",
+                "filename": "1942.776_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_full.tif",
+                "width": "2221",
+                "height": "2167",
+                "filesize": "14469512",
+                "filename": "1942.776_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_web.jpg",
+                  "width": "945",
+                  "height": "893",
+                  "filesize": "397445"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_print.jpg",
+                  "width": "2198",
+                  "height": "2076",
+                  "filesize": "2309758"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_full.tif",
+                  "width": "2198",
+                  "height": "2076",
+                  "filesize": "13720228"
+                },
+                "date_created": "2007-05-25T15:30:00",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_web.jpg",
+                  "width": "893",
+                  "height": "893",
+                  "filesize": "331947"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_print.jpg",
+                  "width": "2190",
+                  "height": "2190",
+                  "filesize": "2181199"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_full.tif",
+                  "width": "2190",
+                  "height": "2190",
+                  "filesize": "14418904"
+                },
+                "date_created": "2007-05-25T16:02:27",
+                "annotation": ""
+              }
+            ],
+            "creditline": "Bequest of John L. Severance",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 122512,
+            "creators": [],
+            "legal_status": "accessioned",
+            "accession_date": "1942-07-24T00:00:00",
+            "sortable_date": -664,
+            "date_added_to_oa": null,
+            "date_text": "664–30 BCE OR 664–330 BCE",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "object",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": null,
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 06:18:32.192000"
+          }
+        ]
+      },
+      "bytes": 20751,
+      "sha256": "753b378c12677af56fde475e1ecc86d0e3d8d4f316a5b2721a6706fc1b607a47",
+      "validPayload": true,
+      "durationMs": 236,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "cma-artwork",
+      "upstream": "https://openaccess-api.clevelandart.org/api/artworks/152829",
+      "startedAt": "2026-10-25T04:48:34.561Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "data": {
+          "id": 152829,
+          "accession_number": "1985.71.5",
+          "share_license_status": "CC0",
+          "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+          "current_location": null,
+          "title": "Cat and Butterfly",
+          "series_in_original_language": "雑畫圖冊",
+          "creation_date": "1788",
+          "creation_date_earliest": 1788,
+          "creation_date_latest": 1788,
+          "artists_tags": [
+            "male"
+          ],
+          "culture": [
+            "China, Qing dynasty (1644-1911)"
+          ],
+          "technique": "album leaf, ink on paper",
+          "support_materials": [],
+          "department": "Chinese Art",
+          "collection": "ASIAN - Album leaf",
+          "type": "Painting",
+          "measurements": "Sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.)",
+          "dimensions": {
+            "sheet": {
+              "height": 0.29,
+              "height_inch": 11,
+              "height_inch_fraction": 0.4375,
+              "width": 0.184,
+              "width_inch": 7,
+              "width_inch_fraction": 0.25
+            }
+          },
+          "state_of_the_work": null,
+          "edition_of_the_work": null,
+          "copyright": null,
+          "inscriptions": [
+            {
+              "inscription": "Six seals appearing on the leaves:\n\nMin Zhen 閔貞; Zheng zhai 正齋; Qingqiao 青橋; Zhen 貞; Liao tang 蓼塘; Min Zhen zhi yin 閔貞之印。",
+              "inscription_translation": null,
+              "inscription_remark": null,
+              "sortorder": 1
+            }
+          ],
+          "exhibitions": {
+            "current": [
+              {
+                "id": 521183,
+                "title": "When Salt was Gold: Yangzhou, City of Riches and Art",
+                "description": "<i>When Salt was Gold: Yangzhou, City of Riches and Art</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (May 12-November 5, 2023).",
+                "opening_date": "2023-05-12T04:00:00"
+              }
+            ],
+            "legacy": [
+              {
+                "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (October 29, 1999–January 24, 2000).",
+                "opening_date": "1999-10-29T00:00:00"
+              },
+              {
+                "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (November 15, 2000–March 26, 2001).",
+                "opening_date": "2000-11-15T00:00:00"
+              }
+            ]
+          },
+          "provenance": [
+            {
+              "description": "Daili Shanren 戴笠山人 [active late 1700s]",
+              "citations": [],
+              "footnotes": null,
+              "date": "1788–?",
+              "sortorder": 1
+            },
+            {
+              "description": "Ni Yun 倪耘 [d. 1864]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 2
+            },
+            {
+              "description": "Yan Shiqing 顏世清 [1873–1929]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 3
+            },
+            {
+              "description": "Xu Xiaopu 徐小圃 [1887–1961]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 4
+            },
+            {
+              "description": "Ding Nianxian 丁念先 [1906–1969]",
+              "citations": [],
+              "footnotes": null,
+              "date": "c. mid-1900s",
+              "sortorder": 5
+            },
+            {
+              "description": "(Eskenazi Ltd., London, England, sold to the Cleveland Museum of Art)",
+              "citations": [],
+              "footnotes": null,
+              "date": "?–1985",
+              "sortorder": 6
+            },
+            {
+              "description": "The Cleveland Museum of Art, Cleveland, OH",
+              "citations": [],
+              "footnotes": null,
+              "date": "1985–",
+              "sortorder": 7
+            }
+          ],
+          "find_spot": null,
+          "related_works": [],
+          "former_accession_numbers": [
+            "85.71e"
+          ],
+          "did_you_know": "Cat and butterfly are homophones for the characters “mao die” 耄耋 (octogenarian), so this painting expresses hope that the artist's friend will live a long life.",
+          "early_education_description": null,
+          "artlens_description": null,
+          "description": "Min Zhen, who was orphaned at age 12 and developed an eccentric personality, was trained by Tang Yin (1682–1756), a writer, playwright, and superintendent of the imperial porcelain workshops in Jingdezhen. The connection to him may have enabled Min to stay in Beijing for a decade from around 1773. It is not clear whether he ever resided in Yangzhou, but his style is in many instances reminiscent of that of Yangzhou artist Huang Shen. <br><br>The album was painted for his friend Dailili Shanren in exchange for a scholar’s stone. The paintings demonstrate the artist’s versatility and mature style in the last years of his life. While two leaves are rendered in unconventional compositions seen from above (<em>Cat and Butterfly </em><a href=\"https://www.clevelandart.org/art/1985.71.5\">CMA 1985.71.5</a>) and below (<em>Banana Plant </em><a href=\"https://www.clevelandart.org/art/1985.71.11\">CMA 1985.71.11</a>), they have a humorous touch. “Cat and butterfly” is a homophone for the Chinese characters “mao die,” meaning “octogenarian,” and express the wish for the recipient’s longevity. The banana plant stands for the world of literati but can also allude to Buddhism.",
+          "external_resources": {
+            "wikidata": [
+              "https://www.wikidata.org/wiki/Q60475747"
+            ],
+            "internet_archive": [
+              "https://archive.org/details/clevelandart-1985.71.5-cat-and-butterfly"
+            ]
+          },
+          "citations": [
+            {
+              "citation": "Ding, Nianxian 丁念先. <em>Nian sheng lou du hua xiao ji</em> [念聖樓讀畫小紀 = Chinese calligraphy and painting of various dynasties in the collection of Nianshenglou]. Taibei: Wen xing za zhi she, 1961.",
+              "page_number": "Mentioned: p. 41, no. 85",
+              "url": null
+            },
+            {
+              "citation": "Fukunaga, Takehiko 福永武彥, and Howard L. Rogers. <em>Kinnō,</em> <em>Bunjinga suihen. chiyūgo (9)</em> 金農, 文人画粋編. 中国篇 9. Tōkyō: Chūōkoronsha, 1976.",
+              "page_number": "Mentioned and Reproduced: pls. 94–97, p. 179, fig. 30",
+              "url": null
+            },
+            {
+              "citation": "Sotheby's, Parke, Bernet, New York. <em>Fine Chinese Paintings</em>. June 3, 1985 sale.",
+              "page_number": "Mentioned and Reproduced: cat. no. 69",
+              "url": null
+            },
+            {
+              "citation": "Chou, Ju-hsi and Anita Chung. <em>Silent poetry: Chinese paintings from the collection of the Cleveland Museum of Art</em>. Cleveland, OH: Cleveland Museum of Art, 2015.",
+              "page_number": "Reproduced: pp. 462–465",
+              "url": null
+            }
+          ],
+          "url": "https://clevelandart.org/art/1985.71.5",
+          "images": {
+            "annotation": null,
+            "web": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+              "width": "572",
+              "height": "893",
+              "filesize": "347970",
+              "filename": "1985.71.5_web.jpg"
+            },
+            "print": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_print.jpg",
+              "width": "2179",
+              "height": "3400",
+              "filesize": "4795378",
+              "filename": "1985.71.5_print.jpg"
+            },
+            "full": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_full.tif",
+              "width": "4307",
+              "height": "6720",
+              "filesize": "86850188",
+              "filename": "1985.71.5_full.tif"
+            }
+          },
+          "alternate_images": [
+            {
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_web.jpg",
+                "width": "554",
+                "height": "893",
+                "filesize": "333234"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_print.jpg",
+                "width": "2109",
+                "height": "3400",
+                "filesize": "5982499"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_full.tif",
+                "width": "3969",
+                "height": "6398",
+                "filesize": "76210456"
+              },
+              "date_created": "2010-04-21T18:08:04",
+              "annotation": ""
+            },
+            {
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_web.jpg",
+                "width": "573",
+                "height": "893",
+                "filesize": "353650"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_print.jpg",
+                "width": "2183",
+                "height": "3400",
+                "filesize": "5857218"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_full.tif",
+                "width": "4188",
+                "height": "6522",
+                "filesize": "81971656"
+              },
+              "date_created": "2010-04-20T19:52:12",
+              "annotation": ""
+            }
+          ],
+          "creditline": "John L. Severance Fund",
+          "image_credit": null,
+          "sketchfab_id": null,
+          "sketchfab_url": null,
+          "gallery_donor_text": null,
+          "athena_id": 152829,
+          "creators": [
+            {
+              "id": 31140,
+              "description": "Min Zhen (Chinese, 1730–after 1788)",
+              "extent": null,
+              "qualifier": null,
+              "role": "artist",
+              "biography": null,
+              "name_in_original_language": "閔貞",
+              "birth_year": "1730",
+              "death_year": "1788",
+              "use_in_caption": true,
+              "include_extent": false,
+              "weight": 1
+            }
+          ],
+          "legal_status": "accessioned",
+          "accession_date": "1985-06-03T00:00:00",
+          "sortable_date": 1788,
+          "date_added_to_oa": null,
+          "date_text": "1788",
+          "collapse_artists": false,
+          "on_loan": false,
+          "recently_acquired": false,
+          "record_type": "component",
+          "conservation_statement": null,
+          "has_conservation_images": false,
+          "cover_accession_number": "1985.71",
+          "is_nazi_era_provenance": false,
+          "impression": null,
+          "alternate_titles": [
+            "Cat and Butterfly (Longevity)"
+          ],
+          "is_highlight": false,
+          "updated_at": "2026-05-29 07:54:10.231000"
+        }
+      },
+      "bytes": 8574,
+      "sha256": "801b6b559f59431f05bf7642e28960aea698f22ee3daa91a91f51923a699bfe6",
+      "validPayload": true,
+      "durationMs": 232,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "cma-artist-search",
+      "upstream": "https://openaccess-api.clevelandart.org/api/creators/?name=Min%20Zhen&limit=3",
+      "startedAt": "2026-10-25T04:48:42.436Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "info": {
+          "total": 1,
+          "parameters": {
+            "name": "Min Zhen",
+            "skip": 0,
+            "limit": 3
+          }
+        },
+        "data": [
+          {
+            "name": "Min Zhen",
+            "nationality": "Chinese",
+            "description": "Min Zhen (Chinese, 1730–after 1788)",
+            "biography": null,
+            "birth_year": "1730",
+            "death_year": "1788",
+            "id": 31140,
+            "artworks": [
+              {
+                "id": 152821,
+                "accession_number": "1985.71",
+                "title": "Album of Miscellaneous Subjects",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊), 1788. Min Zhen (Chinese, 1730–after 1788). Album of twelve leaves; ink on paper; each leaf: 29 x 18.4 cm (11 7/16 x 7 1/4 in.); overall with mount: 35.6 x 22.1 cm (14 x 8 11/16 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71",
+                "url": "https://clevelandart.org/art/1985.71"
+              },
+              {
+                "id": 152822,
+                "accession_number": "1985.71.1",
+                "title": "Elephant, Horse, and Hare",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Elephant, Horse, and Hare, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; overall single page: 36.8 x 22.1 cm (14 1/2 x 8 11/16 in.); painting: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.1",
+                "url": "https://clevelandart.org/art/1985.71.1"
+              },
+              {
+                "id": 152823,
+                "accession_number": "1985.71.10",
+                "title": "Su Wu the Shepherd",
+                "tombstone": " (雑畫圖冊): Su Wu the Shepherd, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.10",
+                "url": "https://clevelandart.org/art/1985.71.10"
+              },
+              {
+                "id": 152824,
+                "accession_number": "1985.71.11",
+                "title": "Banana Plants",
+                "tombstone": " (雑畫圖冊): Banana Plants, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.11",
+                "url": "https://clevelandart.org/art/1985.71.11"
+              },
+              {
+                "id": 152825,
+                "accession_number": "1985.71.12",
+                "title": "Sheer Cliffs",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Sheer Cliffs, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.12",
+                "url": "https://clevelandart.org/art/1985.71.12"
+              },
+              {
+                "id": 152826,
+                "accession_number": "1985.71.2",
+                "title": "Lu Tong and Servant",
+                "tombstone": " (雑畫圖冊): Lu Tong and Servant, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.2",
+                "url": "https://clevelandart.org/art/1985.71.2"
+              },
+              {
+                "id": 152827,
+                "accession_number": "1985.71.3",
+                "title": "Landscape in the Manner of Ma Yuan",
+                "tombstone": " (雑畫圖冊): Landscape in the Manner of Ma Yuan, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.3",
+                "url": "https://clevelandart.org/art/1985.71.3"
+              },
+              {
+                "id": 152828,
+                "accession_number": "1985.71.4",
+                "title": "Landscape after Mi Fu",
+                "tombstone": "Landscape after Mi Fu, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.4",
+                "url": "https://clevelandart.org/art/1985.71.4"
+              },
+              {
+                "id": 152829,
+                "accession_number": "1985.71.5",
+                "title": "Cat and Butterfly",
+                "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+                "url": "https://clevelandart.org/art/1985.71.5"
+              },
+              {
+                "id": 152830,
+                "accession_number": "1985.71.6",
+                "title": "Su Dongpo",
+                "tombstone": " (雑畫圖冊): Su Dongpo (蘇東坡), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.6",
+                "url": "https://clevelandart.org/art/1985.71.6"
+              },
+              {
+                "id": 152831,
+                "accession_number": "1985.71.7",
+                "title": "Dragon amid Clouds",
+                "tombstone": " (雑畫圖冊): Dragon amid Clouds, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.7",
+                "url": "https://clevelandart.org/art/1985.71.7"
+              },
+              {
+                "id": 152832,
+                "accession_number": "1985.71.8",
+                "title": "River Landscape",
+                "tombstone": " (雑畫圖冊): River Landscape, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.8",
+                "url": "https://clevelandart.org/art/1985.71.8"
+              },
+              {
+                "id": 152833,
+                "accession_number": "1985.71.9",
+                "title": "Peaches",
+                "tombstone": " (雑畫圖冊): Peaches (桃子), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.9",
+                "url": "https://clevelandart.org/art/1985.71.9"
+              }
+            ]
+          }
+        ]
+      },
+      "bytes": 5364,
+      "sha256": "98f135d3c48cef1bea102da336457be5945b8eaf4a1186743600cd9ee487857e",
+      "validPayload": true,
+      "durationMs": 233,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "cma-artist",
+      "upstream": "https://openaccess-api.clevelandart.org/api/creators/31140",
+      "startedAt": "2026-10-25T04:52:45.423Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "data": {
+          "name": "Min Zhen",
+          "nationality": "Chinese",
+          "description": "Min Zhen (Chinese, 1730–after 1788)",
+          "biography": null,
+          "birth_year": "1730",
+          "death_year": "1788",
+          "id": 31140,
+          "artworks": [
+            {
+              "id": 152821,
+              "accession_number": "1985.71",
+              "title": "Album of Miscellaneous Subjects",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊), 1788. Min Zhen (Chinese, 1730–after 1788). Album of twelve leaves; ink on paper; each leaf: 29 x 18.4 cm (11 7/16 x 7 1/4 in.); overall with mount: 35.6 x 22.1 cm (14 x 8 11/16 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71",
+              "url": "https://clevelandart.org/art/1985.71"
+            },
+            {
+              "id": 152822,
+              "accession_number": "1985.71.1",
+              "title": "Elephant, Horse, and Hare",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Elephant, Horse, and Hare, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; overall single page: 36.8 x 22.1 cm (14 1/2 x 8 11/16 in.); painting: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.1",
+              "url": "https://clevelandart.org/art/1985.71.1"
+            },
+            {
+              "id": 152823,
+              "accession_number": "1985.71.10",
+              "title": "Su Wu the Shepherd",
+              "tombstone": " (雑畫圖冊): Su Wu the Shepherd, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.10",
+              "url": "https://clevelandart.org/art/1985.71.10"
+            },
+            {
+              "id": 152824,
+              "accession_number": "1985.71.11",
+              "title": "Banana Plants",
+              "tombstone": " (雑畫圖冊): Banana Plants, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.11",
+              "url": "https://clevelandart.org/art/1985.71.11"
+            },
+            {
+              "id": 152825,
+              "accession_number": "1985.71.12",
+              "title": "Sheer Cliffs",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Sheer Cliffs, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.12",
+              "url": "https://clevelandart.org/art/1985.71.12"
+            },
+            {
+              "id": 152826,
+              "accession_number": "1985.71.2",
+              "title": "Lu Tong and Servant",
+              "tombstone": " (雑畫圖冊): Lu Tong and Servant, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.2",
+              "url": "https://clevelandart.org/art/1985.71.2"
+            },
+            {
+              "id": 152827,
+              "accession_number": "1985.71.3",
+              "title": "Landscape in the Manner of Ma Yuan",
+              "tombstone": " (雑畫圖冊): Landscape in the Manner of Ma Yuan, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.3",
+              "url": "https://clevelandart.org/art/1985.71.3"
+            },
+            {
+              "id": 152828,
+              "accession_number": "1985.71.4",
+              "title": "Landscape after Mi Fu",
+              "tombstone": "Landscape after Mi Fu, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.4",
+              "url": "https://clevelandart.org/art/1985.71.4"
+            },
+            {
+              "id": 152829,
+              "accession_number": "1985.71.5",
+              "title": "Cat and Butterfly",
+              "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+              "url": "https://clevelandart.org/art/1985.71.5"
+            },
+            {
+              "id": 152830,
+              "accession_number": "1985.71.6",
+              "title": "Su Dongpo",
+              "tombstone": " (雑畫圖冊): Su Dongpo (蘇東坡), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.6",
+              "url": "https://clevelandart.org/art/1985.71.6"
+            },
+            {
+              "id": 152831,
+              "accession_number": "1985.71.7",
+              "title": "Dragon amid Clouds",
+              "tombstone": " (雑畫圖冊): Dragon amid Clouds, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.7",
+              "url": "https://clevelandart.org/art/1985.71.7"
+            },
+            {
+              "id": 152832,
+              "accession_number": "1985.71.8",
+              "title": "River Landscape",
+              "tombstone": " (雑畫圖冊): River Landscape, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.8",
+              "url": "https://clevelandart.org/art/1985.71.8"
+            },
+            {
+              "id": 152833,
+              "accession_number": "1985.71.9",
+              "title": "Peaches",
+              "tombstone": " (雑畫圖冊): Peaches (桃子), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.9",
+              "url": "https://clevelandart.org/art/1985.71.9"
+            }
+          ]
+        }
+      },
+      "bytes": 5281,
+      "sha256": "4cd0998e3373ef8c6ea8bd81ce51ef7c0686c7b5a5a5b7f98912aad683e7b3e8",
+      "validPayload": true,
+      "durationMs": 269,
+      "clientValidated": true,
+      "transport": "standalone curl HTTP/1.1",
+      "previousAttempts": [
+        {
+          "error": "ENOTEMPTY: directory not empty, rmdir '[local temporary path]'",
+          "at": "2026-10-25T04:48:09.328Z"
+        },
+        {
+          "error": "curl transport exited 35; no request retry was attempted"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "service": "smk-search",
+      "upstream": "https://api.smk.dk/api/v1/art/search/?keys=cat&offset=0&rows=3&lang=en",
+      "startedAt": "2026-10-25T04:49:19.327Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "body": {
+        "offset": 0,
+        "rows": 3,
+        "found": 227,
+        "items": [
+          {
+            "id": "1170025074_object",
+            "created": "2020-03-21T13:14:24Z",
+            "modified": "2025-07-11T17:37:14Z",
+            "current_location_name": "Sal 220",
+            "current_location_date": "2018-08-10T00:00:00Z",
+            "acquisition_date": "1918-01-01T00:00:00Z",
+            "acquisition_date_precision": "1918-12-31",
+            "dimensions": [
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "height",
+                "unit": "cm",
+                "value": "26.5"
+              },
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "width",
+                "unit": "cm",
+                "value": "31.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "height",
+                "unit": "cm",
+                "value": "39.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "width",
+                "unit": "cm",
+                "value": "44.7"
+              },
+              {
+                "part": "Brutto",
+                "type": "depth",
+                "unit": "cm",
+                "value": "8"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "David Jacobsen i Paris",
+                "author": "Jette Kjærboe",
+                "notes": "p. 96-98, fig. 14, 104 note 107."
+              },
+              {
+                "title": "David Jacobsen",
+                "author": "Ubekendt",
+                "notes": "kat. 36 (\"Katten\").",
+                "year_of_publication": "1918"
+              },
+              {
+                "title": "Danske Jødiske Kunstnere",
+                "author": "Ubekendt",
+                "notes": "kat. 914 (\"Katten\").",
+                "year_of_publication": "1908"
+              },
+              {
+                "title": "Museets sidste Forøgelser af ældre dansk Malerkunst",
+                "author": "Karl Madsen",
+                "notes": "p. 166.",
+                "year_of_publication": "1918"
+              }
+            ],
+            "exhibitions": [
+              {
+                "exhibition": "Pissarro. Et møde på Skt. Thomas",
+                "date_start": "2017-03-10T00:00:00.000Z",
+                "date_end": "2017-07-02T00:00:00.000Z",
+                "venue": "Ordrupgaard"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "David Jacobsen 1860",
+                "type": "signature"
+              }
+            ],
+            "materials": [
+              "canvas"
+            ],
+            "object_names": [
+              {
+                "name": "Painting"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Jacobsen, David",
+                "creator_forename": "David",
+                "creator_surname": "Jacobsen",
+                "creator_date_of_birth": "1821-07-02T00:00:00.000Z",
+                "creator_date_of_death": "1871-04-22T00:00:00.000Z",
+                "creator_nationality": "Danish",
+                "creator_gender": "MALE",
+                "creator_history": "David Jacobsen opgav i akademiårene skulpturen til fordel for portræt- og primært genremaleri i traditionen fra J. Friedlænder og David Monies. I hovedværket Søndag eftermiddag ved badeanstalten på øen Føhr, 1854, leverede J. dog et originalt bidrag til dansk folkelivsmaleri i skildringen af mødet mellem lokalbefolkningen og de ferierende byboere. Under Paris-opholdet 1855-69 fortsatte J. at male gennemarbejdede og detaljerede genremotiver og udførte desuden enkelte religiøse billeder. Kunsthistorien har valgt at fremhæve J.s mange uprætentiøse parisiske interiør- og gademotiver på grund af værkernes førimpressionistiske kvaliteter i motivvalg og lys- og farvebehandling. Interiørbillederne er også beslægtet med især Corots værker, og det er sandsynligt, at venskabet med franske kunstnere som Pissarro, som han en tid delte atelier med, har sat spor i J.s kunst. Som andre internationalt orienterede danske kunstnere var J. i opposition til det hjemlige nationale maleri, men formåede ikke som andre at skabe sig en karriere i udlandet. I fortvivlelse over sin udsigtsløse fremtid valgte J. at begå selvmord 1871 under et ophold i Firenze.",
+                "creator_lref": "6050_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1860-01-01T00:00:00.000Z",
+                "end": "1860-12-31T00:00:00.000Z",
+                "period": "1860"
+              }
+            ],
+            "techniques": [
+              "Oil on canvas"
+            ],
+            "titles": [
+              {
+                "title": "The Cat in the Studio",
+                "language": "engelsk"
+              }
+            ],
+            "number_of_parts": 1,
+            "object_number": "KMS3402",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KMS3402",
+            "frontend_url": "https://open.smk.dk/artwork/image/KMS3402",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS3402",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KMS3402",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KMS3402",
+            "production_dates_notes": [
+              "Værkdatering: 1860"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": true,
+            "alternative_images": [
+              {
+                "mime_type": "image/tiff",
+                "iiif_id": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2",
+                "iiif_info": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/info.json",
+                "width": 4744,
+                "height": 3280,
+                "size": 16107833.103448275,
+                "thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/!1024,/0/default.jpg",
+                "native": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/full/0/native.jpg",
+                "orientation": "landscape"
+              }
+            ],
+            "image_mime_type": "image/tiff",
+            "image_iiif_id": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2",
+            "image_iiif_info": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/info.json",
+            "image_width": 3773,
+            "image_height": 3164,
+            "image_size": 12359393,
+            "image_thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+            "image_native": "https://api.smk.dk/api/v1/download/W3siaW1nX3VybCI6Imh0dHBzOi8vaWlwLnNtay5kay9paWlmL2pwMi9jbjY5bTc2NXhfa21zMzQwMi1jcm9wcGVkLnRpZi5qcDIvZnVsbC9mdWxsLzAvbmF0aXZlLmpwZyIsInB1YmxpY19kb21haW4iOnRydWUsIm9iamVjdF9udW1iZXIiOiJLTVMzNDAyIiwibnVtIjoiIn1d/KMS3402.jpg",
+            "image_orientation": "landscape",
+            "image_hq": true,
+            "has_3d_file": false,
+            "has_image": true,
+            "colors": [
+              "#191909",
+              "#5a5527",
+              "#908d41",
+              "#956830",
+              "#33140c"
+            ],
+            "suggested_bg_color": [
+              "#908d41"
+            ],
+            "entropy": 9.7812195,
+            "contrast": 2.6962907,
+            "saturation": 4.121473,
+            "colortemp": 4.640539,
+            "brightness": 4.5632677,
+            "has_text": true,
+            "artist": [
+              "David Jacobsen"
+            ]
+          },
+          {
+            "id": "1170007636_object",
+            "created": "2020-03-21T09:52:19Z",
+            "modified": "2025-07-11T17:29:30Z",
+            "acquisition_date": "1861-01-01T00:00:00Z",
+            "acquisition_date_precision": "1861",
+            "dimensions": [
+              {
+                "part": "bladmaal",
+                "type": "height",
+                "unit": "mm",
+                "value": "212"
+              },
+              {
+                "part": "bladmaal",
+                "type": "width",
+                "unit": "mm",
+                "value": "322"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "VERSO: med sort blæk f.n.t.v. \"J. Cats inv 1779\"",
+                "language": "Danish",
+                "type": "signature"
+              },
+              {
+                "content": "Med blyant f.n.m.f. \"Bang\"",
+                "language": "Danish",
+                "type": "Inscription"
+              },
+              {
+                "content": "Med blyant f.n.t.h. \"J. Cats\"",
+                "language": "Danish",
+                "type": "Inscription"
+              },
+              {
+                "content": "Med blyant f.n.t.v \"A. Elcker, nach Cats\"",
+                "language": "Danish",
+                "type": "Inscription"
+              }
+            ],
+            "object_names": [
+              {
+                "name": "Drawing"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Cats, Jacob",
+                "creator_forename": "Jacob",
+                "creator_surname": "Cats",
+                "creator_date_of_birth": "1741-01-01T00:00:00.000Z",
+                "creator_date_of_death": "1799-01-01T00:00:00.000Z",
+                "creator_nationality": "Netherlandish, German",
+                "creator_gender": "MALE",
+                "creator_lref": "31866_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1779-01-01T00:00:00.000Z",
+                "end": "1779-01-01T00:00:00.000Z",
+                "period": "1779"
+              }
+            ],
+            "object_number": "KKSgb16033",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KKSgb16033",
+            "frontend_url": "https://open.smk.dk/artwork/image/KKSgb16033",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KKSgb16033",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KKSgb16033",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KKSgb16033",
+            "production_dates_notes": [
+              "Værkdatering: 1779"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": false,
+            "has_3d_file": false,
+            "has_image": false,
+            "titles": [
+              {
+                "title": "Byscene med skøjteløbere",
+                "type": "beskrivelse",
+                "language": "dansk"
+              }
+            ],
+            "artist": [
+              "Jacob Cats"
+            ]
+          },
+          {
+            "id": "1170007637_object",
+            "created": "2020-03-21T09:52:21Z",
+            "modified": "2025-07-11T17:29:30Z",
+            "acquisition_date": "1861-01-01T00:00:00Z",
+            "acquisition_date_precision": "1861",
+            "dimensions": [
+              {
+                "part": "bladmaal",
+                "type": "height",
+                "unit": "mm",
+                "value": "117"
+              },
+              {
+                "part": "bladmaal",
+                "type": "width",
+                "unit": "mm",
+                "value": "180"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "Les marques de collections de dessins & d'estampes: marques estampillées et écrites de collections particulières et publiques",
+                "author": "Frits Lugt",
+                "notes": "2034",
+                "shelfmark": "7027",
+                "year_of_publication": "1921-1956"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "VERSO: Med pen og brunt blæk under midten t.v.: \"geschilderd voor de heer schepen Hop\"; herunder: \"J. Cats / 1768: f4 ... \"; og med blyant f.n.t.h.: \"J. Cats / Bang don.\"",
+                "language": "Danish",
+                "type": "Inscription"
+              }
+            ],
+            "object_names": [
+              {
+                "name": "Drawing"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Cats, Jacob",
+                "creator_forename": "Jacob",
+                "creator_surname": "Cats",
+                "creator_date_of_birth": "1741-01-01T00:00:00.000Z",
+                "creator_date_of_death": "1799-01-01T00:00:00.000Z",
+                "creator_nationality": "Netherlandish, German",
+                "creator_gender": "MALE",
+                "creator_lref": "31866_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1768-01-01T00:00:00.000Z",
+                "end": "1768-01-01T00:00:00.000Z",
+                "period": "1768"
+              }
+            ],
+            "techniques": [
+              "Black chalk"
+            ],
+            "object_number": "KKSgb16032",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KKSgb16032",
+            "frontend_url": "https://open.smk.dk/artwork/image/KKSgb16032",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KKSgb16032",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KKSgb16032",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KKSgb16032",
+            "production_dates_notes": [
+              "Værkdatering: 1768"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": false,
+            "has_3d_file": false,
+            "has_image": false,
+            "titles": [
+              {
+                "title": "Landskab med vogn",
+                "type": "beskrivelse",
+                "language": "dansk"
+              }
+            ],
+            "artist": [
+              "Jacob Cats"
+            ]
+          }
+        ],
+        "facets": {},
+        "facets_ranges": {},
+        "corrections": [],
+        "autocomplete": [
+          "Faster Cathrine",
+          "Chr. J. Cato",
+          "Chr. Cato",
+          "Cathedrale d'Albi",
+          "Catharinens Tod. 4. Kinder, ein Mann und Frau, betrübt um ihren Bette R. versammelt; vor welchem auf einer Tonne, Glas und Flasche stehen. ob. IV, p.115."
+        ]
+      },
+      "bytes": 9199,
+      "sha256": "e278ce696815c82571d8d6b96103a8e8c8b1cc1929f9a2b44b46053dd91920f0",
+      "validPayload": true,
+      "durationMs": 372,
+      "clientValidated": true
+    },
+    {
+      "round": 1,
+      "service": "smk-artwork",
+      "upstream": "https://api.smk.dk/api/v1/art/?object_number=KMS3402&lang=en",
+      "startedAt": "2026-10-25T04:49:27.479Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "body": {
+        "items": [
+          {
+            "id": "1170025074_object",
+            "created": "2020-03-21T13:14:24Z",
+            "modified": "2025-07-11T17:37:14Z",
+            "current_location_name": "Sal 220",
+            "current_location_date": "2018-08-10T00:00:00Z",
+            "acquisition_date": "1918-01-01T00:00:00Z",
+            "acquisition_date_precision": "1918-12-31",
+            "dimensions": [
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "height",
+                "unit": "cm",
+                "value": "26.5"
+              },
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "width",
+                "unit": "cm",
+                "value": "31.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "height",
+                "unit": "cm",
+                "value": "39.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "width",
+                "unit": "cm",
+                "value": "44.7"
+              },
+              {
+                "part": "Brutto",
+                "type": "depth",
+                "unit": "cm",
+                "value": "8"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "David Jacobsen i Paris",
+                "author": "Jette Kjærboe",
+                "notes": "p. 96-98, fig. 14, 104 note 107."
+              },
+              {
+                "title": "David Jacobsen",
+                "author": "Ubekendt",
+                "notes": "kat. 36 (\"Katten\").",
+                "year_of_publication": "1918"
+              },
+              {
+                "title": "Danske Jødiske Kunstnere",
+                "author": "Ubekendt",
+                "notes": "kat. 914 (\"Katten\").",
+                "year_of_publication": "1908"
+              },
+              {
+                "title": "Museets sidste Forøgelser af ældre dansk Malerkunst",
+                "author": "Karl Madsen",
+                "notes": "p. 166.",
+                "year_of_publication": "1918"
+              }
+            ],
+            "exhibitions": [
+              {
+                "exhibition": "Pissarro. Et møde på Skt. Thomas",
+                "date_start": "2017-03-10T00:00:00.000Z",
+                "date_end": "2017-07-02T00:00:00.000Z",
+                "venue": "Ordrupgaard"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "David Jacobsen 1860",
+                "type": "signature"
+              }
+            ],
+            "materials": [
+              "canvas"
+            ],
+            "object_names": [
+              {
+                "name": "Painting"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Jacobsen, David",
+                "creator_forename": "David",
+                "creator_surname": "Jacobsen",
+                "creator_date_of_birth": "1821-07-02T00:00:00.000Z",
+                "creator_date_of_death": "1871-04-22T00:00:00.000Z",
+                "creator_nationality": "Danish",
+                "creator_gender": "MALE",
+                "creator_history": "David Jacobsen opgav i akademiårene skulpturen til fordel for portræt- og primært genremaleri i traditionen fra J. Friedlænder og David Monies. I hovedværket Søndag eftermiddag ved badeanstalten på øen Føhr, 1854, leverede J. dog et originalt bidrag til dansk folkelivsmaleri i skildringen af mødet mellem lokalbefolkningen og de ferierende byboere. Under Paris-opholdet 1855-69 fortsatte J. at male gennemarbejdede og detaljerede genremotiver og udførte desuden enkelte religiøse billeder. Kunsthistorien har valgt at fremhæve J.s mange uprætentiøse parisiske interiør- og gademotiver på grund af værkernes førimpressionistiske kvaliteter i motivvalg og lys- og farvebehandling. Interiørbillederne er også beslægtet med især Corots værker, og det er sandsynligt, at venskabet med franske kunstnere som Pissarro, som han en tid delte atelier med, har sat spor i J.s kunst. Som andre internationalt orienterede danske kunstnere var J. i opposition til det hjemlige nationale maleri, men formåede ikke som andre at skabe sig en karriere i udlandet. I fortvivlelse over sin udsigtsløse fremtid valgte J. at begå selvmord 1871 under et ophold i Firenze.",
+                "creator_lref": "6050_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1860-01-01T00:00:00.000Z",
+                "end": "1860-12-31T00:00:00.000Z",
+                "period": "1860"
+              }
+            ],
+            "techniques": [
+              "Oil on canvas"
+            ],
+            "titles": [
+              {
+                "title": "The Cat in the Studio",
+                "language": "engelsk"
+              }
+            ],
+            "number_of_parts": 1,
+            "object_number": "KMS3402",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KMS3402",
+            "frontend_url": "https://open.smk.dk/artwork/image/KMS3402",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS3402",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KMS3402",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KMS3402",
+            "production_dates_notes": [
+              "Værkdatering: 1860"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": true,
+            "alternative_images": [
+              {
+                "mime_type": "image/tiff",
+                "iiif_id": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2",
+                "iiif_info": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/info.json",
+                "width": 4744,
+                "height": 3280,
+                "size": 16107833.103448275,
+                "thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/!1024,/0/default.jpg",
+                "native": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/full/0/native.jpg",
+                "orientation": "landscape"
+              }
+            ],
+            "image_mime_type": "image/tiff",
+            "image_iiif_id": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2",
+            "image_iiif_info": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/info.json",
+            "image_width": 3773,
+            "image_height": 3164,
+            "image_size": 12359393,
+            "image_thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+            "image_native": "https://api.smk.dk/api/v1/download/W3siaW1nX3VybCI6Imh0dHBzOi8vaWlwLnNtay5kay9paWlmL2pwMi9jbjY5bTc2NXhfa21zMzQwMi1jcm9wcGVkLnRpZi5qcDIvZnVsbC9mdWxsLzAvbmF0aXZlLmpwZyIsInB1YmxpY19kb21haW4iOnRydWUsIm9iamVjdF9udW1iZXIiOiJLTVMzNDAyIiwibnVtIjoiIn1d/KMS3402.jpg",
+            "image_orientation": "landscape",
+            "image_hq": true,
+            "has_3d_file": false,
+            "has_image": true,
+            "colors": [
+              "#191909",
+              "#5a5527",
+              "#908d41",
+              "#956830",
+              "#33140c"
+            ],
+            "suggested_bg_color": [
+              "#908d41"
+            ],
+            "entropy": 9.7812195,
+            "contrast": 2.6962907,
+            "saturation": 4.121473,
+            "colortemp": 4.640539,
+            "brightness": 4.5632677,
+            "has_text": true,
+            "artist": [
+              "David Jacobsen"
+            ]
+          }
+        ]
+      },
+      "bytes": 5085,
+      "sha256": "08e33fe94d9dd8b36e1d39529f407aa8f84fa3a54c57d4caead76cf5559976ff",
+      "validPayload": true,
+      "durationMs": 426,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "met-search",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=5&offset=0",
+      "startedAt": "2026-10-25T04:49:28.513Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "total": 1591,
+        "objectIDs": [
+          91120,
+          552027,
+          570722,
+          570749,
+          552028
+        ]
+      },
+      "bytes": 63,
+      "sha256": "6e1e6150955ed4b420bf804f8dc112230262bf195e5f6d98c2b4177025664c49",
+      "validPayload": true,
+      "durationMs": 293,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "met-artwork",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+      "startedAt": "2026-10-25T04:49:29.306Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "objectID": 552027,
+        "isHighlight": false,
+        "accessionNumber": "04.2.472",
+        "accessionYear": "1904",
+        "isPublicDomain": true,
+        "primaryImage": "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031195.jpg",
+        "primaryImageSmall": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+        "additionalImages": [
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031193.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031194.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031192.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031196.jpg",
+          "https://images.metmuseum.org/CRDImages/eg/original/LC-04_2_472_EGDP031191.jpg"
+        ],
+        "constituents": null,
+        "department": "Egyptian Art",
+        "objectName": "Figurine, cat",
+        "title": "Cat",
+        "culture": "",
+        "period": "Late Period–Ptolemaic Period",
+        "dynasty": "",
+        "reign": "",
+        "portfolio": "",
+        "artistRole": "",
+        "artistPrefix": "",
+        "artistDisplayName": "",
+        "artistDisplayBio": "",
+        "artistSuffix": "",
+        "artistAlphaSort": "",
+        "artistNationality": "",
+        "artistBeginDate": "",
+        "artistEndDate": "",
+        "artistGender": "",
+        "artistWikidata_URL": "",
+        "artistULAN_URL": "",
+        "objectDate": "664–30 BCE",
+        "objectBeginDate": -664,
+        "objectEndDate": -30,
+        "medium": "Cupreous metal",
+        "dimensions": "H. 13.7 cm (5 3/8 in.); W. 5.6 cm (2 3/16 in.); L. 8.4 cm (3 5/16 in.)\r\nH. (with tang): 15 cm (5 7/8 in.)",
+        "measurements": [
+          {
+            "elementName": "Overall",
+            "elementDescription": null,
+            "elementMeasurements": {
+              "Height": 13.7,
+              "Length": 8.4,
+              "Width": 5.6
+            }
+          },
+          {
+            "elementName": "Height",
+            "elementDescription": "with tang",
+            "elementMeasurements": {
+              "Height": 15
+            }
+          }
+        ],
+        "creditLine": "Gift of Darius Ogden Mills, 1904",
+        "geographyType": "From",
+        "city": "",
+        "state": "",
+        "county": "",
+        "country": "Egypt",
+        "region": "",
+        "subregion": "",
+        "locale": "",
+        "locus": "",
+        "excavation": "",
+        "river": "",
+        "classification": "",
+        "rightsAndReproduction": "",
+        "linkResource": "",
+        "metadataDate": "2026-07-30T04:49:13.073Z",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "objectURL": "https://www.metmuseum.org/art/collection/search/552027",
+        "tags": [
+          {
+            "term": "Cats",
+            "AAT_URL": "http://vocab.getty.edu/page/aat/300265960",
+            "Wikidata_URL": "https://www.wikidata.org/wiki/Q146"
+          }
+        ],
+        "objectWikidata_URL": "",
+        "isTimelineWork": false,
+        "GalleryNumber": "130"
+      },
+      "bytes": 2236,
+      "sha256": "2a52dab8deb630c7ece7d832503682965df2f7d774198aa6f9714c6437679ae1",
+      "validPayload": true,
+      "durationMs": 339,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "met-departments",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1/departments",
+      "startedAt": "2026-10-25T04:52:38.047Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "departments": [
+          {
+            "departmentId": 1,
+            "displayName": "American Decorative Arts"
+          },
+          {
+            "departmentId": 3,
+            "displayName": "Ancient West Asian Art"
+          },
+          {
+            "departmentId": 4,
+            "displayName": "Arms and Armor"
+          },
+          {
+            "departmentId": 5,
+            "displayName": "Arts of Africa, Oceania, and the Americas"
+          },
+          {
+            "departmentId": 6,
+            "displayName": "Asian Art"
+          },
+          {
+            "departmentId": 7,
+            "displayName": "The Cloisters"
+          },
+          {
+            "departmentId": 8,
+            "displayName": "The Costume Institute"
+          },
+          {
+            "departmentId": 9,
+            "displayName": "Drawings and Prints"
+          },
+          {
+            "departmentId": 10,
+            "displayName": "Egyptian Art"
+          },
+          {
+            "departmentId": 11,
+            "displayName": "European Paintings"
+          },
+          {
+            "departmentId": 12,
+            "displayName": "European Sculpture and Decorative Arts"
+          },
+          {
+            "departmentId": 13,
+            "displayName": "Greek and Roman Art"
+          },
+          {
+            "departmentId": 14,
+            "displayName": "Islamic Art"
+          },
+          {
+            "departmentId": 15,
+            "displayName": "The Robert Lehman Collection"
+          },
+          {
+            "departmentId": 16,
+            "displayName": "The Libraries"
+          },
+          {
+            "departmentId": 17,
+            "displayName": "Medieval Art"
+          },
+          {
+            "departmentId": 18,
+            "displayName": "Musical Instruments"
+          },
+          {
+            "departmentId": 19,
+            "displayName": "Photographs"
+          },
+          {
+            "departmentId": 21,
+            "displayName": "Modern Art"
+          }
+        ]
+      },
+      "bytes": 1067,
+      "sha256": "b5a60d5715ae725acd47acf071db4e112535d6cf08663cc18088f916dcadf12b",
+      "validPayload": true,
+      "durationMs": 352,
+      "clientValidated": true,
+      "transport": "standalone curl HTTP/1.1",
+      "previousAttempts": [
+        {
+          "error": "curl transport exited 35; no request retry was attempted",
+          "at": "2026-10-25T04:48:09.328Z"
+        },
+        {
+          "error": "curl transport exited 35; no request retry was attempted"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "service": "cma-artwork-search",
+      "upstream": "https://openaccess-api.clevelandart.org/api/artworks/?title=cat&cc0=1&has_image=1&limit=3",
+      "startedAt": "2026-10-25T04:49:47.964Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "info": {
+          "total": 35,
+          "parameters": {
+            "skip": 0,
+            "limit": 3,
+            "cc0": "1",
+            "title": "cat",
+            "has_image": "1",
+            "select": "accession_number,accession_number_sortable,cover_accession_number,department,department,gallery,collection,classification_type"
+          }
+        },
+        "data": [
+          {
+            "id": 98363,
+            "accession_number": "1917.998",
+            "share_license_status": "CC0",
+            "tombstone": "Cat Coffin, 305–30 BCE. Egypt, Greco-Roman period (332 BCE–395 CE), Ptolemaic dynasty (305–30 BCE). Bronze, hollow cast; overall: 51 x 14.1 x 24 cm (20 1/16 x 5 9/16 x 9 7/16 in.). The Cleveland Museum of Art, Gift of the John Huntington Art and Polytechnic Trust, 1917.998",
+            "current_location": "107 Egyptian",
+            "title": "Cat Coffin",
+            "creation_date": "305–30 BCE",
+            "creation_date_earliest": -305,
+            "creation_date_latest": -30,
+            "artists_tags": [],
+            "culture": [
+              "Egypt, Greco-Roman period (332 BCE–395 CE), Ptolemaic dynasty (305–30 BCE)"
+            ],
+            "technique": "bronze, hollow cast",
+            "support_materials": [],
+            "department": "Egyptian and Ancient Near Eastern Art",
+            "collection": "Egypt - Greco-Roman",
+            "type": "Funerary Equipment",
+            "measurements": "Overall: 51 x 14.1 x 24 cm (20 1/16 x 5 9/16 x 9 7/16 in.)",
+            "dimensions": {
+              "overall": {
+                "height": 0.51,
+                "height_inch": 20,
+                "height_inch_fraction": 0.0625,
+                "width": 0.141,
+                "width_inch": 5,
+                "width_inch_fraction": 0.5625,
+                "depth": 0.24,
+                "depth_inch": 9,
+                "depth_inch_fraction": 0.4375
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 312341,
+                  "title": "The Silver Jubilee Exhibition",
+                  "description": "<i>The Silver Jubilee Exhibition</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (June 23-September 28, 1941).",
+                  "opening_date": "1941-06-23T04:00:00"
+                },
+                {
+                  "id": 304550,
+                  "title": "A Cleveland Bestiary",
+                  "description": "<i>A Cleveland Bestiary</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (October 15-December 16, 1981).",
+                  "opening_date": "1981-10-15T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "The Cleveland Museum of Art, Cleveland, OH (1916). no. 163, p. 225",
+                  "opening_date": "1916-01-01T00:00:00"
+                },
+                {
+                  "description": "Museum of Fine Arts, Boston, MA (29 August 1952 - 2 April 1953).",
+                  "opening_date": "1952-08-29T00:00:00"
+                },
+                {
+                  "description": "Cleveland Museum of Art, Cleveland, OH (1981b). no. 31",
+                  "opening_date": "1981-01-01T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Dikran G. Kelekian, New York, NY, sold to the Cleveland Museum of Art",
+                "citations": [],
+                "footnotes": [],
+                "date": "?-1917",
+                "sortorder": 1
+              },
+              {
+                "description": "The Cleveland Museum of Art, Cleveland, OH",
+                "citations": [],
+                "footnotes": [],
+                "date": "1917-",
+                "sortorder": 2
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [
+              "1584.17"
+            ],
+            "did_you_know": "A necklace appears to have been incised or scratched into the finished bronze; faint traces are visible on the chest.",
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Although the cat is considered the most Egyptian of animals, as an object of worship the cat does not appear until late in Egyptian history. This unusually large statue of a cat was made to hold the mummified remains of a sacred cat. The coffin is, of course, hollow, with an open bottom. As usual, the animal’s tail is curled around its right side.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60741470"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1917.998-cat-coffin"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "The Cleveland Museum of Art. <em>The Cleveland Museum of Art Handbook.</em> Cleveland, OH: The Cleveland Museum of Art, 1958.",
+                "page_number": "Mentioned and Reproduced: cat. no. 7",
+                "url": "https://archive.org/details/CMAHandbook1958/page/n18"
+              },
+              {
+                "citation": "Kathman, Barbara A. <em>A Cleveland Bestiary</em>. Cleveland, OH; Cleveland Museum of Art, 1981.",
+                "page_number": "Reproduced: p. 37; Mentioned: p. 33, p. 62",
+                "url": null
+              },
+              {
+                "citation": "Berman, Lawrence M., and Kenneth J. Bohač.<em> Catalogue of Egyptian Art: The Cleveland Museum of Art.</em> Cleveland, OH: Cleveland Museum of Art, 1999",
+                "page_number": "Reproduced and Mentioned: p. 438",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1917.998",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_web.jpg",
+                "width": "630",
+                "height": "893",
+                "filesize": "268555",
+                "filename": "1917.998_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_print.jpg",
+                "width": "2398",
+                "height": "3400",
+                "filesize": "3941618",
+                "filename": "1917.998_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_full.tif",
+                "width": "4232",
+                "height": "6000",
+                "filesize": "76206172",
+                "filename": "1917.998_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_web.jpg",
+                  "width": "583",
+                  "height": "893",
+                  "filesize": "260397"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_print.jpg",
+                  "width": "2218",
+                  "height": "3400",
+                  "filesize": "3901355"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt0_full.tif",
+                  "width": "4567",
+                  "height": "7000",
+                  "filesize": "95937332"
+                },
+                "date_created": "2007-04-25T16:52:34",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_web.jpg",
+                  "width": "689",
+                  "height": "893",
+                  "filesize": "312097"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_print.jpg",
+                  "width": "2624",
+                  "height": "3400",
+                  "filesize": "4632187"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_alt1_full.tif",
+                  "width": "4631",
+                  "height": "6000",
+                  "filesize": "83388788"
+                },
+                "date_created": "2007-04-25T17:20:46",
+                "annotation": ""
+              }
+            ],
+            "creditline": "Gift of the John Huntington Art and Polytechnic Trust",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 98363,
+            "creators": [],
+            "legal_status": "accessioned",
+            "accession_date": "1917-02-14T00:00:00",
+            "sortable_date": -305,
+            "date_added_to_oa": null,
+            "date_text": "305–30 BCE",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "object",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": null,
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 05:18:37.616000"
+          },
+          {
+            "id": 152829,
+            "accession_number": "1985.71.5",
+            "share_license_status": "CC0",
+            "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+            "current_location": null,
+            "title": "Cat and Butterfly",
+            "series_in_original_language": "雑畫圖冊",
+            "creation_date": "1788",
+            "creation_date_earliest": 1788,
+            "creation_date_latest": 1788,
+            "artists_tags": [
+              "male"
+            ],
+            "culture": [
+              "China, Qing dynasty (1644-1911)"
+            ],
+            "technique": "album leaf, ink on paper",
+            "support_materials": [],
+            "department": "Chinese Art",
+            "collection": "ASIAN - Album leaf",
+            "type": "Painting",
+            "measurements": "Sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.)",
+            "dimensions": {
+              "sheet": {
+                "height": 0.29,
+                "height_inch": 11,
+                "height_inch_fraction": 0.4375,
+                "width": 0.184,
+                "width_inch": 7,
+                "width_inch_fraction": 0.25
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [
+              {
+                "inscription": "Six seals appearing on the leaves:\n\nMin Zhen 閔貞; Zheng zhai 正齋; Qingqiao 青橋; Zhen 貞; Liao tang 蓼塘; Min Zhen zhi yin 閔貞之印。",
+                "inscription_translation": null,
+                "inscription_remark": null,
+                "sortorder": 1
+              }
+            ],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 521183,
+                  "title": "When Salt was Gold: Yangzhou, City of Riches and Art",
+                  "description": "<i>When Salt was Gold: Yangzhou, City of Riches and Art</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (May 12-November 5, 2023).",
+                  "opening_date": "2023-05-12T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (October 29, 1999–January 24, 2000).",
+                  "opening_date": "1999-10-29T00:00:00"
+                },
+                {
+                  "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (November 15, 2000–March 26, 2001).",
+                  "opening_date": "2000-11-15T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Daili Shanren 戴笠山人 [active late 1700s]",
+                "citations": [],
+                "footnotes": null,
+                "date": "1788–?",
+                "sortorder": 1
+              },
+              {
+                "description": "Ni Yun 倪耘 [d. 1864]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 2
+              },
+              {
+                "description": "Yan Shiqing 顏世清 [1873–1929]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 3
+              },
+              {
+                "description": "Xu Xiaopu 徐小圃 [1887–1961]",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": 4
+              },
+              {
+                "description": "Ding Nianxian 丁念先 [1906–1969]",
+                "citations": [],
+                "footnotes": null,
+                "date": "c. mid-1900s",
+                "sortorder": 5
+              },
+              {
+                "description": "(Eskenazi Ltd., London, England, sold to the Cleveland Museum of Art)",
+                "citations": [],
+                "footnotes": null,
+                "date": "?–1985",
+                "sortorder": 6
+              },
+              {
+                "description": "The Cleveland Museum of Art, Cleveland, OH",
+                "citations": [],
+                "footnotes": null,
+                "date": "1985–",
+                "sortorder": 7
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [
+              "85.71e"
+            ],
+            "did_you_know": "Cat and butterfly are homophones for the characters “mao die” 耄耋 (octogenarian), so this painting expresses hope that the artist's friend will live a long life.",
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Min Zhen, who was orphaned at age 12 and developed an eccentric personality, was trained by Tang Yin (1682–1756), a writer, playwright, and superintendent of the imperial porcelain workshops in Jingdezhen. The connection to him may have enabled Min to stay in Beijing for a decade from around 1773. It is not clear whether he ever resided in Yangzhou, but his style is in many instances reminiscent of that of Yangzhou artist Huang Shen. <br><br>The album was painted for his friend Dailili Shanren in exchange for a scholar’s stone. The paintings demonstrate the artist’s versatility and mature style in the last years of his life. While two leaves are rendered in unconventional compositions seen from above (<em>Cat and Butterfly </em><a href=\"https://www.clevelandart.org/art/1985.71.5\">CMA 1985.71.5</a>) and below (<em>Banana Plant </em><a href=\"https://www.clevelandart.org/art/1985.71.11\">CMA 1985.71.11</a>), they have a humorous touch. “Cat and butterfly” is a homophone for the Chinese characters “mao die,” meaning “octogenarian,” and express the wish for the recipient’s longevity. The banana plant stands for the world of literati but can also allude to Buddhism.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60475747"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1985.71.5-cat-and-butterfly"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "Ding, Nianxian 丁念先. <em>Nian sheng lou du hua xiao ji</em> [念聖樓讀畫小紀 = Chinese calligraphy and painting of various dynasties in the collection of Nianshenglou]. Taibei: Wen xing za zhi she, 1961.",
+                "page_number": "Mentioned: p. 41, no. 85",
+                "url": null
+              },
+              {
+                "citation": "Fukunaga, Takehiko 福永武彥, and Howard L. Rogers. <em>Kinnō,</em> <em>Bunjinga suihen. chiyūgo (9)</em> 金農, 文人画粋編. 中国篇 9. Tōkyō: Chūōkoronsha, 1976.",
+                "page_number": "Mentioned and Reproduced: pls. 94–97, p. 179, fig. 30",
+                "url": null
+              },
+              {
+                "citation": "Sotheby's, Parke, Bernet, New York. <em>Fine Chinese Paintings</em>. June 3, 1985 sale.",
+                "page_number": "Mentioned and Reproduced: cat. no. 69",
+                "url": null
+              },
+              {
+                "citation": "Chou, Ju-hsi and Anita Chung. <em>Silent poetry: Chinese paintings from the collection of the Cleveland Museum of Art</em>. Cleveland, OH: Cleveland Museum of Art, 2015.",
+                "page_number": "Reproduced: pp. 462–465",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1985.71.5",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+                "width": "572",
+                "height": "893",
+                "filesize": "347970",
+                "filename": "1985.71.5_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_print.jpg",
+                "width": "2179",
+                "height": "3400",
+                "filesize": "4795378",
+                "filename": "1985.71.5_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_full.tif",
+                "width": "4307",
+                "height": "6720",
+                "filesize": "86850188",
+                "filename": "1985.71.5_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_web.jpg",
+                  "width": "554",
+                  "height": "893",
+                  "filesize": "333234"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_print.jpg",
+                  "width": "2109",
+                  "height": "3400",
+                  "filesize": "5982499"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_full.tif",
+                  "width": "3969",
+                  "height": "6398",
+                  "filesize": "76210456"
+                },
+                "date_created": "2010-04-21T18:08:04",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_web.jpg",
+                  "width": "573",
+                  "height": "893",
+                  "filesize": "353650"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_print.jpg",
+                  "width": "2183",
+                  "height": "3400",
+                  "filesize": "5857218"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_full.tif",
+                  "width": "4188",
+                  "height": "6522",
+                  "filesize": "81971656"
+                },
+                "date_created": "2010-04-20T19:52:12",
+                "annotation": ""
+              }
+            ],
+            "creditline": "John L. Severance Fund",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 152829,
+            "creators": [
+              {
+                "id": 31140,
+                "description": "Min Zhen (Chinese, 1730–after 1788)",
+                "extent": null,
+                "qualifier": null,
+                "role": "artist",
+                "biography": null,
+                "name_in_original_language": "閔貞",
+                "birth_year": "1730",
+                "death_year": "1788",
+                "use_in_caption": true,
+                "include_extent": false,
+                "weight": 1
+              }
+            ],
+            "legal_status": "accessioned",
+            "accession_date": "1985-06-03T00:00:00",
+            "sortable_date": 1788,
+            "date_added_to_oa": null,
+            "date_text": "1788",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "component",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": "1985.71",
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [
+              "Cat and Butterfly (Longevity)"
+            ],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 07:54:10.231000"
+          },
+          {
+            "id": 122512,
+            "accession_number": "1942.776",
+            "share_license_status": "CC0",
+            "tombstone": "Cat, 664–30 BCE OR 664–330 BCE. Egypt, Late period (715–332 BCE), Dynasty 26 or later. Bronze and gold; overall: 9.2 x 2.3 x 5.5 cm (3 5/8 x 7/8 x 2 3/16 in.); without tang: 7.5 cm (2 15/16 in.). The Cleveland Museum of Art, Bequest of John L. Severance, 1942.776",
+            "current_location": "107 Egyptian",
+            "title": "Cat",
+            "creation_date": "664–30 BCE OR 664–330 BCE",
+            "creation_date_earliest": -664,
+            "creation_date_latest": -30,
+            "artists_tags": [],
+            "culture": [
+              "Egypt, Late period (715–332 BCE), Dynasty 26 or later"
+            ],
+            "technique": "bronze and gold",
+            "support_materials": [],
+            "department": "Egyptian and Ancient Near Eastern Art",
+            "collection": "Egypt - Late Period",
+            "type": "Sculpture",
+            "measurements": "Overall: 9.2 x 2.3 x 5.5 cm (3 5/8 x 7/8 x 2 3/16 in.); without tang: 7.5 cm (2 15/16 in.)",
+            "dimensions": {
+              "overall": {
+                "height": 0.092,
+                "height_inch": 3,
+                "height_inch_fraction": 0.625,
+                "width": 0.023,
+                "width_inch": 0,
+                "width_inch_fraction": 0.875,
+                "depth": 0.055,
+                "depth_inch": 2,
+                "depth_inch_fraction": 0.1875
+              },
+              "without tang": {
+                "height": 0.075,
+                "height_inch": 2,
+                "height_inch_fraction": 0.9375
+              }
+            },
+            "state_of_the_work": null,
+            "edition_of_the_work": null,
+            "copyright": null,
+            "inscriptions": [],
+            "exhibitions": {
+              "current": [
+                {
+                  "id": 335856,
+                  "title": "Exhibition of the John L. Severance Collection",
+                  "description": "<i>Exhibition of the John L. Severance Collection</i>. The Cleveland Museum of Art, Cleveland, OH (November 12, 1942-March 14, 1943).",
+                  "opening_date": "1942-11-12T04:00:00"
+                }
+              ],
+              "legacy": [
+                {
+                  "description": "CMA 1942, no. 265",
+                  "opening_date": "1942-01-01T00:00:00"
+                }
+              ]
+            },
+            "provenance": [
+              {
+                "description": "Purchased from R.H. Blanchard, Blanchard's Egyptian Museum, Cairo, by John L. Severance",
+                "citations": [],
+                "footnotes": null,
+                "date": null,
+                "sortorder": null
+              }
+            ],
+            "find_spot": null,
+            "related_works": [],
+            "former_accession_numbers": [],
+            "did_you_know": null,
+            "early_education_description": null,
+            "artlens_description": null,
+            "description": "Cats were the sacred animal of Bastet, Egyptian goddess of fire, cats, and protector of the home. Sitting upright in a pose characteristic of these feline figurines, this bronze cat adorned with an embossed pendant and gold earring was made as a votive offering to be deposited with the deceased.",
+            "external_resources": {
+              "wikidata": [
+                "https://www.wikidata.org/wiki/Q60763484"
+              ],
+              "internet_archive": [
+                "https://archive.org/details/clevelandart-1942.776-cat"
+              ]
+            },
+            "citations": [
+              {
+                "citation": "<em>Catalogue of the John L. Severance Collection: Bequest of John L. Severance, 1936.</em> [Cleveland, Ohio]: Cleveland Museum of Art, 1942.",
+                "page_number": "Mentioned: p. 86, cat. no. 265",
+                "url": "https://archive.org/details/SeveranceBequest/page/n90"
+              },
+              {
+                "citation": "Wunderlich, Silvia. \"Department of Egyptian Art: Bronzes.\" <em>The Bulletin of the Cleveland Museum of Art </em>29, no. 9 (November 1942): 158-159",
+                "page_number": "Mentioned: p. 158",
+                "url": "https://www.jstor.org/stable/25141020"
+              },
+              {
+                "citation": "Berman, Lawrence M., and Kenneth J. Bohač.<em> Catalogue of Egyptian Art: The Cleveland Museum of Art.</em> Cleveland, OH: Cleveland Museum of Art, 1999",
+                "page_number": "Reproduced and Mentioned: p. 437",
+                "url": null
+              }
+            ],
+            "url": "https://clevelandart.org/art/1942.776",
+            "images": {
+              "annotation": null,
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_web.jpg",
+                "width": "915",
+                "height": "893",
+                "filesize": "351320",
+                "filename": "1942.776_web.jpg"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_print.jpg",
+                "width": "2221",
+                "height": "2167",
+                "filesize": "2239602",
+                "filename": "1942.776_print.jpg"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_full.tif",
+                "width": "2221",
+                "height": "2167",
+                "filesize": "14469512",
+                "filename": "1942.776_full.tif"
+              }
+            },
+            "alternate_images": [
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_web.jpg",
+                  "width": "945",
+                  "height": "893",
+                  "filesize": "397445"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_print.jpg",
+                  "width": "2198",
+                  "height": "2076",
+                  "filesize": "2309758"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt0_full.tif",
+                  "width": "2198",
+                  "height": "2076",
+                  "filesize": "13720228"
+                },
+                "date_created": "2007-05-25T15:30:00",
+                "annotation": ""
+              },
+              {
+                "web": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_web.jpg",
+                  "width": "893",
+                  "height": "893",
+                  "filesize": "331947"
+                },
+                "print": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_print.jpg",
+                  "width": "2190",
+                  "height": "2190",
+                  "filesize": "2181199"
+                },
+                "full": {
+                  "url": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_alt1_full.tif",
+                  "width": "2190",
+                  "height": "2190",
+                  "filesize": "14418904"
+                },
+                "date_created": "2007-05-25T16:02:27",
+                "annotation": ""
+              }
+            ],
+            "creditline": "Bequest of John L. Severance",
+            "image_credit": null,
+            "sketchfab_id": null,
+            "sketchfab_url": null,
+            "gallery_donor_text": null,
+            "athena_id": 122512,
+            "creators": [],
+            "legal_status": "accessioned",
+            "accession_date": "1942-07-24T00:00:00",
+            "sortable_date": -664,
+            "date_added_to_oa": null,
+            "date_text": "664–30 BCE OR 664–330 BCE",
+            "collapse_artists": false,
+            "on_loan": false,
+            "recently_acquired": false,
+            "record_type": "object",
+            "conservation_statement": null,
+            "has_conservation_images": false,
+            "cover_accession_number": null,
+            "is_nazi_era_provenance": false,
+            "impression": null,
+            "alternate_titles": [],
+            "is_highlight": false,
+            "updated_at": "2026-05-29 06:18:32.192000"
+          }
+        ]
+      },
+      "bytes": 20751,
+      "sha256": "753b378c12677af56fde475e1ecc86d0e3d8d4f316a5b2721a6706fc1b607a47",
+      "validPayload": true,
+      "durationMs": 251,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "cma-artwork",
+      "upstream": "https://openaccess-api.clevelandart.org/api/artworks/152829",
+      "startedAt": "2026-10-25T04:49:56.797Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "data": {
+          "id": 152829,
+          "accession_number": "1985.71.5",
+          "share_license_status": "CC0",
+          "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+          "current_location": null,
+          "title": "Cat and Butterfly",
+          "series_in_original_language": "雑畫圖冊",
+          "creation_date": "1788",
+          "creation_date_earliest": 1788,
+          "creation_date_latest": 1788,
+          "artists_tags": [
+            "male"
+          ],
+          "culture": [
+            "China, Qing dynasty (1644-1911)"
+          ],
+          "technique": "album leaf, ink on paper",
+          "support_materials": [],
+          "department": "Chinese Art",
+          "collection": "ASIAN - Album leaf",
+          "type": "Painting",
+          "measurements": "Sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.)",
+          "dimensions": {
+            "sheet": {
+              "height": 0.29,
+              "height_inch": 11,
+              "height_inch_fraction": 0.4375,
+              "width": 0.184,
+              "width_inch": 7,
+              "width_inch_fraction": 0.25
+            }
+          },
+          "state_of_the_work": null,
+          "edition_of_the_work": null,
+          "copyright": null,
+          "inscriptions": [
+            {
+              "inscription": "Six seals appearing on the leaves:\n\nMin Zhen 閔貞; Zheng zhai 正齋; Qingqiao 青橋; Zhen 貞; Liao tang 蓼塘; Min Zhen zhi yin 閔貞之印。",
+              "inscription_translation": null,
+              "inscription_remark": null,
+              "sortorder": 1
+            }
+          ],
+          "exhibitions": {
+            "current": [
+              {
+                "id": 521183,
+                "title": "When Salt was Gold: Yangzhou, City of Riches and Art",
+                "description": "<i>When Salt was Gold: Yangzhou, City of Riches and Art</i>. The Cleveland Museum of Art, Cleveland, OH (organizer) (May 12-November 5, 2023).",
+                "opening_date": "2023-05-12T04:00:00"
+              }
+            ],
+            "legacy": [
+              {
+                "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (October 29, 1999–January 24, 2000).",
+                "opening_date": "1999-10-29T00:00:00"
+              },
+              {
+                "description": "<em>Gallery 122 Rotation</em>. The Cleveland Museum of Art, Cleveland, OH (November 15, 2000–March 26, 2001).",
+                "opening_date": "2000-11-15T00:00:00"
+              }
+            ]
+          },
+          "provenance": [
+            {
+              "description": "Daili Shanren 戴笠山人 [active late 1700s]",
+              "citations": [],
+              "footnotes": null,
+              "date": "1788–?",
+              "sortorder": 1
+            },
+            {
+              "description": "Ni Yun 倪耘 [d. 1864]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 2
+            },
+            {
+              "description": "Yan Shiqing 顏世清 [1873–1929]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 3
+            },
+            {
+              "description": "Xu Xiaopu 徐小圃 [1887–1961]",
+              "citations": [],
+              "footnotes": null,
+              "date": null,
+              "sortorder": 4
+            },
+            {
+              "description": "Ding Nianxian 丁念先 [1906–1969]",
+              "citations": [],
+              "footnotes": null,
+              "date": "c. mid-1900s",
+              "sortorder": 5
+            },
+            {
+              "description": "(Eskenazi Ltd., London, England, sold to the Cleveland Museum of Art)",
+              "citations": [],
+              "footnotes": null,
+              "date": "?–1985",
+              "sortorder": 6
+            },
+            {
+              "description": "The Cleveland Museum of Art, Cleveland, OH",
+              "citations": [],
+              "footnotes": null,
+              "date": "1985–",
+              "sortorder": 7
+            }
+          ],
+          "find_spot": null,
+          "related_works": [],
+          "former_accession_numbers": [
+            "85.71e"
+          ],
+          "did_you_know": "Cat and butterfly are homophones for the characters “mao die” 耄耋 (octogenarian), so this painting expresses hope that the artist's friend will live a long life.",
+          "early_education_description": null,
+          "artlens_description": null,
+          "description": "Min Zhen, who was orphaned at age 12 and developed an eccentric personality, was trained by Tang Yin (1682–1756), a writer, playwright, and superintendent of the imperial porcelain workshops in Jingdezhen. The connection to him may have enabled Min to stay in Beijing for a decade from around 1773. It is not clear whether he ever resided in Yangzhou, but his style is in many instances reminiscent of that of Yangzhou artist Huang Shen. <br><br>The album was painted for his friend Dailili Shanren in exchange for a scholar’s stone. The paintings demonstrate the artist’s versatility and mature style in the last years of his life. While two leaves are rendered in unconventional compositions seen from above (<em>Cat and Butterfly </em><a href=\"https://www.clevelandart.org/art/1985.71.5\">CMA 1985.71.5</a>) and below (<em>Banana Plant </em><a href=\"https://www.clevelandart.org/art/1985.71.11\">CMA 1985.71.11</a>), they have a humorous touch. “Cat and butterfly” is a homophone for the Chinese characters “mao die,” meaning “octogenarian,” and express the wish for the recipient’s longevity. The banana plant stands for the world of literati but can also allude to Buddhism.",
+          "external_resources": {
+            "wikidata": [
+              "https://www.wikidata.org/wiki/Q60475747"
+            ],
+            "internet_archive": [
+              "https://archive.org/details/clevelandart-1985.71.5-cat-and-butterfly"
+            ]
+          },
+          "citations": [
+            {
+              "citation": "Ding, Nianxian 丁念先. <em>Nian sheng lou du hua xiao ji</em> [念聖樓讀畫小紀 = Chinese calligraphy and painting of various dynasties in the collection of Nianshenglou]. Taibei: Wen xing za zhi she, 1961.",
+              "page_number": "Mentioned: p. 41, no. 85",
+              "url": null
+            },
+            {
+              "citation": "Fukunaga, Takehiko 福永武彥, and Howard L. Rogers. <em>Kinnō,</em> <em>Bunjinga suihen. chiyūgo (9)</em> 金農, 文人画粋編. 中国篇 9. Tōkyō: Chūōkoronsha, 1976.",
+              "page_number": "Mentioned and Reproduced: pls. 94–97, p. 179, fig. 30",
+              "url": null
+            },
+            {
+              "citation": "Sotheby's, Parke, Bernet, New York. <em>Fine Chinese Paintings</em>. June 3, 1985 sale.",
+              "page_number": "Mentioned and Reproduced: cat. no. 69",
+              "url": null
+            },
+            {
+              "citation": "Chou, Ju-hsi and Anita Chung. <em>Silent poetry: Chinese paintings from the collection of the Cleveland Museum of Art</em>. Cleveland, OH: Cleveland Museum of Art, 2015.",
+              "page_number": "Reproduced: pp. 462–465",
+              "url": null
+            }
+          ],
+          "url": "https://clevelandart.org/art/1985.71.5",
+          "images": {
+            "annotation": null,
+            "web": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+              "width": "572",
+              "height": "893",
+              "filesize": "347970",
+              "filename": "1985.71.5_web.jpg"
+            },
+            "print": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_print.jpg",
+              "width": "2179",
+              "height": "3400",
+              "filesize": "4795378",
+              "filename": "1985.71.5_print.jpg"
+            },
+            "full": {
+              "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_full.tif",
+              "width": "4307",
+              "height": "6720",
+              "filesize": "86850188",
+              "filename": "1985.71.5_full.tif"
+            }
+          },
+          "alternate_images": [
+            {
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_web.jpg",
+                "width": "554",
+                "height": "893",
+                "filesize": "333234"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_print.jpg",
+                "width": "2109",
+                "height": "3400",
+                "filesize": "5982499"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt0_full.tif",
+                "width": "3969",
+                "height": "6398",
+                "filesize": "76210456"
+              },
+              "date_created": "2010-04-21T18:08:04",
+              "annotation": ""
+            },
+            {
+              "web": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_web.jpg",
+                "width": "573",
+                "height": "893",
+                "filesize": "353650"
+              },
+              "print": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_print.jpg",
+                "width": "2183",
+                "height": "3400",
+                "filesize": "5857218"
+              },
+              "full": {
+                "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_alt1_full.tif",
+                "width": "4188",
+                "height": "6522",
+                "filesize": "81971656"
+              },
+              "date_created": "2010-04-20T19:52:12",
+              "annotation": ""
+            }
+          ],
+          "creditline": "John L. Severance Fund",
+          "image_credit": null,
+          "sketchfab_id": null,
+          "sketchfab_url": null,
+          "gallery_donor_text": null,
+          "athena_id": 152829,
+          "creators": [
+            {
+              "id": 31140,
+              "description": "Min Zhen (Chinese, 1730–after 1788)",
+              "extent": null,
+              "qualifier": null,
+              "role": "artist",
+              "biography": null,
+              "name_in_original_language": "閔貞",
+              "birth_year": "1730",
+              "death_year": "1788",
+              "use_in_caption": true,
+              "include_extent": false,
+              "weight": 1
+            }
+          ],
+          "legal_status": "accessioned",
+          "accession_date": "1985-06-03T00:00:00",
+          "sortable_date": 1788,
+          "date_added_to_oa": null,
+          "date_text": "1788",
+          "collapse_artists": false,
+          "on_loan": false,
+          "recently_acquired": false,
+          "record_type": "component",
+          "conservation_statement": null,
+          "has_conservation_images": false,
+          "cover_accession_number": "1985.71",
+          "is_nazi_era_provenance": false,
+          "impression": null,
+          "alternate_titles": [
+            "Cat and Butterfly (Longevity)"
+          ],
+          "is_highlight": false,
+          "updated_at": "2026-05-29 07:54:10.231000"
+        }
+      },
+      "bytes": 8574,
+      "sha256": "801b6b559f59431f05bf7642e28960aea698f22ee3daa91a91f51923a699bfe6",
+      "validPayload": true,
+      "durationMs": 945,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "cma-artist-search",
+      "upstream": "https://openaccess-api.clevelandart.org/api/creators/?name=Min%20Zhen&limit=3",
+      "startedAt": "2026-10-25T04:50:23.799Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "info": {
+          "total": 1,
+          "parameters": {
+            "name": "Min Zhen",
+            "skip": 0,
+            "limit": 3
+          }
+        },
+        "data": [
+          {
+            "name": "Min Zhen",
+            "nationality": "Chinese",
+            "description": "Min Zhen (Chinese, 1730–after 1788)",
+            "biography": null,
+            "birth_year": "1730",
+            "death_year": "1788",
+            "id": 31140,
+            "artworks": [
+              {
+                "id": 152821,
+                "accession_number": "1985.71",
+                "title": "Album of Miscellaneous Subjects",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊), 1788. Min Zhen (Chinese, 1730–after 1788). Album of twelve leaves; ink on paper; each leaf: 29 x 18.4 cm (11 7/16 x 7 1/4 in.); overall with mount: 35.6 x 22.1 cm (14 x 8 11/16 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71",
+                "url": "https://clevelandart.org/art/1985.71"
+              },
+              {
+                "id": 152822,
+                "accession_number": "1985.71.1",
+                "title": "Elephant, Horse, and Hare",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Elephant, Horse, and Hare, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; overall single page: 36.8 x 22.1 cm (14 1/2 x 8 11/16 in.); painting: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.1",
+                "url": "https://clevelandart.org/art/1985.71.1"
+              },
+              {
+                "id": 152823,
+                "accession_number": "1985.71.10",
+                "title": "Su Wu the Shepherd",
+                "tombstone": " (雑畫圖冊): Su Wu the Shepherd, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.10",
+                "url": "https://clevelandart.org/art/1985.71.10"
+              },
+              {
+                "id": 152824,
+                "accession_number": "1985.71.11",
+                "title": "Banana Plants",
+                "tombstone": " (雑畫圖冊): Banana Plants, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.11",
+                "url": "https://clevelandart.org/art/1985.71.11"
+              },
+              {
+                "id": 152825,
+                "accession_number": "1985.71.12",
+                "title": "Sheer Cliffs",
+                "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Sheer Cliffs, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.12",
+                "url": "https://clevelandart.org/art/1985.71.12"
+              },
+              {
+                "id": 152826,
+                "accession_number": "1985.71.2",
+                "title": "Lu Tong and Servant",
+                "tombstone": " (雑畫圖冊): Lu Tong and Servant, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.2",
+                "url": "https://clevelandart.org/art/1985.71.2"
+              },
+              {
+                "id": 152827,
+                "accession_number": "1985.71.3",
+                "title": "Landscape in the Manner of Ma Yuan",
+                "tombstone": " (雑畫圖冊): Landscape in the Manner of Ma Yuan, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.3",
+                "url": "https://clevelandart.org/art/1985.71.3"
+              },
+              {
+                "id": 152828,
+                "accession_number": "1985.71.4",
+                "title": "Landscape after Mi Fu",
+                "tombstone": "Landscape after Mi Fu, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.4",
+                "url": "https://clevelandart.org/art/1985.71.4"
+              },
+              {
+                "id": 152829,
+                "accession_number": "1985.71.5",
+                "title": "Cat and Butterfly",
+                "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+                "url": "https://clevelandart.org/art/1985.71.5"
+              },
+              {
+                "id": 152830,
+                "accession_number": "1985.71.6",
+                "title": "Su Dongpo",
+                "tombstone": " (雑畫圖冊): Su Dongpo (蘇東坡), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.6",
+                "url": "https://clevelandart.org/art/1985.71.6"
+              },
+              {
+                "id": 152831,
+                "accession_number": "1985.71.7",
+                "title": "Dragon amid Clouds",
+                "tombstone": " (雑畫圖冊): Dragon amid Clouds, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.7",
+                "url": "https://clevelandart.org/art/1985.71.7"
+              },
+              {
+                "id": 152832,
+                "accession_number": "1985.71.8",
+                "title": "River Landscape",
+                "tombstone": " (雑畫圖冊): River Landscape, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.8",
+                "url": "https://clevelandart.org/art/1985.71.8"
+              },
+              {
+                "id": 152833,
+                "accession_number": "1985.71.9",
+                "title": "Peaches",
+                "tombstone": " (雑畫圖冊): Peaches (桃子), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.9",
+                "url": "https://clevelandart.org/art/1985.71.9"
+              }
+            ]
+          }
+        ]
+      },
+      "bytes": 5364,
+      "sha256": "98f135d3c48cef1bea102da336457be5945b8eaf4a1186743600cd9ee487857e",
+      "validPayload": true,
+      "durationMs": 247,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "cma-artist",
+      "upstream": "https://openaccess-api.clevelandart.org/api/creators/31140",
+      "startedAt": "2026-10-25T04:50:25.081Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "data": {
+          "name": "Min Zhen",
+          "nationality": "Chinese",
+          "description": "Min Zhen (Chinese, 1730–after 1788)",
+          "biography": null,
+          "birth_year": "1730",
+          "death_year": "1788",
+          "id": 31140,
+          "artworks": [
+            {
+              "id": 152821,
+              "accession_number": "1985.71",
+              "title": "Album of Miscellaneous Subjects",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊), 1788. Min Zhen (Chinese, 1730–after 1788). Album of twelve leaves; ink on paper; each leaf: 29 x 18.4 cm (11 7/16 x 7 1/4 in.); overall with mount: 35.6 x 22.1 cm (14 x 8 11/16 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71",
+              "url": "https://clevelandart.org/art/1985.71"
+            },
+            {
+              "id": 152822,
+              "accession_number": "1985.71.1",
+              "title": "Elephant, Horse, and Hare",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Elephant, Horse, and Hare, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; overall single page: 36.8 x 22.1 cm (14 1/2 x 8 11/16 in.); painting: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.1",
+              "url": "https://clevelandart.org/art/1985.71.1"
+            },
+            {
+              "id": 152823,
+              "accession_number": "1985.71.10",
+              "title": "Su Wu the Shepherd",
+              "tombstone": " (雑畫圖冊): Su Wu the Shepherd, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.10",
+              "url": "https://clevelandart.org/art/1985.71.10"
+            },
+            {
+              "id": 152824,
+              "accession_number": "1985.71.11",
+              "title": "Banana Plants",
+              "tombstone": " (雑畫圖冊): Banana Plants, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.11",
+              "url": "https://clevelandart.org/art/1985.71.11"
+            },
+            {
+              "id": 152825,
+              "accession_number": "1985.71.12",
+              "title": "Sheer Cliffs",
+              "tombstone": "Album of Miscellaneous Subjects (雑畫圖冊): Sheer Cliffs, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.12",
+              "url": "https://clevelandart.org/art/1985.71.12"
+            },
+            {
+              "id": 152826,
+              "accession_number": "1985.71.2",
+              "title": "Lu Tong and Servant",
+              "tombstone": " (雑畫圖冊): Lu Tong and Servant, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.2",
+              "url": "https://clevelandart.org/art/1985.71.2"
+            },
+            {
+              "id": 152827,
+              "accession_number": "1985.71.3",
+              "title": "Landscape in the Manner of Ma Yuan",
+              "tombstone": " (雑畫圖冊): Landscape in the Manner of Ma Yuan, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.3",
+              "url": "https://clevelandart.org/art/1985.71.3"
+            },
+            {
+              "id": 152828,
+              "accession_number": "1985.71.4",
+              "title": "Landscape after Mi Fu",
+              "tombstone": "Landscape after Mi Fu, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.4",
+              "url": "https://clevelandart.org/art/1985.71.4"
+            },
+            {
+              "id": 152829,
+              "accession_number": "1985.71.5",
+              "title": "Cat and Butterfly",
+              "tombstone": " (雑畫圖冊): Cat and Butterfly, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.5",
+              "url": "https://clevelandart.org/art/1985.71.5"
+            },
+            {
+              "id": 152830,
+              "accession_number": "1985.71.6",
+              "title": "Su Dongpo",
+              "tombstone": " (雑畫圖冊): Su Dongpo (蘇東坡), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.6",
+              "url": "https://clevelandart.org/art/1985.71.6"
+            },
+            {
+              "id": 152831,
+              "accession_number": "1985.71.7",
+              "title": "Dragon amid Clouds",
+              "tombstone": " (雑畫圖冊): Dragon amid Clouds, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.7",
+              "url": "https://clevelandart.org/art/1985.71.7"
+            },
+            {
+              "id": 152832,
+              "accession_number": "1985.71.8",
+              "title": "River Landscape",
+              "tombstone": " (雑畫圖冊): River Landscape, 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.8",
+              "url": "https://clevelandart.org/art/1985.71.8"
+            },
+            {
+              "id": 152833,
+              "accession_number": "1985.71.9",
+              "title": "Peaches",
+              "tombstone": " (雑畫圖冊): Peaches (桃子), 1788. Min Zhen (Chinese, 1730–after 1788). Album leaf, ink on paper; sheet: 29 x 18.4 cm (11 7/16 x 7 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.71.9",
+              "url": "https://clevelandart.org/art/1985.71.9"
+            }
+          ]
+        }
+      },
+      "bytes": 5281,
+      "sha256": "4cd0998e3373ef8c6ea8bd81ce51ef7c0686c7b5a5a5b7f98912aad683e7b3e8",
+      "validPayload": true,
+      "durationMs": 263,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "smk-search",
+      "upstream": "https://api.smk.dk/api/v1/art/search/?keys=cat&offset=0&rows=3&lang=en",
+      "startedAt": "2026-10-25T04:50:33.247Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "body": {
+        "offset": 0,
+        "rows": 3,
+        "found": 227,
+        "items": [
+          {
+            "id": "1170025074_object",
+            "created": "2020-03-21T13:14:24Z",
+            "modified": "2025-07-11T17:37:14Z",
+            "current_location_name": "Sal 220",
+            "current_location_date": "2018-08-10T00:00:00Z",
+            "acquisition_date": "1918-01-01T00:00:00Z",
+            "acquisition_date_precision": "1918-12-31",
+            "dimensions": [
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "height",
+                "unit": "cm",
+                "value": "26.5"
+              },
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "width",
+                "unit": "cm",
+                "value": "31.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "height",
+                "unit": "cm",
+                "value": "39.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "width",
+                "unit": "cm",
+                "value": "44.7"
+              },
+              {
+                "part": "Brutto",
+                "type": "depth",
+                "unit": "cm",
+                "value": "8"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "David Jacobsen i Paris",
+                "author": "Jette Kjærboe",
+                "notes": "p. 96-98, fig. 14, 104 note 107."
+              },
+              {
+                "title": "David Jacobsen",
+                "author": "Ubekendt",
+                "notes": "kat. 36 (\"Katten\").",
+                "year_of_publication": "1918"
+              },
+              {
+                "title": "Danske Jødiske Kunstnere",
+                "author": "Ubekendt",
+                "notes": "kat. 914 (\"Katten\").",
+                "year_of_publication": "1908"
+              },
+              {
+                "title": "Museets sidste Forøgelser af ældre dansk Malerkunst",
+                "author": "Karl Madsen",
+                "notes": "p. 166.",
+                "year_of_publication": "1918"
+              }
+            ],
+            "exhibitions": [
+              {
+                "exhibition": "Pissarro. Et møde på Skt. Thomas",
+                "date_start": "2017-03-10T00:00:00.000Z",
+                "date_end": "2017-07-02T00:00:00.000Z",
+                "venue": "Ordrupgaard"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "David Jacobsen 1860",
+                "type": "signature"
+              }
+            ],
+            "materials": [
+              "canvas"
+            ],
+            "object_names": [
+              {
+                "name": "Painting"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Jacobsen, David",
+                "creator_forename": "David",
+                "creator_surname": "Jacobsen",
+                "creator_date_of_birth": "1821-07-02T00:00:00.000Z",
+                "creator_date_of_death": "1871-04-22T00:00:00.000Z",
+                "creator_nationality": "Danish",
+                "creator_gender": "MALE",
+                "creator_history": "David Jacobsen opgav i akademiårene skulpturen til fordel for portræt- og primært genremaleri i traditionen fra J. Friedlænder og David Monies. I hovedværket Søndag eftermiddag ved badeanstalten på øen Føhr, 1854, leverede J. dog et originalt bidrag til dansk folkelivsmaleri i skildringen af mødet mellem lokalbefolkningen og de ferierende byboere. Under Paris-opholdet 1855-69 fortsatte J. at male gennemarbejdede og detaljerede genremotiver og udførte desuden enkelte religiøse billeder. Kunsthistorien har valgt at fremhæve J.s mange uprætentiøse parisiske interiør- og gademotiver på grund af værkernes førimpressionistiske kvaliteter i motivvalg og lys- og farvebehandling. Interiørbillederne er også beslægtet med især Corots værker, og det er sandsynligt, at venskabet med franske kunstnere som Pissarro, som han en tid delte atelier med, har sat spor i J.s kunst. Som andre internationalt orienterede danske kunstnere var J. i opposition til det hjemlige nationale maleri, men formåede ikke som andre at skabe sig en karriere i udlandet. I fortvivlelse over sin udsigtsløse fremtid valgte J. at begå selvmord 1871 under et ophold i Firenze.",
+                "creator_lref": "6050_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1860-01-01T00:00:00.000Z",
+                "end": "1860-12-31T00:00:00.000Z",
+                "period": "1860"
+              }
+            ],
+            "techniques": [
+              "Oil on canvas"
+            ],
+            "titles": [
+              {
+                "title": "The Cat in the Studio",
+                "language": "engelsk"
+              }
+            ],
+            "number_of_parts": 1,
+            "object_number": "KMS3402",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KMS3402",
+            "frontend_url": "https://open.smk.dk/artwork/image/KMS3402",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS3402",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KMS3402",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KMS3402",
+            "production_dates_notes": [
+              "Værkdatering: 1860"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": true,
+            "alternative_images": [
+              {
+                "mime_type": "image/tiff",
+                "iiif_id": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2",
+                "iiif_info": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/info.json",
+                "width": 4744,
+                "height": 3280,
+                "size": 16107833.103448275,
+                "thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/!1024,/0/default.jpg",
+                "native": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/full/0/native.jpg",
+                "orientation": "landscape"
+              }
+            ],
+            "image_mime_type": "image/tiff",
+            "image_iiif_id": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2",
+            "image_iiif_info": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/info.json",
+            "image_width": 3773,
+            "image_height": 3164,
+            "image_size": 12359393,
+            "image_thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+            "image_native": "https://api.smk.dk/api/v1/download/W3siaW1nX3VybCI6Imh0dHBzOi8vaWlwLnNtay5kay9paWlmL2pwMi9jbjY5bTc2NXhfa21zMzQwMi1jcm9wcGVkLnRpZi5qcDIvZnVsbC9mdWxsLzAvbmF0aXZlLmpwZyIsInB1YmxpY19kb21haW4iOnRydWUsIm9iamVjdF9udW1iZXIiOiJLTVMzNDAyIiwibnVtIjoiIn1d/KMS3402.jpg",
+            "image_orientation": "landscape",
+            "image_hq": true,
+            "has_3d_file": false,
+            "has_image": true,
+            "colors": [
+              "#191909",
+              "#5a5527",
+              "#908d41",
+              "#956830",
+              "#33140c"
+            ],
+            "suggested_bg_color": [
+              "#908d41"
+            ],
+            "entropy": 9.7812195,
+            "contrast": 2.6962907,
+            "saturation": 4.121473,
+            "colortemp": 4.640539,
+            "brightness": 4.5632677,
+            "has_text": true,
+            "artist": [
+              "David Jacobsen"
+            ]
+          },
+          {
+            "id": "1170007636_object",
+            "created": "2020-03-21T09:52:19Z",
+            "modified": "2025-07-11T17:29:30Z",
+            "acquisition_date": "1861-01-01T00:00:00Z",
+            "acquisition_date_precision": "1861",
+            "dimensions": [
+              {
+                "part": "bladmaal",
+                "type": "height",
+                "unit": "mm",
+                "value": "212"
+              },
+              {
+                "part": "bladmaal",
+                "type": "width",
+                "unit": "mm",
+                "value": "322"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "VERSO: med sort blæk f.n.t.v. \"J. Cats inv 1779\"",
+                "language": "Danish",
+                "type": "signature"
+              },
+              {
+                "content": "Med blyant f.n.m.f. \"Bang\"",
+                "language": "Danish",
+                "type": "Inscription"
+              },
+              {
+                "content": "Med blyant f.n.t.h. \"J. Cats\"",
+                "language": "Danish",
+                "type": "Inscription"
+              },
+              {
+                "content": "Med blyant f.n.t.v \"A. Elcker, nach Cats\"",
+                "language": "Danish",
+                "type": "Inscription"
+              }
+            ],
+            "object_names": [
+              {
+                "name": "Drawing"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Cats, Jacob",
+                "creator_forename": "Jacob",
+                "creator_surname": "Cats",
+                "creator_date_of_birth": "1741-01-01T00:00:00.000Z",
+                "creator_date_of_death": "1799-01-01T00:00:00.000Z",
+                "creator_nationality": "Netherlandish, German",
+                "creator_gender": "MALE",
+                "creator_lref": "31866_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1779-01-01T00:00:00.000Z",
+                "end": "1779-01-01T00:00:00.000Z",
+                "period": "1779"
+              }
+            ],
+            "object_number": "KKSgb16033",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KKSgb16033",
+            "frontend_url": "https://open.smk.dk/artwork/image/KKSgb16033",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KKSgb16033",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KKSgb16033",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KKSgb16033",
+            "production_dates_notes": [
+              "Værkdatering: 1779"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": false,
+            "has_3d_file": false,
+            "has_image": false,
+            "titles": [
+              {
+                "title": "Byscene med skøjteløbere",
+                "type": "beskrivelse",
+                "language": "dansk"
+              }
+            ],
+            "artist": [
+              "Jacob Cats"
+            ]
+          },
+          {
+            "id": "1170007637_object",
+            "created": "2020-03-21T09:52:21Z",
+            "modified": "2025-07-11T17:29:30Z",
+            "acquisition_date": "1861-01-01T00:00:00Z",
+            "acquisition_date_precision": "1861",
+            "dimensions": [
+              {
+                "part": "bladmaal",
+                "type": "height",
+                "unit": "mm",
+                "value": "117"
+              },
+              {
+                "part": "bladmaal",
+                "type": "width",
+                "unit": "mm",
+                "value": "180"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "Les marques de collections de dessins & d'estampes: marques estampillées et écrites de collections particulières et publiques",
+                "author": "Frits Lugt",
+                "notes": "2034",
+                "shelfmark": "7027",
+                "year_of_publication": "1921-1956"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "VERSO: Med pen og brunt blæk under midten t.v.: \"geschilderd voor de heer schepen Hop\"; herunder: \"J. Cats / 1768: f4 ... \"; og med blyant f.n.t.h.: \"J. Cats / Bang don.\"",
+                "language": "Danish",
+                "type": "Inscription"
+              }
+            ],
+            "object_names": [
+              {
+                "name": "Drawing"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Cats, Jacob",
+                "creator_forename": "Jacob",
+                "creator_surname": "Cats",
+                "creator_date_of_birth": "1741-01-01T00:00:00.000Z",
+                "creator_date_of_death": "1799-01-01T00:00:00.000Z",
+                "creator_nationality": "Netherlandish, German",
+                "creator_gender": "MALE",
+                "creator_lref": "31866_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1768-01-01T00:00:00.000Z",
+                "end": "1768-01-01T00:00:00.000Z",
+                "period": "1768"
+              }
+            ],
+            "techniques": [
+              "Black chalk"
+            ],
+            "object_number": "KKSgb16032",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KKSgb16032",
+            "frontend_url": "https://open.smk.dk/artwork/image/KKSgb16032",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KKSgb16032",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KKSgb16032",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KKSgb16032",
+            "production_dates_notes": [
+              "Værkdatering: 1768"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": false,
+            "has_3d_file": false,
+            "has_image": false,
+            "titles": [
+              {
+                "title": "Landskab med vogn",
+                "type": "beskrivelse",
+                "language": "dansk"
+              }
+            ],
+            "artist": [
+              "Jacob Cats"
+            ]
+          }
+        ],
+        "facets": {},
+        "facets_ranges": {},
+        "corrections": [],
+        "autocomplete": [
+          "Faster Cathrine",
+          "Chr. J. Cato",
+          "Chr. Cato",
+          "Cathedrale d'Albi",
+          "Catharinens Tod. 4. Kinder, ein Mann und Frau, betrübt um ihren Bette R. versammelt; vor welchem auf einer Tonne, Glas und Flasche stehen. ob. IV, p.115."
+        ]
+      },
+      "bytes": 9199,
+      "sha256": "e278ce696815c82571d8d6b96103a8e8c8b1cc1929f9a2b44b46053dd91920f0",
+      "validPayload": true,
+      "durationMs": 385,
+      "clientValidated": true
+    },
+    {
+      "round": 2,
+      "service": "smk-artwork",
+      "upstream": "https://api.smk.dk/api/v1/art/?object_number=KMS3402&lang=en",
+      "startedAt": "2026-10-25T04:50:36.517Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "body": {
+        "items": [
+          {
+            "id": "1170025074_object",
+            "created": "2020-03-21T13:14:24Z",
+            "modified": "2025-07-11T17:37:14Z",
+            "current_location_name": "Sal 220",
+            "current_location_date": "2018-08-10T00:00:00Z",
+            "acquisition_date": "1918-01-01T00:00:00Z",
+            "acquisition_date_precision": "1918-12-31",
+            "dimensions": [
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "height",
+                "unit": "cm",
+                "value": "26.5"
+              },
+              {
+                "notes": "265 x 315 mm",
+                "part": "Netto",
+                "type": "width",
+                "unit": "cm",
+                "value": "31.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "height",
+                "unit": "cm",
+                "value": "39.5"
+              },
+              {
+                "part": "Brutto",
+                "type": "width",
+                "unit": "cm",
+                "value": "44.7"
+              },
+              {
+                "part": "Brutto",
+                "type": "depth",
+                "unit": "cm",
+                "value": "8"
+              }
+            ],
+            "documentation": [
+              {
+                "title": "David Jacobsen i Paris",
+                "author": "Jette Kjærboe",
+                "notes": "p. 96-98, fig. 14, 104 note 107."
+              },
+              {
+                "title": "David Jacobsen",
+                "author": "Ubekendt",
+                "notes": "kat. 36 (\"Katten\").",
+                "year_of_publication": "1918"
+              },
+              {
+                "title": "Danske Jødiske Kunstnere",
+                "author": "Ubekendt",
+                "notes": "kat. 914 (\"Katten\").",
+                "year_of_publication": "1908"
+              },
+              {
+                "title": "Museets sidste Forøgelser af ældre dansk Malerkunst",
+                "author": "Karl Madsen",
+                "notes": "p. 166.",
+                "year_of_publication": "1918"
+              }
+            ],
+            "exhibitions": [
+              {
+                "exhibition": "Pissarro. Et møde på Skt. Thomas",
+                "date_start": "2017-03-10T00:00:00.000Z",
+                "date_end": "2017-07-02T00:00:00.000Z",
+                "venue": "Ordrupgaard"
+              }
+            ],
+            "inscriptions": [
+              {
+                "content": "David Jacobsen 1860",
+                "type": "signature"
+              }
+            ],
+            "materials": [
+              "canvas"
+            ],
+            "object_names": [
+              {
+                "name": "Painting"
+              }
+            ],
+            "production": [
+              {
+                "creator": "Jacobsen, David",
+                "creator_forename": "David",
+                "creator_surname": "Jacobsen",
+                "creator_date_of_birth": "1821-07-02T00:00:00.000Z",
+                "creator_date_of_death": "1871-04-22T00:00:00.000Z",
+                "creator_nationality": "Danish",
+                "creator_gender": "MALE",
+                "creator_history": "David Jacobsen opgav i akademiårene skulpturen til fordel for portræt- og primært genremaleri i traditionen fra J. Friedlænder og David Monies. I hovedværket Søndag eftermiddag ved badeanstalten på øen Føhr, 1854, leverede J. dog et originalt bidrag til dansk folkelivsmaleri i skildringen af mødet mellem lokalbefolkningen og de ferierende byboere. Under Paris-opholdet 1855-69 fortsatte J. at male gennemarbejdede og detaljerede genremotiver og udførte desuden enkelte religiøse billeder. Kunsthistorien har valgt at fremhæve J.s mange uprætentiøse parisiske interiør- og gademotiver på grund af værkernes førimpressionistiske kvaliteter i motivvalg og lys- og farvebehandling. Interiørbillederne er også beslægtet med især Corots værker, og det er sandsynligt, at venskabet med franske kunstnere som Pissarro, som han en tid delte atelier med, har sat spor i J.s kunst. Som andre internationalt orienterede danske kunstnere var J. i opposition til det hjemlige nationale maleri, men formåede ikke som andre at skabe sig en karriere i udlandet. I fortvivlelse over sin udsigtsløse fremtid valgte J. at begå selvmord 1871 under et ophold i Firenze.",
+                "creator_lref": "6050_person"
+              }
+            ],
+            "production_date": [
+              {
+                "start": "1860-01-01T00:00:00.000Z",
+                "end": "1860-12-31T00:00:00.000Z",
+                "period": "1860"
+              }
+            ],
+            "techniques": [
+              "Oil on canvas"
+            ],
+            "titles": [
+              {
+                "title": "The Cat in the Studio",
+                "language": "engelsk"
+              }
+            ],
+            "number_of_parts": 1,
+            "object_number": "KMS3402",
+            "object_url": "https://api.smk.dk/api/v1/art?object_number=KMS3402",
+            "frontend_url": "https://open.smk.dk/artwork/image/KMS3402",
+            "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS3402",
+            "enrichment_url": "https://enrichment.api.smk.dk/api/enrichment/KMS3402",
+            "similar_images_url": "https://similar.api.smk.dk/similar/?object_number=KMS3402",
+            "production_dates_notes": [
+              "Værkdatering: 1860"
+            ],
+            "public_domain": true,
+            "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "on_display": true,
+            "alternative_images": [
+              {
+                "mime_type": "image/tiff",
+                "iiif_id": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2",
+                "iiif_info": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/info.json",
+                "width": 4744,
+                "height": 3280,
+                "size": 16107833.103448275,
+                "thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/!1024,/0/default.jpg",
+                "native": "https://iip.smk.dk/iiif/jp2/2514nm30s_kms3402.tif.jp2/full/full/0/native.jpg",
+                "orientation": "landscape"
+              }
+            ],
+            "image_mime_type": "image/tiff",
+            "image_iiif_id": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2",
+            "image_iiif_info": "https://iip.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/info.json",
+            "image_width": 3773,
+            "image_height": 3164,
+            "image_size": 12359393,
+            "image_thumbnail": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+            "image_native": "https://api.smk.dk/api/v1/download/W3siaW1nX3VybCI6Imh0dHBzOi8vaWlwLnNtay5kay9paWlmL2pwMi9jbjY5bTc2NXhfa21zMzQwMi1jcm9wcGVkLnRpZi5qcDIvZnVsbC9mdWxsLzAvbmF0aXZlLmpwZyIsInB1YmxpY19kb21haW4iOnRydWUsIm9iamVjdF9udW1iZXIiOiJLTVMzNDAyIiwibnVtIjoiIn1d/KMS3402.jpg",
+            "image_orientation": "landscape",
+            "image_hq": true,
+            "has_3d_file": false,
+            "has_image": true,
+            "colors": [
+              "#191909",
+              "#5a5527",
+              "#908d41",
+              "#956830",
+              "#33140c"
+            ],
+            "suggested_bg_color": [
+              "#908d41"
+            ],
+            "entropy": 9.7812195,
+            "contrast": 2.6962907,
+            "saturation": 4.121473,
+            "colortemp": 4.640539,
+            "brightness": 4.5632677,
+            "has_text": true,
+            "artist": [
+              "David Jacobsen"
+            ]
+          }
+        ]
+      },
+      "bytes": 5085,
+      "sha256": "08e33fe94d9dd8b36e1d39529f407aa8f84fa3a54c57d4caead76cf5559976ff",
+      "validPayload": true,
+      "durationMs": 567,
+      "clientValidated": true
+    }
+  ],
+  "completedAt": "2026-10-25T04:57:17.716Z",
+  "passed": true
+}

@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-10-23T08:40:24.048Z",
+  "purpose": "Phase 2A dependency-sentinel feasibility and live upstream connectivity check",
+  "scope": "Read-only probes; no x402 payment and no deployment",
+  "network": "Authenticated desktop environment, outbound HTTPS",
+  "sources": [
+    {
+      "name": "deps.dev API v3",
+      "documentation": "https://docs.deps.dev/api/v3/",
+      "access": "Public API; examples require no API key. Official docs allow client caching.",
+      "observedRisk": "No formally specified rate limit; servers may return HTTP 429 under load."
+    },
+    {
+      "name": "OSV API",
+      "documentation": "https://google.github.io/osv.dev/api/",
+      "access": "Public API; no authentication described.",
+      "observedRisk": "Official docs currently state no rate limits; HTTP/1.1 responses are capped at 32 MiB."
+    }
+  ],
+  "probes": [
+    {
+      "name": "deps-package",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/systems/npm/packages/express",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 944,
+      "bytes": 56708,
+      "sha256": "e002acff3c8a32b90d5d8a17ee2d267cf03c07ff5b1198a65cb45685bfea0733",
+      "summary": {
+        "versions": 290
+      }
+    },
+    {
+      "name": "deps-version",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/systems/npm/packages/express/versions/4.21.2",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 271,
+      "bytes": 843,
+      "sha256": "d49174a82e445cb86fcbf388546f37ffa8d1bcb2c56594ee920f00a2aeddc0c5",
+      "summary": {
+        "package": {
+          "system": "NPM",
+          "name": "express",
+          "version": "4.21.2"
+        },
+        "publishedAt": "2024-12-05T22:31:40Z",
+        "licenses": [
+          "MIT"
+        ]
+      }
+    },
+    {
+      "name": "deps-requirements",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/systems/npm/packages/express/versions/4.21.2:requirements",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 307,
+      "bytes": 2247,
+      "sha256": "53e70dc9e51631dc9312c71fcc9000edbb6d073eb5eb5d58765ba2e7ec29dd99",
+      "summary": {
+        "npmRequirements": 31,
+        "devRequirements": 16
+      }
+    },
+    {
+      "name": "deps-dependencies",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/systems/npm/packages/express/versions/4.21.2:dependencies",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 313,
+      "bytes": 15072,
+      "sha256": "b339f624e60f77deb66f009203f5b31a0aee7265f9c76d3c42ab926d5b745b61",
+      "summary": {
+        "nodes": 72,
+        "edges": 128
+      }
+    },
+    {
+      "name": "deps-project-health",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/projects/github.com%2Fexpressjs%2Fexpress",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 308,
+      "bytes": 7278,
+      "sha256": "4e4d5a9bc2c6ddc5d738fb6a713d848b7be3c89b02b22020c42b49d4e8e7cfef",
+      "summary": {
+        "project": "github.com/expressjs/express",
+        "scorecardChecks": 14
+      }
+    },
+    {
+      "name": "deps-advisory",
+      "method": "GET",
+      "url": "https://api.deps.dev/v3/advisories/GHSA-29mw-wpgm-hmr9",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "attempts": 1,
+      "latencyMs": 299,
+      "bytes": 274,
+      "sha256": "18853218a6395ac803f2749ccb7bf4f73b64bd428bbf391da99bf2ba1419520f",
+      "summary": {
+        "id": "GHSA-29mw-wpgm-hmr9",
+        "title": "Regular Expression Denial of Service (ReDoS) in lodash",
+        "aliases": [
+          "CVE-2020-28500"
+        ],
+        "cvss3Score": 5.3
+      }
+    },
+    {
+      "name": "osv-query",
+      "method": "POST",
+      "url": "https://api.osv.dev/v1/query",
+      "status": 200,
+      "contentType": "application/json",
+      "attempts": 1,
+      "latencyMs": 935,
+      "bytes": 18737,
+      "sha256": "3bacd82e4ab68d74e2b155fbe471ec84d23da344266a72eb0a5bdd4ba14947d3",
+      "summary": {
+        "vulnerabilities": 5,
+        "firstId": "GHSA-29mw-wpgm-hmr9"
+      }
+    },
+    {
+      "name": "osv-vulnerability-detail",
+      "method": "GET",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-29mw-wpgm-hmr9",
+      "status": 200,
+      "contentType": "application/json",
+      "attempts": 1,
+      "latencyMs": 702,
+      "bytes": 4846,
+      "sha256": "5cfd7090437e6d0e52e43e21103f786e176d0ba4cb97c00f22d28d04104016c9",
+      "summary": {
+        "id": "GHSA-29mw-wpgm-hmr9",
+        "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+        "aliases": [
+          "CVE-2020-28500"
+        ]
+      }
+    }
+  ],
+  "assessment": {
+    "allProbesPassed": true,
+    "successfulProbes": 8
+  }
+}

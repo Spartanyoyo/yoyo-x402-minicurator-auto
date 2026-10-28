@@ -1,0 +1,134 @@
+{
+  "at": "2026-10-22T03:28:05.014Z",
+  "finishedAt": "2026-10-22T03:28:46.083Z",
+  "purpose": "Validate every configured Base Sepolia public RPC sequentially with the read-only operations required by purchase and audit.",
+  "proxyConnections": 1,
+  "expectedChainId": 84532,
+  "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "historicalTransaction": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7",
+  "healthyCount": 7,
+  "totalCount": 8,
+  "results": [
+    {
+      "url": "https://base-sepolia.gateway.tenderly.co/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589109",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 8397
+    },
+    {
+      "url": "https://base-sepolia.drpc.org/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589137",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 5749
+    },
+    {
+      "url": "https://base-sepolia.rpc.sentio.xyz/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589167",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 5532
+    },
+    {
+      "url": "https://base-testnet.api.pocket.network/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589190",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 4145
+    },
+    {
+      "url": "https://base-sepolia-public.nodies.app/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589245",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 10879
+    },
+    {
+      "url": "https://base-sepolia.api.onfinality.io/public",
+      "ok": false,
+      "latencyMs": 1555,
+      "error": "RPC Request failed.\n\nURL: https://base-sepolia.api.onfinality.io/public\nRequest body: {\"method\":\"eth_getTransactionReceipt\",\"params\":[\"0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7\"]}\n\nDetails: Too Many Requests, Please apply an OnFinality API key or contact us to receive a higher rate limit\nVersion: viem@2.57.7",
+      "cause": "Too Many Requests, Please apply an OnFinality API key or contact us to receive a higher rate limit"
+    },
+    {
+      "url": "https://sepolia.base.org/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589270",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 2872
+    },
+    {
+      "url": "https://base-sepolia-rpc.publicnode.com/",
+      "ok": true,
+      "chainId": 84532,
+      "latestBlock": "48589282",
+      "historicalReceipt": {
+        "found": true,
+        "status": "success",
+        "blockNumber": "48193611",
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7"
+      },
+      "buyerBalance": "19997000",
+      "sellerBalance": "3000",
+      "historicalBlockLogs": 166,
+      "latencyMs": 1933
+    }
+  ]
+}

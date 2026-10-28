@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-16T13:00:50.108Z",
+  "purchaseEvidence": "evidence/purchase-1792155501626.json",
+  "failedAttemptEvidence": "evidence/purchase-1792155166089.json",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "fromBlock": "48193441",
+  "toBlock": "48193681",
+  "rpcLogPagination": {
+    "reason": "Public RPC rejected the first all-range eth_getLogs call: limited to 200 range",
+    "maximumBlocksPerRequest": 150,
+    "ranges": [
+      {
+        "from": "48193441",
+        "to": "48193590"
+      },
+      {
+        "from": "48193591",
+        "to": "48193681"
+      }
+    ]
+  },
+  "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7",
+  "transactionTime": "2026-10-16T12:58:30.000Z",
+  "confirmations": 71,
+  "transactionSender": "0xd407e409e34e0b9afb99ecceb609bdbcd5e7f1bf",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "balances": {
+    "before": {
+      "block": "48193608",
+      "buyer": "19.999",
+      "seller": "0.001"
+    },
+    "after": {
+      "block": "48193611",
+      "buyer": "19.998",
+      "seller": "0.002"
+    }
+  },
+  "logs": {
+    "buyerOut": [
+      {
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7",
+        "blockNumber": "48193611",
+        "logIndex": 361,
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "value": "1000"
+      }
+    ],
+    "buyerIn": [],
+    "sellerOut": [],
+    "sellerIn": [
+      {
+        "transactionHash": "0x5ab696456203ce6ec4d8525cada0a30751e915e9636cc289a00838a6c85001f7",
+        "blockNumber": "48193611",
+        "logIndex": 361,
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "value": "1000"
+      }
+    ]
+  },
+  "checks": {
+    "correctChain": true,
+    "successfulReceipt": true,
+    "singleBuyerPayment": true,
+    "singleSellerReceipt": true,
+    "noOtherBuyerReceipts": true,
+    "noOtherSellerPayments": true,
+    "priorAuthorizationExpiredWithoutDebit": true
+  },
+  "passed": true
+}

@@ -1,0 +1,164 @@
+{
+  "checkedAt": "2026-10-23T08:31:55.421Z",
+  "assertions": {
+    "metSearchFindsSelectedArtwork": true,
+    "cmaSearchFindsSelectedArtwork": true,
+    "smkSearchFindsSelectedArtwork": true,
+    "creatorSearchMatchesDetail": true,
+    "artworkLinksToCreator": true,
+    "creatorLinksToArtwork": true,
+    "metOpenImage": true,
+    "cmaOpenImage": true,
+    "smkOpenImage": true
+  },
+  "allAssertionsPassed": true,
+  "works": [
+    {
+      "museum": "Met",
+      "id": 552027,
+      "title": "Cat",
+      "date": "664–30 BCE",
+      "artist": null,
+      "culture": "",
+      "medium": "Cupreous metal",
+      "source": "https://www.metmuseum.org/art/collection/search/552027",
+      "open": true,
+      "image": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+      "rights": "CC0; Met isPublicDomain=true"
+    },
+    {
+      "museum": "Cleveland",
+      "id": 152829,
+      "title": "Cat and Butterfly",
+      "date": "1788",
+      "artist": [
+        "Min Zhen (Chinese, 1730–after 1788)"
+      ],
+      "culture": [
+        "China, Qing dynasty (1644-1911)"
+      ],
+      "medium": "album leaf, ink on paper",
+      "source": "https://clevelandart.org/art/1985.71.5",
+      "open": true,
+      "image": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+      "rights": "CC0"
+    },
+    {
+      "museum": "SMK",
+      "id": "KMS3402",
+      "title": "The Cat in the Studio",
+      "date": "1860",
+      "artist": [
+        "David Jacobsen"
+      ],
+      "medium": [
+        "canvas"
+      ],
+      "source": "https://open.smk.dk/artwork/image/KMS3402",
+      "open": true,
+      "image": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+      "rights": "https://creativecommons.org/publicdomain/mark/1.0/"
+    }
+  ],
+  "artist": {
+    "id": 31140,
+    "name": "Min Zhen",
+    "nationality": "Chinese",
+    "birthYear": "1730",
+    "deathYear": "1788",
+    "biography": null,
+    "relatedWorks": 13
+  },
+  "imageChecks": [
+    {
+      "museum": "Met",
+      "url": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "checkedAt": "2026-10-23T08:31:55.433Z",
+      "status": 206,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "cache-control": "max-age=432000",
+        "content-length": "4096",
+        "content-range": "bytes 0-4095/111135",
+        "content-type": "image/jpeg",
+        "date": "Fri, 23 Oct 2026 08:31:56 GMT",
+        "etag": "\"5257922aeabfd61:0\"",
+        "last-modified": "Sat, 21 Nov 2020 09:39:11 GMT",
+        "server": "Microsoft-IIS/10.0",
+        "set-cookie": "incap_ses_394_1661977=PodZDtq6zj1TIoQ9GMV3BX0b22oAAAAARzO4fplKQxkkY5DsjNGHkw==; path=/; Domain=.metmuseum.org; Secure; SameSite=None",
+        "strict-transport-security": "max-age=31536000",
+        "x-cdn": "Imperva",
+        "x-iinfo": "47-66621875-66621912 NNNN CT(214 351 0) RT(1792744316568 119) q(0 0 6 0) r(8 8) U15",
+        "x-powered-by": "ASP.NET"
+      },
+      "prefixBytesRead": 588,
+      "prefixSha256": "2299bb7cca47f9979c34d81ee68073b5d87e5b6afdf986f75ea6622ba81022f4",
+      "jpegSignature": true,
+      "validImage": true,
+      "durationMs": 1242
+    },
+    {
+      "museum": "Cleveland",
+      "url": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "checkedAt": "2026-10-23T08:31:57.884Z",
+      "status": 206,
+      "headers": {
+        "age": "1685",
+        "cache-control": "max-age=14400",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a4ef637f8c21b823-AMS",
+        "connection": "keep-alive",
+        "content-length": "4096",
+        "content-range": "bytes 0-4095/351386",
+        "content-security-policy": "frame-ancestors 'none'",
+        "content-type": "image/jpeg",
+        "date": "Fri, 23 Oct 2026 08:31:59 GMT",
+        "expect-ct": "enforce,max-age=86400",
+        "last-modified": "Tue, 02 Jun 2026 08:51:52 GMT",
+        "referrer-policy": "no-referrer-when-downgrade",
+        "server": "cloudflare",
+        "strict-transport-security": "max-age=31536000;includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "deny",
+        "x-xss-protection": "1;mode=block"
+      },
+      "prefixBytesRead": 1369,
+      "prefixSha256": "d0f39ea6f5c281b3066731e155b726af4e2d3e4e0be442ad48ba62b50b180db3",
+      "jpegSignature": true,
+      "validImage": true,
+      "durationMs": 1886
+    },
+    {
+      "museum": "SMK",
+      "url": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+      "method": "GET",
+      "range": "bytes=0-4095",
+      "checkedAt": "2026-10-23T08:32:00.981Z",
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "max-age=86400",
+        "connection": "keep-alive",
+        "content-disposition": "inline;filename=\"cn69m765x_kms3402-cropped.tif.jpg\"",
+        "content-length": "116312",
+        "content-type": "image/jpeg",
+        "date": "Fri, 23 Oct 2026 08:32:03 GMT",
+        "last-modified": "Tue, 23 Aug 2022 13:20:02 GMT",
+        "server": "nginx/1.15.6",
+        "x-powered-by": "IIPImage"
+      },
+      "prefixBytesRead": 3782,
+      "prefixSha256": "e0121b3d52626e2a240a1196dd4df0f4ddae263bf4ff8ae2f165afa00d105d11",
+      "jpegSignature": true,
+      "validImage": true,
+      "durationMs": 3358
+    }
+  ],
+  "allImagesPassed": true,
+  "completedAt": "2026-10-23T08:32:05.548Z"
+}

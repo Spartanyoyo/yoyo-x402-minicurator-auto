@@ -1,0 +1,88 @@
+{
+  "at": "2026-10-16T12:59:12.980Z",
+  "baseUrl": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+  "/F-02.md": {
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "cf-ray": "a4b73d604c04c321-LAX",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "text/plain; charset=UTF-8",
+      "date": "Fri, 16 Oct 2026 12:59:15 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=N7Mtq%2BuOstsVe9VvOyWM9meAAUUrld%2FHmyDMvydYHYcxcfFgIiWH%2FUZha3iaH16CKthS31FrkeminmuM1LzR1I4Oa2UT6hmm339obRiGQFeEKrcxtX5HNZcXasAqzJUvVFv1V8iaCPFAxgfZbRUSOCZa3h7RVZJep%2FJjYHuWg%2FU%3D\"}]}",
+      "server": "cloudflare",
+      "transfer-encoding": "chunked",
+      "x-request-id": "f5d797f1-4815-4186-80aa-2294e1d4e4e7"
+    },
+    "body": "# F-02：Yoyo x402 天气服务 API\n\n文档版本：0.1.0，2026-10-16。使用本服务前先阅读本文件。\n\n本服务是 C。用户 A 可以自然语言提出查询需求，Codex B 根据本文组织请求。本接口由我们部署；它在官方 x402 组件外接入真实天气来源 D（MET Norway）。\n\n## 服务入口\n\n基地址：`https://yoyo-x402-weather.accessible-trip.workers.dev`。\n\n- `GET /health`：免费，查看网络、收款地址和价格。\n- `GET /F-02.md` 或 `/llms.txt`：免费读取本说明。\n- `GET /weather?latitude=...&longitude=...`：按次收费的天气查询。\n\n## 从自然语言准备参数\n\n| 参数 | 类型和范围 | 必填 |\n|---|---|---|\n| latitude | 十进制度数，-90 到 90，最多四位小数 | 是 |\n| longitude | 十进制度数，-180 到 180，最多四位小数 | 是 |\n\n本接口不接受城市名。收到城市名时，Codex 应通过可用的地理查询来源核实城市代表坐标，记录来源，再调用本服务。如果无法确定地点或有同名地点，先询问用户，不猜测位置。用户也可以直接提供坐标。\n\n本阶段上海演示使用坐标 `31.2304, 121.4737`，代表上海市中心附近的演示位置，不表示用户的实际位置。查询其他地点须重新确认其坐标。\n\n示例：用户说“查询上海现在的天气”，Codex 阅读本文，确认上海演示位置后请求：\n\n```text\nGET https://yoyo-x402-weather.accessible-trip.workers.dev/weather?latitude=31.2304&longitude=121.4737\n```\n\n## 付款要求\n\n- 仅 Base Sepolia 测试网，网络标识 `eip155:84532`。\n- 仅测试 USDC，合约 `0x036CbD53842c5426634e7929541eC2318f3dCF7e`。\n- 单次 0.001 测试 USDC，即该合约的 1000 个最小单位。\n- 卖方收款地址：`0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f`。\n- x402 V2，exact 支付方式，公共 facilitator：`https://x402.org/facilitator`。\n\n先不带付款凭证请求，服务返回 402 和付款要求。买方使用官方客户端 SDK 解析要求并签名重试。核对网络、代币、收款地址和单次金额；不得使用主网或其他资产。只对配置好的这个服务地址发出本次授权的请求。\n\n签名不等于扣款成功；成功结果须取得支付回执和链上交易证据。单次调用结束后不要自动再买一次。如付款状态不明，先查回执和链上记录。不得把手工转账与另一次免费天气请求拼成交易。\n\n## 成功结果\n\n返回 JSON，包含 `requestId` 和 `weather`。天气字段包括 `location`、`dataType`、`provider`、`attribution`、`source`、`updatedAt`、`forecastTime`、`retrievedAt`、带单位的 `temperature`、`relativeHumidity`、`windSpeed` 及可能为空的 `summary`。\n\n数据是 MET Norway 天气模型中距离当前时间最近的一项，非气象站实况观测。回答用户时注明查询位置、温度及单位、预报时间、数据来源；不要把预报说成实时观测。保留支付响应头，并与双方余额和链上转账对账。\n\n## 错误\n\n- 400：参数缺失、非数字或超出范围；在付款前修正。\n- 402：需要付款或凭证无效；使用官方 x402 客户端处理。\n- 502：上游天气请求失败；先查有无结算，不能盲目重试付款。\n- 503：服务或结算组件不可用；保留错误并查明原因。\n\n## 本机买方工具\n\n在项目目录运行 `npm run probe -- <服务基地址>`，记录免费文档、健康检查与首次 402；运行 `npm run buy -- --base-url <服务基地址> --latitude 31.2304 --longitude 121.4737 --intent \"查询上海现在的天气\"` 执行一次购买。买方凭据仅从本机 `.env.local` 读取，不上传到云端。\n\nCloudflare 临时预览地址需要在官方给出的期限内认领；如果尚未认领，不能把它描述为长期稳定部署。\n"
+  },
+  "/health": {
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "cf-ray": "a4b73d6218d4c321-LAX",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Fri, 16 Oct 2026 12:59:16 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lvTM6DQfZNe55nQk35pZQodXh234T8hSAWh03OmjA251vVstmpKWqNePjQkWfuVUJ%2BnlExHWjfrLqMyg5615MENXeNIZp8ohQxBBvtmWVE8TbVvj%2BAgXmybnSsDAReeBzZYwDNx18ml%2BPOKBIaJpJJvk4LoPbKyLrH72Gy1O%2FeI%3D\"}]}",
+      "server": "cloudflare",
+      "transfer-encoding": "chunked",
+      "x-request-id": "58c84223-122e-4416-b2c0-349118c6508d"
+    },
+    "body": {
+      "service": "yoyo-x402-weather",
+      "network": "eip155:84532",
+      "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "priceAtomic": "1000",
+      "docs": "/F-02.md"
+    }
+  },
+  "/weather?latitude=31.2304&longitude=121.4737": {
+    "status": 402,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "cf-ray": "a4b73d63acc0c321-LAX",
+      "connection": "keep-alive",
+      "content-length": "2",
+      "content-type": "application/json",
+      "date": "Fri, 16 Oct 2026 12:59:16 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItd2VhdGhlci5hY2Nlc3NpYmxlLXRyaXAud29ya2Vycy5kZXYvd2VhdGhlcj9sYXRpdHVkZT0zMS4yMzA0JmxvbmdpdHVkZT0xMjEuNDczNyIsImRlc2NyaXB0aW9uIjoiV2VhdGhlciBtb2RlbCBmb3JlY2FzdCBmb3IgdGhlIHJlcXVlc3RlZCBjb29yZGluYXRlcywgZnJvbSBNRVQgTm9yd2F5IiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gIvrPbX%2FJj1UvWB1YgPoAnCWLzITDpr8fMywrrp7wZDKcjqeapBg3145SvMBElI8X6wDQJ%2FDL463eDplod%2BACbLuiOh%2FX7%2BTyDJ%2Bx7G0LzPuA7mr8bNysYqoX6jHb6rpoo1cQTM5Ll8NZPqyGsvssa81HGjwEbqqHTB8lNgcVNE%3D\"}]}",
+      "server": "cloudflare",
+      "x-request-id": "b9b0b5a2-144c-4da2-a3f5-569ed01c7855"
+    },
+    "body": {},
+    "paymentRequired": {
+      "x402Version": 2,
+      "error": "Payment required",
+      "resource": {
+        "url": "https://yoyo-x402-weather.accessible-trip.workers.dev/weather?latitude=31.2304&longitude=121.4737",
+        "description": "Weather model forecast for the requested coordinates, from MET Norway",
+        "mimeType": "application/json"
+      },
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:84532",
+          "amount": "1000",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "maxTimeoutSeconds": 300,
+          "extra": {
+            "name": "USDC",
+            "version": "2"
+          }
+        }
+      ]
+    }
+  }
+}

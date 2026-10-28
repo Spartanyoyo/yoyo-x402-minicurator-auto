@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-10-25T06:58:51.402Z",
+  "worker": "yoyo-x402-minicurator",
+  "moduleHashes": {
+    "curator-worker.js": "cd836661ec3620ab7c0cdabbaa63db61184454341f9644f92724b7a27ea2525b",
+    "210b6577d5247fda44faf0afc42e4e00a3773944-F-02_minicurator.md": "398000ac919501d9abc0231477624ebfd492ff9a8aa009592420248206c6c21e"
+  },
+  "status": "upload_submitted",
+  "error": "fetch failed"
+}

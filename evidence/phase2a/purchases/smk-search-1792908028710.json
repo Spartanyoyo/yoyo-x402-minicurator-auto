@@ -1,0 +1,213 @@
+{
+  "resourceService": "smk-search",
+  "parameters": {
+    "q": "cat",
+    "limit": 3,
+    "offset": 0
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T06:00:28.714Z",
+  "intent": "猫主题跨馆展览：采购SMK候选作品；只读传输对比通过后使用默认TLS上限，前序失败均已确认无扣款",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T06:00:37.547Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4ff007dbe6998b3-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 06:00:37 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9zbWstc2VhcmNoP3E9Y2F0JmxpbWl0PTMmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBTTUs7IG9ubHkgcHVibGljLWRvbWFpbiByZWNvcmRzIHdpdGggaW1hZ2VzIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8rOATL4XE%2BwxjSZXSvpUd6jApGHgyHXPbe8dthL%2BozVAXgjehvDQJB%2Fx8eYjGQF5TVkL0czyBVaddF0f6YWXe0zrY9HPhnrSykRWAKtQestcgIcZnvLJaIRy6Y8wQ%2F1Oz0eUM5mAtzyx9McP1L8lbR%2FsKzyfhuo3T%2FP8rPBOF0kX1g36\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "bc524e08-5ac7-48e2-bc88-e5433728bf9c"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+          "description": "Search SMK; only public-domain records with images",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+      "paid": true,
+      "status": 200,
+      "receivedAt": "2026-10-25T06:00:42.526Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4ff008ccfcc87f5-SIN",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 06:00:42 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4NkUyMDlDMWEzYzA2MDVERDE3ODM3NDkwODE0MjkyMWIyNTc3RThFOSIsInRyYW5zYWN0aW9uIjoiMHgzOTUzODQ5YWMxZDc1ZTU0NzBiZWFjYTFjYmYxOWJlNjMwNWY0ZGY5MzA0NDkxMzE5NWY0ZjVhOGJiZTI3ZjIxIiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiJ9",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Bey8snKNZHgaixnuUld4Ad0Ux8pCpa7P9CwgxwyNeaRDmLS96OKSyknD4IUKK9iK2U%2FAeD86nUybmjJdK5T3eJy%2BfPdcEMaMemsNAEe1bL7OoNyaDoCzitEChkUm7mk5KepD6MLy7DTUanwTIYdOAS6MwFMhfQQUQBJF4nR8yEsXC50o\"}]}",
+        "server": "cloudflare",
+        "transfer-encoding": "chunked",
+        "x-request-id": "8de71d26-d3e3-4f62-bc40-096ae7059073"
+      }
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/smk-search/F-02.md",
+    "readAt": "2026-10-25T06:00:31.168Z",
+    "sha256": "35156b973a83f4a9a159803be0b52ccc7793841453f9f279ed5ab8fed409876e",
+    "content": "# F-02: smk-search\n\nSearch SMK; only public-domain records with images\n\n```json\n{\n  \"id\": \"smk-search\",\n  \"provider\": \"SMK\",\n  \"kind\": \"artwork-search\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search SMK; only public-domain records with images\",\n  \"path\": \"/api/smk-search\",\n  \"documentationPath\": \"/services/smk-search/F-02.md\",\n  \"healthPath\": \"/services/smk-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/smk-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/smk-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49930828",
+    "buyer": "19989000",
+    "seller": "13000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792908337",
+    "nonce": "0x5734e9a351359e58f31c4f3fc93606bf49cd02c714ef8722d699bc05b735ed53",
+    "expiresAt": "2026-10-25T06:05:37.000Z"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "8de71d26-d3e3-4f62-bc40-096ae7059073",
+    "resource": {
+      "schemaVersion": 1,
+      "service": "smk-search",
+      "provider": "SMK",
+      "kind": "artwork-search",
+      "query": {
+        "q": "cat",
+        "limit": 3,
+        "offset": 0
+      },
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=cat&offset=0&rows=3&lang=en",
+      "retrievedAt": "2026-10-25T06:00:41.392Z",
+      "total": 227,
+      "returned": 1,
+      "excluded": 2,
+      "items": [
+        {
+          "museum": "SMK",
+          "id": "KMS3402",
+          "title": "The Cat in the Studio",
+          "artists": [
+            {
+              "id": null,
+              "name": "David Jacobsen"
+            }
+          ],
+          "date": "1860",
+          "medium": [
+            "Oil on canvas"
+          ],
+          "culture": [],
+          "department": null,
+          "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+          "sourceUrl": "https://open.smk.dk/artwork/image/KMS3402",
+          "rights": {
+            "publicDomain": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "evidence": "public_domain=true"
+          }
+        }
+      ],
+      "cache": {
+        "status": "miss",
+        "stale": false
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+    "status": "success",
+    "blockNumber": "49930866",
+    "blockTimestamp": "1792908042"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "beforeObserved": {
+    "block": "49930828",
+    "buyer": "19989000",
+    "seller": "13000"
+  },
+  "after": {
+    "block": "49930866",
+    "buyer": "19988000",
+    "seller": "14000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+      "blockNumber": "49930866",
+      "logIndex": 18,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0x5734e9a351359e58f31c4f3fc93606bf49cd02c714ef8722d699bc05b735ed53"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "1000",
+    "sellerDelta": "1000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-10-25T06:59:10.484Z",
+    "paymentVerified": true
+  }
+}

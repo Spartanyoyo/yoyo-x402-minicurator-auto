@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-22T03:23:54.021Z",
+  "baseUrl": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+  "status": "failed",
+  "error": {
+    "path": "/F-02.md",
+    "message": "fetch failed"
+  }
+}

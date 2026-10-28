@@ -1,0 +1,326 @@
+{
+  "checkedAt": "2026-10-22T02:43:25.747Z",
+  "passed": true,
+  "results": [
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "HEAD",
+      "expected": 405,
+      "status": 405,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": "GET",
+      "requestId": "43ebf10e-9edf-4107-a5c1-58965e9dce35"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "POST",
+      "expected": 405,
+      "status": 405,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": "GET",
+      "requestId": "b86531e8-b015-4144-bdd6-e65468fe9624"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=0&latitude=90&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "9925ca5e-b748-4105-9f54-ce291572042d"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=0x20&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "bec5aa4b-4565-48da-90f9-8f5fd2bb36ba"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=91&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "92004aeb-f29e-4560-9f4f-7d49b623a4c6"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/weather?latitude=0&longitude=0",
+      "headers": {
+        "payment-signature": "invalid"
+      },
+      "expected": 402,
+      "status": 402,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "15edd2c1-188a-42b5-9a72-91e35d7e2948"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/.env.local",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "7751c04a-c32b-4eac-aefc-18ce85d90e07"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/.env.cloudflare",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "a47ecfe1-9ab8-4770-952e-bbe37018e9d2"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/private/seller-key.txt",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "d791d5b1-a687-4e21-8fce-66d982026b10"
+    },
+    {
+      "base": "http://127.0.0.1:4021",
+      "path": "/llms.txt",
+      "expected": 200,
+      "status": 200,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "b93a625f-c523-40c6-8519-9a65f2c69636"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "HEAD",
+      "expected": 405,
+      "status": 405,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": "GET",
+      "requestId": "579ecf2b-392e-4963-87d1-06ac2716a3c0"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "POST",
+      "expected": 405,
+      "status": 405,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": "GET",
+      "requestId": "16bc450f-14fc-4244-84cd-5ac72bff572a"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=0&latitude=90&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "c80e78d8-2171-4503-9fd8-bc4685d7abe4"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=0x20&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "88f1d7a8-62b9-4f33-9ad5-2c7af39b22a3"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=91&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "1255be0a-6531-4239-a73e-0920a10f912f"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/weather?latitude=0&longitude=0",
+      "headers": {
+        "payment-signature": "invalid"
+      },
+      "expected": 402,
+      "status": 402,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "8f8a1a75-7e05-4cf9-bf35-f3efc5eb1e2d"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/.env.local",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "758c8578-5aa0-46fe-8c0b-e6fd51b3bc1c"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/.env.cloudflare",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "16746420-7ef1-45ae-985a-3736d16e7d12"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/private/seller-key.txt",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "42a93c79-b28a-4ac1-a578-c2577ee5bcd4"
+    },
+    {
+      "base": "http://127.0.0.1:4022",
+      "path": "/llms.txt",
+      "expected": 200,
+      "status": 200,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "6ddc6890-5f9e-45d8-961e-46ae56c99653"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "HEAD",
+      "expected": 405,
+      "error": "fetch failed",
+      "passed": true,
+      "retry": {
+        "at": "2026-10-22T02:45:19.538Z",
+        "status": 405,
+        "allow": "GET",
+        "hasProtectedWeather": false,
+        "passed": true
+      }
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=0&longitude=0",
+      "method": "POST",
+      "expected": 405,
+      "status": 405,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": "GET",
+      "requestId": "fcdcc542-f856-4d20-b95f-831f085de965"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=0&latitude=90&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "df0acb13-4df1-4dbc-95d9-584e8889ba6b"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=0x20&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "300d2b82-aae0-4110-b56b-d8b72bda07c8"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=91&longitude=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "4f32d524-30c4-4e14-b275-6c97662ba6ff"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/weather?latitude=0&longitude=0",
+      "headers": {
+        "payment-signature": "invalid"
+      },
+      "expected": 402,
+      "status": 402,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "05cecaf1-2736-48d7-bd8d-26ac73aedd4f"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/.env.local",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "b92b6b15-641d-4faa-abcb-811096677ae1"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/.env.cloudflare",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "321cd08d-9414-4016-88f1-e91df94e9157"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/private/seller-key.txt",
+      "expected": 404,
+      "status": 404,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "e7818734-4ac0-4bf4-a486-7e105935da8b"
+    },
+    {
+      "base": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+      "path": "/llms.txt",
+      "expected": 200,
+      "status": 200,
+      "passed": true,
+      "hasProtectedWeather": false,
+      "allow": null,
+      "requestId": "8e4a4b64-4af4-45c3-a3c8-ed1b58067c15"
+    }
+  ],
+  "recheckedAt": "2026-10-22T02:45:19.542Z"
+}

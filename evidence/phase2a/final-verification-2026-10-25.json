@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-10-25T07:33:34.523864Z",
+  "status": "functional_acceptance_passed_with_documented_remaining_boundaries",
+  "allFunctionalChecksPassed": true,
+  "scope": "Base Sepolia functional configuration and demonstration; no production security or SLA certification",
+  "auditHardening": {
+    "finding": "Pre-fix audit did not bind the saved EIP-3009 authorization nonce to the on-chain AuthorizationUsed event.",
+    "reproduced": true,
+    "fixed": true,
+    "validatedByNegativeTests": true,
+    "historicalPaymentsReauditedWithoutNewPayment": true,
+    "evidence": "independent-chain-reaudit-2026-10-25.json"
+  },
+  "command": "npm run verify",
+  "exitCode": 0,
+  "tests": {
+    "total": 150,
+    "passed": 150,
+    "failed": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "builds": {
+    "weather": "passed",
+    "curator": "passed"
+  },
+  "documentation": {
+    "filesChecked": 24,
+    "linksChecked": 362,
+    "failures": 0,
+    "passed": true
+  },
+  "credentials": {
+    "filesScanned": 222,
+    "matchingFiles": 0,
+    "passed": true
+  },
+  "deployment": {
+    "curatorVersion": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+    "curatorPercent": 100,
+    "curatorUploadedBundleHashMatchesCurrentBuild": true,
+    "weatherVersion": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+    "weatherPercent": 100,
+    "weatherPreserved": true,
+    "evidence": "deployment-2026-10-25.json"
+  },
+  "liveProbe": {
+    "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+    "passed": true,
+    "resources": 9,
+    "allDocsAndHealth200": true,
+    "allUnpaid402": true,
+    "allMention2MiBLimit": true,
+    "evidence": "probe-1792913053593.json"
+  },
+  "chainReaudit": {
+    "passed": true,
+    "services": 9,
+    "failures": 0,
+    "primaryRpc": "https://base-sepolia.gateway.tenderly.co",
+    "secondaryRpc": "https://base-testnet.api.pocket.network",
+    "requiresAuthorizationNonceEventBinding": true,
+    "requiresExactTransferAndBalances": true,
+    "requiresArtifactDelivery": true,
+    "evidence": "independent-chain-reaudit-2026-10-25.json"
+  },
+  "purchases": {
+    "verified": 9,
+    "totalAttempts": 16,
+    "totalConfirmedAtomic": "9000",
+    "unresolvedSigned": 0,
+    "evidence": "demo-session.json"
+  },
+  "images": {
+    "passed": 3,
+    "total": 3,
+    "evidence": "image-proof-2026-10-25.json"
+  },
+  "dependencyAudit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 6,
+      "critical": 0,
+      "total": 6
+    },
+    "underlyingAdvisory": "GHSA-mrhx-c7xc-m3w5",
+    "fullyRemediated": false,
+    "currentMitigations": [
+      "Payment headers are bounded before SDK validation",
+      "Request URLs and quotes are bounded",
+      "Provider JSON is streamed with a 2 MiB limit",
+      "Testnet-only scope"
+    ],
+    "evidence": "dependency-audit-2026-10-25.json"
+  },
+  "remainingBoundaries": [
+    "Session-level total budget is caller-tracked; each purchase is capped at 1000 atomic units.",
+    "A lost paid response has no automatic redelivery path; reconciliation prevents duplicate payment but may require operator review.",
+    "The upstream Zod advisory remains until x402 publishes a compatible fix."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-22T03:37:03.329Z",
+  "network": "eip155:84532",
+  "chainId": 84532,
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "total": 8,
+  "available": 4,
+  "endpoints": [
+    {
+      "url": "https://sepolia.base.org/",
+      "ok": false,
+      "elapsedMs": 9764,
+      "error": {
+        "message": "HTTP request failed.",
+        "code": null
+      }
+    },
+    {
+      "url": "https://base-sepolia.gateway.tenderly.co/",
+      "ok": true,
+      "chainId": 84532,
+      "blockNumber": "48591554",
+      "elapsedMs": 7358
+    },
+    {
+      "url": "https://base-sepolia.drpc.org/",
+      "ok": false,
+      "elapsedMs": 10640,
+      "error": {
+        "message": "HTTP request failed.",
+        "code": null
+      }
+    },
+    {
+      "url": "https://base-sepolia.rpc.sentio.xyz/",
+      "ok": true,
+      "chainId": 84532,
+      "blockNumber": "48591630",
+      "elapsedMs": 4398
+    },
+    {
+      "url": "https://base-testnet.api.pocket.network/",
+      "ok": true,
+      "chainId": 84532,
+      "blockNumber": "48591654",
+      "elapsedMs": 5237
+    },
+    {
+      "url": "https://base-sepolia-public.nodies.app/",
+      "ok": false,
+      "elapsedMs": 10666,
+      "error": {
+        "message": "HTTP request failed.",
+        "code": null
+      }
+    },
+    {
+      "url": "https://base-sepolia.api.onfinality.io/public",
+      "ok": true,
+      "chainId": 84532,
+      "blockNumber": "48591720",
+      "elapsedMs": 1948
+    },
+    {
+      "url": "https://base-sepolia-rpc.publicnode.com/",
+      "ok": false,
+      "elapsedMs": 10596,
+      "error": {
+        "message": "HTTP request failed.",
+        "code": null
+      }
+    }
+  ]
+}

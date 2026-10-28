@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-10-25T07:22:37.740Z",
+  "worker": "yoyo-x402-minicurator",
+  "versionMessage": "MiniCurator validation e037b1671de9",
+  "moduleHashes": {
+    "curator-worker.js": "e037b1671de978e0f8a6a0cfba47ef26b8087a23bc46464ae34f21a235f18e95",
+    "e4486c1ffda9cd977e4012d4c84c734649b1d857-F-02_minicurator.md": "23c49a329c19a9909f18a478bd2d2cd578ae388b603ecd55627c2f1a82915208"
+  },
+  "status": "deployed",
+  "versionId": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+  "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+  "activeVersions": [
+    {
+      "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+      "percentage": 100
+    }
+  ],
+  "completedAt": "2026-10-25T07:22:43.195Z"
+}

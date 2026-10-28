@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-25T05:04:11.099Z",
+  "scope": "Read-only deployment metadata; private account identifiers and author details excluded",
+  "workers": {
+    "yoyo-x402-minicurator": {
+      "latest": {
+        "id": "fbf699b6-9b05-4bfe-bdb9-af52cb413aca",
+        "createdOn": "2026-10-25T05:01:54.91706Z",
+        "versions": [
+          {
+            "version_id": "db00f890-70e5-433c-8444-70e445084aaa",
+            "percentage": 100
+          }
+        ]
+      },
+      "bindings": [
+        {
+          "name": "SELLER_ADDRESS",
+          "type": "plain_text"
+        },
+        {
+          "name": "UPSTREAM_RATE_LIMITER",
+          "type": "ratelimit"
+        }
+      ],
+      "compatibilityDate": "2026-10-25"
+    },
+    "yoyo-x402-weather": {
+      "latest": {
+        "id": "103020af-c162-4e2c-911f-eb386a42d9d5",
+        "createdOn": "2026-10-22T02:41:43.509739Z",
+        "versions": [
+          {
+            "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+            "percentage": 100
+          }
+        ]
+      },
+      "bindings": [
+        {
+          "name": "SELLER_ADDRESS",
+          "type": "plain_text"
+        }
+      ],
+      "compatibilityDate": "2026-10-16"
+    }
+  },
+  "localSourceHashes": {
+    "src/curator-worker.mjs": "eb82420c239911528ae760c6f39b689437a13c41e890e2bbcfd16815ed316a2a",
+    "src/curator-app.mjs": "2e3fac9f67b07f8e6f4782106595004d9d4af6775e0647cd65508cf38f058588",
+    "src/curator-catalog.mjs": "c8b71ce9afaa9d3bec66c21a08360cda01e652a0810789fc0595b3684db26c64",
+    "wrangler.curator.jsonc": "d8d3b1aca647c06f429a19b90414937d8a7f786979598b1335d564482834a74b",
+    "docs/F-02_minicurator.md": "cf239ede7cc0a4047faaafb876ca52d515efcf16ed3e5f95e8e4cb56fb8d53bd"
+  },
+  "weatherVersionPreserved": true
+}

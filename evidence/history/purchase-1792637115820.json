@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-22T02:45:15.821Z",
+  "intent": "按用户要求完整复核第一阶段：查询北京天气并核验测试网收付款",
+  "location": {
+    "latitude": 39.9075,
+    "longitude": 116.3972
+  },
+  "baseUrl": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "not_verified",
+  "http": [],
+  "error": "fetch failed"
+}

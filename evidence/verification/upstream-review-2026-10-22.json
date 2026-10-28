@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-22T02:34:47.445Z",
+  "weather": {
+    "location": {
+      "latitude": 39.9075,
+      "longitude": 116.3972
+    },
+    "dataType": "model_forecast_nearest_time_not_station_observation",
+    "provider": "MET Norway",
+    "attribution": "Weather data from MET Norway, CC BY 4.0",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "transformations": "Selected nearest forecast time and renamed fields; source model data unchanged.",
+    "source": "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=39.9075&lon=116.3972",
+    "updatedAt": "2026-10-22T01:17:59Z",
+    "forecastTime": "2026-10-22T03:00:00Z",
+    "retrievedAt": "2026-10-22T02:34:51.833Z",
+    "temperature": {
+      "value": 10.9,
+      "unit": "celsius"
+    },
+    "relativeHumidity": {
+      "value": 62.5,
+      "unit": "%"
+    },
+    "windSpeed": {
+      "value": 1.8,
+      "unit": "m/s"
+    },
+    "summary": "clearsky_day"
+  }
+}

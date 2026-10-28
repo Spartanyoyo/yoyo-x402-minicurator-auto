@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "yoyo-x402-weather",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
+  "secrets": { "required": [] },
+  "vars": {
+    "SELLER_ADDRESS": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f"
+  }
+}

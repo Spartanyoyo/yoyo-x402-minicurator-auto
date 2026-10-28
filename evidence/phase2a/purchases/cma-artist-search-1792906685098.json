@@ -1,0 +1,287 @@
+{
+  "resourceService": "cma-artist-search",
+  "parameters": {
+    "q": "Min Zhen",
+    "limit": 3,
+    "offset": 0
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:38:05.102Z",
+  "intent": "猫主题跨馆展览：依据已购Cat and Butterfly作者字段检索Min Zhen，核对艺术家身份",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:38:46.629Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4fee07deff2d4de-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:38:46 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0aXN0LXNlYXJjaD9xPU1pbitaaGVuJmxpbWl0PTMmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBDTUEgYXJ0aXN0IG5hbWVzIGFuZCByZWxhdGVkIGFydHdvcmsgSURzIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3u6QrJhwKifODGPc49%2BJryHsaF1T7VM93tkqnimgBo92wXEpX%2FEbWt%2BH7fyzbyPPAE3mEonaiqHKKu35rRjEet4vjdQKaxSaHGHHHnAb%2FHgJc7H1yAVyrh1ICtjL%2B1GgPuvXhiU6J7t%2FQ1UMUQc%2FQk%2F2eVp1kmRgJB0CV%2BH6wM9BZ%2Fd6\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "e7d6a8e4-c675-4ff1-b6b5-9accd25aeb1e"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0",
+          "description": "Search CMA artist names and related artwork IDs",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0",
+      "paid": true,
+      "status": 200,
+      "receivedAt": "2026-10-25T05:38:56.520Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4fee0af1962b251-SIN",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:38:56 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4NkUyMDlDMWEzYzA2MDVERDE3ODM3NDkwODE0MjkyMWIyNTc3RThFOSIsInRyYW5zYWN0aW9uIjoiMHg3YzNkZGZhNjE3NDVlMWRlYTRhMzg4ZDUyOGE0YzNiMTc0YjY2M2U3Y2MyMDVkZTUyZDMwNTJmM2FlN2Q2MDMwIiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiJ9",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4nSda%2FnDTV2Jm0vTiN7gu4zMqACeiwcPqyr6MmjswVJi67Fhd5wm%2BVpCUj9sJKijf8LjSAPuznv1VjRQGtlKk0cAuIqap%2Bp4O6bqvtiaZ3wLvqac%2BDuVpCYq1owzSVJ%2FEup9xXo7rSQV9ZQ9Jo8HwKxeuyBvL07dQChaAzvcmyfhOVy5\"}]}",
+        "server": "cloudflare",
+        "transfer-encoding": "chunked",
+        "x-request-id": "ead133fd-91e6-4d51-a681-53cb06e7b5ce"
+      }
+    }
+  ],
+  "preflightErrors": [
+    {
+      "operation": "read_documentation",
+      "attempt": 1,
+      "at": "2026-10-25T05:38:36.076Z",
+      "message": "fetch failed",
+      "cause": "Connect Timeout Error (attempted address: yoyo-x402-minicurator.accessible-trip.workers.dev:443, timeout: 30000ms)"
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/cma-artist-search/F-02.md",
+    "readAt": "2026-10-25T05:38:43.723Z",
+    "sha256": "dfdde3a1e63bd3d9efc45acc9b4a424828cb8f9e4f4c8cc87ba9b7591cf6f5c6",
+    "content": "# F-02: cma-artist-search\n\nSearch CMA artist names and related artwork IDs\n\n```json\n{\n  \"id\": \"cma-artist-search\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artist-search\",\n  \"example\": {\n    \"q\": \"Min Zhen\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search CMA artist names and related artwork IDs\",\n  \"path\": \"/api/cma-artist-search\",\n  \"documentationPath\": \"/services/cma-artist-search/F-02.md\",\n  \"healthPath\": \"/services/cma-artist-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artist-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artist-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49924280",
+    "buyer": "19991000",
+    "seller": "11000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792907026",
+    "nonce": "0x2db1dd63cba49dff854f7686320e2336ee8941354b09b3309c43dda756c89529",
+    "expiresAt": "2026-10-25T05:43:46.000Z"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "ead133fd-91e6-4d51-a681-53cb06e7b5ce",
+    "resource": {
+      "schemaVersion": 1,
+      "service": "cma-artist-search",
+      "provider": "CMA",
+      "kind": "artist-search",
+      "query": {
+        "q": "Min Zhen",
+        "limit": 3,
+        "offset": 0
+      },
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/creators/?name=Min+Zhen&limit=3&skip=0",
+      "retrievedAt": "2026-10-25T05:38:55.599Z",
+      "total": 1,
+      "returned": 1,
+      "excluded": 0,
+      "items": [
+        {
+          "id": "31140",
+          "name": "Min Zhen",
+          "description": "Min Zhen (Chinese, 1730–after 1788)",
+          "nationality": "Chinese",
+          "birthYear": "1730",
+          "deathYear": "1788",
+          "biography": null,
+          "artworks": [
+            {
+              "id": "152821",
+              "title": "Album of Miscellaneous Subjects",
+              "sourceUrl": "https://clevelandart.org/art/1985.71",
+              "rightsVerified": false
+            },
+            {
+              "id": "152822",
+              "title": "Elephant, Horse, and Hare",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.1",
+              "rightsVerified": false
+            },
+            {
+              "id": "152823",
+              "title": "Su Wu the Shepherd",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.10",
+              "rightsVerified": false
+            },
+            {
+              "id": "152824",
+              "title": "Banana Plants",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.11",
+              "rightsVerified": false
+            },
+            {
+              "id": "152825",
+              "title": "Sheer Cliffs",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.12",
+              "rightsVerified": false
+            },
+            {
+              "id": "152826",
+              "title": "Lu Tong and Servant",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.2",
+              "rightsVerified": false
+            },
+            {
+              "id": "152827",
+              "title": "Landscape in the Manner of Ma Yuan",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.3",
+              "rightsVerified": false
+            },
+            {
+              "id": "152828",
+              "title": "Landscape after Mi Fu",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.4",
+              "rightsVerified": false
+            },
+            {
+              "id": "152829",
+              "title": "Cat and Butterfly",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.5",
+              "rightsVerified": false
+            },
+            {
+              "id": "152830",
+              "title": "Su Dongpo",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.6",
+              "rightsVerified": false
+            },
+            {
+              "id": "152831",
+              "title": "Dragon amid Clouds",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.7",
+              "rightsVerified": false
+            },
+            {
+              "id": "152832",
+              "title": "River Landscape",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.8",
+              "rightsVerified": false
+            },
+            {
+              "id": "152833",
+              "title": "Peaches",
+              "sourceUrl": "https://clevelandart.org/art/1985.71.9",
+              "rightsVerified": false
+            }
+          ]
+        }
+      ],
+      "cache": {
+        "status": "miss",
+        "stale": false
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+    "status": "success",
+    "blockNumber": "49924337",
+    "blockTimestamp": "1792906736"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "beforeObserved": {
+    "block": "49924280",
+    "buyer": "19991000",
+    "seller": "11000"
+  },
+  "after": {
+    "block": "49924337",
+    "buyer": "19990000",
+    "seller": "12000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+      "blockNumber": "49924337",
+      "logIndex": 2,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0x2db1dd63cba49dff854f7686320e2336ee8941354b09b3309c43dda756c89529"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "1000",
+    "sellerDelta": "1000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-10-25T06:57:21.562Z",
+    "paymentVerified": true
+  }
+}

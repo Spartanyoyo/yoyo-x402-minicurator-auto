@@ -1,0 +1,9 @@
+{
+  "network": "eip155:84532",
+  "chain": "Base Sepolia",
+  "asset": "USDC (testnet)",
+  "assetAddress": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "createdAt": "2026-10-16T10:47:01.483Z"
+}

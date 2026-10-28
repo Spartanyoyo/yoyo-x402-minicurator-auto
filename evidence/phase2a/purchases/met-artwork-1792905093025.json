@@ -1,0 +1,204 @@
+{
+  "resourceService": "met-artwork",
+  "parameters": {
+    "id": 552027
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:11:33.029Z",
+  "intent": "猫主题跨馆展览：从已购Met搜索结果选择552027，核验公版图片和作品详情",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:11:42.693Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4feb8d80a4888ff-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:11:42 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtYXJ0d29yaz9pZD01NTIwMjciLCJkZXNjcmlwdGlvbiI6Ik9uZSBwdWJsaWMtZG9tYWluIE1ldCBhcnR3b3JrIHdpdGggaW1hZ2UgYW5kIHByb3ZlbmFuY2UiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=URHrczNzQwRzeuCFDdRgR1XlWnw%2FgdJvN2Mqi2WXMUi3TMNO44ggPBhdF%2Fftt1az9RPj60Yt4tYSVhE19Qgv9%2FEiBk7bIj7V6hDVRG0IvSneqQID4OmLqGfxjCSj%2Brf2zICOBxZZS30fWpKY3l9xJjk4UTCZPBc7Zib4HeXfIXeuNr1b\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "1433e7c8-e02c-4333-ac2b-c66440edce32"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+          "description": "One public-domain Met artwork with image and provenance",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+      "paid": true,
+      "status": 200,
+      "receivedAt": "2026-10-25T05:11:45.295Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4feb8df0dc79354-HKG",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:11:44 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4NkUyMDlDMWEzYzA2MDVERDE3ODM3NDkwODE0MjkyMWIyNTc3RThFOSIsInRyYW5zYWN0aW9uIjoiMHg2ODc0MWQ3MmMzYjdkNTQ4OTU4ZWU0YmRiYTM2YmVmMzRiNzRkNmMzZDg3MGQ0N2QwMmIyOWNjMTBiNDM0YjY1IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiJ9",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tSa6dmqoZfQhOoO%2BlCyUuYPOGVd6hxBveR6b7KphzYIjoNTWaC4XLG3BooaT%2BgdQEIO6xs9HRHhYIAc5YktD%2FKwvX5U9sjBx5R5KrzYGBDehYWqiJ%2B83jCW7rF9g3x%2F4dkDeMIB9IzRXZgV9gg%2Fa8IR5gemhBXgeQp%2FT22kuMasYCj35\"}]}",
+        "server": "cloudflare",
+        "transfer-encoding": "chunked",
+        "x-request-id": "4a78b7f2-3c57-49d1-ad2a-0a43af0c3be2"
+      }
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/met-artwork/F-02.md",
+    "readAt": "2026-10-25T05:11:40.596Z",
+    "sha256": "cf2662a79305949af3e36a63a8b35a4f2da2df1523067dc36528224e44ec6323",
+    "content": "# F-02: met-artwork\n\nOne public-domain Met artwork with image and provenance\n\n```json\n{\n  \"id\": \"met-artwork\",\n  \"provider\": \"Met\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"552027\"\n  },\n  \"description\": \"One public-domain Met artwork with image and provenance\",\n  \"path\": \"/api/met-artwork\",\n  \"documentationPath\": \"/services/met-artwork/F-02.md\",\n  \"healthPath\": \"/services/met-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49916162",
+    "buyer": "19995000",
+    "seller": "7000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792905402",
+    "nonce": "0x39ae9e8b85a4aa94c724d6c9712b4ea42952749b9761c3acf607a2a3e5b4de21",
+    "expiresAt": "2026-10-25T05:16:42.000Z"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "4a78b7f2-3c57-49d1-ad2a-0a43af0c3be2",
+    "resource": {
+      "schemaVersion": 1,
+      "service": "met-artwork",
+      "provider": "Met",
+      "kind": "artwork",
+      "query": {
+        "id": 552027
+      },
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+      "retrievedAt": "2026-10-25T05:11:44.201Z",
+      "total": 1,
+      "returned": 1,
+      "excluded": 0,
+      "items": [
+        {
+          "museum": "Met",
+          "id": "552027",
+          "title": "Cat",
+          "artists": [],
+          "date": "664–30 BCE",
+          "medium": [
+            "Cupreous metal"
+          ],
+          "culture": [],
+          "department": "Egyptian Art",
+          "imageUrl": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/552027",
+          "rights": {
+            "publicDomain": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "evidence": "isPublicDomain=true"
+          }
+        }
+      ],
+      "cache": {
+        "status": "miss",
+        "stale": false
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+    "status": "success",
+    "blockNumber": "49916180",
+    "blockTimestamp": "1792905104"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "beforeObserved": {
+    "block": "49916162",
+    "buyer": "19995000",
+    "seller": "7000"
+  },
+  "after": {
+    "block": "49916180",
+    "buyer": "19994000",
+    "seller": "8000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+      "blockNumber": "49916180",
+      "logIndex": 28,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0x39ae9e8b85a4aa94c724d6c9712b4ea42952749b9761c3acf607a2a3e5b4de21"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "1000",
+    "sellerDelta": "1000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-10-25T06:57:50.100Z",
+    "paymentVerified": true
+  }
+}

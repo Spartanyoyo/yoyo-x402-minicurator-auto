@@ -1,0 +1,385 @@
+{
+  "checkedAt": "2026-10-28T02:33:07.322Z",
+  "scope": "Read-only Phase 2A acceptance audit; no signatures, payments, deployment or source mutation",
+  "passed": false,
+  "failures": [
+    "met-search: primary RPC audit failed after 2 attempt(s)",
+    "met-search: secondary RPC check failed after 2 attempt(s)",
+    "met-artwork: primary RPC audit failed after 2 attempt(s)",
+    "met-artwork: secondary RPC check failed after 2 attempt(s)",
+    "met-departments: primary RPC audit failed after 2 attempt(s)",
+    "met-departments: secondary RPC check failed after 2 attempt(s)",
+    "cma-artwork-search: primary RPC audit failed after 2 attempt(s)",
+    "cma-artwork-search: secondary RPC check failed after 2 attempt(s)",
+    "cma-artwork: primary RPC audit failed after 2 attempt(s)",
+    "cma-artwork: secondary RPC check failed after 2 attempt(s)",
+    "cma-artist-search: primary RPC audit failed after 2 attempt(s)",
+    "cma-artist-search: secondary RPC check failed after 2 attempt(s)",
+    "cma-artist: primary RPC audit failed after 2 attempt(s)",
+    "cma-artist: secondary RPC check failed after 2 attempt(s)",
+    "smk-search: primary RPC audit failed after 2 attempt(s)",
+    "smk-search: secondary RPC check failed after 2 attempt(s)",
+    "smk-artwork: primary RPC audit failed after 2 attempt(s)",
+    "smk-artwork: secondary RPC check failed after 2 attempt(s)"
+  ],
+  "input": {
+    "session": "evidence/phase2a/demo-session.json",
+    "sessionSha256": "ade25543bed44c13262ff17ee6b41cc92644d34e945b21e123a49137ba9cfe1d"
+  },
+  "requirements": {
+    "nineDistinctServices": true,
+    "paidHttpAndDeliveryEvidence": true,
+    "crossResourceArtworkSelection": true,
+    "primaryRpcFullAudit": false,
+    "independentSecondaryReceiptAuthorizationAndBalanceQuery": false
+  },
+  "rpc": {
+    "primary": "https://base-sepolia.gateway.tenderly.co",
+    "secondary": "https://base-testnet.api.pocket.network",
+    "attempts": 2
+  },
+  "records": [
+    {
+      "service": "met-search",
+      "evidence": "evidence/phase2a/purchases/met-search-1792904993023.json",
+      "evidenceSha256": "f7411a07f7a9473b6866252a7bbb4e437bd4ce83d5f97824678d2a3dfa845846",
+      "transaction": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "met-artwork",
+      "evidence": "evidence/phase2a/purchases/met-artwork-1792905093025.json",
+      "evidenceSha256": "67030f519d7a97950537d11a160cef0cc978090400a082360965d281f4a90f65",
+      "transaction": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "met-departments",
+      "evidence": "evidence/phase2a/purchases/met-departments-1792906417078.json",
+      "evidenceSha256": "e2d6c4d24230b71b4b066c820303f19b036a17e7f8f85d0d7e80329d94ede019",
+      "transaction": "0x5e87f27ac50b05fa83c732a31f8ef88f9dd209d908cce4dd75c51df81d45bad1",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "cma-artwork-search",
+      "evidence": "evidence/phase2a/purchases/cma-artwork-search-1792906533294.json",
+      "evidenceSha256": "96dad8b1ddb872461140ab93e9671de1fdeeecf5dd763196c6cc006e300e3133",
+      "transaction": "0x778c8292b1cd6c37a07bd9171c3d9f4383776216e745d908b0b563eb7ba624e1",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "cma-artwork",
+      "evidence": "evidence/phase2a/purchases/cma-artwork-1792906617520.json",
+      "evidenceSha256": "e7fc31466a8e912e5709267fcb8c7cf083f62ecb44601ee372957cc198895a9f",
+      "transaction": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "cma-artist-search",
+      "evidence": "evidence/phase2a/purchases/cma-artist-search-1792906685098.json",
+      "evidenceSha256": "72c89ac41e0aea3752c275555237b6c987d048f0f93715f29405e93710998cfa",
+      "transaction": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "cma-artist",
+      "evidence": "evidence/phase2a/purchases/cma-artist-1792907255236.json",
+      "evidenceSha256": "3a1bf9c3526bbc3f643574833a1fbf98f4b761e092ec36e56ad976e1998162c5",
+      "transaction": "0x92fca88398328ab6a57e3952977de7e14329703f4ba4e43e285f503411d2b9f5",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "smk-search",
+      "evidence": "evidence/phase2a/purchases/smk-search-1792908028710.json",
+      "evidenceSha256": "c2ee392734951d63da9d6ef17c4600a2c2a3c7f17510f9da67d1cbdace5e2ada",
+      "transaction": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    },
+    {
+      "service": "smk-artwork",
+      "evidence": "evidence/phase2a/purchases/smk-artwork-1792908060324.json",
+      "evidenceSha256": "2c85cc3c93c4ed57ff1c39fa7d862339db5d1912cd9085be7ae2936c35008f49",
+      "transaction": "0x20308fdc292cba38f120ea0fd01434d0a1e65901ab7b204ecf67a4b61ebe3d3c",
+      "primary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      },
+      "secondary": {
+        "ok": false,
+        "error": "The request took too long to respond.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          },
+          {
+            "attempt": 2,
+            "status": "failed",
+            "error": "The request took too long to respond."
+          }
+        ]
+      }
+    }
+  ]
+}

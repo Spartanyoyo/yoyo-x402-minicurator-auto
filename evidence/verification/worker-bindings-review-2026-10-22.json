@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-22T02:58:41.403Z",
+  "local": {
+    "verification": "Observed Wrangler reload output",
+    "logExcerpt": [
+      "Using secrets defined in .dev.vars",
+      "env.SELLER_ADDRESS: Environment Variable, local"
+    ],
+    "observedBindingNames": [
+      "SELLER_ADDRESS"
+    ],
+    "requiredSecrets": [],
+    "devVarsFilePresent": true
+  },
+  "deployed": {
+    "verification": "Cloudflare version API",
+    "version": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+    "bindingNames": [
+      "SELLER_ADDRESS"
+    ],
+    "onlySellerBinding": true
+  },
+  "passed": true
+}

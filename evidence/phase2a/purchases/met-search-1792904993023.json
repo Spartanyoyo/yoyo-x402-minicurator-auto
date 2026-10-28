@@ -1,0 +1,218 @@
+{
+  "resourceService": "met-search",
+  "parameters": {
+    "q": "cat",
+    "limit": 5,
+    "offset": 0
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:09:53.027Z",
+  "intent": "给10岁孩子做15分钟猫主题跨馆展览：先搜索Met候选作品",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:10:05.853Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4feb678ac00a3ca-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:10:05 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtc2VhcmNoP3E9Y2F0JmxpbWl0PTUmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBNZXQgb2JqZWN0IElEczsgcmlnaHRzIHJlcXVpcmUgdGhlIHNlcGFyYXRlIGFydHdvcmsgcmVzb3VyY2UiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tTKC1lbEjB8mYK%2BaGAtCg8zk9HYTgZtfZl30noGhU3mKPx%2FpmbSSoHDBFleDVjZUYUhUGpzhP53FsLcKpdzzkf8nhyBS8Zz8wttbpX%2FbRP3lcBO3R1CYGs%2FtoeuVAG%2BJXHvwOWzlt6IAfMDjN3z5FWE1HQNGunsOYfDYdxchxAS2QFnm\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "1e7f1fea-c90b-4aaa-9d47-b884e64ab988"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+          "description": "Search Met object IDs; rights require the separate artwork resource",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+      "paid": true,
+      "status": 200,
+      "receivedAt": "2026-10-25T05:10:23.744Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4feb6da6d64a3ef-SIN",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:10:23 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4NkUyMDlDMWEzYzA2MDVERDE3ODM3NDkwODE0MjkyMWIyNTc3RThFOSIsInRyYW5zYWN0aW9uIjoiMHg1ZWRmZjY4MDkyYWM0ZGQ4ZTRkM2U0YzA0MmNkNDJjODUyNDZiMWZhNzQwYzQyZjZhNWQxNTFiMDdlZTFmOTI5IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiJ9",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MiiaiOBqmXMUBSNG1PPKGo6rRPRVwIN7JGvOYJ1%2Bpu%2Fa3FFZc4Y2GHLHB84UV6veVm%2FMLPk7tkx1gi7CvEi33AFMCAYndqvrMxHnK9VGqZlRQn0EvGmCKpfWlHQ07E8NiltDS4fj7jHWF24VGrh9XKBtaUdHgHtcLflHJdCIMGI8pYp9\"}]}",
+        "server": "cloudflare",
+        "transfer-encoding": "chunked",
+        "x-request-id": "15903e7b-cdd9-4605-b05e-1305501617de"
+      }
+    }
+  ],
+  "preflightErrors": [
+    {
+      "operation": "read_documentation",
+      "attempt": 1,
+      "at": "2026-10-25T05:09:53.818Z",
+      "message": "fetch failed",
+      "cause": "Client network socket disconnected before secure TLS connection was established"
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/met-search/F-02.md",
+    "readAt": "2026-10-25T05:09:56.072Z",
+    "sha256": "7f8d39b595c1ce450b16dd192d3450ade3cd44eda982637fd2e19999d98e4726",
+    "content": "# F-02: met-search\n\nSearch Met object IDs; rights require the separate artwork resource\n\n```json\n{\n  \"id\": \"met-search\",\n  \"provider\": \"Met\",\n  \"kind\": \"identifiers\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"5\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search Met object IDs; rights require the separate artwork resource\",\n  \"path\": \"/api/met-search\",\n  \"documentationPath\": \"/services/met-search/F-02.md\",\n  \"healthPath\": \"/services/met-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49915661",
+    "buyer": "19996000",
+    "seller": "6000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792905305",
+    "nonce": "0x828d9ea64b04805234f44f99004836ba2cbad80bd8820b380e08fb2269b19a87",
+    "expiresAt": "2026-10-25T05:15:05.000Z"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "15903e7b-cdd9-4605-b05e-1305501617de",
+    "resource": {
+      "schemaVersion": 1,
+      "service": "met-search",
+      "provider": "Met",
+      "kind": "identifiers",
+      "query": {
+        "q": "cat",
+        "limit": 5,
+        "offset": 0
+      },
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=5&offset=0",
+      "retrievedAt": "2026-10-25T05:10:22.363Z",
+      "total": 1591,
+      "returned": 5,
+      "excluded": 0,
+      "items": [
+        {
+          "id": "91120",
+          "rightsVerified": false
+        },
+        {
+          "id": "552027",
+          "rightsVerified": false
+        },
+        {
+          "id": "570722",
+          "rightsVerified": false
+        },
+        {
+          "id": "570749",
+          "rightsVerified": false
+        },
+        {
+          "id": "552028",
+          "rightsVerified": false
+        }
+      ],
+      "cache": {
+        "status": "miss",
+        "stale": false
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+    "status": "success",
+    "blockNumber": "49915771",
+    "blockTimestamp": "1792905023"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "beforeObserved": {
+    "block": "49915661",
+    "buyer": "19996000",
+    "seller": "6000"
+  },
+  "after": {
+    "block": "49915771",
+    "buyer": "19995000",
+    "seller": "7000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+      "blockNumber": "49915771",
+      "logIndex": 6,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0x828d9ea64b04805234f44f99004836ba2cbad80bd8820b380e08fb2269b19a87"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "1000",
+    "sellerDelta": "1000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-10-25T06:58:34.089Z",
+    "paymentVerified": true
+  }
+}

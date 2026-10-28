@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-28T02:49:14.477826Z",
+  "scope": "GitHub publication and mentor-review read-only recheck; no new payment or deployment",
+  "status": "passed_with_known_upstream_dependency_risk",
+  "functionalAcceptancePassed": true,
+  "localGates": {
+    "command": "npm run verify",
+    "exitCode": 0,
+    "tests": 150,
+    "testFailures": 0,
+    "weatherWorkerBuild": "passed",
+    "curatorWorkerBuild": "passed",
+    "documentationLinks": {
+      "passed": true,
+      "filesChecked": 24,
+      "linksChecked": 373,
+      "failures": 0
+    },
+    "credentialScan": {
+      "passed": true,
+      "filesScanned": 217,
+      "matches": 0
+    },
+    "evidenceManifestStable": true,
+    "cleanInstall": {
+      "command": "npm ci",
+      "status": "passed",
+      "environment": "temporary copy without secrets or node_modules"
+    }
+  },
+  "liveChecks": {
+    "nineResourceProbePassed": true,
+    "probeEvidence": "probe-2026-10-28.json",
+    "allDocumentation200": true,
+    "allHealth200": true,
+    "allUnpaidQuotes402": true,
+    "curatorProbeErrors": 0
+  },
+  "chainChecks": {
+    "passed": true,
+    "services": 9,
+    "transactions": 9,
+    "primaryRpc": "https://base-sepolia.gateway.tenderly.co",
+    "secondaryRpc": "https://base-testnet.api.pocket.network",
+    "failures": 0,
+    "evidence": "independent-chain-reaudit-2026-10-28.json"
+  },
+  "deployment": {
+    "curatorVersion": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+    "curatorTrafficPercent": 100,
+    "weatherVersion": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+    "weatherTrafficPercent": 100,
+    "weatherPreserved": true,
+    "weatherLiveDocs200": true,
+    "weatherLiveUnpaid402": true,
+    "evidence": "deployment-2026-10-25.json",
+    "rpcHealthEvidence": "rpc-health-2026-10-28.json"
+  },
+  "fixAppliedDuringRecheck": {
+    "issue": "Curator RPC-only commands inherited Node global proxy settings and timed out against otherwise healthy RPC endpoints.",
+    "resolution": "Curator HTTP requests keep their explicit proxy-aware transport; RPC audit and probe commands no longer enable the global HTTP proxy.",
+    "verifiedBy": "nine transactions passed dual-RPC reaudit after the command fix"
+  },
+  "knownResidualRisk": {
+    "npmAuditTotal": 6,
+    "severity": "high",
+    "advisory": "GHSA-mrhx-c7xc-m3w5",
+    "rootCause": "Current official x402 packages require a Zod 3 version covered by the advisory.",
+    "mitigations": [
+      "payment headers bounded before SDK validation",
+      "request URLs and quotes bounded",
+      "museum JSON streamed with 2 MiB limit",
+      "testnet only"
+    ],
+    "fullyRemediated": false
+  },
+  "securityHardening": {
+    "rawSignedTransactionMaterialRedacted": true,
+    "redactedEvidence": "evidence/history/purchase-1792155166089.json",
+    "retainedAuditConclusion": "The failed request was reconciled as expired, unused and uncharged; the raw signed transaction and EIP-3009 signature are not published.",
+    "scannerDetects": [
+      "PEM private-key blocks and common secret-token formats",
+      "raw signed transaction method markers",
+      "long hexadecimal payloads",
+      "non-placeholder payment signature headers",
+      "raw signed transaction material inside Base64 payment-response headers"
+    ],
+    "originalHistoryWarning": "The pre-release initial commit contains the old unsanitized blob. A new GitHub repository must use a clean parentless release commit or rewritten history rather than pushing the old commit graph."
+  }
+}

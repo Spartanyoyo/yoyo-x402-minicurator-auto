@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-10-25T04:44:22.321Z",
+  "baseUrl": "https://yoyo-minicurator-egress.accessible-trip.workers.dev",
+  "scope": "Real Cloudflare Workers outbound fetches; no payment",
+  "rounds": 2,
+  "records": [
+    {
+      "round": 1,
+      "service": "met-search",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=5&offset=0",
+      "startedAt": "2026-10-25T04:44:25.002Z",
+      "environment": "Cloudflare Workers",
+      "colo": "HKG",
+      "error": "Invalid redirect value, must be one of \"follow\" or \"manual\" (\"error\" won't be implemented since it does not make sense at the edge; use \"manual\" and check the response status code).",
+      "validPayload": false,
+      "durationMs": 0,
+      "clientValidated": false
+    },
+    {
+      "round": 1,
+      "service": "met-artwork",
+      "upstream": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+      "startedAt": "2026-10-25T04:44:41.456Z",
+      "environment": "Cloudflare Workers",
+      "colo": "SIN",
+      "error": "Invalid redirect value, must be one of \"follow\" or \"manual\" (\"error\" won't be implemented since it does not make sense at the edge; use \"manual\" and check the response status code).",
+      "validPayload": false,
+      "durationMs": 0,
+      "clientValidated": false
+    }
+  ]
+}

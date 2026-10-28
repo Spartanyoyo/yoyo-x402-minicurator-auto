@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-25T05:42:30.036Z",
+  "checks": [
+    {
+      "path": "/api/met-artwork?id=552027",
+      "expected": 431,
+      "status": 431,
+      "passed": true,
+      "requestId": "f6f06c13-e8fb-469c-9e2e-e1e0594c1f59"
+    },
+    {
+      "path": "/api/cma-artwork?id=0",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "requestId": "0e076b89-bf5c-41fa-9c09-1dc26dc64a1f"
+    },
+    {
+      "path": "/api/smk-artwork?id=https%3A%2F%2Fevil.test",
+      "expected": 400,
+      "status": 400,
+      "passed": true,
+      "requestId": "49b96d11-9fa2-4fd1-9e30-79b7958f9794"
+    }
+  ],
+  "passed": true
+}

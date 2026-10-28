@@ -1,0 +1,44 @@
+{
+  "name": "yoyo-x402-weather",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --use-env-proxy --env-file=.env.local scripts/dev.mjs",
+    "wallets": "node scripts/create-wallets.mjs",
+    "probe": "node --use-env-proxy --env-file=.env.local scripts/probe.mjs",
+    "buy": "node --use-env-proxy --env-file=.env.local scripts/buy.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "deploy": "wrangler deploy",
+    "curator:build": "wrangler deploy --config wrangler.curator.jsonc --dry-run --outdir dist/curator",
+    "curator:deploy": "npm run curator:build && node --env-file=.env.cloudflare --env-file=.env.local scripts/deploy-curator.mjs",
+    "curator:probe": "node --env-file=.env.local scripts/probe-curator.mjs",
+    "curator:buy": "node --env-file=.env.local scripts/buy-curator.mjs",
+    "curator:audit": "node --env-file=.env.local scripts/audit.mjs",
+    "curator:reconcile": "node --env-file=.env.local scripts/reconcile-curator.mjs",
+    "curator:verify-chain": "node --env-file=.env.local scripts/verify-phase2a.mjs",
+    "rpc-check": "node --env-file=.env.local scripts/rpc-health.mjs",
+    "evidence:manifest": "node scripts/build-evidence-manifest.mjs",
+    "docs:check": "node scripts/check-docs.mjs",
+    "verify": "npm test && npm run build && npm run curator:build && npm run docs:check && npm run security:check",
+    "security:check": "node scripts/check-public-files.mjs"
+  },
+  "dependencies": {
+    "@x402/core": "2.28.0",
+    "@x402/evm": "2.28.0",
+    "@x402/fetch": "2.28.0",
+    "@x402/hono": "2.28.0",
+    "hono": "4.13.13",
+    "undici": "7.30.1",
+    "viem": "2.57.7"
+  },
+  "devDependencies": {
+    "@hono/node-server": "2.1.5",
+    "wrangler": "4.151.1"
+  },
+  "overrides": {
+    "undici": "$undici",
+    "fast-uri": "3.1.9"
+  }
+}

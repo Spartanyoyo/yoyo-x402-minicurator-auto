@@ -1,0 +1,211 @@
+{
+  "resourceService": "cma-artwork",
+  "parameters": {
+    "id": 152829
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:36:57.525Z",
+  "intent": "猫主题跨馆展览：从已购CMA搜索结果选择Cat and Butterfly，获取完整档案及公版图片",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:37:08.185Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4fede16ccbf1d3a-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:37:07 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0d29yaz9pZD0xNTI4MjkiLCJkZXNjcmlwdGlvbiI6Ik9uZSBDQzAgQ2xldmVsYW5kIGFydHdvcmsgd2l0aCBpbWFnZSBhbmQgcHJvdmVuYW5jZSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwIiwiYXNzZXQiOiIweDAzNkNiRDUzODQyYzU0MjY2MzRlNzkyOTU0MWVDMjMxOGYzZENGN2UiLCJwYXlUbyI6IjB4MzAzNzgyQjFiNzg4NTI3YkU2Y0MyOEM2RjE2YUEyQTNCYTI2YjU5ZiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0RDIiwidmVyc2lvbiI6IjIifX1dfQ==",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hHle%2BbOTCSDy3FZsVAtTkzGqjwh34Z%2B1v5WBtJKo85cwAsZ%2FnwgvCSQmuJxtArSf6Bf1z70Kkx%2FQqPwvPRWK0S6pk10yHrc2xGaAJnh%2FLlREhIGtR816cDYnUAlOowKMOGRy254BrqqR9Cw1ciUulx%2B%2BgIKGbShQXBGUN%2B2LNDXEc8O%2F\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "22bcb78d-4fd5-490c-92b1-12757b1f73ed"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+          "description": "One CC0 Cleveland artwork with image and provenance",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+      "paid": true,
+      "status": 200,
+      "receivedAt": "2026-10-25T05:37:11.351Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4fede1aed71fdec-SIN",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:37:11 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4NkUyMDlDMWEzYzA2MDVERDE3ODM3NDkwODE0MjkyMWIyNTc3RThFOSIsInRyYW5zYWN0aW9uIjoiMHg1Y2QyZDgxMmI2YzEyNTIzYzFjOTBlMjZjYzkwYjFiM2E3MWI4NmFlYjhhMzMwM2Q3NzVmYzZhM2E2NzI3MTM4IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiJ9",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SQSkow8qOs9P0FJxyjlzHs219b2uPtu2n6Q1x7YDuzdzV3mL3yPy5vmAXfqNZ5v1l3YHk7sWIx6wqoKBQvnFAUJJkOoJvSUm6ueYNSeNxOuxhIqsoAgFW65CVe1ckqS%2FwnKVmgNuE9YzTiF0jGhBh%2Fginrtj%2Fqcj4nit7mI7i5XlsenC\"}]}",
+        "server": "cloudflare",
+        "transfer-encoding": "chunked",
+        "x-request-id": "a649fc0d-6c97-48a0-be8d-f8cb58f67698"
+      }
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/cma-artwork/F-02.md",
+    "readAt": "2026-10-25T05:37:06.132Z",
+    "sha256": "22f93c6ae70e63e142635489248883d76086b62ad05605e5ea1b0aaab4435335",
+    "content": "# F-02: cma-artwork\n\nOne CC0 Cleveland artwork with image and provenance\n\n```json\n{\n  \"id\": \"cma-artwork\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"152829\"\n  },\n  \"description\": \"One CC0 Cleveland artwork with image and provenance\",\n  \"path\": \"/api/cma-artwork\",\n  \"documentationPath\": \"/services/cma-artwork/F-02.md\",\n  \"healthPath\": \"/services/cma-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49923790",
+    "buyer": "19992000",
+    "seller": "10000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792906928",
+    "nonce": "0x9ccd502a781a7ed6587b534909933c7b1ef56839c2a389e0d77a36ff2ea001bf",
+    "expiresAt": "2026-10-25T05:42:08.000Z"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "a649fc0d-6c97-48a0-be8d-f8cb58f67698",
+    "resource": {
+      "schemaVersion": 1,
+      "service": "cma-artwork",
+      "provider": "CMA",
+      "kind": "artwork",
+      "query": {
+        "id": 152829
+      },
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/152829",
+      "retrievedAt": "2026-10-25T05:37:09.924Z",
+      "total": 1,
+      "returned": 1,
+      "excluded": 0,
+      "items": [
+        {
+          "museum": "CMA",
+          "id": "152829",
+          "title": "Cat and Butterfly",
+          "artists": [
+            {
+              "id": "31140",
+              "name": "Min Zhen (Chinese, 1730–after 1788)"
+            }
+          ],
+          "date": "1788",
+          "medium": [
+            "album leaf, ink on paper"
+          ],
+          "culture": [
+            "China, Qing dynasty (1644-1911)"
+          ],
+          "department": "Chinese Art",
+          "imageUrl": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+          "sourceUrl": "https://clevelandart.org/art/1985.71.5",
+          "rights": {
+            "publicDomain": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "evidence": "share_license_status=\"CC0\""
+          }
+        }
+      ],
+      "cache": {
+        "status": "miss",
+        "stale": false
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+    "status": "success",
+    "blockNumber": "49923809",
+    "blockTimestamp": "1792906630"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "beforeObserved": {
+    "block": "49923790",
+    "buyer": "19992000",
+    "seller": "10000"
+  },
+  "after": {
+    "block": "49923809",
+    "buyer": "19991000",
+    "seller": "11000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+      "blockNumber": "49923809",
+      "logIndex": 20,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "value": "1000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0x9ccd502a781a7ed6587b534909933c7b1ef56839c2a389e0d77a36ff2ea001bf"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "1000",
+    "sellerDelta": "1000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-10-25T06:57:35.601Z",
+    "paymentVerified": true
+  }
+}

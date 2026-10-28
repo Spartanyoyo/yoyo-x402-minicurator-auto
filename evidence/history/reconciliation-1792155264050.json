@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-16T12:54:23.748Z",
+  "purchaseEvidence": "evidence/purchase-1792155166089.json",
+  "networkId": 84532,
+  "transactionHash": "0x0dbdd3ca8724e1aaffce05816a402a5a1ffbe2463518ddcd89e4cccc4af8f04c",
+  "facilitatorTransactionNonce": 2927722,
+  "authorization": {
+    "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792155470",
+    "expiresAt": "2026-10-16T12:57:50.000Z",
+    "nonce": "0xd7350acf2710afe98088d2bfe85b67daa930bc2fc7355196f6c27198d3103f59"
+  },
+  "latestBlock": {
+    "number": "48193488",
+    "timestamp": "1792155264",
+    "time": "2026-10-16T12:54:24.000Z"
+  },
+  "checks": {
+    "authorizationUsed": {
+      "ok": true,
+      "value": false
+    },
+    "buyerBalance": {
+      "ok": true,
+      "value": "19999000"
+    },
+    "sellerBalance": {
+      "ok": true,
+      "value": "1000"
+    },
+    "receipt": {
+      "ok": false,
+      "name": "TransactionReceiptNotFoundError",
+      "error": "Transaction receipt with hash \"0x0dbdd3ca8724e1aaffce05816a402a5a1ffbe2463518ddcd89e4cccc4af8f04c\" could not be found. The Transaction may not be processed on a block yet."
+    },
+    "transaction": {
+      "ok": false,
+      "name": "TransactionNotFoundError",
+      "error": "Transaction with hash \"0x0dbdd3ca8724e1aaffce05816a402a5a1ffbe2463518ddcd89e4cccc4af8f04c\" could not be found."
+    },
+    "matchingTransfers": {
+      "ok": true,
+      "value": []
+    }
+  },
+  "authorizationExpired": false,
+  "balanceChanges": {
+    "buyer": "0",
+    "seller": "0"
+  }
+}

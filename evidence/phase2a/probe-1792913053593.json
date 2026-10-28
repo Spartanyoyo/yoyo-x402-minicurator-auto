@@ -1,0 +1,667 @@
+{
+  "startedAt": "2026-10-25T07:24:13.590Z",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "scope": "Read-only docs, health and unpaid quotes; no authorization signatures",
+  "resources": [
+    {
+      "service": "met-search",
+      "documentation": {
+        "status": 200,
+        "sha256": "ec42e98a1f9a5a81a12c8d9b0d17fc2099975b1d1e5d7a99b32399a7ad4c989f",
+        "content": "# F-02: met-search\n\nSearch Met object IDs; rights require the separate artwork resource\n\n```json\n{\n  \"id\": \"met-search\",\n  \"provider\": \"Met\",\n  \"kind\": \"identifiers\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"5\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search Met object IDs; rights require the separate artwork resource\",\n  \"path\": \"/api/met-search\",\n  \"documentationPath\": \"/services/met-search/F-02.md\",\n  \"healthPath\": \"/services/met-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "met-search",
+          "provider": "Met",
+          "kind": "identifiers",
+          "example": {
+            "q": "cat",
+            "limit": "5",
+            "offset": "0"
+          },
+          "description": "Search Met object IDs; rights require the separate artwork resource",
+          "path": "/api/met-search",
+          "documentationPath": "/services/met-search/F-02.md",
+          "healthPath": "/services/met-search/health",
+          "cacheNamespace": "minicurator-v1/met-search",
+          "freshSeconds": 3600,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7b690a519fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:31 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtc2VhcmNoP3E9Y2F0JmxpbWl0PTUmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBNZXQgb2JqZWN0IElEczsgcmlnaHRzIHJlcXVpcmUgdGhlIHNlcGFyYXRlIGFydHdvcmsgcmVzb3VyY2UiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=naLNxEhsHuY8XZ2lL9HqhjOruOk8SGCwxTslDbHXXelsgHDgd2xOivr4Y2bEZRKUoqZgX7322BF%2F10E1fm9CkRF10wmXsvTA5XBNM8UWdDZT1RlCERQS1pSIGBvy65BWIHiZ0EM%2F0xSlF2XVA7T%2B6wYGsAGfnx%2FBypjglZJm%2BANcbTJm\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "74f62256-c704-4850-8b3f-ddfbee93a40d"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+            "description": "Search Met object IDs; rights require the separate artwork resource",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "met-artwork",
+      "documentation": {
+        "status": 200,
+        "sha256": "c8264a177718bcb7eb537352b51d2b1c8d2e7e399bafab3ddd921ad419836cc0",
+        "content": "# F-02: met-artwork\n\nOne public-domain Met artwork with image and provenance\n\n```json\n{\n  \"id\": \"met-artwork\",\n  \"provider\": \"Met\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"552027\"\n  },\n  \"description\": \"One public-domain Met artwork with image and provenance\",\n  \"path\": \"/api/met-artwork\",\n  \"documentationPath\": \"/services/met-artwork/F-02.md\",\n  \"healthPath\": \"/services/met-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "met-artwork",
+          "provider": "Met",
+          "kind": "artwork",
+          "example": {
+            "id": "552027"
+          },
+          "description": "One public-domain Met artwork with image and provenance",
+          "path": "/api/met-artwork",
+          "documentationPath": "/services/met-artwork/F-02.md",
+          "healthPath": "/services/met-artwork/health",
+          "cacheNamespace": "minicurator-v1/met-artwork",
+          "freshSeconds": 86400,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7ba87be29fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:42 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtYXJ0d29yaz9pZD01NTIwMjciLCJkZXNjcmlwdGlvbiI6Ik9uZSBwdWJsaWMtZG9tYWluIE1ldCBhcnR3b3JrIHdpdGggaW1hZ2UgYW5kIHByb3ZlbmFuY2UiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZaoC0TXBU3R210t3lveVQnJvnBhB5qvi6guBQd2NJdzNgVJVYfebUdm3SGDVse8AE4HgZuAHheHzvnPTkTz0NP0tYY4uFKYGZgIFpLBUHYjZHaj%2BLsuxa09h0uE82gguj%2BgF1XMKGazewkpqW%2B2y%2B%2Fq4OqTtGSd3SWdzxotHY3aofOjZ\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "2a0b82e4-14f2-4556-a7ba-0b5eca7f3ff2"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+            "description": "One public-domain Met artwork with image and provenance",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "met-departments",
+      "documentation": {
+        "status": 200,
+        "sha256": "f22ad561e6d42f9eb5c489d72f2e82e05ea9f9d54ff86ab336c7ec34153347d0",
+        "content": "# F-02: met-departments\n\nMet department identifiers and names\n\n```json\n{\n  \"id\": \"met-departments\",\n  \"provider\": \"Met\",\n  \"kind\": \"departments\",\n  \"example\": {},\n  \"description\": \"Met department identifiers and names\",\n  \"path\": \"/api/met-departments\",\n  \"documentationPath\": \"/services/met-departments/F-02.md\",\n  \"healthPath\": \"/services/met-departments/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-departments\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-departments. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "met-departments",
+          "provider": "Met",
+          "kind": "departments",
+          "example": {},
+          "description": "Met department identifiers and names",
+          "path": "/api/met-departments",
+          "documentationPath": "/services/met-departments/F-02.md",
+          "healthPath": "/services/met-departments/health",
+          "cacheNamespace": "minicurator-v1/met-departments",
+          "freshSeconds": 86400,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bb36c709fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:43 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtZGVwYXJ0bWVudHMiLCJkZXNjcmlwdGlvbiI6Ik1ldCBkZXBhcnRtZW50IGlkZW50aWZpZXJzIGFuZCBuYW1lcyIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwIiwiYXNzZXQiOiIweDAzNkNiRDUzODQyYzU0MjY2MzRlNzkyOTU0MWVDMjMxOGYzZENGN2UiLCJwYXlUbyI6IjB4MzAzNzgyQjFiNzg4NTI3YkU2Y0MyOEM2RjE2YUEyQTNCYTI2YjU5ZiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0RDIiwidmVyc2lvbiI6IjIifX1dfQ==",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KQj6FXxxzMDBQg46T971Wwl4WZq6wRj3hRiSPCHSyr9%2F3v1Okqi4YNrksdXeEv12tsQuu9ra%2FOLIy%2B8FFCuEe1bn4ezQJZBBSBybVh4zn%2BWzEySqQxPSX1yY93aB0G8zXnLcmOn00zgDIxsJ%2BHHqGIQ%2B4aeAWDltb2E0FHn9Xlgr9DsN\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "6505b7f9-6d8d-4931-86bb-7b852a21b402"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments",
+            "description": "Met department identifiers and names",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "cma-artwork-search",
+      "documentation": {
+        "status": 200,
+        "sha256": "67d8b49abfcac00a5a23037ef4b838c5a4e686c1776842f67f8526a6b719620d",
+        "content": "# F-02: cma-artwork-search\n\nSearch CMA titles; only CC0 records with images\n\n```json\n{\n  \"id\": \"cma-artwork-search\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artwork-search\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search CMA titles; only CC0 records with images\",\n  \"path\": \"/api/cma-artwork-search\",\n  \"documentationPath\": \"/services/cma-artwork-search/F-02.md\",\n  \"healthPath\": \"/services/cma-artwork-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artwork-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artwork-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "cma-artwork-search",
+          "provider": "CMA",
+          "kind": "artwork-search",
+          "example": {
+            "q": "cat",
+            "limit": "3",
+            "offset": "0"
+          },
+          "description": "Search CMA titles; only CC0 records with images",
+          "path": "/api/cma-artwork-search",
+          "documentationPath": "/services/cma-artwork-search/F-02.md",
+          "healthPath": "/services/cma-artwork-search/health",
+          "cacheNamespace": "minicurator-v1/cma-artwork-search",
+          "freshSeconds": 3600,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bbb5a059fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:45 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0d29yay1zZWFyY2g/cT1jYXQmbGltaXQ9MyZvZmZzZXQ9MCIsImRlc2NyaXB0aW9uIjoiU2VhcmNoIENNQSB0aXRsZXM7IG9ubHkgQ0MwIHJlY29yZHMgd2l0aCBpbWFnZXMiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xXgJPx%2FPVeBS6Als9ieSkeLa75NnWzKi3J5foXke86Sc4I0SgL%2Bc6RJ5WzUVCncvC3tsYjjrL3nPPFt%2BiKUzhNsMzwPfpSZ82z9Nu5K8e4Tc%2BcoYnaGcnZ7u4CPHm%2BVB83TwbDA9L5qduP2iZfbF%2F95uOQ18J7y64c51RFKZqUhK0Pvu\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "0080f86c-d1ad-4087-ab0c-79899ffa0d3c"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0",
+            "description": "Search CMA titles; only CC0 records with images",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "documentation": {
+        "status": 200,
+        "sha256": "1518c72a64a5c862dc6829f7fbf59d2fea17524e7b9da2ae3c172a88fdf40fa5",
+        "content": "# F-02: cma-artwork\n\nOne CC0 Cleveland artwork with image and provenance\n\n```json\n{\n  \"id\": \"cma-artwork\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"152829\"\n  },\n  \"description\": \"One CC0 Cleveland artwork with image and provenance\",\n  \"path\": \"/api/cma-artwork\",\n  \"documentationPath\": \"/services/cma-artwork/F-02.md\",\n  \"healthPath\": \"/services/cma-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "cma-artwork",
+          "provider": "CMA",
+          "kind": "artwork",
+          "example": {
+            "id": "152829"
+          },
+          "description": "One CC0 Cleveland artwork with image and provenance",
+          "path": "/api/cma-artwork",
+          "documentationPath": "/services/cma-artwork/F-02.md",
+          "healthPath": "/services/cma-artwork/health",
+          "cacheNamespace": "minicurator-v1/cma-artwork",
+          "freshSeconds": 86400,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bc12dd39fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:45 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0d29yaz9pZD0xNTI4MjkiLCJkZXNjcmlwdGlvbiI6Ik9uZSBDQzAgQ2xldmVsYW5kIGFydHdvcmsgd2l0aCBpbWFnZSBhbmQgcHJvdmVuYW5jZSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwIiwiYXNzZXQiOiIweDAzNkNiRDUzODQyYzU0MjY2MzRlNzkyOTU0MWVDMjMxOGYzZENGN2UiLCJwYXlUbyI6IjB4MzAzNzgyQjFiNzg4NTI3YkU2Y0MyOEM2RjE2YUEyQTNCYTI2YjU5ZiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0RDIiwidmVyc2lvbiI6IjIifX1dfQ==",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PV3%2B9t%2Biz9ABsfcQVGlCSJ5D%2FPVKQJtTDhTxnDlg7RtqTshh6CtONqT6Ys4z%2BHwfHVUHOy2dIMDpCbOz2WyWyktlbwV3f8Kd%2FomEtL01WvE04%2BUGBjByX8Qjx%2BKLGk0AlLPXfAQeeOIGZwWFrR7jLn0aLuG25WQWBJF3VMduLECScYIA\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "59228b12-bc66-44f0-af56-c26f15d8be44"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+            "description": "One CC0 Cleveland artwork with image and provenance",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "cma-artist-search",
+      "documentation": {
+        "status": 200,
+        "sha256": "9056f134fb33451baed9c6e10944e7368bf9b3286be5233599c3be1f085ec160",
+        "content": "# F-02: cma-artist-search\n\nSearch CMA artist names and related artwork IDs\n\n```json\n{\n  \"id\": \"cma-artist-search\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artist-search\",\n  \"example\": {\n    \"q\": \"Min Zhen\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search CMA artist names and related artwork IDs\",\n  \"path\": \"/api/cma-artist-search\",\n  \"documentationPath\": \"/services/cma-artist-search/F-02.md\",\n  \"healthPath\": \"/services/cma-artist-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artist-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artist-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "cma-artist-search",
+          "provider": "CMA",
+          "kind": "artist-search",
+          "example": {
+            "q": "Min Zhen",
+            "limit": "3",
+            "offset": "0"
+          },
+          "description": "Search CMA artist names and related artwork IDs",
+          "path": "/api/cma-artist-search",
+          "documentationPath": "/services/cma-artist-search/F-02.md",
+          "healthPath": "/services/cma-artist-search/health",
+          "cacheNamespace": "minicurator-v1/cma-artist-search",
+          "freshSeconds": 3600,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bc689cd9fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:46 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0aXN0LXNlYXJjaD9xPU1pbitaaGVuJmxpbWl0PTMmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBDTUEgYXJ0aXN0IG5hbWVzIGFuZCByZWxhdGVkIGFydHdvcmsgSURzIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PYfV4C4OSituDYOU6LKDyw0AoJvOJbQzrdCPAPGm%2FrpFW%2BmXeCoeoVVBDQkLEcg2foBatU93ERtAcSayDsmepBvMz%2BObVqookwZZWUgKD0ftGzYjB73V4NHJc8p4twbYJVFDPfpTPOVTVebLUCo4zwBg0maOtnT8IbHVzPOqPpRUAC2B\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "809b8039-e5ad-4b4d-b98d-9f5a183c5a83"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist-search?q=Min+Zhen&limit=3&offset=0",
+            "description": "Search CMA artist names and related artwork IDs",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "cma-artist",
+      "documentation": {
+        "status": 200,
+        "sha256": "a2a8684a0bb2b81a6840e27fb54e3c14332de349419c3a6a02c0f2c56fddbc30",
+        "content": "# F-02: cma-artist\n\nOne CMA artist and related artwork references\n\n```json\n{\n  \"id\": \"cma-artist\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artist\",\n  \"example\": {\n    \"id\": \"31140\"\n  },\n  \"description\": \"One CMA artist and related artwork references\",\n  \"path\": \"/api/cma-artist\",\n  \"documentationPath\": \"/services/cma-artist/F-02.md\",\n  \"healthPath\": \"/services/cma-artist/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artist\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist?id=31140\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artist. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "cma-artist",
+          "provider": "CMA",
+          "kind": "artist",
+          "example": {
+            "id": "31140"
+          },
+          "description": "One CMA artist and related artwork references",
+          "path": "/api/cma-artist",
+          "documentationPath": "/services/cma-artist/F-02.md",
+          "healthPath": "/services/cma-artist/health",
+          "cacheNamespace": "minicurator-v1/cma-artist",
+          "freshSeconds": 86400,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bcc1d949fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:47 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0aXN0P2lkPTMxMTQwIiwiZGVzY3JpcHRpb24iOiJPbmUgQ01BIGFydGlzdCBhbmQgcmVsYXRlZCBhcnR3b3JrIHJlZmVyZW5jZXMiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Qhgul%2B1Wi9SjngELV8kY0MdMuOthjWkvlHopw9ofriluevLylKYwtbkEX3wj5KTY3gMJkTf7%2FviUbhHxVlYPgW5qI%2BE3%2BuXLzeYbqRXFeCyglgEdATA4bcV%2B6TNO9Q0NKLG3SpgDn13gH%2FQRZshzSQ1a0JXm3CUj5IzVawQHDqzSAGnH\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "effff1e7-a9e9-4f0c-a45e-887cd6c30f7c"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist?id=31140",
+            "description": "One CMA artist and related artwork references",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "documentation": {
+        "status": 200,
+        "sha256": "c96fbbe60cabb6ae1bbe6b732fba5d875420160bbe3375151f1f2cb3de093316",
+        "content": "# F-02: smk-search\n\nSearch SMK; only public-domain records with images\n\n```json\n{\n  \"id\": \"smk-search\",\n  \"provider\": \"SMK\",\n  \"kind\": \"artwork-search\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search SMK; only public-domain records with images\",\n  \"path\": \"/api/smk-search\",\n  \"documentationPath\": \"/services/smk-search/F-02.md\",\n  \"healthPath\": \"/services/smk-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/smk-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/smk-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "smk-search",
+          "provider": "SMK",
+          "kind": "artwork-search",
+          "example": {
+            "q": "cat",
+            "limit": "3",
+            "offset": "0"
+          },
+          "description": "Search SMK; only public-domain records with images",
+          "path": "/api/smk-search",
+          "documentationPath": "/services/smk-search/F-02.md",
+          "healthPath": "/services/smk-search/health",
+          "cacheNamespace": "minicurator-v1/smk-search",
+          "freshSeconds": 3600,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bd1d8e69fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:48 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9zbWstc2VhcmNoP3E9Y2F0JmxpbWl0PTMmb2Zmc2V0PTAiLCJkZXNjcmlwdGlvbiI6IlNlYXJjaCBTTUs7IG9ubHkgcHVibGljLWRvbWFpbiByZWNvcmRzIHdpdGggaW1hZ2VzIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qiMEgL3aZ1luMyRlUV4M7x7tlbQzmbMBh%2FUY8bv3w1y3J8Ka8%2BCtadqYnCVPmY5A9gm6gxhDhDncAIsPfg2Xre9X6V68hIlPk2S5hWl5sF%2BXuTDfIa5KJNU3m8muvRyUZI5UVnEKSeThAqI73G8neyWXbSejS%2F%2BJ8xgltebhPteiXSCu\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "05f648ee-2b64-4459-a9fc-ecc48233922c"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+            "description": "Search SMK; only public-domain records with images",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "service": "smk-artwork",
+      "documentation": {
+        "status": 200,
+        "sha256": "9fe4336444cc5c5a8cdc4d69f570a08c150152f4299cc5ba47ae53ae587acbbb",
+        "content": "# F-02: smk-artwork\n\nOne public-domain SMK artwork with image and provenance\n\n```json\n{\n  \"id\": \"smk-artwork\",\n  \"provider\": \"SMK\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"KMS3402\"\n  },\n  \"description\": \"One public-domain SMK artwork with image and provenance\",\n  \"path\": \"/api/smk-artwork\",\n  \"documentationPath\": \"/services/smk-artwork/F-02.md\",\n  \"healthPath\": \"/services/smk-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/smk-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/smk-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+      },
+      "health": {
+        "status": 200,
+        "body": {
+          "id": "smk-artwork",
+          "provider": "SMK",
+          "kind": "artwork",
+          "example": {
+            "id": "KMS3402"
+          },
+          "description": "One public-domain SMK artwork with image and provenance",
+          "path": "/api/smk-artwork",
+          "documentationPath": "/services/smk-artwork/F-02.md",
+          "healthPath": "/services/smk-artwork/health",
+          "cacheNamespace": "minicurator-v1/smk-artwork",
+          "freshSeconds": 86400,
+          "network": "eip155:84532",
+          "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "priceAtomic": "1000",
+          "upstreamProbedByHealth": false
+        }
+      },
+      "quote": {
+        "status": 402,
+        "headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "cf-ray": "a4ff7bd75d829fe3-SIN",
+          "connection": "keep-alive",
+          "content-length": "2",
+          "content-type": "application/json",
+          "date": "Sun, 25 Oct 2026 07:24:49 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9zbWstYXJ0d29yaz9pZD1LTVMzNDAyIiwiZGVzY3JpcHRpb24iOiJPbmUgcHVibGljLWRvbWFpbiBTTUsgYXJ0d29yayB3aXRoIGltYWdlIGFuZCBwcm92ZW5hbmNlIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzMiIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgzMDM3ODJCMWI3ODg1MjdiRTZjQzI4QzZGMTZhQTJBM0JhMjZiNTlmIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fV19",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jYo3AMuMYQxkVgFhAB0z238iWjWh9SfOlZ%2FunQpBj52V6oLhLs4XfvGhXvt%2BO%2FC9gBRo9qnYKk%2B%2BTgEtnBczY9Feie5n0RSYVEP9uUYYWNebVjzKvIG%2FtQp8mmmdXtuYzNe20%2FdG5MFGaC9zTSqfNHIC0iFs5Zpg2zdWbLClEo1TPzYP\"}]}",
+          "server": "cloudflare",
+          "x-request-id": "664bc977-e778-449e-b03b-149bfe1a1054"
+        },
+        "paymentRequired": {
+          "x402Version": 2,
+          "error": "Payment required",
+          "resource": {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402",
+            "description": "One public-domain SMK artwork with image and provenance",
+            "mimeType": "application/json"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:84532",
+              "amount": "1000",
+              "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+              "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "maxTimeoutSeconds": 300,
+              "extra": {
+                "name": "USDC",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "health": {
+    "status": 200,
+    "body": {
+      "service": "yoyo-x402-minicurator",
+      "network": "eip155:84532",
+      "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "priceAtomic": "1000",
+      "resourceCount": 9,
+      "docs": "/F-02.md"
+    }
+  },
+  "passed": true,
+  "completedAt": "2026-10-25T07:24:49.692Z"
+}

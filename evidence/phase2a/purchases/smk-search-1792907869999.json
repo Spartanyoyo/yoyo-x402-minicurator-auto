@@ -1,0 +1,33 @@
+{
+  "resourceService": "smk-search",
+  "parameters": {
+    "q": "cat",
+    "limit": 3,
+    "offset": 0
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:57:50.003Z",
+  "intent": "猫主题跨馆展览：搜索SMK公版作品；前笔授权已过期并独立核实未扣款，改用curl传输",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "not_verified",
+  "http": [],
+  "preflightErrors": [
+    {
+      "operation": "read_documentation",
+      "attempt": 1,
+      "at": "2026-10-25T05:57:58.861Z",
+      "message": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted"
+    },
+    {
+      "operation": "read_documentation",
+      "attempt": 2,
+      "at": "2026-10-25T05:58:00.108Z",
+      "message": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted"
+    }
+  ],
+  "error": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted"
+}

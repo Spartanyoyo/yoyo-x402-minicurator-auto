@@ -1,0 +1,300 @@
+{
+  "checkedAt": "2026-10-25T06:45:49.429Z",
+  "scope": "Read-only Phase 2A acceptance audit; no signatures, payments, deployment or source mutation",
+  "passed": false,
+  "failures": [
+    "met-departments: secondary RPC check failed: HTTP request failed.",
+    "cma-artwork-search: primary RPC audit failed: HTTP request failed.",
+    "cma-artwork-search: secondary RPC check failed: HTTP request failed.",
+    "smk-artwork: primary RPC audit failed: HTTP request failed.",
+    "smk-artwork: secondary RPC check failed: HTTP request failed."
+  ],
+  "input": {
+    "session": "evidence/phase2a/demo-session.json",
+    "sessionSha256": "ade25543bed44c13262ff17ee6b41cc92644d34e945b21e123a49137ba9cfe1d"
+  },
+  "requirements": {
+    "nineDistinctServices": true,
+    "paidHttpAndDeliveryEvidence": true,
+    "crossResourceArtworkSelection": true,
+    "primaryRpcAudit": true,
+    "independentSecondaryReceiptAndBalanceQuery": true
+  },
+  "rpc": {
+    "primary": "https://base-sepolia.gateway.tenderly.co",
+    "secondary": "https://base-testnet.api.pocket.network"
+  },
+  "locale": {
+    "primarySource": "configured",
+    "secondarySource": "configured"
+  },
+  "records": [
+    {
+      "service": "met-search",
+      "evidence": "evidence/phase2a/purchases/met-search-1792904993023.json",
+      "evidenceSha256": "4e687fecc7b0545d0a77c428d70a650da869fe8d8c4dc76b8c873fb13b0dac40",
+      "transaction": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49915771"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49915661",
+          "buyer": "19996000",
+          "seller": "6000"
+        },
+        "after": {
+          "block": "49915771",
+          "buyer": "19995000",
+          "seller": "7000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "met-artwork",
+      "evidence": "evidence/phase2a/purchases/met-artwork-1792905093025.json",
+      "evidenceSha256": "df65057b9d8e1e4cab6b87db43361436fba7739bdd02d8a67cfbcdf60b4d96d9",
+      "transaction": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49916180"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49916162",
+          "buyer": "19995000",
+          "seller": "7000"
+        },
+        "after": {
+          "block": "49916180",
+          "buyer": "19994000",
+          "seller": "8000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "met-departments",
+      "evidence": "evidence/phase2a/purchases/met-departments-1792906417078.json",
+      "evidenceSha256": "fa5e95176810b0b33376d57fad73a8667b2f4ef5badb9ae371d55da3715c392c",
+      "transaction": "0x5e87f27ac50b05fa83c732a31f8ef88f9dd209d908cce4dd75c51df81d45bad1",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49922888"
+      },
+      "secondary": {
+        "status": "error",
+        "error": "HTTP request failed."
+      }
+    },
+    {
+      "service": "cma-artwork-search",
+      "evidence": "evidence/phase2a/purchases/cma-artwork-search-1792906533294.json",
+      "evidenceSha256": "588e245c8d637493084f79736cfaddf1e82ef4510db2b8ec01d3a67f384235b4",
+      "transaction": "0x778c8292b1cd6c37a07bd9171c3d9f4383776216e745d908b0b563eb7ba624e1",
+      "primary": {
+        "status": "error",
+        "error": "HTTP request failed."
+      },
+      "secondary": {
+        "status": "error",
+        "error": "HTTP request failed."
+      }
+    },
+    {
+      "service": "cma-artwork",
+      "evidence": "evidence/phase2a/purchases/cma-artwork-1792906617520.json",
+      "evidenceSha256": "3069df34051688e43709332fe365c428ff119a6adf4edfbb098c73209c795def",
+      "transaction": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49923809"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49923790",
+          "buyer": "19992000",
+          "seller": "10000"
+        },
+        "after": {
+          "block": "49923809",
+          "buyer": "19991000",
+          "seller": "11000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "cma-artist-search",
+      "evidence": "evidence/phase2a/purchases/cma-artist-search-1792906685098.json",
+      "evidenceSha256": "be66965b71ba7bac51a04fe6b608a1e22befc42bfa51580c9cb60fa931d7d9da",
+      "transaction": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49924337"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49924280",
+          "buyer": "19991000",
+          "seller": "11000"
+        },
+        "after": {
+          "block": "49924337",
+          "buyer": "19990000",
+          "seller": "12000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "cma-artist",
+      "evidence": "evidence/phase2a/purchases/cma-artist-1792907255236.json",
+      "evidenceSha256": "41557c03ea0d7ae9cf618c2e13442276520c6678ef3b09b115987f57b30285b3",
+      "transaction": "0x92fca88398328ab6a57e3952977de7e14329703f4ba4e43e285f503411d2b9f5",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49926999"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49926966",
+          "buyer": "19990000",
+          "seller": "12000"
+        },
+        "after": {
+          "block": "49926999",
+          "buyer": "19989000",
+          "seller": "13000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "smk-search",
+      "evidence": "evidence/phase2a/purchases/smk-search-1792908028710.json",
+      "evidenceSha256": "42876cb2b50691a82468f7f9c0b8a29c82863dbdf53fde50470e8ad6866fc9be",
+      "transaction": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+      "primary": {
+        "status": "verified",
+        "paymentVerified": true,
+        "deliveryVerified": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "settlementPayerMatches": true,
+        "exactTransfer": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "blockNumber": "49930866"
+      },
+      "secondary": {
+        "transactionMatches": true,
+        "blockMatches": true,
+        "chainSuccess": true,
+        "before": {
+          "block": "49930828",
+          "buyer": "19989000",
+          "seller": "13000"
+        },
+        "after": {
+          "block": "49930866",
+          "buyer": "19988000",
+          "seller": "14000"
+        },
+        "buyerDelta": "1000",
+        "sellerDelta": "1000"
+      }
+    },
+    {
+      "service": "smk-artwork",
+      "evidence": "evidence/phase2a/purchases/smk-artwork-1792908060324.json",
+      "evidenceSha256": "634f65c02b16e23db855b158158cc290ebb2d4afdb7762ef93528b55da6204e4",
+      "transaction": "0x20308fdc292cba38f120ea0fd01434d0a1e65901ab7b204ecf67a4b61ebe3d3c",
+      "primary": {
+        "status": "error",
+        "error": "HTTP request failed."
+      },
+      "secondary": {
+        "status": "error",
+        "error": "HTTP request failed."
+      }
+    }
+  ]
+}

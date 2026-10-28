@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-22",
+  "status": "not_completed",
+  "source": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "attempts": [
+    { "method": "npm audit --json", "result": "socket hang up" },
+    { "method": "npm audit with configured HTTPS proxy and bounded timeout", "result": "network timeout" },
+    { "method": "Node fetch of complete lockfile inventory", "result": "connect timeout" },
+    { "method": "Node fetch with explicit configured ProxyAgent, limited sample", "result": "aborted after 20 seconds" }
+  ],
+  "installedDependencyTree": "npm ls --all --omit=optional exited 0; required dependency versions matched",
+  "conclusion": "No vulnerability-free claim can be made because the official advisory endpoint was unreachable."
+}

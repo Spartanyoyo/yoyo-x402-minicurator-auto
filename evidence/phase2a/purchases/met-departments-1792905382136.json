@@ -1,0 +1,103 @@
+{
+  "resourceService": "met-departments",
+  "parameters": {},
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:16:22.141Z",
+  "intent": "猫主题跨馆展览：核对Met作品部门；先前文档读取失败均未签名未提交",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "not_charged_reconciled",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:16:28.168Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4febfd01eb635b2-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:16:27 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9tZXQtZGVwYXJ0bWVudHMiLCJkZXNjcmlwdGlvbiI6Ik1ldCBkZXBhcnRtZW50IGlkZW50aWZpZXJzIGFuZCBuYW1lcyIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwIiwiYXNzZXQiOiIweDAzNkNiRDUzODQyYzU0MjY2MzRlNzkyOTU0MWVDMjMxOGYzZENGN2UiLCJwYXlUbyI6IjB4MzAzNzgyQjFiNzg4NTI3YkU2Y0MyOEM2RjE2YUEyQTNCYTI2YjU5ZiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0RDIiwidmVyc2lvbiI6IjIifX1dfQ==",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=N3y%2FZEiAMVC9mFJOjLx%2BdepntlpvreEOciUY35LQsfgEyhuFYfQCBJZ6lJ34rlhJBswQzUziVLxoZPjU2QTP05nczUOQqHBnU0eqllApuhhbvZyyDgikduswv7hFtr0QI9vjRTewiarXOCvpbWJA7CQD1F0gErkv7yRyn441bKqebvZ%2F\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "16535613-e080-4cba-93f5-8b629067256a"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments",
+          "description": "Met department identifiers and names",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/met-departments/F-02.md",
+    "readAt": "2026-10-25T05:16:24.101Z",
+    "sha256": "673ea8089c56f3380a8a006b046125b74289057aa1d43a613668443f1c9431fd",
+    "content": "# F-02: met-departments\n\nMet department identifiers and names\n\n```json\n{\n  \"id\": \"met-departments\",\n  \"provider\": \"Met\",\n  \"kind\": \"departments\",\n  \"example\": {},\n  \"description\": \"Met department identifiers and names\",\n  \"path\": \"/api/met-departments\",\n  \"documentationPath\": \"/services/met-departments/F-02.md\",\n  \"healthPath\": \"/services/met-departments/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-departments\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-departments\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-departments. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49917586",
+    "buyer": "19994000",
+    "seller": "8000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792905688",
+    "nonce": "0xa628fe384924cc75bfe139f733ecd261c86e1f0ebccf2f5ad6e39c634e8bdd1f",
+    "expiresAt": "2026-10-25T05:21:28.000Z"
+  },
+  "error": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted",
+  "reconciliation": {
+    "checkedAt": "2026-10-25T05:26:41.455Z",
+    "signed": true,
+    "blockNumber": "49920571",
+    "blockTime": "2026-10-25T05:26:23.000Z",
+    "expired": true,
+    "authorizationUsed": false,
+    "beforeObserved": {
+      "block": "49917586",
+      "buyer": "19994000",
+      "seller": "8000"
+    },
+    "after": {
+      "block": "49920571",
+      "buyer": "19994000",
+      "seller": "8000"
+    },
+    "balancesUnchanged": true,
+    "transfers": [],
+    "authorizationTransactions": [],
+    "safeToRetry": true,
+    "reason": "Retry only if unused, expired, balances unchanged and no related transfers",
+    "previousStatus": "outcome_unknown_check_chain_before_retry"
+  }
+}

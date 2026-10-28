@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-25T06:10:14.756Z",
+  "worker": "yoyo-minicurator-egress",
+  "scope": "Remove only the task-created outbound probe Worker after nine verified purchases and three image checks; retain probe source and evidence",
+  "status": "removed",
+  "readErrors": [
+    {
+      "message": "fetch failed",
+      "cause": "ECONNRESET"
+    }
+  ],
+  "before": {
+    "exists": true,
+    "status": 200
+  },
+  "deleteResponse": {
+    "status": 200,
+    "success": true,
+    "codes": []
+  },
+  "after": {
+    "exists": false,
+    "status": 404,
+    "codes": [
+      10007
+    ]
+  },
+  "completedAt": "2026-10-25T06:10:51.358Z"
+}

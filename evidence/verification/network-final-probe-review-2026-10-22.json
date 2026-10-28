@@ -1,0 +1,24 @@
+{
+  "reviewedAt": "2026-10-22T03:30:00.041Z",
+  "operation": "post-purchase free cloud probe",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "failed",
+      "error": "Client network socket disconnected before secure TLS connection was established",
+      "paymentCreated": false
+    },
+    {
+      "attempt": 2,
+      "result": "passed",
+      "statuses": [
+        200,
+        200,
+        402
+      ],
+      "evidence": "evidence/probe-1792639509149.json",
+      "paymentCreated": false
+    }
+  ],
+  "passed": true
+}

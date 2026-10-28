@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-22T02:56:32.299Z",
+  "source": "evidence/purchase-1792637658048.json",
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792637989",
+    "nonce": "0x70d1b87766f40bbdc3be49c7cb22a5d3ba1cc5a898dfd47e1491201ada6a0eba",
+    "expiresAt": "2026-10-22T02:59:49.000Z"
+  },
+  "chainId": 84532,
+  "latestBlock": {
+    "number": "48579638",
+    "timestamp": "1792637796"
+  },
+  "authorizationExpired": false,
+  "authorizationUsed": false,
+  "balances": {
+    "block": "48579638",
+    "buyer": "19998000",
+    "seller": "2000"
+  },
+  "matchingTransfers": [],
+  "noDebit": true,
+  "safeToRetry": false
+}

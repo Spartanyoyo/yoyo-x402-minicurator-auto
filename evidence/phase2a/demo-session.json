@@ -1,0 +1,295 @@
+{
+  "startedAt": "2026-10-25T05:09:48.734Z",
+  "intent": "给10岁孩子做一个15分钟的猫主题艺术展，包含三馆公版图片、展览顺序、讲解、观察题和来源",
+  "maximumAtomic": "9000",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "completed_verified",
+  "purchases": [
+    {
+      "service": "cma-artist",
+      "evidence": "purchases/cma-artist-1792906824862.json",
+      "status": "not_charged_reconciled",
+      "chargedAtomic": "0",
+      "noChargeReconciled": true
+    },
+    {
+      "service": "cma-artist",
+      "evidence": "purchases/cma-artist-1792907255236.json",
+      "status": "verified",
+      "transaction": "0x92fca88398328ab6a57e3952977de7e14329703f4ba4e43e285f503411d2b9f5",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "cma-artist-search",
+      "evidence": "purchases/cma-artist-search-1792906685098.json",
+      "status": "verified",
+      "transaction": "0x7c3ddfa61745e1dea4a388d528a4c3b174b663e7cc205de52d3052f3ae7d6030",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "cma-artwork",
+      "evidence": "purchases/cma-artwork-1792906617520.json",
+      "status": "verified",
+      "transaction": "0x5cd2d812b6c12523c1c90e26cc90b1b3a71b86aeb8a3303d775fc6a3a6727138",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "cma-artwork-search",
+      "evidence": "purchases/cma-artwork-search-1792906533294.json",
+      "status": "verified",
+      "transaction": "0x778c8292b1cd6c37a07bd9171c3d9f4383776216e745d908b0b563eb7ba624e1",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-artwork",
+      "evidence": "purchases/met-artwork-1792905093025.json",
+      "status": "verified",
+      "transaction": "0x68741d72c3b7d548958ee4bdba36bef34b74d6c3d870d47d02b29cc10b434b65",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-departments",
+      "evidence": "purchases/met-departments-1792905169759.json",
+      "status": "not_verified",
+      "chargedAtomic": "0",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-departments",
+      "evidence": "purchases/met-departments-1792905279012.json",
+      "status": "not_verified",
+      "chargedAtomic": "0",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-departments",
+      "evidence": "purchases/met-departments-1792905382136.json",
+      "status": "not_charged_reconciled",
+      "chargedAtomic": "0",
+      "noChargeReconciled": true
+    },
+    {
+      "service": "met-departments",
+      "evidence": "purchases/met-departments-1792906316492.json",
+      "status": "not_verified",
+      "chargedAtomic": "0",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-departments",
+      "evidence": "purchases/met-departments-1792906417078.json",
+      "status": "verified",
+      "transaction": "0x5e87f27ac50b05fa83c732a31f8ef88f9dd209d908cce4dd75c51df81d45bad1",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "met-search",
+      "evidence": "purchases/met-search-1792904993023.json",
+      "status": "verified",
+      "transaction": "0x5edff68092ac4dd8e4d3e4c042cd42c85246b1fa740c42f6a5d151b07ee1f929",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "smk-artwork",
+      "evidence": "purchases/smk-artwork-1792908060324.json",
+      "status": "verified",
+      "transaction": "0x20308fdc292cba38f120ea0fd01434d0a1e65901ab7b204ecf67a4b61ebe3d3c",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "smk-search",
+      "evidence": "purchases/smk-search-1792907492895.json",
+      "status": "not_charged_reconciled",
+      "chargedAtomic": "0",
+      "noChargeReconciled": true
+    },
+    {
+      "service": "smk-search",
+      "evidence": "purchases/smk-search-1792907869999.json",
+      "status": "not_verified",
+      "chargedAtomic": "0",
+      "noChargeReconciled": false
+    },
+    {
+      "service": "smk-search",
+      "evidence": "purchases/smk-search-1792908028710.json",
+      "status": "verified",
+      "transaction": "0x3953849ac1d75e5470beaca1cbf19be6305f4df93044913195f4f5a8bbe27f21",
+      "chargedAtomic": "1000",
+      "noChargeReconciled": false
+    }
+  ],
+  "verifiedResources": [
+    "met-search",
+    "met-artwork",
+    "met-departments",
+    "cma-artwork-search",
+    "cma-artwork",
+    "cma-artist-search",
+    "cma-artist",
+    "smk-search",
+    "smk-artwork"
+  ],
+  "totalConfirmedAtomic": "9000",
+  "unresolvedSignedAttempts": [],
+  "openingBalances": {
+    "block": "49915661",
+    "buyer": "19996000",
+    "seller": "6000"
+  },
+  "closingBalances": {
+    "block": "49931112",
+    "buyer": "19987000",
+    "seller": "15000"
+  },
+  "assertions": [
+    {
+      "name": "Exactly one verified purchase for each of the nine resources",
+      "passed": true
+    },
+    {
+      "name": "Every verified record contains documentation, unpaid 402, paid 200, matching request ID and exact audited transfer",
+      "passed": true
+    },
+    {
+      "name": "Every signed unsuccessful attempt is independently reconciled as unused, expired and uncharged",
+      "passed": true
+    },
+    {
+      "name": "Every unsigned failure stopped before a paid response",
+      "passed": true
+    },
+    {
+      "name": "Confirmed charge equals 9000 atomic units and respects the session budget",
+      "passed": true
+    },
+    {
+      "name": "All nine cross-resource assertions pass",
+      "passed": true
+    },
+    {
+      "name": "Session opening/closing balance differences match the sum of confirmed charges",
+      "passed": true
+    }
+  ],
+  "crossResourceAssertions": [
+    {
+      "name": "Purchased Met search includes purchased object 552027",
+      "passed": true
+    },
+    {
+      "name": "Purchased Met department list includes the artwork department",
+      "passed": true
+    },
+    {
+      "name": "Purchased CMA artwork search includes purchased object 152829",
+      "passed": true
+    },
+    {
+      "name": "Purchased CMA artist search includes purchased artist 31140",
+      "passed": true
+    },
+    {
+      "name": "Purchased CMA artwork names artist 31140",
+      "passed": true
+    },
+    {
+      "name": "Purchased CMA artist links back to artwork 152829",
+      "passed": true
+    },
+    {
+      "name": "Purchased SMK search includes purchased object KMS3402",
+      "passed": true
+    },
+    {
+      "name": "All three selected artwork details explicitly carry public-domain rights and museum image/source URLs",
+      "passed": true
+    },
+    {
+      "name": "All three selected details preserve title, date, medium and non-stale retrieval metadata",
+      "passed": true
+    }
+  ],
+  "selectedWorks": [
+    {
+      "museum": "Met",
+      "id": "552027",
+      "title": "Cat",
+      "artists": [],
+      "date": "664–30 BCE",
+      "medium": [
+        "Cupreous metal"
+      ],
+      "culture": [],
+      "department": "Egyptian Art",
+      "imageUrl": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+      "sourceUrl": "https://www.metmuseum.org/art/collection/search/552027",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "evidence": "isPublicDomain=true"
+      }
+    },
+    {
+      "museum": "CMA",
+      "id": "152829",
+      "title": "Cat and Butterfly",
+      "artists": [
+        {
+          "id": "31140",
+          "name": "Min Zhen (Chinese, 1730–after 1788)"
+        }
+      ],
+      "date": "1788",
+      "medium": [
+        "album leaf, ink on paper"
+      ],
+      "culture": [
+        "China, Qing dynasty (1644-1911)"
+      ],
+      "department": "Chinese Art",
+      "imageUrl": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+      "sourceUrl": "https://clevelandart.org/art/1985.71.5",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "evidence": "share_license_status=\"CC0\""
+      }
+    },
+    {
+      "museum": "SMK",
+      "id": "KMS3402",
+      "title": "The Cat in the Studio",
+      "artists": [
+        {
+          "id": null,
+          "name": "David Jacobsen"
+        }
+      ],
+      "date": "1860",
+      "medium": [
+        "Oil on canvas"
+      ],
+      "culture": [],
+      "department": null,
+      "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+      "sourceUrl": "https://open.smk.dk/artwork/image/KMS3402",
+      "rights": {
+        "publicDomain": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "evidence": "public_domain=true"
+      }
+    }
+  ],
+  "artistDataCaveat": "CMA artist description says 1730-after 1788 while deathYear is 1788; biography is null. Do not infer a definite death year or invent biography.",
+  "updatedAt": "2026-10-25T06:01:44.014Z"
+}

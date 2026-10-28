@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-22T03:45:34.781Z",
+  "operation": "second read-only RPC cross-check",
+  "transaction": "0x7858f5bc9d2d3c22f9709c200f84b86f1dd2927242d126fce90bc00bf4856ff1",
+  "expected": {
+    "buyer": "19997000",
+    "seller": "3000",
+    "block": "48587561"
+  },
+  "successfulEndpoints": 1,
+  "totalEndpoints": 3,
+  "results": [
+    {
+      "url": "https://base-sepolia-rpc.publicnode.com",
+      "ok": false,
+      "elapsedMs": 10613,
+      "error": {
+        "message": "HTTP request failed.",
+        "cause": "fetch failed"
+      }
+    },
+    {
+      "url": "https://base-sepolia-public.nodies.app",
+      "ok": true,
+      "chainId": 84532,
+      "receipt": {
+        "status": "success",
+        "blockNumber": "48587561",
+        "transactionHash": "0x7858f5bc9d2d3c22f9709c200f84b86f1dd2927242d126fce90bc00bf4856ff1"
+      },
+      "balances": {
+        "buyer": "19997000",
+        "seller": "3000"
+      },
+      "elapsedMs": 17829,
+      "balancesMatchExpected": true
+    },
+    {
+      "url": "https://base-sepolia.api.onfinality.io/public",
+      "ok": false,
+      "elapsedMs": 3257,
+      "error": {
+        "message": "RPC Request failed.",
+        "cause": "RPC Request failed.\n\nURL: https://base-sepolia.api.onfinality.io/public\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0x70a08231000000000000000000000000303782b1b788527be6cc28c6f16aa2a3ba26b59f\",\"to\":\"0x036CbD53842c5426634e7929541eC2318f3dCF7e\"},\"0x2e56329\"]}\n \nRaw Call Arguments:\n  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e\n  data:  0x70a08231000000000000000000000000303782b1b788527be6cc28c6f16aa2a3ba26b59f\n\nDetails: Too Many Requests, Please apply an OnFinality API key or contact us to receive a higher rate limit\nVersion: viem@2.57.7"
+      }
+    }
+  ],
+  "passed": false
+}

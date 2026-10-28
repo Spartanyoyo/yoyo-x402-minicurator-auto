@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-10-25T05:30:00.296Z",
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@x402/core": {
+      "name": "@x402/core",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "zod"
+      ],
+      "effects": [
+        "@x402/evm",
+        "@x402/extensions",
+        "@x402/fetch",
+        "@x402/hono"
+      ],
+      "range": ">=2.0.0",
+      "nodes": [
+        "node_modules/@x402/core"
+      ],
+      "fixAvailable": {
+        "name": "@x402/core",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@x402/evm": {
+      "name": "@x402/evm",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@x402/core",
+        "zod"
+      ],
+      "effects": [],
+      "range": ">=2.0.0",
+      "nodes": [
+        "node_modules/@x402/evm"
+      ],
+      "fixAvailable": {
+        "name": "@x402/evm",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@x402/extensions": {
+      "name": "@x402/extensions",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@x402/core",
+        "zod"
+      ],
+      "effects": [
+        "@x402/hono"
+      ],
+      "range": ">=2.0.0",
+      "nodes": [
+        "node_modules/@x402/extensions"
+      ],
+      "fixAvailable": {
+        "name": "@x402/hono",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@x402/fetch": {
+      "name": "@x402/fetch",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@x402/core"
+      ],
+      "effects": [],
+      "range": ">=2.0.0",
+      "nodes": [
+        "node_modules/@x402/fetch"
+      ],
+      "fixAvailable": {
+        "name": "@x402/fetch",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@x402/hono": {
+      "name": "@x402/hono",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@x402/core",
+        "@x402/extensions"
+      ],
+      "effects": [],
+      "range": ">=2.0.0",
+      "nodes": [
+        "node_modules/@x402/hono"
+      ],
+      "fixAvailable": {
+        "name": "@x402/hono",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    },
+    "zod": {
+      "name": "zod",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1243066,
+          "name": "zod",
+          "dependency": "zod",
+          "title": "Zod can exhaust memory while validating oversized constrained collections",
+          "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+          "severity": "high",
+          "cwe": [
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<4.6.6"
+        }
+      ],
+      "effects": [
+        "@x402/core",
+        "@x402/evm",
+        "@x402/extensions"
+      ],
+      "range": "<4.6.6",
+      "nodes": [
+        "node_modules/zod"
+      ],
+      "fixAvailable": {
+        "name": "@x402/core",
+        "version": "0.0.1",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 6,
+      "critical": 0,
+      "total": 6
+    },
+    "dependencies": {
+      "prod": 34,
+      "dev": 90,
+      "optional": 60,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 123
+    }
+  }
+}

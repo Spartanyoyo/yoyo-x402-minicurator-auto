@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-22T03:45:48.637Z",
+  "transaction": "0x7858f5bc9d2d3c22f9709c200f84b86f1dd2927242d126fce90bc00bf4856ff1",
+  "expected": {
+    "buyer": "19997000",
+    "seller": "3000",
+    "block": "48587561"
+  },
+  "attemptFiles": [
+    "evidence/transaction-rpc-crosscheck-2026-10-22.json",
+    "evidence/transaction-rpc-crosscheck-second-2026-10-22.json"
+  ],
+  "successfulEndpointsAcrossAttempts": [
+    {
+      "url": "https://base-sepolia.gateway.tenderly.co",
+      "chainId": 84532,
+      "receipt": {
+        "status": "success",
+        "blockNumber": "48587561",
+        "transactionHash": "0x7858f5bc9d2d3c22f9709c200f84b86f1dd2927242d126fce90bc00bf4856ff1"
+      },
+      "balances": {
+        "buyer": "19997000",
+        "seller": "3000"
+      }
+    },
+    {
+      "url": "https://base-sepolia-public.nodies.app",
+      "chainId": 84532,
+      "receipt": {
+        "status": "success",
+        "blockNumber": "48587561",
+        "transactionHash": "0x7858f5bc9d2d3c22f9709c200f84b86f1dd2927242d126fce90bc00bf4856ff1"
+      },
+      "balances": {
+        "buyer": "19997000",
+        "seller": "3000"
+      }
+    }
+  ],
+  "distinctSuccessfulProviders": 2,
+  "allSuccessfulReadsMatchExpected": true,
+  "passed": true,
+  "note": "The providers were queried in two separate read-only attempts because the local proxy dropped some connections; each recorded success independently matches the original audit."
+}

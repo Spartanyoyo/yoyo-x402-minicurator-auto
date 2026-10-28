@@ -1,0 +1,105 @@
+{
+  "resourceService": "cma-artist",
+  "parameters": {
+    "id": 31140
+  },
+  "budgetAtomic": "1000",
+  "at": "2026-10-25T05:40:24.866Z",
+  "intent": "猫主题跨馆展览：根据已购艺术家检索核验31140身份及Cat and Butterfly关联作品",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "not_charged_reconciled",
+  "http": [
+    {
+      "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist?id=31140",
+      "paid": false,
+      "status": 402,
+      "receivedAt": "2026-10-25T05:40:36.308Z",
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "no-store",
+        "cf-ray": "a4fee32ae8b8ae45-SIN",
+        "connection": "keep-alive",
+        "content-length": "2",
+        "content-type": "application/json",
+        "date": "Sun, 25 Oct 2026 05:40:36 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly95b3lvLXg0MDItbWluaWN1cmF0b3IuYWNjZXNzaWJsZS10cmlwLndvcmtlcnMuZGV2L2FwaS9jbWEtYXJ0aXN0P2lkPTMxMTQwIiwiZGVzY3JpcHRpb24iOiJPbmUgQ01BIGFydGlzdCBhbmQgcmVsYXRlZCBhcnR3b3JrIHJlZmVyZW5jZXMiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMyIiwiYW1vdW50IjoiMTAwMCIsImFzc2V0IjoiMHgwMzZDYkQ1Mzg0MmM1NDI2NjM0ZTc5Mjk1NDFlQzIzMThmM2RDRjdlIiwicGF5VG8iOiIweDMwMzc4MkIxYjc4ODUyN2JFNmNDMjhDNkYxNmFBMkEzQmEyNmI1OWYiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEQyIsInZlcnNpb24iOiIyIn19XX0=",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rAtvzu%2FBkp%2B16VMuZgTTZMugUGwkC0SAnzEXoY6cigiEF1CjMghRPzHqr2gdiq6jdS4Cimqa3YIWA3BSc2ddZsQGZAYeEoTNjnBoJKSPelwFrJO8jZWy7iRQzoJrs506VHY8q%2Fh19HMWeKRT1UE9S96dwLdtabEQ3gSSMpnUhx643CdG\"}]}",
+        "server": "cloudflare",
+        "x-request-id": "28914f9c-057e-4337-bb3c-a493f4519d83"
+      },
+      "paymentRequired": {
+        "x402Version": 2,
+        "error": "Payment required",
+        "resource": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist?id=31140",
+          "description": "One CMA artist and related artwork references",
+          "mimeType": "application/json"
+        },
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "amount": "1000",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "name": "USDC",
+              "version": "2"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "documentation": {
+    "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/cma-artist/F-02.md",
+    "readAt": "2026-10-25T05:40:32.803Z",
+    "sha256": "33348195e531d1c731a0c4621add89533042592f06a3829f1b34e1d3ae0a8606",
+    "content": "# F-02: cma-artist\n\nOne CMA artist and related artwork references\n\n```json\n{\n  \"id\": \"cma-artist\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artist\",\n  \"example\": {\n    \"id\": \"31140\"\n  },\n  \"description\": \"One CMA artist and related artwork references\",\n  \"path\": \"/api/cma-artist\",\n  \"documentationPath\": \"/services/cma-artist/F-02.md\",\n  \"healthPath\": \"/services/cma-artist/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artist\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artist?id=31140\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artist. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+  },
+  "before": {
+    "block": "49924828",
+    "buyer": "19990000",
+    "seller": "12000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+    "value": "1000",
+    "validAfter": "0",
+    "validBefore": "1792907136",
+    "nonce": "0x7754df8d74c68785caf9336bc98ec25ac756bcdba98668f291762ddc5967bdfb",
+    "expiresAt": "2026-10-25T05:45:36.000Z"
+  },
+  "error": "fetch failed",
+  "reconciliation": {
+    "checkedAt": "2026-10-25T05:46:26.995Z",
+    "signed": true,
+    "blockNumber": "49926515",
+    "blockTime": "2026-10-25T05:46:11.000Z",
+    "expired": true,
+    "authorizationUsed": false,
+    "beforeObserved": {
+      "block": "49924828",
+      "buyer": "19990000",
+      "seller": "12000"
+    },
+    "after": {
+      "block": "49926515",
+      "buyer": "19990000",
+      "seller": "12000"
+    },
+    "balancesUnchanged": true,
+    "transfers": [],
+    "authorizationTransactions": [],
+    "safeToRetry": true,
+    "reason": "Retry only if unused, expired, balances unchanged and no related transfers",
+    "previousStatus": "outcome_unknown_check_chain_before_retry"
+  }
+}

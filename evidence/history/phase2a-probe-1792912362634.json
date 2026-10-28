@@ -1,0 +1,39 @@
+{
+  "startedAt": "2026-10-25T07:12:42.629Z",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "scope": "Read-only docs, health and unpaid quotes; no authorization signatures",
+  "resources": [
+    {
+      "service": "met-search"
+    }
+  ],
+  "errors": [
+    {
+      "path": "/services/met-search/F-02.md",
+      "attempt": 1,
+      "transport": "explicit-proxy-fetch",
+      "message": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted"
+    },
+    {
+      "path": "/services/met-search/F-02.md",
+      "attempt": 2,
+      "transport": "curl-read-only-fallback",
+      "message": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted"
+    }
+  ],
+  "health": {
+    "status": 200,
+    "body": {
+      "service": "yoyo-x402-minicurator",
+      "network": "eip155:84532",
+      "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "priceAtomic": "1000",
+      "resourceCount": 9,
+      "docs": "/F-02.md"
+    }
+  },
+  "passed": false,
+  "error": "curl transport exited 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed; no request retry was attempted",
+  "completedAt": "2026-10-25T07:13:09.606Z"
+}

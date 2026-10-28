@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-10-16T12:52:50.678Z",
+  "accountName": "Accessible Trip",
+  "worker": "yoyo-x402-weather",
+  "expectedVersionId": "4adf8c60-ff8e-4337-a3b6-1ef566f30e29",
+  "baseUrl": "https://yoyo-x402-weather.accessible-trip.workers.dev",
+  "api": [
+    {
+      "path": "/deployments",
+      "httpStatus": 200,
+      "success": true,
+      "errors": [],
+      "result": {
+        "deployments": [
+          {
+            "id": "f7a4ffe6-47a8-4185-b514-6e892ae3e5e3",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/triggered_by": "deployment"
+            },
+            "versions": [
+              {
+                "version_id": "4adf8c60-ff8e-4337-a3b6-1ef566f30e29",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-16T12:51:23.757052Z"
+          },
+          {
+            "id": "c5a8c6cb-8f8c-4527-9b09-24fca093e99b",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "c9531b6a-25f1-4bb5-be67-89bc512a59e3",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-16T10:57:47.758225Z"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/versions/4adf8c60-ff8e-4337-a3b6-1ef566f30e29",
+      "httpStatus": 200,
+      "success": true,
+      "errors": [],
+      "result": {
+        "id": "4adf8c60-ff8e-4337-a3b6-1ef566f30e29",
+        "number": 2,
+        "metadata": {
+          "created_on": "2026-10-16T12:51:23.016388Z",
+          "source": "wrangler",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "978aa75ff8f027351b2fd7cd611b49fbbebca5c30c3ba0faa86ad8adcf4fc647",
+            "handlers": [
+              "fetch"
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "compatibility_date": "2026-10-16",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "SELLER_ADDRESS",
+              "text": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+              "type": "plain_text"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sourceHashes": {
+    "src/worker.mjs": "6b67096b9a60eb5a837d48100104a83e1283963cb3b8468aa2aa810cb016372b",
+    "src/app.mjs": "e45a680ab8fb1e698ee49d28b52a8d8ad97e22eb1566abee1b399c74e01c53cb",
+    "src/weather.mjs": "c8cddea10dd417e47a3415443f676bb0aaa985a56875e5c84a1816ddf20430a4",
+    "docs/F-01_upstream.md": "d65bc34c9f7569e5bebe0efe8d294cda66555918a18c50f900f41a4fab6fa06a",
+    "docs/F-02_weather-service.md": "a615c074fb5325b8398534641baf4b971f606d0bfc50195ab7404c665736ddda",
+    "wrangler.jsonc": "eb2d500771126f27c2a332baccfb447a9c23d11883fa6095d7c9ffc36ecebd50",
+    "package.json": "d41b387db3df760528c4417f2205a392ec08cb1f0c1b512c98a4e396bbbf1b79",
+    "package-lock.json": "6b52ad21922d1a7aa0ebac76fcf49edbc8ceadb6defc6d8112aaedf6438618b7"
+  },
+  "accountIdRedacted": "Removed from public repository",
+  "publicRepositorySanitization": {
+    "fieldsRemoved": [
+      "Cloudflare account identifier",
+      "author identifier",
+      "author email"
+    ],
+    "rawCopy": "local-only (gitignored)"
+  }
+}

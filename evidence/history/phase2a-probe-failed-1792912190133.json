@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-10-25T07:09:50.127Z",
+  "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+  "scope": "Read-only docs, health and unpaid quotes; no authorization signatures",
+  "resources": [],
+  "errors": [
+    {
+      "path": "/health",
+      "attempt": 1,
+      "transport": "explicit-proxy-fetch",
+      "message": "fetch failed",
+      "cause": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    {
+      "path": "/health",
+      "attempt": 2,
+      "transport": "curl-read-only-fallback",
+      "message": "curl transport exited 28; curl: (28) Failed to connect to yoyo-x402-minicurator.accessible-trip.workers.dev:443 after 21089 ms: Could not connect to server; no request retry was attempted"
+    }
+  ],
+  "passed": false,
+  "error": "curl transport exited 28; curl: (28) Failed to connect to yoyo-x402-minicurator.accessible-trip.workers.dev:443 after 21089 ms: Could not connect to server; no request retry was attempted",
+  "completedAt": "2026-10-25T07:10:22.083Z"
+}
