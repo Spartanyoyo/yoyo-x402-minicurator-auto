@@ -1,0 +1,87 @@
+{
+  "status": "phase2b_testnet_complete",
+  "checkedAt": "2026-11-02T12:13:16.926Z",
+  "checks": {
+    "fullSuite": true,
+    "targetedAfterFinalBounds": true,
+    "threeDryRunBuilds": true,
+    "normalDoubleRpc": true,
+    "recoveryDoubleRpc": true,
+    "redelivery": true,
+    "liveProbe": true,
+    "docs": true,
+    "credentialScan": true
+  },
+  "testsPassed": 185,
+  "normalJob": "89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89",
+  "recoveryJob": "181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde",
+  "normalDurationSeconds": 32.003,
+  "normalAuditChecks": 14,
+  "recoveryAuditChecks": 16,
+  "newPaymentsForAudit": 0,
+  "deployment": {
+    "at": "2026-11-02T12:13:15.532Z",
+    "deployments": [
+      {
+        "worker": "yoyo-x402-weather",
+        "deploymentId": "103020af-c162-4e2c-911f-eb386a42d9d5",
+        "versions": [
+          {
+            "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+            "percentage": 100
+          }
+        ]
+      },
+      {
+        "worker": "yoyo-x402-minicurator",
+        "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+        "versions": [
+          {
+            "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+            "percentage": 100
+          }
+        ]
+      },
+      {
+        "worker": "yoyo-x402-cloud-curator",
+        "deploymentId": "249684a8-8502-4933-ad6f-79b88b2e6a3b",
+        "versions": [
+          {
+            "version_id": "504974b6-0bc2-46a9-ba5b-646bc6115224",
+            "percentage": 100
+          }
+        ]
+      }
+    ],
+    "sourceHash": "8e327e9f5f9e1c79eab3f3388ab2047ea8882761999069f2627eb8da0081c10f",
+    "configHash": "e4f1ec6736944378fdba1ab07a8241450335cb5c0497d46a919054be223cf104"
+  },
+  "normalE2eExecutionVersion": "69ce185f-e35e-49e4-9f5a-1b8df7bfea3b",
+  "subsequentChanges": "Added model-input size and minimum three-museum budget guards; targeted tests, deployment and live unpaid probes passed",
+  "sourceHashes": {
+    "src/agent-worker.mjs": "57ccb490cabbed7656a46aae0eaca02079d6e06b798ed5f6d2261e9c8552beca",
+    "src/agent-job.mjs": "8e327e9f5f9e1c79eab3f3388ab2047ea8882761999069f2627eb8da0081c10f",
+    "src/agent-model.mjs": "8c060206b8eb434aab65d388783a499df35ce94cec90a41e39d50678e66e663c",
+    "src/agent-contract.mjs": "3d41475ddd55ff52ea743e7366b27073f9912c0321a238ae23fa854ef9f2a8e8",
+    "src/agent-evidence.mjs": "6885a64cb836c970beb049a4305d523290a0c11f5d7cd060310ca5c6f592b821",
+    "scripts/purchase.mjs": "dfd9cb5f66e223ce9d5cd4ef7440dd2c2ba07e0f9e9b4129782d84ea467b44c4",
+    "scripts/chain.mjs": "6ffae1005e1c421603267dffa27162cf37477da6d2a2ada2e4f6a0f76552c7f8",
+    "scripts/reconcile.mjs": "c4fa23998b976eaf5d572f56f99a81410f6d3bb374c45fae617361c4f512aef6",
+    "wrangler.agent.jsonc": "e4f1ec6736944378fdba1ab07a8241450335cb5c0497d46a919054be223cf104"
+  },
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 6,
+    "critical": 0,
+    "total": 6
+  },
+  "limitations": [
+    "Base Sepolia testnet only",
+    "Unused prepaid budget is not automatically refunded",
+    "A lost paid upstream response cannot be redelivered by the Phase 2-A provider",
+    "Model prose requires human review",
+    "Existing upstream Zod advisory remains; functional acceptance is not production clearance"
+  ]
+}

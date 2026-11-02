@@ -1,5 +1,7 @@
 # Yoyo x402 Agent 数据采购
 
+**第二阶段 B 云端 Agent 已实现并部署（2026-11-02）。** 本地只提交目标并购买一个 x402 任务，云端 DeepSeek Flash 自主采购、审计并整合三馆数据，最后交付可重复取件的展览。正常端到端样例用约32秒完成6项采购；任务、中间JSON、预算和证据由Durable Objects持久保存。查看[2-B使用说明](docs/第二阶段B_使用说明.md)、[云端生成展览](docs/第二阶段B_云端生成猫主题展览.md)、[2-B验收报告](docs/第二阶段B_验收报告.md)与[机器契约](docs/F-02_cloud-curator.md)。第一阶段和2-A线上版本保持原样。
+
 **第二阶段 A 已完成测试网配置、端到端演示和取证复核（2026-10-25）。** Cross-Museum MiniCurator 已部署 Met、CMA、SMK 的九个独立 x402 资源，并完成九笔 `verified` 采购，总支付 0.009 测试 USDC；九笔历史交易随后由两个不同 Base Sepolia RPC 在不重新付款的情况下 9/9 重审通过。直接查看 [Mentor 配置验收报告](docs/第二阶段A_配置验收报告.md)、[15 分钟猫主题展览](docs/第二阶段A_猫主题迷你展览.md)、[独立链上重审](evidence/phase2a/independent-chain-reaudit-2026-10-25.json)或 [MiniCurator 使用说明](docs/第二阶段A_使用说明.md)。当前仍有 Zod 上游依赖公告，详见[依赖审计说明](docs/第二阶段A_依赖审计说明.md)。
 
 **2026-10-28 GitHub 发布前复核通过：** 150 项测试、两个 Worker 构建、文档与凭据扫描通过；线上 9 个资源再次 9/9 检查通过；九笔历史交易由两个独立 RPC 再次 9/9 重审通过，未新增付款。摘要见 [发布前复核证据](evidence/phase2a/release-verification-2026-10-28.json)。
@@ -119,7 +121,7 @@ npm run rpc-check -- --out evidence/verification/rpc-health-latest.json
 
 ## 配置与部署
 
-从 [.env.example](.env.example) 创建本机 `.env.local`，从 [.env.cloudflare.example](.env.cloudflare.example) 创建本机 `.env.cloudflare`。买方私钥只留在本机；Worker 不读取私钥。部署令牌和账号 ID 只放在被忽略的本机文件中。
+第一阶段从 [.env.example](.env.example) 创建本机 `.env.local`，从 [.env.cloudflare.example](.env.cloudflare.example) 创建本机 `.env.cloudflare`。原本地买方私钥只留在本机，天气与2-A Worker不读取它。2-B另建专用测试钱包，以Worker Secret保存；模型配置样例为[.env.phase2b.example](.env.phase2b.example)。部署令牌和账号ID只放在被忽略的本机文件中。
 
 ```bash
 npm run build

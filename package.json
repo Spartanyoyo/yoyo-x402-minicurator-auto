@@ -21,8 +21,16 @@
     "rpc-check": "node --env-file=.env.local scripts/rpc-health.mjs",
     "evidence:manifest": "node scripts/build-evidence-manifest.mjs",
     "docs:check": "node scripts/check-docs.mjs",
-    "verify": "npm test && npm run build && npm run curator:build && npm run docs:check && npm run security:check",
-    "security:check": "node scripts/check-public-files.mjs"
+    "verify": "npm test && npm run build && npm run curator:build && npm run agent:build && npm run docs:check && npm run security:check",
+    "security:check": "node scripts/check-public-files.mjs",
+    "agent:build": "wrangler deploy --config wrangler.agent.jsonc --dry-run --outdir dist/agent",
+    "agent:deploy": "node --env-file=.env.cloudflare node_modules/wrangler/bin/wrangler.js deploy --config wrangler.agent.jsonc",
+    "agent:probe": "node --env-file=.env.phase2b.local scripts/probe-agent.mjs",
+    "agent:run": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs run",
+    "agent:status": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs status",
+    "agent:wait": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs wait",
+    "agent:reconcile": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs reconcile",
+    "agent:verify-chain": "node --use-env-proxy --env-file=.env.local scripts/verify-agent.mjs"
   },
   "dependencies": {
     "@x402/core": "2.28.0",

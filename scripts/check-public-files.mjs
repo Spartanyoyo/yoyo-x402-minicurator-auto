@@ -4,10 +4,12 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const ignoredDirectories = new Set([".git", "node_modules", ".wrangler", "dist", "private", "local-only"]);
-const ignoredFiles = new Set([".env.local", ".env.cloudflare", ".dev.vars"]);
+const ignoredFiles = new Set([".env.local", ".env.cloudflare", ".env.phase2b.local", ".dev.vars"]);
 const localCredentialFiles = [
   { file: ".env.local", key: "EVM_PRIVATE_KEY", kind: "buyer_private_key" },
   { file: ".env.cloudflare", key: "CLOUDFLARE_API_TOKEN", kind: "cloudflare_api_token" },
+  { file: ".env.phase2b.local", key: "AGENT_LLM_API_KEY", kind: "agent_model_api_key" },
+  { file: ".env.phase2b.local", key: "AGENT_WALLET_KEY", kind: "agent_wallet_private_key" },
 ];
 const comparisons = [];
 
@@ -52,7 +54,8 @@ collect(root);
 function publicSensitiveArtifacts(text) {
   const kinds = [];
   if (/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(text)) kinds.push("pem_private_key");
-  if (/\bEVM_PRIVATE_KEY[ \t]*=[ \t]*["']?0x[0-9a-fA-F]{64}\b/.test(text)) kinds.push("evm_private_key_assignment");
+  if (/\b(?:EVM_PRIVATE_KEY|AGENT_WALLET_KEY)[ \t]*=[ \t]*["']?0x[0-9a-fA-F]{64}\b/.test(text)) kinds.push("evm_private_key_assignment");
+  if (/\bsk-[A-Za-z0-9_-]{20,}\b/.test(text)) kinds.push("model_api_key");
   if (/\bCLOUDFLARE_API_TOKEN[ \t]*=[ \t]*["']?[A-Za-z0-9_-]{20,}/.test(text)) kinds.push("cloudflare_token_assignment");
   if (/\bgh[pousr]_[A-Za-z0-9]{30,}\b/.test(text) || /\bgithub_pat_[A-Za-z0-9_]{40,}\b/.test(text)) kinds.push("github_token");
   if (/\bAKIA[0-9A-Z]{16}\b/.test(text)) kinds.push("aws_access_key");

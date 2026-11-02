@@ -2,6 +2,7 @@
 .env*
 !.env.example
 !.env.cloudflare.example
+!.env.phase2b.example
 .dev.vars*
 private/
 local-only/

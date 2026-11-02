@@ -1,0 +1,1570 @@
+{
+  "requestId": "7d0bfffc-a965-4231-af67-3ec3282283f4",
+  "jobId": "89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89",
+  "status": "complete",
+  "input": {
+    "goal": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+    "budgetAtomic": "9000"
+  },
+  "createdAt": "2026-11-02T12:03:08.937Z",
+  "updatedAt": "2026-11-02T12:03:40.940Z",
+  "expiresAt": "2026-11-09T12:03:08.937Z",
+  "budget": {
+    "reservedAtomic": "6000",
+    "maximumAtomic": "9000"
+  },
+  "calls": [
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "cat",
+        "limit": 5,
+        "offset": 0
+      }
+    },
+    {
+      "service": "cma-artwork-search",
+      "parameters": {
+        "q": "cat",
+        "limit": 3,
+        "offset": 0
+      }
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "cat",
+        "limit": 3,
+        "offset": 0
+      }
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 552027
+      }
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 152829
+      }
+    },
+    {
+      "service": "smk-artwork",
+      "parameters": {
+        "id": "KMS3402"
+      }
+    }
+  ],
+  "rounds": 3,
+  "incoming": {
+    "at": "2026-11-02T12:03:12.257Z",
+    "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+    "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "network": "eip155:84532",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "before": {
+      "block": "53495616",
+      "buyer": "19975000",
+      "seller": "7000"
+    },
+    "authorization": {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "value": "12000",
+      "validAfter": "0",
+      "validBefore": "1793621290",
+      "nonce": "0xa3985b595d038e6435e65a55f5f316f01fc4c34d124d78f8b494a1f06a4fc9e8"
+    },
+    "status": "verified",
+    "http": [
+      {
+        "paid": true,
+        "status": 202,
+        "receivedAt": "2026-11-02T12:03:12.840Z",
+        "headers": {
+          "x-request-id": "7d0bfffc-a965-4231-af67-3ec3282283f4"
+        }
+      }
+    ],
+    "settlement": {
+      "success": true,
+      "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "transaction": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+      "network": "eip155:84532"
+    },
+    "response": {
+      "requestId": "7d0bfffc-a965-4231-af67-3ec3282283f4",
+      "jobId": "89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89"
+    },
+    "receipt": {
+      "transactionHash": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+      "status": "success",
+      "blockNumber": "53495620",
+      "blockTimestamp": "1793620992"
+    },
+    "transfers": [
+      {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "12000"
+      }
+    ],
+    "authorizationEvents": [
+      {
+        "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "nonce": "0xa3985b595d038e6435e65a55f5f316f01fc4c34d124d78f8b494a1f06a4fc9e8"
+      }
+    ],
+    "beforeObserved": {
+      "block": "53495616",
+      "buyer": "19975000",
+      "seller": "7000"
+    },
+    "after": {
+      "block": "53495620",
+      "buyer": "19963000",
+      "seller": "19000"
+    },
+    "intervalTransfers": [
+      {
+        "transactionHash": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+        "blockNumber": "53495620",
+        "logIndex": 2,
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "12000"
+      }
+    ],
+    "audit": {
+      "chainSuccess": true,
+      "exactTransfer": true,
+      "authorizationFieldsMatch": true,
+      "authorizationEventMatch": true,
+      "authorizationTimeMatch": true,
+      "settlementPayerMatches": true,
+      "declaredTermsMatch": true,
+      "initialBalancesMatch": true,
+      "noOtherTransfers": true,
+      "buyerDelta": "12000",
+      "sellerDelta": "12000",
+      "deliveryVerified": true,
+      "auditedAt": "2026-11-02T12:03:13.498Z",
+      "balanceChangesExplained": true,
+      "balanceMode": "all_interval_transfers",
+      "paymentVerified": true
+    }
+  },
+  "modelCalls": 4,
+  "delivery": {
+    "goal": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+    "reportMarkdown": "# 跟着猫咪逛三座博物馆：15分钟迷你展\n\n欢迎来到这场给小观众的猫咪迷你展！我们用大约15分钟，跟着一只猫从古埃及走到中国清代，再走进19世纪丹麦画家的画室。三件作品分别来自美国大都会艺术博物馆、美国克利夫兰艺术博物馆和丹麦国家美术馆（SMK），都是公有领域作品。看展小提示：先看，再猜，最后读说明。下面的解读是“一种可能的看法”，不是唯一答案——你自己的观察同样重要。\n\n路线总时长：15 分钟；开场、观察问题和总结包含在各站时间内。\n\n## Cat — Met（5 分钟）\n\n这是一件古埃及的猫形金属像，年代大约在公元前664年到公元前30年之间，材质是含铜金属。古埃及人常把猫和女神巴斯特联系在一起，猫因此既像宠物，也像神圣的守护者。它身形挺直、坐姿端正，表面有金属的光泽。这里说的“神圣”是根据古埃及文化背景做出的解读，具体用途还需要更多证据。\n\n观察问题：它坐得直不直？你觉得它是在休息，还是在“站岗”？如果它会发出声音，会是什么声音？\n\n![Cat](https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg)\n\n来源：https://www.metmuseum.org/art/collection/search/552027\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"isPublicDomain=true\"}；Met:552027\n采购交易：0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764\n\n## Cat and Butterfly — CMA（5 分钟）\n\n这是清代画家闵贞1788年画的一页册页，纸本水墨，画的是猫和蝴蝶。中国画常用水墨的浓淡来表现毛茸茸的质感，而不是涂满颜色。猫盯着蝴蝶，画面里就有了“下一刻会怎样”的悬念。有人会把“猫”和“蝶”联系起来做吉祥的联想，但这只是一种解读，画家的本意我们无法确定。\n\n观察问题：猫的眼睛在看哪里？蝴蝶离它有多远？如果你来补画一笔，会加什么，让故事继续？\n\n![Cat and Butterfly](https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg)\n\n来源：https://clevelandart.org/art/1985.71.5\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"share_license_status=\\\"CC0\\\"\"}；CMA:152829\n采购交易：0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d\n\n## The Cat in the Studio — SMK（5 分钟）\n\n这是丹麦画家大卫·雅各布森1860年的油画《画室里的猫》，布面油画。画室里通常有画架、颜料和杂物，猫在这样的空间里会显得很自在，也可能有点捣乱。油画颜料可以层层叠加，画出光影和毛发的细腻变化。至于猫是画家的宠物还是“模特”，我们只能根据画面去猜想，不能当作确定的事实。\n\n观察问题：找一找画室里有什么东西？猫离哪些东西最近？它像是在帮忙，还是在捣乱？你是怎么从画面里看出来的？\n\n![The Cat in the Studio](https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg)\n\n来源：https://open.smk.dk/artwork/image/KMS3402\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/mark/1.0/\",\"evidence\":\"public_domain=true\"}；SMK:KMS3402\n采购交易：0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792\n\n三只猫，三种“语言”：古埃及用金属塑造庄严的坐姿，中国清代用水墨捕捉猫与蝴蝶的瞬间，19世纪丹麦用油画记录画室里的日常。看猫，其实也是在学“怎么观察”：看姿态、看眼神、看它和周围东西的关系。下次你遇到一只真的猫，也可以试试今天用过的观察问题。所有展出作品均为公有领域，图片与出处信息由应用统一显示。\n\n## 采购与审计\n\n任务：89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89\n采购预算：9000 原子单位；实际已验证采购：6000 原子单位。\n所有付款为 Base Sepolia 测试 USDC。图片以馆方 URL 引用，云端不复制图片文件。\n\n- met-search：verified；0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee\n- cma-artwork-search：verified；0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150\n- smk-search：verified；0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417\n- met-artwork：verified；0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764\n- cma-artwork：verified；0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d\n- smk-artwork：verified；0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792\n",
+    "reportSha256": "84cc75b03207465f0c89dc56a66d3c3929dea74a44157e0748f8d80fe371e91f",
+    "purchases": [
+      {
+        "resourceService": "met-search",
+        "parameters": {
+          "q": "cat",
+          "limit": 5,
+          "offset": 0
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:16.985Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:17.595Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fec2192fceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:17 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=E6N52FUteEq6qq5leAa7o5WxSBSa8k4isOYQULYRikyJu%2Fdkf%2F2M6SQa42jHhs%2BVvxwIw7fd1TQb5hl92kSDK9XOp7uFgbSSsHT9omJ7caWQ1QEO4mfeiHROciXa%2B5O789tPOkID2QVGHHCk7up9RFQ%2FRVFH%2BoP71R2D%2Fd5Wk6RYBpj6OfjpPr2vxibph%2FPw\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "b58e4c96-459a-4921-b0c0-180ce621e6ed"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+                "description": "Search Met object IDs; rights require the separate artwork resource",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:20.384Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fecc09cdd8a7-SJC",
+              "connection": "close",
+              "content-length": "627",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:19 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=V8bL8dilUKY5pc9zi0IE%2BkzsU6Wb8SPm3FCRJCo%2BdgSGFOo3QYvs9Em6ahqvyizBAEc2IgPAKNwQ1hydhHKYzLhxLtszWKd4rRNr7%2BnzVA6Bc8w2W9uCMFwYc0JzalshcOd5JGqc8p%2BrYITL5isvxYVrKk3djtfHHMCBX9sOEGWABVKB3TuX2U9DklRds8gg\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "0f621bf2-04de-4adb-9ea1-3bd0cfd0bdc2"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/met-search/F-02.md",
+          "readAt": "2026-11-02T12:03:17.128Z",
+          "sha256": "ec42e98a1f9a5a81a12c8d9b0d17fc2099975b1d1e5d7a99b32399a7ad4c989f",
+          "content": "# F-02: met-search\n\nSearch Met object IDs; rights require the separate artwork resource\n\n```json\n{\n  \"id\": \"met-search\",\n  \"provider\": \"Met\",\n  \"kind\": \"identifiers\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"5\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search Met object IDs; rights require the separate artwork resource\",\n  \"path\": \"/api/met-search\",\n  \"documentationPath\": \"/services/met-search/F-02.md\",\n  \"healthPath\": \"/services/met-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-search?q=cat&limit=5&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621297",
+          "nonce": "0x5a227c50ff7e2f7bf219c60fb8a524da6eb3984987fe76e88e3722a7fb01f4ab",
+          "expiresAt": "2026-11-02T12:08:17.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "0f621bf2-04de-4adb-9ea1-3bd0cfd0bdc2",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-search",
+            "provider": "Met",
+            "kind": "identifiers",
+            "query": {
+              "q": "cat",
+              "limit": 5,
+              "offset": 0
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=5&offset=0",
+            "retrievedAt": "2026-11-02T12:03:19.446Z",
+            "total": 1592,
+            "returned": 5,
+            "excluded": 0,
+            "items": [
+              {
+                "id": "91120",
+                "rightsVerified": false
+              },
+              {
+                "id": "552027",
+                "rightsVerified": false
+              },
+              {
+                "id": "570722",
+                "rightsVerified": false
+              },
+              {
+                "id": "570749",
+                "rightsVerified": false
+              },
+              {
+                "id": "552028",
+                "rightsVerified": false
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+          "status": "success",
+          "blockNumber": "53495656",
+          "blockTimestamp": "1793621000"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0x5a227c50ff7e2f7bf219c60fb8a524da6eb3984987fe76e88e3722a7fb01f4ab"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "after": {
+          "block": "53495656",
+          "buyer": "17000",
+          "seller": "22000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+            "blockNumber": "53495649",
+            "logIndex": 13,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+            "blockNumber": "53495656",
+            "logIndex": 1,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": false,
+          "buyerDelta": "2000",
+          "sellerDelta": "2000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:21.080Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      },
+      {
+        "resourceService": "cma-artwork-search",
+        "parameters": {
+          "q": "cat",
+          "limit": 3,
+          "offset": 0
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:16.985Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:17.591Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fec22932ceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:17 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BWRoTAP2EvxIB8H0Htm9zfxM7hW1UCCenaITkxdh1yDwLyXsN8Mt6Xi5hzNzyDj05cDcTn4c3mCqhy2Q%2F0VO1slJ99mvUU5Xk%2Bt8%2BfFXQJy0BaFlom9vi6uvTy5y524e1KXlR3P7SVHU0k29tZCUd3%2FJsJIienXH%2FwOy0baFpu1XSZLNcbi33UsdYr57oXy5\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "6efac218-0282-47ad-be8c-2cbfa286b9c3"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0",
+                "description": "Search CMA titles; only CC0 records with images",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:19.019Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fec39ae9d8a7-SJC",
+              "connection": "close",
+              "content-length": "2020",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:18 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nhmKB5mpY6twsozGPtolsP7gZCo2dkEAUGDKqMqKihz0u2JPOUTaWwIbou0XNKuxcHKLQxQ%2FN60IDsrub9cHallFC2PrwWAUsuV8%2F5X2RYiV%2Bg1cf7bvjdTnPTZWgXvDqTxqpy516d%2FvBr27ItbdmU3dWOSaHz8gJrDTr6cNh5qGugGCS03hXtuIiY5Seq1h\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "96a54f4d-bc0c-4dc5-a54b-636e08cadd6a"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/cma-artwork-search/F-02.md",
+          "readAt": "2026-11-02T12:03:17.132Z",
+          "sha256": "67d8b49abfcac00a5a23037ef4b838c5a4e686c1776842f67f8526a6b719620d",
+          "content": "# F-02: cma-artwork-search\n\nSearch CMA titles; only CC0 records with images\n\n```json\n{\n  \"id\": \"cma-artwork-search\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artwork-search\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search CMA titles; only CC0 records with images\",\n  \"path\": \"/api/cma-artwork-search\",\n  \"documentationPath\": \"/services/cma-artwork-search/F-02.md\",\n  \"healthPath\": \"/services/cma-artwork-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artwork-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork-search?q=cat&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artwork-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621297",
+          "nonce": "0x524b28d2cbfd93835431153b71a99a7aa3989020e339989cf9f07b313e6be4f3",
+          "expiresAt": "2026-11-02T12:08:17.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "96a54f4d-bc0c-4dc5-a54b-636e08cadd6a",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork-search",
+            "provider": "CMA",
+            "kind": "artwork-search",
+            "query": {
+              "q": "cat",
+              "limit": 3,
+              "offset": 0
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=cat&cc0=1&has_image=1&limit=3&skip=0",
+            "retrievedAt": "2026-11-02T12:03:18.082Z",
+            "total": 35,
+            "returned": 3,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "98363",
+                "title": "Cat Coffin",
+                "artists": [],
+                "date": "305–30 BCE",
+                "medium": [
+                  "bronze, hollow cast"
+                ],
+                "culture": [
+                  "Egypt, Greco-Roman period (332 BCE–395 CE), Ptolemaic dynasty (305–30 BCE)"
+                ],
+                "department": "Egyptian and Ancient Near Eastern Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1917.998/1917.998_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1917.998",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "152829",
+                "title": "Cat and Butterfly",
+                "artists": [
+                  {
+                    "id": "31140",
+                    "name": "Min Zhen (Chinese, 1730–after 1788)"
+                  }
+                ],
+                "date": "1788",
+                "medium": [
+                  "album leaf, ink on paper"
+                ],
+                "culture": [
+                  "China, Qing dynasty (1644-1911)"
+                ],
+                "department": "Chinese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1985.71.5",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "122512",
+                "title": "Cat",
+                "artists": [],
+                "date": "664–30 BCE OR 664–330 BCE",
+                "medium": [
+                  "bronze and gold"
+                ],
+                "culture": [
+                  "Egypt, Late period (715–332 BCE), Dynasty 26 or later"
+                ],
+                "department": "Egyptian and Ancient Near Eastern Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1942.776/1942.776_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1942.776",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+          "status": "success",
+          "blockNumber": "53495649",
+          "blockTimestamp": "1793620998"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0x524b28d2cbfd93835431153b71a99a7aa3989020e339989cf9f07b313e6be4f3"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "after": {
+          "block": "53495649",
+          "buyer": "18000",
+          "seller": "21000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+            "blockNumber": "53495649",
+            "logIndex": 13,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": true,
+          "buyerDelta": "1000",
+          "sellerDelta": "1000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:19.653Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "cat",
+          "limit": 3,
+          "offset": 0
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:16.985Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:17.633Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fec2c956ceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:17 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=D8g5KephujSDN%2BDQXpYtcPQNJYHNyVfca%2BkJCJeAUHoGvGZMlhWFhj7xEXA7ATmaWgLVbCsKZHfFvPrSDZ%2Bciuthj9SWB%2FTty9gdZo5n7tnFUujYk0o1Z0OzMxOLQeHzN3P5wn1PgyBBDUvXPSlDW0FcOotDHE9XZlMxd3Qinw5DOGsZiChyzM8EWn9cp%2BlN\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "913c0925-3967-4e78-b064-6c711895a907"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+                "description": "Search SMK; only public-domain records with images",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:22.782Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fed47964d8a7-SJC",
+              "connection": "close",
+              "content-length": "878",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:21 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=6DRbGU%2FKrwUok0YMBIkMrzpvI%2BQhjLruIxss%2B%2FbttCP0kG3R5PLA6MKJ4u%2BlxzaiKWnf3L7e57ZWeU9HiNu7Pydr2Ruvzu0qeMGyow3LCAJB1YOpId7mGLDkBUJrQLr%2FTHsHvipnxjHKBUVcg46jZ6SA51nl9I8IWjLhyKVVCuFrtZqPBtRBNhhFMnXEbjfT\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "87e36799-a63e-4de4-adba-b6c4720e9c96"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/smk-search/F-02.md",
+          "readAt": "2026-11-02T12:03:17.126Z",
+          "sha256": "c96fbbe60cabb6ae1bbe6b732fba5d875420160bbe3375151f1f2cb3de093316",
+          "content": "# F-02: smk-search\n\nSearch SMK; only public-domain records with images\n\n```json\n{\n  \"id\": \"smk-search\",\n  \"provider\": \"SMK\",\n  \"kind\": \"artwork-search\",\n  \"example\": {\n    \"q\": \"cat\",\n    \"limit\": \"3\",\n    \"offset\": \"0\"\n  },\n  \"description\": \"Search SMK; only public-domain records with images\",\n  \"path\": \"/api/smk-search\",\n  \"documentationPath\": \"/services/smk-search/F-02.md\",\n  \"healthPath\": \"/services/smk-search/health\",\n  \"cacheNamespace\": \"minicurator-v1/smk-search\",\n  \"freshSeconds\": 3600,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-search?q=cat&limit=3&offset=0\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/smk-search. Fresh: 3600s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621297",
+          "nonce": "0x048d1ab39704b9a0099ecca0f062dd43e95e2aafdfadfa0be4cfc39fc2597c44",
+          "expiresAt": "2026-11-02T12:08:17.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "87e36799-a63e-4de4-adba-b6c4720e9c96",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "cat",
+              "limit": 3,
+              "offset": 0
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=cat&offset=0&rows=3&lang=en",
+            "retrievedAt": "2026-11-02T12:03:21.464Z",
+            "total": 227,
+            "returned": 1,
+            "excluded": 2,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KMS3402",
+                "title": "The Cat in the Studio",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "David Jacobsen"
+                  }
+                ],
+                "date": "1860",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS3402",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+          "status": "success",
+          "blockNumber": "53495666",
+          "blockTimestamp": "1793621002"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0x048d1ab39704b9a0099ecca0f062dd43e95e2aafdfadfa0be4cfc39fc2597c44"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495642",
+          "buyer": "19000",
+          "seller": "20000"
+        },
+        "after": {
+          "block": "53495666",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+            "blockNumber": "53495649",
+            "logIndex": 13,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+            "blockNumber": "53495656",
+            "logIndex": 1,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+            "blockNumber": "53495666",
+            "logIndex": 1,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": false,
+          "buyerDelta": "3000",
+          "sellerDelta": "3000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:23.416Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 552027
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:26.769Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:27.243Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fefe7a63ceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:26 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8AMSmhhYX4CeI9hFILecvNZo8xp1sp03HJnCbqODyba7aiEP5C%2BnW0tr7uj3%2F%2B9%2BP03htTieOaWVuR90sN%2Bq0P7FqCXOKwLnUeHBo3HuGwiC8VH8SC6OqBMOcMcnhyaTd2GsqN1IkTo2Ii6ZqkS6PMf7%2FhRsxwUjV6QRKAueAzmdggb2qs53gJgXXAmjFjTT\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "d731c0ac-9068-41b9-a341-30230f8f0ce1"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+                "description": "One public-domain Met artwork with image and provenance",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:28.094Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542feffaacfd8a7-SJC",
+              "connection": "close",
+              "content-length": "815",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:27 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FC75%2B%2BirkM6tTAMTp%2F4Y4lXLrr1vFN%2FyYkzIqdmA5aIiuStLVBLft%2F8Gq2BF97me5sTMGHxo7556PQPpqNGGJxTt1qc2unqZRBrF9%2BC891xPPsKh9BF5d6Xd5KqmRcUDvDDuJDeFcLb498xTbnt%2FuZpOeg925bJwMzHcdvue31YnM8vMje6RbmnwU6SIHjY2\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "76d23eb5-0ca4-452a-a567-6878c9f02ed5"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/met-artwork/F-02.md",
+          "readAt": "2026-11-02T12:03:26.795Z",
+          "sha256": "c8264a177718bcb7eb537352b51d2b1c8d2e7e399bafab3ddd921ad419836cc0",
+          "content": "# F-02: met-artwork\n\nOne public-domain Met artwork with image and provenance\n\n```json\n{\n  \"id\": \"met-artwork\",\n  \"provider\": \"Met\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"552027\"\n  },\n  \"description\": \"One public-domain Met artwork with image and provenance\",\n  \"path\": \"/api/met-artwork\",\n  \"documentationPath\": \"/services/met-artwork/F-02.md\",\n  \"healthPath\": \"/services/met-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/met-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/met-artwork?id=552027\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/met-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621307",
+          "nonce": "0xf3b7b9eace467d68d254208ef69223b1134b6b7d13c9fefbc21825cb4863ff0f",
+          "expiresAt": "2026-11-02T12:08:27.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "76d23eb5-0ca4-452a-a567-6878c9f02ed5",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-artwork",
+            "provider": "Met",
+            "kind": "artwork",
+            "query": {
+              "id": 552027
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+            "retrievedAt": "2026-11-02T12:00:14.091Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "Met",
+                "id": "552027",
+                "title": "Cat",
+                "artists": [],
+                "date": "664–30 BCE",
+                "medium": [
+                  "Cupreous metal"
+                ],
+                "culture": [],
+                "department": "Egyptian Art",
+                "imageUrl": "https://images.metmuseum.org/CRDImages/eg/web-large/LC-04_2_472_EGDP031195.jpg",
+                "sourceUrl": "https://www.metmuseum.org/art/collection/search/552027",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "isPublicDomain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "hit",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+          "status": "success",
+          "blockNumber": "53495696",
+          "blockTimestamp": "1793621008"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0xf3b7b9eace467d68d254208ef69223b1134b6b7d13c9fefbc21825cb4863ff0f"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "after": {
+          "block": "53495696",
+          "buyer": "15000",
+          "seller": "24000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+            "blockNumber": "53495696",
+            "logIndex": 5,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": true,
+          "buyerDelta": "1000",
+          "sellerDelta": "1000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:29.777Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      },
+      {
+        "resourceService": "cma-artwork",
+        "parameters": {
+          "id": 152829
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:26.769Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:27.743Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fefe8a64ceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:27 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4KD4TofE9lg04t9WYfnfB0AC5NrOuOGTcTIQBLy7HqIaWzqeIzDWIueCGfKc0TvHxIT7Cwr%2FOoTpPmIm%2Bn0DmUKMqGhrct%2FzSNeGA27c9sZbHYDxHTf8aqzPpF4%2B0jOJS2a%2BXQbpkSb8rS80vMhOvyJV6ijcRYp0b3JpF2iQcUqqoqizAZEb%2FMJ119Tk7Q%2Fs\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "f364964a-144f-41b3-a057-1281a3e84b37"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+                "description": "One CC0 Cleveland artwork with image and provenance",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:31.008Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542ff0cdf21d8a7-SJC",
+              "connection": "close",
+              "content-length": "894",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:30 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=g%2F8pNt6mw2xvKHFrJgm85CiGNMQXFqNLrLuz5iOXtqWvJcbdNEEgzsT9nG9Rdk04RqCAjY5ulEI5dWKb1VedDYhAu6%2B0ZOzRqWLhjpW6NsdU%2FqDzoJ6OVKg%2BlP67KNJSxzuHKUQCiVBZR8uXjYVrE6sFEXQu%2F9Leivim%2BkyxZiWFNeueVsc%2Fn3%2BGF0ohIlc9\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "5a341d20-095b-4f92-bdba-24af15b8c022"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/cma-artwork/F-02.md",
+          "readAt": "2026-11-02T12:03:26.794Z",
+          "sha256": "1518c72a64a5c862dc6829f7fbf59d2fea17524e7b9da2ae3c172a88fdf40fa5",
+          "content": "# F-02: cma-artwork\n\nOne CC0 Cleveland artwork with image and provenance\n\n```json\n{\n  \"id\": \"cma-artwork\",\n  \"provider\": \"CMA\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"152829\"\n  },\n  \"description\": \"One CC0 Cleveland artwork with image and provenance\",\n  \"path\": \"/api/cma-artwork\",\n  \"documentationPath\": \"/services/cma-artwork/F-02.md\",\n  \"healthPath\": \"/services/cma-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/cma-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/cma-artwork?id=152829\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/cma-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621307",
+          "nonce": "0x5a5fee68e6071422353c5ce4491c80d24d0d4887de547c4cf072a90dfdfc9209",
+          "expiresAt": "2026-11-02T12:08:27.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "5a341d20-095b-4f92-bdba-24af15b8c022",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork",
+            "provider": "CMA",
+            "kind": "artwork",
+            "query": {
+              "id": 152829
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/152829",
+            "retrievedAt": "2026-11-02T12:00:12.152Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "152829",
+                "title": "Cat and Butterfly",
+                "artists": [
+                  {
+                    "id": "31140",
+                    "name": "Min Zhen (Chinese, 1730–after 1788)"
+                  }
+                ],
+                "date": "1788",
+                "medium": [
+                  "album leaf, ink on paper"
+                ],
+                "culture": [
+                  "China, Qing dynasty (1644-1911)"
+                ],
+                "department": "Chinese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1985.71.5/1985.71.5_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1985.71.5",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "hit",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+          "status": "success",
+          "blockNumber": "53495707",
+          "blockTimestamp": "1793621010"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0x5a5fee68e6071422353c5ce4491c80d24d0d4887de547c4cf072a90dfdfc9209"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "after": {
+          "block": "53495707",
+          "buyer": "13000",
+          "seller": "26000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+            "blockNumber": "53495696",
+            "logIndex": 5,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+            "blockNumber": "53495701",
+            "logIndex": 9,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+            "blockNumber": "53495707",
+            "logIndex": 7,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": false,
+          "buyerDelta": "3000",
+          "sellerDelta": "3000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:31.684Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      },
+      {
+        "resourceService": "smk-artwork",
+        "parameters": {
+          "id": "KMS3402"
+        },
+        "budgetAtomic": "1000",
+        "at": "2026-11-02T12:03:26.769Z",
+        "intent": "请自主完成一个15分钟的中文猫主题迷你展览，面向十岁孩子，涵盖Met、CMA、SMK三馆的公有领域作品。自行检索和采购详情，给出准确的分站时间、观察问题、馆方图片和来源，并附全部x402支付审计。",
+        "baseUrl": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
+        "buyer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "seller": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+        "network": "eip155:84532",
+        "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "status": "verified",
+        "http": [
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402",
+            "paid": false,
+            "status": 402,
+            "receivedAt": "2026-11-02T12:03:27.248Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542fefe7a60ceb5-SJC",
+              "connection": "close",
+              "content-length": "2",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:26 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aguGpgDifVIYYnP%2FQQ%2FJNbDGhyJ0Z05wopae7%2BSZPpFrVChrO%2FkEjrlYwpSd4eDTIuDCGjt5AFxyADWK9J6WHFaPUNu2BCjNsjsodUg6lJ2oSTvRIsjuTowfPxeoU7z78PPewg9tLc%2FwLb7KazxcEYb8TUcag63daiELuYw6qDpvwUFCBt78Urm1PtxbL8FY\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "3421dd65-28bf-4d08-a9b0-488f80a4e5b9"
+            },
+            "paymentRequired": {
+              "x402Version": 2,
+              "error": "Payment required",
+              "resource": {
+                "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402",
+                "description": "One public-domain SMK artwork with image and provenance",
+                "mimeType": "application/json"
+              },
+              "accepts": [
+                {
+                  "scheme": "exact",
+                  "network": "eip155:84532",
+                  "amount": "1000",
+                  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+                  "payTo": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+                  "maxTimeoutSeconds": 300,
+                  "extra": {
+                    "name": "USDC",
+                    "version": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402",
+            "paid": true,
+            "status": 200,
+            "receivedAt": "2026-11-02T12:03:29.403Z",
+            "headers": {
+              "cache-control": "no-store",
+              "cf-ray": "a542ff04bf89d8a7-SJC",
+              "connection": "close",
+              "content-length": "843",
+              "content-type": "application/json",
+              "date": "Mon, 02 Nov 2026 12:03:28 GMT",
+              "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+              "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=a2ALTEZWi27KeOuh6xspduJJHaSMpSKnR9QAgVHugPrDO4Fgvu2xG3p9wg%2FHss7aWFaeN7DsknjNjn1Bijh1%2FKEX2aXYMBklOZXYqGJPfYj5k67LIWNPrJtKIbcNChCktYDi2e8Jxyl9tZF7WY%2FnMggHEsscNI747IvouuHUGnJJZoHaNr8Id6N%2F37jrUB6N\"}]}",
+              "server": "cloudflare",
+              "x-request-id": "ccf7a38e-0276-4b45-89f7-ebaa3d9d1285"
+            }
+          }
+        ],
+        "documentation": {
+          "url": "https://yoyo-x402-minicurator.accessible-trip.workers.dev/services/smk-artwork/F-02.md",
+          "readAt": "2026-11-02T12:03:26.797Z",
+          "sha256": "9fe4336444cc5c5a8cdc4d69f570a08c150152f4299cc5ba47ae53ae587acbbb",
+          "content": "# F-02: smk-artwork\n\nOne public-domain SMK artwork with image and provenance\n\n```json\n{\n  \"id\": \"smk-artwork\",\n  \"provider\": \"SMK\",\n  \"kind\": \"artwork\",\n  \"example\": {\n    \"id\": \"KMS3402\"\n  },\n  \"description\": \"One public-domain SMK artwork with image and provenance\",\n  \"path\": \"/api/smk-artwork\",\n  \"documentationPath\": \"/services/smk-artwork/F-02.md\",\n  \"healthPath\": \"/services/smk-artwork/health\",\n  \"cacheNamespace\": \"minicurator-v1/smk-artwork\",\n  \"freshSeconds\": 86400,\n  \"url\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork\",\n  \"exampleUrl\": \"https://yoyo-x402-minicurator.accessible-trip.workers.dev/api/smk-artwork?id=KMS3402\",\n  \"network\": \"eip155:84532\",\n  \"asset\": \"0x036CbD53842c5426634e7929541eC2318f3dCF7e\",\n  \"seller\": \"0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f\",\n  \"priceAtomic\": \"1000\",\n  \"scheme\": \"exact\",\n  \"x402Version\": 2,\n  \"maxTimeoutSeconds\": 300\n}\n```\n\nGET only. Parameters occur once; unknown parameters are rejected. q: 1..80 characters; limit: 1..10 (default 5); offset: 0..1000 (default 0). Detail requires id. met-search additionally accepts departmentId. met-departments accepts no query parameters.\n\nUnpaid: 402 + PAYMENT-REQUIRED. Paid success: 200 + PAYMENT-RESPONSE + X-Request-Id. Result envelope: {requestId, resource}. resource contains service, provider, kind, query, sourceUrl, retrievedAt, total, returned, excluded, items, cache. Search totals include excluded records; returned is the actual delivered count.\n\nMet search IDs and artist artwork references have rightsVerified=false; purchase artwork detail before displaying an image. Artwork resources only deliver explicitly CC0/public-domain works with HTTPS museum image/source URLs. Empty filtered search results are valid and still cost one call. Missing/closed/malformed detail returns an error before settlement.\n\nCache namespace: minicurator-v1/smk-artwork. Fresh: 86400s; maximum retained age: 7 days. Stale fallback explicitly carries cache.stale=true and original retrievedAt. No image binaries are proxied. Provider JSON responses are streamed and rejected above 2 MiB.\n\nOne signature and one paid submission per purchase. Never automatically repeat an unknown payment outcome. Inspect authorization, settlement and chain evidence first.\n\nFull service documentation: https://yoyo-x402-minicurator.accessible-trip.workers.dev/F-02.md\n"
+        },
+        "before": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "authorization": {
+          "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793621307",
+          "nonce": "0xf7e8e43023b33ee96e6c0e5118ff50ae3302db4287ca836debce3d89dbf2de20",
+          "expiresAt": "2026-11-02T12:08:27.000Z"
+        },
+        "settlement": {
+          "success": true,
+          "payer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "transaction": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+          "network": "eip155:84532"
+        },
+        "response": {
+          "requestId": "ccf7a38e-0276-4b45-89f7-ebaa3d9d1285",
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-artwork",
+            "provider": "SMK",
+            "kind": "artwork",
+            "query": {
+              "id": "KMS3402"
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KMS3402&lang=en",
+            "retrievedAt": "2026-11-02T12:00:16.813Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KMS3402",
+                "title": "The Cat in the Studio",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "David Jacobsen"
+                  }
+                ],
+                "date": "1860",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cn69m765x_kms3402-cropped.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS3402",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "hit",
+              "stale": false
+            }
+          }
+        },
+        "receipt": {
+          "transactionHash": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+          "status": "success",
+          "blockNumber": "53495701",
+          "blockTimestamp": "1793621009"
+        },
+        "transfers": [
+          {
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "authorizationEvents": [
+          {
+            "authorizer": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "nonce": "0xf7e8e43023b33ee96e6c0e5118ff50ae3302db4287ca836debce3d89dbf2de20"
+          }
+        ],
+        "beforeObserved": {
+          "block": "53495690",
+          "buyer": "16000",
+          "seller": "23000"
+        },
+        "after": {
+          "block": "53495701",
+          "buyer": "14000",
+          "seller": "25000"
+        },
+        "intervalTransfers": [
+          {
+            "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+            "blockNumber": "53495696",
+            "logIndex": 5,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          },
+          {
+            "transactionHash": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+            "blockNumber": "53495701",
+            "logIndex": 9,
+            "from": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+            "to": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
+            "value": "1000"
+          }
+        ],
+        "audit": {
+          "chainSuccess": true,
+          "exactTransfer": true,
+          "authorizationFieldsMatch": true,
+          "authorizationEventMatch": true,
+          "authorizationTimeMatch": true,
+          "settlementPayerMatches": true,
+          "declaredTermsMatch": true,
+          "initialBalancesMatch": true,
+          "noOtherTransfers": false,
+          "buyerDelta": "2000",
+          "sellerDelta": "2000",
+          "deliveryVerified": true,
+          "auditedAt": "2026-11-02T12:03:30.145Z",
+          "balanceChangesExplained": true,
+          "balanceMode": "all_interval_transfers",
+          "paymentVerified": true
+        }
+      }
+    ],
+    "priorAttempts": [],
+    "modelEvidence": [
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 623,
+          "completion_tokens": 74,
+          "total_tokens": 697,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 623
+        },
+        "responseId": "45ac1d81-78ae-4f16-ac89-9eb87c7bbb12",
+        "outputHash": "a7102c38c38c2a8deae5f4f8c05e8c977fdcfaf95cfa1afc1c9a008ace562a07",
+        "at": "2026-11-02T12:03:15.985Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 64,
+          "total_tokens": 1827,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 1251
+        },
+        "responseId": "709c60c7-7196-4e38-b41c-b554ac71b36d",
+        "outputHash": "becb20334be3b695f7af4ffb3c23a1da896895793e96fe1ddfefacf1d275dd54",
+        "at": "2026-11-02T12:03:25.769Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 2590,
+          "completion_tokens": 11,
+          "total_tokens": 2601,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 2078
+        },
+        "responseId": "113ccb31-061f-43ec-ace6-2da78ccf6e29",
+        "outputHash": "7f876422f59a4e76d28ea74501745e7e2e7e5fdfb448fb9928b2d47536991f97",
+        "at": "2026-11-02T12:03:34.125Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 1956,
+          "completion_tokens": 612,
+          "total_tokens": 2568,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1956
+        },
+        "responseId": "29afd14b-0aa6-4e52-a8fd-c067706007f9",
+        "outputHash": "651d3ef7ff2bcf42e06c6b46f10628ae6cd8c8f86bce8d79445c3bcfeb1ffa51",
+        "at": "2026-11-02T12:03:40.940Z"
+      }
+    ],
+    "completedAt": "2026-11-02T12:03:40.940Z",
+    "totalUpstreamAtomic": "6000"
+  }
+}

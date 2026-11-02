@@ -1,0 +1,223 @@
+{
+  "at": "2026-11-02T11:42:22.427Z",
+  "jobId": "181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde",
+  "baseUrl": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev",
+  "input": {
+    "goal": "请为十岁孩子设计一个15分钟的中文猫主题迷你展览，必须包含Met、CMA和SMK三家博物馆的公有领域作品。请自主检索、购买作品详情并整合，提供观察问题、图片来源、许可和支付证据。采购预算最多0.009测试USDC。",
+    "budgetAtomic": "9000"
+  },
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "status": "verified",
+  "http": [
+    {
+      "paid": true,
+      "status": 202,
+      "receivedAt": "2026-11-02T11:42:30.609Z",
+      "headers": {
+        "x-request-id": "9304660a-18c6-4462-b3a5-24779b207d44"
+      }
+    }
+  ],
+  "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+  "documentation": {
+    "url": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev/F-02.md",
+    "content": "Sensitive upstream diagnostic redacted",
+    "sha256": "129fbf1a41ae7da3255d973eed9b478aa593ae39850e55c20c4cbfde906510c3",
+    "readAt": "2026-11-02T11:42:23.470Z"
+  },
+  "before": {
+    "block": "53489389",
+    "buyer": "19987000",
+    "seller": "0"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "value": "12000",
+    "validAfter": "0",
+    "validBefore": "1793620047",
+    "nonce": "0xa057d8273a075f53fabdda0837f561ce6971fa59e91401a035dbab3baadb341f"
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+    "network": "eip155:84532"
+  },
+  "response": {
+    "requestId": "9304660a-18c6-4462-b3a5-24779b207d44",
+    "jobId": "181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde",
+    "status": "queued",
+    "input": {
+      "goal": "请为十岁孩子设计一个15分钟的中文猫主题迷你展览，必须包含Met、CMA和SMK三家博物馆的公有领域作品。请自主检索、购买作品详情并整合，提供观察问题、图片来源、许可和支付证据。采购预算最多0.009测试USDC。",
+      "budgetAtomic": "9000"
+    },
+    "createdAt": "2026-11-02T11:42:24.339Z",
+    "updatedAt": "2026-11-02T11:42:30.851Z",
+    "expiresAt": "2026-11-09T11:42:24.339Z",
+    "budget": {
+      "reservedAtomic": "0",
+      "maximumAtomic": "9000"
+    },
+    "calls": [],
+    "rounds": 0,
+    "incoming": {
+      "at": "2026-11-02T11:42:28.801Z",
+      "intent": "请为十岁孩子设计一个15分钟的中文猫主题迷你展览，必须包含Met、CMA和SMK三家博物馆的公有领域作品。请自主检索、购买作品详情并整合，提供观察问题、图片来源、许可和支付证据。采购预算最多0.009测试USDC。",
+      "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "network": "eip155:84532",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "before": {
+        "block": "53489399",
+        "buyer": "19987000",
+        "seller": "0"
+      },
+      "authorization": {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "12000",
+        "validAfter": "0",
+        "validBefore": "1793620047",
+        "nonce": "0xa057d8273a075f53fabdda0837f561ce6971fa59e91401a035dbab3baadb341f"
+      },
+      "status": "verified",
+      "http": [
+        {
+          "paid": true,
+          "status": 202,
+          "receivedAt": "2026-11-02T11:42:30.185Z",
+          "headers": {
+            "x-request-id": "9304660a-18c6-4462-b3a5-24779b207d44"
+          }
+        }
+      ],
+      "settlement": {
+        "success": true,
+        "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "transaction": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+        "network": "eip155:84532"
+      },
+      "response": {
+        "requestId": "9304660a-18c6-4462-b3a5-24779b207d44",
+        "jobId": "181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde"
+      },
+      "receipt": {
+        "transactionHash": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+        "status": "success",
+        "blockNumber": "53489403",
+        "blockTimestamp": "1793619749"
+      },
+      "transfers": [
+        {
+          "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+          "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "value": "12000"
+        }
+      ],
+      "authorizationEvents": [
+        {
+          "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+          "nonce": "0xa057d8273a075f53fabdda0837f561ce6971fa59e91401a035dbab3baadb341f"
+        }
+      ],
+      "beforeObserved": {
+        "block": "53489399",
+        "buyer": "19987000",
+        "seller": "0"
+      },
+      "after": {
+        "block": "53489403",
+        "buyer": "19975000",
+        "seller": "12000"
+      },
+      "intervalTransfers": [
+        {
+          "transactionHash": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+          "blockNumber": "53489403",
+          "logIndex": 1,
+          "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+          "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+          "value": "12000"
+        }
+      ],
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "12000",
+        "sellerDelta": "12000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T11:42:30.851Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      }
+    }
+  },
+  "receipt": {
+    "transactionHash": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+    "status": "success",
+    "blockNumber": "53489403",
+    "blockTimestamp": "1793619749"
+  },
+  "transfers": [
+    {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "value": "12000"
+    }
+  ],
+  "authorizationEvents": [
+    {
+      "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "nonce": "0xa057d8273a075f53fabdda0837f561ce6971fa59e91401a035dbab3baadb341f"
+    }
+  ],
+  "beforeObserved": {
+    "block": "53489389",
+    "buyer": "19987000",
+    "seller": "0"
+  },
+  "after": {
+    "block": "53489403",
+    "buyer": "19975000",
+    "seller": "12000"
+  },
+  "intervalTransfers": [
+    {
+      "transactionHash": "0x101d62af1258c83e6c0ecc8c50de80d9e7b5f9e584b7222cdd2388d600d9747a",
+      "blockNumber": "53489403",
+      "logIndex": 1,
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "value": "12000"
+    }
+  ],
+  "audit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "12000",
+    "sellerDelta": "12000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-11-02T11:42:33.547Z",
+    "balanceChangesExplained": true,
+    "balanceMode": "all_interval_transfers",
+    "paymentVerified": true
+  }
+}

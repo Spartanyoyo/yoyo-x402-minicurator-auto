@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync } from "node:fs";
+import { getCloudJob } from "./agent-client.mjs";
+const id = process.argv[2];
+if (!/^[a-f0-9]{64}$/.test(id ?? "")) throw new Error("Pass a saved job id");
+const state = JSON.parse(readFileSync(`private/phase2b/jobs/${id}.json`, "utf8"));
+const first = await getCloudJob(state); const second = await getCloudJob(state);
+const transactions = job => job.delivery.purchases.map(record => record.settlement?.transaction ?? null);
+const result = { checkedAt: new Date().toISOString(), jobId: id, firstStatus: first.status, secondStatus: second.status, firstHash: first.delivery.reportSha256, secondHash: second.delivery.reportSha256, unchangedPurchases: JSON.stringify(transactions(first)) === JSON.stringify(transactions(second)), unchangedTimestamp: first.updatedAt === second.updatedAt, newPaymentSubmissions: 0 };
+result.passed = first.status === "complete" && second.status === "complete" && result.firstHash === result.secondHash && result.unchangedPurchases && result.unchangedTimestamp;
+writeFileSync(`evidence/phase2b/redelivery-${id}.json`, JSON.stringify(result, null, 2) + "\n"); console.log(JSON.stringify(result));
+if (!result.passed) process.exitCode = 1;

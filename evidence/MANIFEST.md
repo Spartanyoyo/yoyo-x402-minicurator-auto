@@ -2,7 +2,7 @@
 
 此文件由 `npm run evidence:manifest` 生成。SHA256 对应仓库中脱敏后的公开证据文件；本机原始敏感诊断只保存在被忽略的 `local-only/` 目录。
 
-共 140 个证据文件。分类说明见 [README](README.md)。
+共 153 个证据文件。分类说明见 [README](README.md)。
 
 | 文件 | 字节数 | SHA256 |
 |---|---:|---|
@@ -107,6 +107,19 @@
 | [phase2a/rpc-health-2026-10-25.json](phase2a/rpc-health-2026-10-25.json) | 1630 | `b7dd1596977d133f55b7d1e34ea5ff2f57d329fe65512a13f8a0a425266d5c1b` |
 | [phase2a/rpc-health-2026-10-28.json](phase2a/rpc-health-2026-10-28.json) | 1066 | `11bdd4bcede1360d52c6d5b38910dd0cd038ae99954ab738a7b094e568390776` |
 | [phase2a/temporary-worker-cleanup-2026-10-25.json](phase2a/temporary-worker-cleanup-2026-10-25.json) | 632 | `663f0991a9cffd19ee5920f00e0db425d0caf8487998d71e4daf8759f92b42ca` |
+| [phase2b/acceptance-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/acceptance-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 7881 | `398a0d41711f7b004329a027f72861ba5e6a6f6ab1334828c2fcb935ae9c3f14` |
+| [phase2b/acceptance-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/acceptance-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 7864 | `4db1c62c9ca0a56f8d95453709c3a2d92cb46783b6e5af8443f14e8c7ce86b39` |
+| [phase2b/deployment.json](phase2b/deployment.json) | 996 | `969088d7434b26465e2998e188e16929f4c74d2950e9808ce076d0873e2102a4` |
+| [phase2b/docs-check.json](phase2b/docs-check.json) | 127 | `65cb582b19962971407d9027d9b496815319305c6195efd855add8185d92b424` |
+| [phase2b/final-verification.json](phase2b/final-verification.json) | 3309 | `4b9dd7148b73707c256fcc9bcd754094c1c0c55e57ac6f24a16a45d1e1b21bb4` |
+| [phase2b/independent-audit-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/independent-audit-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 20282 | `69f2ac4b46e285160828b8c7f2694db0b2beb9781de251eecd2b643bf63d5008` |
+| [phase2b/independent-audit-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/independent-audit-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 18316 | `f0e79c25301404afe71fbf244cd003a167fa06d54aa34857002664792843747b` |
+| [phase2b/independent-audit-first-pass-rate-limited.json](phase2b/independent-audit-first-pass-rate-limited.json) | 18248 | `282bf6ba5a43046af9442c844fb2244dffbaf102090d64e378fd7ac55ccdd968` |
+| [phase2b/job-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/job-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 87501 | `48fe3465d8df341bb1cd946be08ae1c71aefcb0d4dc69b7e5693f06d1f7a0ceb` |
+| [phase2b/job-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/job-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 83410 | `ce086feb21bd07d6eac4a58d531fe60431583904fa7d6c09018292a9d5b8d17c` |
+| [phase2b/probe.json](phase2b/probe.json) | 637 | `f95f567c0708a0049692586e39a0343d1d55708922e01d8b50d813b339b11b3b` |
+| [phase2b/redelivery-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/redelivery-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 459 | `13726e95aa4e4f92142a1108504bb3387c0bf29271f7063d9d11cd97a4f538b1` |
+| [phase2b/security-check.json](phase2b/security-check.json) | 398 | `7dab5e949ce1e128b7a8514c7fd5aa3d6dd1660ff17721686a534c07b1b4dfe5` |
 | [transactions/final-chain-audit-1792155650115.json](transactions/final-chain-audit-1792155650115.json) | 2220 | `f679ab40b9cf0bd67ad868a866e49da0a8137f1abf9c4ee5b0fc946b741d4340` |
 | [transactions/location-beijing.json](transactions/location-beijing.json) | 5357 | `6d0bd12e03a2fd9a982f9db865ce1e4cdebc30d508a251729d8c1094ba40a8e6` |
 | [transactions/purchase-1792148046905.json](transactions/purchase-1792148046905.json) | 10043 | `dda917ffd489d57bb458ab24d49d4d60cd0bd9fe8de6ba8f9795f8350cfb0213` |

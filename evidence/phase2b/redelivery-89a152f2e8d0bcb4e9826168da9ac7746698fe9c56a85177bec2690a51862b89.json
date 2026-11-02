@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-02T12:06:08.682Z",
+  "jobId": "89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89",
+  "firstStatus": "complete",
+  "secondStatus": "complete",
+  "firstHash": "84cc75b03207465f0c89dc56a66d3c3929dea74a44157e0748f8d80fe371e91f",
+  "secondHash": "84cc75b03207465f0c89dc56a66d3c3929dea74a44157e0748f8d80fe371e91f",
+  "unchangedPurchases": true,
+  "unchangedTimestamp": true,
+  "newPaymentSubmissions": 0,
+  "passed": true
+}

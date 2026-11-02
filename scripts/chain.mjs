@@ -58,7 +58,8 @@ export async function balances(rpc, buyer, seller, blockNumber) {
   }
 }
 
-export async function auditPurchase(record, rpc = chainClient(), { validateDelivery } = {}) {
+export async function auditPurchase(record, rpc = chainClient(), { validateDelivery, expectedAmount = PRICE_ATOMIC, allowConcurrentTransfers = false, deliveryStatus = 200 } = {}) {
+  if (!/^[1-9]\d*$/.test(expectedAmount)) throw new Error("Invalid expected audit amount");
   record.status = "settled_audit_pending";
   delete record.audit;
   if (await rpc.getChainId() !== 84532) throw new Error("RPC is not Base Sepolia");
@@ -74,12 +75,12 @@ export async function auditPurchase(record, rpc = chainClient(), { validateDeliv
   record.beforeObserved = await balances(rpc, record.buyer, record.seller, BigInt(record.before.block));
   record.after = await balances(rpc, record.buyer, record.seller, receipt.blockNumber);
   record.intervalTransfers = await intervalTransfers(rpc, record.buyer, record.seller, BigInt(record.before.block) + 1n, receipt.blockNumber);
-  const isExact = t => t.from.toLowerCase() === record.buyer.toLowerCase() && t.to.toLowerCase() === record.seller.toLowerCase() && t.value === PRICE_ATOMIC;
+  const isExact = t => t.from.toLowerCase() === record.buyer.toLowerCase() && t.to.toLowerCase() === record.seller.toLowerCase() && t.value === expectedAmount;
   const related = record.transfers.filter(t => [t.from, t.to].some(address => [record.buyer, record.seller].some(wallet => wallet.toLowerCase() === address.toLowerCase())));
   const authorization = record.authorization;
   const authorizationFieldsMatch = authorization?.from?.toLowerCase() === record.buyer.toLowerCase() &&
     authorization?.to?.toLowerCase() === record.seller.toLowerCase() &&
-    authorization?.value === PRICE_ATOMIC &&
+    authorization?.value === expectedAmount &&
     /^0x[0-9a-f]{64}$/i.test(authorization?.nonce ?? "");
   const authorizationEventMatch = record.authorizationEvents.length === 1 &&
     record.authorizationEvents[0].authorizer.toLowerCase() === record.buyer.toLowerCase() &&
@@ -93,7 +94,7 @@ export async function auditPurchase(record, rpc = chainClient(), { validateDeliv
   let deliveryVerified = false;
   try {
     const paid = record.http?.findLast(entry => entry.paid);
-    if (paid?.status !== 200 || !record.response?.requestId || paid.headers["x-request-id"] !== record.response.requestId) {
+    if (paid?.status !== deliveryStatus || !record.response?.requestId || paid.headers["x-request-id"] !== record.response.requestId) {
       throw new Error("Missing successful data response or matching request ID");
     }
     if (validateDelivery) validateDelivery(record.response, record, Date.parse(paid.receivedAt));
@@ -118,7 +119,12 @@ export async function auditPurchase(record, rpc = chainClient(), { validateDeliv
     deliveryVerified,
     auditedAt: new Date().toISOString(),
   };
-  record.audit.paymentVerified = record.audit.chainSuccess && record.audit.exactTransfer && authorizationFieldsMatch && authorizationEventMatch && authorizationTimeMatch && settlementPayerMatches && declaredTermsMatch && record.audit.initialBalancesMatch && record.audit.noOtherTransfers && record.audit.buyerDelta === PRICE_ATOMIC && record.audit.sellerDelta === PRICE_ATOMIC;
+  const net = address => record.intervalTransfers.reduce((sum, t) => sum + (t.to.toLowerCase() === address.toLowerCase() ? BigInt(t.value) : 0n) - (t.from.toLowerCase() === address.toLowerCase() ? BigInt(t.value) : 0n), 0n);
+  const ownTransferPresent = record.intervalTransfers.filter(t => t.transactionHash.toLowerCase() === receipt.transactionHash.toLowerCase() && isExact(t)).length === 1;
+  record.audit.balanceChangesExplained = ownTransferPresent && net(record.buyer) === BigInt(record.after.buyer) - BigInt(record.before.buyer) && net(record.seller) === BigInt(record.after.seller) - BigInt(record.before.seller);
+  record.audit.balanceMode = allowConcurrentTransfers ? "all_interval_transfers" : "isolated_transfer";
+  const balancesVerified = allowConcurrentTransfers ? record.audit.balanceChangesExplained : record.audit.noOtherTransfers && record.audit.buyerDelta === expectedAmount && record.audit.sellerDelta === expectedAmount;
+  record.audit.paymentVerified = record.audit.chainSuccess && record.audit.exactTransfer && authorizationFieldsMatch && authorizationEventMatch && authorizationTimeMatch && settlementPayerMatches && declaredTermsMatch && record.audit.initialBalancesMatch && balancesVerified;
   record.status = record.audit.paymentVerified ? deliveryVerified ? "verified" : "paid_delivery_failed" : "audit_failed";
   return record;
 }

@@ -1,0 +1,582 @@
+{
+  "checkedAt": "2026-11-02T12:04:47.267Z",
+  "jobId": "89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89",
+  "newPayments": 0,
+  "results": [
+    {
+      "provider": "Tenderly",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "12000",
+        "sellerDelta": "12000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:04:50.618Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+        "status": "success",
+        "blockNumber": "53495620",
+        "blockTimestamp": "1793620992"
+      },
+      "before": {
+        "block": "53495607",
+        "buyer": "19975000",
+        "seller": "7000"
+      },
+      "after": {
+        "block": "53495620",
+        "buyer": "19963000",
+        "seller": "19000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "met-search",
+      "transaction": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "2000",
+        "sellerDelta": "2000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:04:52.576Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+        "status": "success",
+        "blockNumber": "53495656",
+        "blockTimestamp": "1793621000"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495656",
+        "buyer": "17000",
+        "seller": "22000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "cma-artwork-search",
+      "transaction": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:04:54.507Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+        "status": "success",
+        "blockNumber": "53495649",
+        "blockTimestamp": "1793620998"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495649",
+        "buyer": "18000",
+        "seller": "21000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "smk-search",
+      "transaction": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:04:56.565Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+        "status": "success",
+        "blockNumber": "53495666",
+        "blockTimestamp": "1793621002"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495666",
+        "buyer": "16000",
+        "seller": "23000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "met-artwork",
+      "transaction": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:04:58.531Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+        "status": "success",
+        "blockNumber": "53495696",
+        "blockTimestamp": "1793621008"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495696",
+        "buyer": "15000",
+        "seller": "24000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "cma-artwork",
+      "transaction": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:00.432Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+        "status": "success",
+        "blockNumber": "53495707",
+        "blockTimestamp": "1793621010"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495707",
+        "buyer": "13000",
+        "seller": "26000"
+      }
+    },
+    {
+      "provider": "Tenderly",
+      "hop": "cloud_to_resource",
+      "service": "smk-artwork",
+      "transaction": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "2000",
+        "sellerDelta": "2000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:02.290Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+        "status": "success",
+        "blockNumber": "53495701",
+        "blockTimestamp": "1793621009"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495701",
+        "buyer": "14000",
+        "seller": "25000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "12000",
+        "sellerDelta": "12000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:07.573Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xf96b00b928c428c9406acef07a21ec0c46c91091011cac6252c448ceb4c8dcab",
+        "status": "success",
+        "blockNumber": "53495620",
+        "blockTimestamp": "1793620992"
+      },
+      "before": {
+        "block": "53495607",
+        "buyer": "19975000",
+        "seller": "7000"
+      },
+      "after": {
+        "block": "53495620",
+        "buyer": "19963000",
+        "seller": "19000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "met-search",
+      "transaction": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "2000",
+        "sellerDelta": "2000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:09.995Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x9017568190682b947351236bd360158c79b340fdabec770b726d275361b45aee",
+        "status": "success",
+        "blockNumber": "53495656",
+        "blockTimestamp": "1793621000"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495656",
+        "buyer": "17000",
+        "seller": "22000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "cma-artwork-search",
+      "transaction": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:12.553Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x3a94ac04c769794f96ace04976e294b03d05723502918ec3dd120d4c8a7a5150",
+        "status": "success",
+        "blockNumber": "53495649",
+        "blockTimestamp": "1793620998"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495649",
+        "buyer": "18000",
+        "seller": "21000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "smk-search",
+      "transaction": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:15.449Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x2386edf1df75a4ba97058f6ff71c2473eb32798c77796ccc61fe0a522b636417",
+        "status": "success",
+        "blockNumber": "53495666",
+        "blockTimestamp": "1793621002"
+      },
+      "before": {
+        "block": "53495642",
+        "buyer": "19000",
+        "seller": "20000"
+      },
+      "after": {
+        "block": "53495666",
+        "buyer": "16000",
+        "seller": "23000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "met-artwork",
+      "transaction": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "1000",
+        "sellerDelta": "1000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:17.857Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x5f9df1d9b49fde83603334c8d505561ce19f450886a423cb8f54e28698e04764",
+        "status": "success",
+        "blockNumber": "53495696",
+        "blockTimestamp": "1793621008"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495696",
+        "buyer": "15000",
+        "seller": "24000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "cma-artwork",
+      "transaction": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:20.231Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0x5da10abfe83cfa012a219fafce1f0c06fc6fa038c74a0ffd4d1fa1912b54440d",
+        "status": "success",
+        "blockNumber": "53495707",
+        "blockTimestamp": "1793621010"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495707",
+        "buyer": "13000",
+        "seller": "26000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "cloud_to_resource",
+      "service": "smk-artwork",
+      "transaction": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": false,
+        "buyerDelta": "2000",
+        "sellerDelta": "2000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-02T12:05:22.921Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xfa20912b40ee54dfdd8de859aebba29f2f8f2bb8bdc5adc20ae9709269856792",
+        "status": "success",
+        "blockNumber": "53495701",
+        "blockTimestamp": "1793621009"
+      },
+      "before": {
+        "block": "53495690",
+        "buyer": "16000",
+        "seller": "23000"
+      },
+      "after": {
+        "block": "53495701",
+        "buyer": "14000",
+        "seller": "25000"
+      }
+    }
+  ],
+  "passed": true
+}

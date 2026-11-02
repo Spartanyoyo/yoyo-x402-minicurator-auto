@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-02T12:13:12.954Z",
+  "health": {
+    "service": "yoyo-x402-cloud-curator",
+    "ready": true,
+    "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "network": "eip155:84532",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "feeAtomic": "3000",
+    "maxCalls": 9,
+    "concurrency": 3,
+    "model": "deepseek-flash",
+    "docs": "/F-02.md"
+  },
+  "checks": {
+    "health": true,
+    "docs": true,
+    "quote": true,
+    "unauthorized": true,
+    "changedGoal": true,
+    "oversizedHeader": true,
+    "insufficientBudgetBeforePayment": true
+  },
+  "passed": true,
+  "paymentsCreated": 0
+}
