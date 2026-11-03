@@ -75,12 +75,13 @@ export function upstreamUrl(service, params) {
 const hosts = {
   Met: { source: ["www.metmuseum.org", "metmuseum.org"], image: ["images.metmuseum.org"] },
   CMA: { source: ["www.clevelandart.org", "clevelandart.org"], image: ["openaccess-cdn.clevelandart.org"] },
-  SMK: { source: ["open.smk.dk"], image: ["iip-thumb.smk.dk", "iip.smk.dk"] },
+  SMK: { source: ["open.smk.dk"], image: ["iip-thumb.smk.dk", "iip.smk.dk", "api.smk.dk"] },
 };
 
 function safeUrl(value, provider, type) {
   try {
     const url = new URL(value);
+    if (provider === "SMK" && type === "image" && url.hostname === "api.smk.dk" && (!/^\/api\/v1\/thumbnail\/[a-f0-9-]+\.(?:jpg|jpeg|png)$/i.test(url.pathname) || url.search || url.hash)) throw new Error("Invalid official thumbnail path");
     if (url.protocol === "https:" && !url.username && !url.password && hosts[provider][type].includes(url.hostname)) return url.href;
   } catch {}
   throw new CatalogError(`Invalid ${provider} ${type} URL`);
@@ -120,7 +121,7 @@ function artist(item) {
   }) };
 }
 
-export function normalizeCatalog(service, query, body, retrievedAt = new Date().toISOString()) {
+export function normalizeCatalog(service, query, body, retrievedAt = new Date().toISOString(), { skipInvalidSearchItems = false } = {}) {
   const definition = serviceDefinition(service);
   expect(definition && body && typeof body === "object", "Missing provider payload");
   let items;
@@ -149,7 +150,8 @@ export function normalizeCatalog(service, query, body, retrievedAt = new Date().
       const explicitlyOpen = definition.provider === "CMA" ? item?.share_license_status === "CC0" : item?.public_domain === true;
       const hasImage = definition.provider === "CMA" ? !!item?.images?.web?.url : !!item?.image_thumbnail;
       if (!explicitlyOpen || !hasImage) { excluded++; continue; }
-      items.push(artwork(definition.provider, item));
+      try { items.push(artwork(definition.provider, item)); }
+      catch (error) { if (!skipInvalidSearchItems) throw error; excluded++; }
     }
   } else if (definition.kind === "artist-search") {
     expect(Array.isArray(body.data) && Number.isSafeInteger(body.info?.total) && body.info.total >= 0, "Invalid artist search response");
@@ -220,7 +222,7 @@ async function providerJson(response) {
   catch { throw new CatalogError("Museum provider returned invalid JSON"); }
 }
 
-export async function catalogResource(service, query, { fetcher = fetch, cache, origin = "https://minicurator.invalid", rateLimiter, now = () => Date.now() } = {}) {
+export async function catalogResource(service, query, { fetcher = fetch, cache, origin = "https://minicurator.invalid", rateLimiter, now = () => Date.now(), skipInvalidSearchItems = false } = {}) {
   const definition = serviceDefinition(service);
   if (!definition) throw new CatalogError("Unknown service", 404);
   const key = new Request(`${origin}/__cache/${definition.cacheNamespace}?${new URLSearchParams(query)}`);
@@ -235,7 +237,7 @@ export async function catalogResource(service, query, { fetcher = fetch, cache, 
     if (rateLimiter && !(await rateLimiter.limit({ key: definition.provider })).success) throw new CatalogError("Provider request budget exceeded; use cached results or retry later", 429);
     const response = await fetcher(upstreamUrl(service, query), { redirect: "manual", headers: { Accept: "application/json", "User-Agent": "YoyoMiniCurator/0.1 (+https://github.com/Spartanyoyo/yoyo-x402-weather)" }, signal: AbortSignal.timeout(20000) });
     if (!response.ok) throw new CatalogError(`Museum provider returned HTTP ${response.status}`, response.status === 404 ? 404 : 502);
-    const result = validateCatalog(normalizeCatalog(service, query, await providerJson(response), new Date(now()).toISOString()), service, query, now());
+    const result = validateCatalog(normalizeCatalog(service, query, await providerJson(response), new Date(now()).toISOString(), { skipInvalidSearchItems }), service, query, now());
     // Only validated data is cached. Paid response envelopes/receipts are never cached.
     let cacheWriteFailed = false;
     try { await cache?.put(key, Response.json(result, { headers: { "Cache-Control": `public, max-age=${MAX_STALE_SECONDS}` } })); }

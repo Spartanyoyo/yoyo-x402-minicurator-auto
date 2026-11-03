@@ -27,6 +27,7 @@
     "agent:deploy": "node --env-file=.env.cloudflare node_modules/wrangler/bin/wrangler.js deploy --config wrangler.agent.jsonc",
     "agent:probe": "node --env-file=.env.phase2b.local scripts/probe-agent.mjs",
     "agent:run": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs run",
+    "agent:pay": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs pay",
     "agent:status": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs status",
     "agent:wait": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs wait",
     "agent:reconcile": "node --use-env-proxy --env-file=.env.local --env-file=.env.phase2b.local scripts/agent.mjs reconcile",

@@ -1,0 +1,223 @@
+{
+  "protocolVersion": 2,
+  "at": "2026-11-03T02:27:20.470Z",
+  "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+  "baseUrl": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文花卉主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6",
+  "status": "cloud_verified_pending_independent_audit",
+  "documentation": {
+    "url": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev/F-02.md",
+    "content": "Sensitive upstream diagnostic redacted",
+    "sha256": "625a9dad38f56a05edc3f3098154b7532f25f1d2f4e4e1afc323eabef327e93f",
+    "readAt": "2026-11-03T02:27:20.467Z"
+  },
+  "http": [
+    {
+      "paid": true,
+      "status": 202,
+      "receivedAt": "2026-11-03T02:27:24.477Z",
+      "headers": {
+        "x-request-id": "2226fb5e-5c58-4dc2-9842-468dcc5fc857"
+      }
+    }
+  ],
+  "before": {
+    "block": "53754872",
+    "buyer": "19954000",
+    "seller": "45000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "value": "3000",
+    "validAfter": "0",
+    "validBefore": "1793673143",
+    "nonce": "0xe563c794432010ae4e9bae5c1b147c8cc9aae2395cf4d59a990fee50b4a8ef6a"
+  },
+  "response": {
+    "protocolVersion": 2,
+    "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+    "requestId": "2226fb5e-5c58-4dc2-9842-468dcc5fc857",
+    "status": "settling_payment",
+    "input": {
+      "protocolVersion": 2,
+      "goal": "为十岁孩子制作15分钟中文花卉主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+      "maxCalls": 24
+    },
+    "createdAt": "2026-11-03T02:15:58.349Z",
+    "updatedAt": "2026-11-03T02:27:25.317Z",
+    "expiresAt": "2026-11-10T02:15:58.349Z",
+    "calls": [
+      {
+        "service": "met-search",
+        "parameters": {
+          "q": "flowers still life",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork-search",
+        "parameters": {
+          "q": "flowers still life",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "flowers still life",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 436293
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork",
+        "parameters": {
+          "id": 314466
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "blomster",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "flower painting",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork",
+        "parameters": {
+          "id": 150019
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-artwork",
+        "parameters": {
+          "id": "KKS2013-44"
+        },
+        "state": "ok",
+        "attempts": 1
+      }
+    ],
+    "rounds": 2,
+    "modelCalls": 3,
+    "feeAtomic": "3000",
+    "totalUpstreamAtomic": "0",
+    "summary": {
+      "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6",
+      "providers": [
+        "Met",
+        "CMA",
+        "SMK"
+      ],
+      "workCount": 4,
+      "generatedAt": "2026-11-03T02:16:20.881Z",
+      "priceAtomic": "3000",
+      "paymentPath": "/jobs/9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff/delivery"
+    },
+    "incoming": {
+      "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+      "requestId": "2226fb5e-5c58-4dc2-9842-468dcc5fc857",
+      "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6",
+      "at": "2026-11-03T02:27:25.317Z",
+      "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "network": "eip155:84532",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "before": {
+        "block": "53754882",
+        "buyer": "19954000",
+        "seller": "45000"
+      },
+      "authorization": {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000",
+        "validAfter": "0",
+        "validBefore": "1793673143",
+        "nonce": "0xe563c794432010ae4e9bae5c1b147c8cc9aae2395cf4d59a990fee50b4a8ef6a"
+      },
+      "status": "accepted_not_submitted",
+      "http": [
+        {
+          "paid": true,
+          "status": 202,
+          "receivedAt": "2026-11-03T02:27:25.317Z",
+          "headers": {
+            "x-request-id": "2226fb5e-5c58-4dc2-9842-468dcc5fc857"
+          }
+        }
+      ],
+      "response": {
+        "requestId": "2226fb5e-5c58-4dc2-9842-468dcc5fc857",
+        "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+        "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6"
+      }
+    }
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+    "network": "eip155:84532"
+  },
+  "cloudAudit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "3000",
+    "sellerDelta": "3000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-11-03T02:27:29.606Z",
+    "balanceChangesExplained": true,
+    "balanceMode": "all_interval_transfers",
+    "paymentVerified": true
+  }
+}

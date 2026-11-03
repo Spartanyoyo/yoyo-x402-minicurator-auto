@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-03T02:25:43.897Z",
+  "jobId": "51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56",
+  "protocolVersion": 2,
+  "firstStatus": "complete",
+  "secondStatus": "complete",
+  "firstHash": "d92ce99f60446ec7f2ae0b3fd84bca30b032e4133c7364da5ef07fd707953afa",
+  "secondHash": "d92ce99f60446ec7f2ae0b3fd84bca30b032e4133c7364da5ef07fd707953afa",
+  "firstIncomingTransaction": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+  "secondIncomingTransaction": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+  "unchangedIncomingPayment": true,
+  "unchangedPurchases": true,
+  "unchangedTimestamp": true,
+  "newPaymentSubmissions": 0,
+  "passed": true
+}

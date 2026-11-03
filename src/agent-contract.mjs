@@ -6,6 +6,10 @@ export const MAX_CALLS = 9;
 export const CONCURRENCY = 3;
 export const MAX_ROUNDS = 5;
 export const RETENTION_MS = 7 * 86400000;
+export const DIRECT_CALLS = 24;
+export const DIRECT_ROUNDS = 10;
+export const MODEL_LIMIT = 14;
+export const RPC_LIMIT = 12;
 export const sha256 = value => createHash("sha256").update(value).digest("hex");
 export const json = (body, status = 200, headers = {}) => Response.json(body, { status, headers: { "Cache-Control": "no-store", ...headers } });
 export function taskInput(input) {
@@ -29,6 +33,25 @@ export function validateCalls(plan, remaining) {
   });
 }
 export const callKey = call => sha256(JSON.stringify([call.service, call.parameters]));
+
+// Version 1 helpers above remain available for already-paid, persisted jobs.
+// New jobs pay only for the completed result; maxCalls is a request cap, not money.
+export function curationInput(input) {
+  if (!input || typeof input !== "object" || Array.isArray(input) || Object.keys(input).some(key => !["goal", "maxCalls", "protocolVersion"].includes(key))) throw new Error("Only goal, maxCalls and protocolVersion are accepted; upstream APIs are free");
+  if (input.protocolVersion !== undefined && input.protocolVersion !== 2) throw new Error("Unsupported job protocol");
+  if (typeof input.goal !== "string" || input.goal.trim().length < 5 || input.goal.length > 2000) throw new Error("goal must contain 5..2000 characters");
+  const maxCalls = input.maxCalls ?? DIRECT_CALLS;
+  if (!Number.isInteger(maxCalls) || maxCalls < 6 || maxCalls > 30) throw new Error("maxCalls must be an integer in 6..30");
+  return { protocolVersion: 2, goal: input.goal.trim(), maxCalls };
+}
+export function curationIdentity(input, token) {
+  if (!/^[a-f0-9]{64}$/.test(token ?? "")) throw new Error("A random 32-byte hexadecimal bearer token is required");
+  return sha256(JSON.stringify({ ...curationInput(input), tokenHash: sha256(token) }));
+}
+export function safeError(error) {
+  const message = String(error?.shortMessage ?? error?.message ?? "Operation failed");
+  return /https?:|Bearer |sk-|0x[0-9a-f]{64}/i.test(message) ? "External operation failed; credentials and signed diagnostics redacted" : message.slice(0, 500);
+}
 
 export async function readTextBounded(response, maximum = 2 * 1024 * 1024) {
   if (Number(response.headers.get("content-length")) > maximum) throw new Error("Response exceeds size limit");

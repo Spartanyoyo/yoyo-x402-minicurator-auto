@@ -1,0 +1,1450 @@
+{
+  "protocolVersion": 2,
+  "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+  "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+  "status": "complete",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文风景主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "createdAt": "2026-11-03T02:15:56.474Z",
+  "updatedAt": "2026-11-03T02:26:45.111Z",
+  "expiresAt": "2026-11-10T02:15:56.474Z",
+  "calls": [
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "landscape",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork-search",
+      "parameters": {
+        "q": "landscape",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landscape",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 340468
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 139454
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landscape painting",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "beach",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 10
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 20
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 30
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 40
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 50
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 60
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 70
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 80
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 90
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "landskab",
+        "limit": 10,
+        "offset": 100
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-artwork",
+      "parameters": {
+        "id": "KKS2023-56"
+      },
+      "state": "ok",
+      "attempts": 1
+    }
+  ],
+  "rounds": 3,
+  "modelCalls": 4,
+  "feeAtomic": "3000",
+  "totalUpstreamAtomic": "0",
+  "summary": {
+    "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+    "providers": [
+      "Met",
+      "CMA",
+      "SMK"
+    ],
+    "workCount": 3,
+    "generatedAt": "2026-11-03T02:16:48.419Z",
+    "priceAtomic": "3000",
+    "paymentPath": "/jobs/e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184/delivery"
+  },
+  "incoming": {
+    "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+    "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+    "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+    "at": "2026-11-03T02:26:35.818Z",
+    "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "network": "eip155:84532",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "before": {
+      "block": "53754634",
+      "buyer": "19957000",
+      "seller": "42000"
+    },
+    "authorization": {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "value": "3000",
+      "validAfter": "0",
+      "validBefore": "1793673093",
+      "nonce": "0x1922c0040ac518122dda6066061bf3bb8a9a9aae580b129c638803bfe4f541de"
+    },
+    "status": "verified",
+    "http": [
+      {
+        "paid": true,
+        "status": 202,
+        "receivedAt": "2026-11-03T02:26:35.818Z",
+        "headers": {
+          "x-request-id": "0989f440-b60f-4540-b816-a86a16518976"
+        }
+      }
+    ],
+    "response": {
+      "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+      "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+      "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542"
+    },
+    "submittedAt": "2026-11-03T02:26:36.818Z",
+    "settlement": {
+      "success": true,
+      "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "transaction": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+      "network": "eip155:84532"
+    },
+    "receipt": {
+      "transactionHash": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+      "status": "success",
+      "blockNumber": "53754643",
+      "blockTimestamp": "1793672797"
+    },
+    "transfers": [
+      {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000"
+      }
+    ],
+    "authorizationEvents": [
+      {
+        "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "nonce": "0x1922c0040ac518122dda6066061bf3bb8a9a9aae580b129c638803bfe4f541de"
+      }
+    ],
+    "beforeObserved": {
+      "block": "53754634",
+      "buyer": "19957000",
+      "seller": "42000"
+    },
+    "after": {
+      "block": "53754643",
+      "buyer": "19954000",
+      "seller": "45000"
+    },
+    "intervalTransfers": [
+      {
+        "transactionHash": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+        "blockNumber": "53754643",
+        "logIndex": 1,
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000"
+      }
+    ],
+    "audit": {
+      "chainSuccess": true,
+      "exactTransfer": true,
+      "authorizationFieldsMatch": true,
+      "authorizationEventMatch": true,
+      "authorizationTimeMatch": true,
+      "settlementPayerMatches": true,
+      "declaredTermsMatch": true,
+      "initialBalancesMatch": true,
+      "noOtherTransfers": true,
+      "buyerDelta": "3000",
+      "sellerDelta": "3000",
+      "deliveryVerified": true,
+      "auditedAt": "2026-11-03T02:26:45.111Z",
+      "balanceChangesExplained": true,
+      "balanceMode": "all_interval_transfers",
+      "paymentVerified": true
+    }
+  },
+  "delivery": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文风景主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "reportMarkdown": "# 三座博物馆的风景之旅：15分钟小小展览\n\n欢迎来到这场为十岁小观众准备的迷你风景展！我们会在15分钟里走过三座博物馆：美国的大都会艺术博物馆（Met）、美国的克利夫兰艺术博物馆（CMA）和丹麦的SMK。你会看到三件公版作品：一件意大利文艺复兴时期的素描、一件日本室町时代的挂轴、一件丹麦1908年的油画。每站都有一个小问题，帮助你像侦探一样观察。请注意：下面关于“画家想表达什么”的说法只是可能的解读，并不是唯一答案；真正的答案要靠你亲眼看、亲口说。\n\n路线总时长：15 分钟；开场、观察问题和总结包含在各站时间内。\n\n## Landscape (recto); Landscape (verso) — Met（5 分钟）\n\n第一站来自大都会艺术博物馆。这是佩鲁吉诺在1489—90年画的《风景》（正面；背面也是风景），用的是灰色绿底纸上刷棕色淡彩、再用白色不透明颜料提亮的方法，背面则是钢笔和棕色墨水画在未处理的米白纸上。你可以把它想成画家的“草稿本”：同一张纸的两面都画了风景。佩鲁吉诺是意大利文艺复兴时期的画家。看这张画时，注意哪些地方用白色提亮，像是阳光落在山坡或树梢上；哪些地方只有淡淡的棕色线条，像是远处的雾。有一种可能的解读是：画家在用深浅对比来制造远近感，但这只是我们的猜测，你也可以有不同看法。\n\n观察问题：找一找：画面上最亮的地方在哪里？如果那是一片阳光，你觉得它照在近处还是远处？为什么？\n\n![Landscape (recto); Landscape (verso)](https://images.metmuseum.org/CRDImages/dp/web-large/DP811071.jpg)\n\n来源：https://www.metmuseum.org/art/collection/search/340468\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"isPublicDomain=true\"}；Met:340468\n数据获取：馆方免费 API；数据 SHA256：81d372e9bef720668092a0b339633783df0e7d0927efa2ea5c7ae61e75138181\n\n## Landscape — CMA（5 分钟）\n\n第二站来自克利夫兰艺术博物馆。这是日本画家相阿弥（Sōami，卒于1525年）在16世纪初画的《风景》，是一件纸本水墨挂轴，属于日本室町时代（1392—1573）。挂轴是竖着挂起来看的画，通常从下往上看。整幅画只用墨，没有彩色，所以你要靠墨的浓淡来分辨山、树、水或云。一个常见的解读是：日本水墨风景常常留出大片空白，让看的人自己想象雾或水；但这只是一种理解方式，不是标准答案。看的时候可以假装自己站在画前，从下往上慢慢“走”一遍。\n\n观察问题：数一数：这幅画里哪一块地方几乎没有墨？你觉得那片空白代表什么——天空、雾、水，还是别的东西？\n\n![Landscape](https://openaccess-cdn.clevelandart.org/1963.262/1963.262_web.jpg)\n\n来源：https://clevelandart.org/art/1963.262\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"share_license_status=\\\"CC0\\\"\"}；CMA:139454\n数据获取：馆方免费 API；数据 SHA256：1ae327507cf8b13441bd34b7768513be2934350ea3354ae082a367f58a8bb140\n\n## Landskab — SMK（5 分钟）\n\n第三站来自丹麦的SMK。这是阿斯特丽德·霍尔姆（Astrid Holm）1908年画的《风景》（Landskab），是画在硬纸板上的油画。和前面两件纸上作品不同，油画颜料可以堆得很厚，颜色也更浓。请留意画面里的颜色：哪些是暖色（像黄、橙、红），哪些是冷色（像蓝、绿）？有解读认为，画家可能想抓住某个特定时刻的光线或天气，但我们无法只凭画面确定她当时看到了什么，这只是一个可能的解释。你可以用自己的感受来补充。\n\n观察问题：如果给这幅画配一个天气词（比如“晴朗”“阴天”“有风”），你会选哪个？画中哪个颜色或笔触让你这样想？\n\n![Landskab](https://iip-thumb.smk.dk/iiif/jp2/5138jk89b_kks2023-56.tif.jp2/full/!1024,/0/default.jpg)\n\n来源：https://open.smk.dk/artwork/image/KKS2023-56\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/mark/1.0/\",\"evidence\":\"public_domain=true\"}；SMK:KKS2023-56\n数据获取：馆方免费 API；数据 SHA256：a4e3ff5162936378c2a69d5e5e760c37a71736905baeaba961930e1f37c6135e\n\n恭喜你走完了三站！你刚看过的三件作品来自三个地方、三个时代、三种材料：意大利的棕色淡彩素描、日本的水墨挂轴、丹麦的油画。它们都叫“风景”，但画法很不一样。记住：我们说的“画家可能想表达……”都是解读，不是事实；真正的证据是你看到的颜色、线条和空白。下次看风景画时，可以先问自己：最亮的地方在哪？哪里留白？用了什么颜色？然后说出你自己的发现。所有作品的作者、年代、材料和公版信息都来自各博物馆的公开记录，应用会附上可核查的来源与图片。\n\n## 来源与交付\n\n任务：e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184\n云端直接调用三馆免费 API，上游付款为 0；仅本地购买此成品通过 x402 支付 0.003 Base Sepolia 测试 USDC。图片以馆方 URL 引用。\n\n- met-search：ok；7680d89424df055236b05414ffcc53d2cbf72caac33e8da11d77f9e3be73fa6f\n- cma-artwork-search：ok；b655a7094420bd31181a477c4743070700aa5637b7f4f3e21cdc10e1309003a4\n- smk-search：unavailable；Invalid SMK image URL\n- met-artwork：ok；81d372e9bef720668092a0b339633783df0e7d0927efa2ea5c7ae61e75138181\n- cma-artwork：ok；1ae327507cf8b13441bd34b7768513be2934350ea3354ae082a367f58a8bb140\n- smk-search：unavailable；Invalid SMK image URL\n- smk-search：ok；b7ac28936d513130f8d36b11d91eb2a3d2085412807adfa8ca61598f2132a42b\n- smk-search：unavailable；Invalid SMK image URL\n- smk-search：ok；4ec836a98320a83fbd4e093f31a91cd4be3d727f8dae00c995372fcb8eaa25bd\n- smk-search：ok；42fa9bc5900a28ebda46aa79fa60f0cf222cebe825ac8f4d8c2ce06b45ccf9e4\n- smk-search：ok；355e3745af324ae1a00fc2e69a6d9527ac672cecc7c1224e034014ee9762ba0c\n- smk-search：ok；0ae7fd5a7124e33b9af197910f92fb572ae7e664d649645d219d4c60cefeb5ce\n- smk-search：ok；bf7e4773e9721cbbce923fc29a46905a1e79147318fc4d96c5a5e569c2254e2f\n- smk-search：ok；a18a8e176b52bed5e45e84cc971dcfd3e84033d348842e58819e755d200bac39\n- smk-search：ok；69eb00826b2e18ec66f8d0c4c3769f44aae5f9b2e6293320057ff00508b5a306\n- smk-search：ok；919642434c929f77e2d7129b0fe8ccf83bc58e0c7878ce2336ae9eeb6fb6c3cc\n- smk-search：ok；f6ffc32efa1e97f9dd4fee0773d5caa2737f72586085bcca43ba34258bfb567a\n- smk-search：ok；213bfe4200f89b39f9679ea8754d11f409f8e4794a5fc1a963a8c821518954e6\n- smk-artwork：ok；a4e3ff5162936378c2a69d5e5e760c37a71736905baeaba961930e1f37c6135e\n",
+    "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+    "resources": [
+      {
+        "resourceService": "met-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:15:59.692Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-search",
+            "provider": "Met",
+            "kind": "identifiers",
+            "query": {
+              "q": "landscape",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=landscape&limit=10&offset=0",
+            "retrievedAt": "2026-11-03T02:16:00.021Z",
+            "total": 34669,
+            "returned": 10,
+            "excluded": 0,
+            "items": [
+              {
+                "id": "340468",
+                "rightsVerified": false
+              },
+              {
+                "id": "10181",
+                "rightsVerified": false
+              },
+              {
+                "id": "892740",
+                "rightsVerified": false
+              },
+              {
+                "id": "359362",
+                "rightsVerified": false
+              },
+              {
+                "id": "335112",
+                "rightsVerified": false
+              },
+              {
+                "id": "11181",
+                "rightsVerified": false
+              },
+              {
+                "id": "11630",
+                "rightsVerified": false
+              },
+              {
+                "id": "459968",
+                "rightsVerified": false
+              },
+              {
+                "id": "45072",
+                "rightsVerified": false
+              },
+              {
+                "id": "44895",
+                "rightsVerified": false
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "7680d89424df055236b05414ffcc53d2cbf72caac33e8da11d77f9e3be73fa6f",
+        "completedAt": "2026-11-03T02:16:00.024Z"
+      },
+      {
+        "resourceService": "cma-artwork-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:15:59.692Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork-search",
+            "provider": "CMA",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landscape",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=landscape&cc0=1&has_image=1&limit=10&skip=0",
+            "retrievedAt": "2026-11-03T02:16:00.797Z",
+            "total": 849,
+            "returned": 10,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "139454",
+                "title": "Landscape",
+                "artists": [
+                  {
+                    "id": "5979",
+                    "name": "Sōami (Japanese, d. 1525)"
+                  }
+                ],
+                "date": "early 1500s",
+                "medium": [
+                  "hanging scroll; ink on paper"
+                ],
+                "culture": [
+                  "Japan, Muromachi period (1392–1573)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1963.262/1963.262_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1963.262",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "149768",
+                "title": "Saint John the Baptist in a Landscape",
+                "artists": [
+                  {
+                    "id": "61584",
+                    "name": "Petrus Christus (Netherlandish, c. 1410–1475/76)"
+                  }
+                ],
+                "date": "c. 1445",
+                "medium": [
+                  "oil on panel"
+                ],
+                "culture": [
+                  "Flanders, Bruges"
+                ],
+                "department": "Medieval Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1979.80/1979.80_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1979.80",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "151298",
+                "title": "Prater Landscape",
+                "artists": [
+                  {
+                    "id": "2810",
+                    "name": "Ferdinand Georg Waldmüller (Austrian, 1793–1865)"
+                  }
+                ],
+                "date": "c. 1831",
+                "medium": [
+                  "oil on wood panel"
+                ],
+                "culture": [
+                  "Austria"
+                ],
+                "department": "Modern European Painting and Sculpture",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1983.155/1983.155_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1983.155",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "149417",
+                "title": "Landscape with Gentle Peaks",
+                "artists": [
+                  {
+                    "id": "315389",
+                    "name": "Kan Tenju (Japanese, 1727–1795)"
+                  }
+                ],
+                "date": "possibly 1800s",
+                "medium": [
+                  "hanging scroll; ink and light color on paper"
+                ],
+                "culture": [
+                  "Japan, Edo period (1615–1868)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1978.7/1978.7_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1978.7",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "111066",
+                "title": "Saint Jerome in a Landscape",
+                "artists": [
+                  {
+                    "id": "24420",
+                    "name": "Domenico Campagnola (Italian, 1500–1564)"
+                  }
+                ],
+                "date": "c. 1530",
+                "medium": [
+                  "pen and brown ink"
+                ],
+                "culture": [
+                  "Italy"
+                ],
+                "department": "Drawings",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1929.557/1929.557_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1929.557",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "143602",
+                "title": "Low Waterfall in a Wooded Landscape with a Dead Beech Tree",
+                "artists": [
+                  {
+                    "id": "2676",
+                    "name": "Jacob van Ruisdael (Dutch, 1628/29–1682)"
+                  }
+                ],
+                "date": "c. 1660–70",
+                "medium": [
+                  "oil on canvas"
+                ],
+                "culture": [
+                  "Netherlands"
+                ],
+                "department": "European Painting and Sculpture",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1967.63/1967.63_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1967.63",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "143234",
+                "title": "Landscape with a Windmill",
+                "artists": [
+                  {
+                    "id": "2676",
+                    "name": "Jacob van Ruisdael (Dutch, 1628/29–1682)"
+                  }
+                ],
+                "date": "1646",
+                "medium": [
+                  "oil on wood"
+                ],
+                "culture": [
+                  "Netherlands"
+                ],
+                "department": "European Painting and Sculpture",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1967.19/1967.19_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1967.19",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "112586",
+                "title": "Venus Reclining in a Landscape",
+                "artists": [
+                  {
+                    "id": "24423",
+                    "name": "Giulio Campagnola (Italian, 1482–1515)"
+                  }
+                ],
+                "date": "c. 1508–9",
+                "medium": [
+                  "engraving"
+                ],
+                "culture": [
+                  "Italy, late 15th-early 16th Century"
+                ],
+                "department": "Prints",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1931.205/1931.205_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1931.205",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "132908",
+                "title": "Landscape after Guo Zhongshu",
+                "artists": [
+                  {
+                    "id": "6306",
+                    "name": "Bada Shanren (Chinese, 1626–1705)"
+                  }
+                ],
+                "date": "c. 1680–1705",
+                "medium": [
+                  "Hanging scroll; ink on paper"
+                ],
+                "culture": [
+                  "China, Qing dynasty (1644–1911)"
+                ],
+                "department": "Chinese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1955.36/1955.36_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1955.36",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "159739",
+                "title": "Snow Landscape",
+                "artists": [
+                  {
+                    "id": "6071",
+                    "name": "Yosa Buson (Japanese, 1716–1783)"
+                  }
+                ],
+                "date": "mid-1770s",
+                "medium": [
+                  "hanging scroll; ink and color on paper"
+                ],
+                "culture": [
+                  "Japan, Edo period (1615–1868)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1997.111/1997.111_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1997.111",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "b655a7094420bd31181a477c4743070700aa5637b7f4f3e21cdc10e1309003a4",
+        "completedAt": "2026-11-03T02:16:00.802Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:15:59.692Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Invalid SMK image URL",
+        "completedAt": "2026-11-03T02:16:01.099Z"
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 340468
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:03.099Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-artwork",
+            "provider": "Met",
+            "kind": "artwork",
+            "query": {
+              "id": 340468
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/340468",
+            "retrievedAt": "2026-11-03T02:16:03.425Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "Met",
+                "id": "340468",
+                "title": "Landscape (recto); Landscape (verso)",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Perugino (Pietro di Cristoforo Vannucci)"
+                  }
+                ],
+                "date": "1489–90",
+                "medium": [
+                  "Brush and brown wash, highlighted with white gouache, on gray-green prepared paper (recto); pen and brown ink on unprepared off-white paper (verso)"
+                ],
+                "culture": [],
+                "department": "Drawings and Prints",
+                "imageUrl": "https://images.metmuseum.org/CRDImages/dp/web-large/DP811071.jpg",
+                "sourceUrl": "https://www.metmuseum.org/art/collection/search/340468",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "isPublicDomain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "81d372e9bef720668092a0b339633783df0e7d0927efa2ea5c7ae61e75138181",
+        "completedAt": "2026-11-03T02:16:03.427Z"
+      },
+      {
+        "resourceService": "cma-artwork",
+        "parameters": {
+          "id": 139454
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:03.099Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork",
+            "provider": "CMA",
+            "kind": "artwork",
+            "query": {
+              "id": 139454
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/139454",
+            "retrievedAt": "2026-11-03T02:16:03.231Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "139454",
+                "title": "Landscape",
+                "artists": [
+                  {
+                    "id": "5979",
+                    "name": "Sōami (Japanese, d. 1525)"
+                  }
+                ],
+                "date": "early 1500s",
+                "medium": [
+                  "hanging scroll; ink on paper"
+                ],
+                "culture": [
+                  "Japan, Muromachi period (1392–1573)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1963.262/1963.262_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1963.262",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "1ae327507cf8b13441bd34b7768513be2934350ea3354ae082a367f58a8bb140",
+        "completedAt": "2026-11-03T02:16:03.233Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landscape painting",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:06.579Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Invalid SMK image URL",
+        "completedAt": "2026-11-03T02:16:07.657Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:10.800Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=0&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:11.035Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "b7ac28936d513130f8d36b11d91eb2a3d2085412807adfa8ca61598f2132a42b",
+        "completedAt": "2026-11-03T02:16:11.037Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "beach",
+          "limit": 10,
+          "offset": 0
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:10.800Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Invalid SMK image URL",
+        "completedAt": "2026-11-03T02:16:11.930Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 10
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:13.930Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 10
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=10&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:14.178Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "4ec836a98320a83fbd4e093f31a91cd4be3d727f8dae00c995372fcb8eaa25bd",
+        "completedAt": "2026-11-03T02:16:14.182Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 20
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:16.182Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 20
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=20&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:16.422Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "42fa9bc5900a28ebda46aa79fa60f0cf222cebe825ac8f4d8c2ce06b45ccf9e4",
+        "completedAt": "2026-11-03T02:16:16.424Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 30
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:18.424Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 30
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=30&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:18.669Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "355e3745af324ae1a00fc2e69a6d9527ac672cecc7c1224e034014ee9762ba0c",
+        "completedAt": "2026-11-03T02:16:18.671Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 40
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:20.671Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 40
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=40&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:21.341Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "0ae7fd5a7124e33b9af197910f92fb572ae7e664d649645d219d4c60cefeb5ce",
+        "completedAt": "2026-11-03T02:16:21.344Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 50
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:23.344Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 50
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=50&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:23.586Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "bf7e4773e9721cbbce923fc29a46905a1e79147318fc4d96c5a5e569c2254e2f",
+        "completedAt": "2026-11-03T02:16:23.588Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 60
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:25.588Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 60
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=60&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:25.822Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "a18a8e176b52bed5e45e84cc971dcfd3e84033d348842e58819e755d200bac39",
+        "completedAt": "2026-11-03T02:16:25.823Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 70
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:27.823Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 70
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=70&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:28.245Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "69eb00826b2e18ec66f8d0c4c3769f44aae5f9b2e6293320057ff00508b5a306",
+        "completedAt": "2026-11-03T02:16:28.247Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 80
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:30.247Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 80
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=80&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:31.140Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "919642434c929f77e2d7129b0fe8ccf83bc58e0c7878ce2336ae9eeb6fb6c3cc",
+        "completedAt": "2026-11-03T02:16:31.142Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 90
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:33.142Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 90
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=90&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:33.795Z",
+            "total": 8748,
+            "returned": 0,
+            "excluded": 10,
+            "items": [],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "f6ffc32efa1e97f9dd4fee0773d5caa2737f72586085bcca43ba34258bfb567a",
+        "completedAt": "2026-11-03T02:16:33.797Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 100
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:35.797Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "landskab",
+              "limit": 10,
+              "offset": 100
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=100&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:16:36.044Z",
+            "total": 8748,
+            "returned": 2,
+            "excluded": 8,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KKS2023-56",
+                "title": "Landskab",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Astrid Holm"
+                  }
+                ],
+                "date": "1908",
+                "medium": [
+                  "Oil on pasteboard"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/5138jk89b_kks2023-56.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KKS2023-56",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS9216",
+                "title": "Landskab",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Svend Hammershøi"
+                  }
+                ],
+                "date": "1902-1903",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/zk51vn85b_kms9216.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS9216",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "213bfe4200f89b39f9679ea8754d11f409f8e4794a5fc1a963a8c821518954e6",
+        "completedAt": "2026-11-03T02:16:36.047Z"
+      },
+      {
+        "resourceService": "smk-artwork",
+        "parameters": {
+          "id": "KKS2023-56"
+        },
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:16:38.047Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-artwork",
+            "provider": "SMK",
+            "kind": "artwork",
+            "query": {
+              "id": "KKS2023-56"
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KKS2023-56&lang=en",
+            "retrievedAt": "2026-11-03T02:16:38.688Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KKS2023-56",
+                "title": "Landskab",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Astrid Holm"
+                  }
+                ],
+                "date": "1908",
+                "medium": [
+                  "Oil on pasteboard"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/5138jk89b_kks2023-56.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KKS2023-56",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "a4e3ff5162936378c2a69d5e5e760c37a71736905baeaba961930e1f37c6135e",
+        "completedAt": "2026-11-03T02:16:38.690Z"
+      }
+    ],
+    "purchases": [],
+    "modelEvidence": [
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 608,
+          "completion_tokens": 80,
+          "total_tokens": 688,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 608
+        },
+        "responseId": "c1524765-95ff-4aa2-ac5d-8bede3faa021",
+        "outputHash": "8a751d6003249587d3fbda56dfdb5232d9699cd1bdbd7378c0c0d1f3a1e4bf55",
+        "at": "2026-11-03T02:15:58.692Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 3339,
+          "completion_tokens": 33,
+          "total_tokens": 3372,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 2827
+        },
+        "responseId": "99dca2e5-ecd3-4c01-b408-7299c91b725c",
+        "outputHash": "d43d8d1f07195f45064fd322932ac7878f9682f0e46649908c39e18bfee7d453",
+        "at": "2026-11-03T02:16:05.579Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 3397,
+          "completion_tokens": 55,
+          "total_tokens": 3452,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 2885
+        },
+        "responseId": "dc48d300-cbcb-465a-86d7-53a3fb7cfb11",
+        "outputHash": "d2d7cf3ae6f4b095238b495e7351f92e26df0870d2acae6178ae84d8feb2e750",
+        "at": "2026-11-03T02:16:09.800Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 5123,
+          "completion_tokens": 852,
+          "total_tokens": 5975,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 5123
+        },
+        "responseId": "f91924aa-9e6b-4b27-a1c9-d853d1fa370b",
+        "outputHash": "ee48de1a9f0eca34b1c3284f90696a7e3866fefb6561715a6c305cbace3c48bf",
+        "at": "2026-11-03T02:16:48.419Z"
+      }
+    ],
+    "generatedAt": "2026-11-03T02:16:48.419Z",
+    "totalUpstreamAtomic": "0",
+    "feeAtomic": "3000"
+  }
+}

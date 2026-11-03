@@ -1,0 +1,192 @@
+{
+  "checkedAt": "2026-11-03T02:27:38.337Z",
+  "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+  "newPayments": 0,
+  "results": [
+    {
+      "provider": "Tenderly",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:27:43.128Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+        "status": "success",
+        "blockNumber": "53754643",
+        "blockTimestamp": "1793672797"
+      },
+      "before": {
+        "block": "53754620",
+        "buyer": "19957000",
+        "seller": "42000"
+      },
+      "after": {
+        "block": "53754643",
+        "buyer": "19954000",
+        "seller": "45000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:27:49.073Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+        "status": "success",
+        "blockNumber": "53754643",
+        "blockTimestamp": "1793672797"
+      },
+      "before": {
+        "block": "53754620",
+        "buyer": "19957000",
+        "seller": "42000"
+      },
+      "after": {
+        "block": "53754643",
+        "buyer": "19954000",
+        "seller": "45000"
+      }
+    }
+  ],
+  "passed": true,
+  "protocolVersion": 2,
+  "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+  "upstreamPayments": 0,
+  "totalUpstreamAtomic": "0",
+  "sourceChecks": [
+    {
+      "service": "met-search",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=landscape&limit=10&offset=0",
+      "resourceSha256": "7680d89424df055236b05414ffcc53d2cbf72caac33e8da11d77f9e3be73fa6f",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork-search",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=landscape&cc0=1&has_image=1&limit=10&skip=0",
+      "resourceSha256": "b655a7094420bd31181a477c4743070700aa5637b7f4f3e21cdc10e1309003a4",
+      "passed": true
+    },
+    {
+      "service": "met-artwork",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/340468",
+      "resourceSha256": "81d372e9bef720668092a0b339633783df0e7d0927efa2ea5c7ae61e75138181",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/139454",
+      "resourceSha256": "1ae327507cf8b13441bd34b7768513be2934350ea3354ae082a367f58a8bb140",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=0&rows=10&lang=en",
+      "resourceSha256": "b7ac28936d513130f8d36b11d91eb2a3d2085412807adfa8ca61598f2132a42b",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=10&rows=10&lang=en",
+      "resourceSha256": "4ec836a98320a83fbd4e093f31a91cd4be3d727f8dae00c995372fcb8eaa25bd",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=20&rows=10&lang=en",
+      "resourceSha256": "42fa9bc5900a28ebda46aa79fa60f0cf222cebe825ac8f4d8c2ce06b45ccf9e4",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=30&rows=10&lang=en",
+      "resourceSha256": "355e3745af324ae1a00fc2e69a6d9527ac672cecc7c1224e034014ee9762ba0c",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=40&rows=10&lang=en",
+      "resourceSha256": "0ae7fd5a7124e33b9af197910f92fb572ae7e664d649645d219d4c60cefeb5ce",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=50&rows=10&lang=en",
+      "resourceSha256": "bf7e4773e9721cbbce923fc29a46905a1e79147318fc4d96c5a5e569c2254e2f",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=60&rows=10&lang=en",
+      "resourceSha256": "a18a8e176b52bed5e45e84cc971dcfd3e84033d348842e58819e755d200bac39",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=70&rows=10&lang=en",
+      "resourceSha256": "69eb00826b2e18ec66f8d0c4c3769f44aae5f9b2e6293320057ff00508b5a306",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=80&rows=10&lang=en",
+      "resourceSha256": "919642434c929f77e2d7129b0fe8ccf83bc58e0c7878ce2336ae9eeb6fb6c3cc",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=90&rows=10&lang=en",
+      "resourceSha256": "f6ffc32efa1e97f9dd4fee0773d5caa2737f72586085bcca43ba34258bfb567a",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landskab&offset=100&rows=10&lang=en",
+      "resourceSha256": "213bfe4200f89b39f9679ea8754d11f409f8e4794a5fc1a963a8c821518954e6",
+      "passed": true
+    },
+    {
+      "service": "smk-artwork",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KKS2023-56&lang=en",
+      "resourceSha256": "a4e3ff5162936378c2a69d5e5e760c37a71736905baeaba961930e1f37c6135e",
+      "passed": true
+    }
+  ]
+}

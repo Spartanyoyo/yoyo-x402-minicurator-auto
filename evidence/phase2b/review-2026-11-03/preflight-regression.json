@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-03T02:45:26.069Z",
+  "before": {
+    "tests": 2,
+    "failed": 2,
+    "observed": [
+      "503 instead of 202 after transient balance RPC failure",
+      "reconcile moved an unsubmitted payment into nonce-expiry waiting"
+    ]
+  },
+  "after": {
+    "newProtocolSuiteTests": 26,
+    "passed": 26,
+    "failed": 0
+  },
+  "cases": [
+    "accepted payment survives a transient pre-settlement balance RPC failure and restart",
+    "reconcile before first settlement preserves accepted payment preparation instead of waiting for expiry"
+  ],
+  "newPayments": 0,
+  "passed": true
+}

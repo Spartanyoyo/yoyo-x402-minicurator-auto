@@ -1,0 +1,23 @@
+{
+  "protocolVersion": 2,
+  "jobId": "13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f",
+  "baseUrl": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+  "status": "preparing_without_payment",
+  "documentation": {
+    "url": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev/F-02.md",
+    "content": "Sensitive upstream diagnostic redacted",
+    "sha256": "27d7f687800c16c3d671a954b30ba6820583a9736e85660a03c2db7c48dfb605",
+    "readAt": "2026-11-03T02:15:53.656Z"
+  },
+  "preparation": {
+    "httpStatus": 202,
+    "receivedAt": "2026-11-03T02:15:54.285Z"
+  },
+  "paymentsSubmitted": 0
+}

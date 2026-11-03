@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-11-03T02:25:44.049Z",
+  "jobId": "51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56",
+  "newPayments": 0,
+  "results": [
+    {
+      "provider": "Tenderly",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:25:48.140Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+        "status": "success",
+        "blockNumber": "53754112",
+        "blockTimestamp": "1793672691"
+      },
+      "before": {
+        "block": "53754094",
+        "buyer": "19963000",
+        "seller": "36000"
+      },
+      "after": {
+        "block": "53754112",
+        "buyer": "19960000",
+        "seller": "39000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:25:55.412Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+        "status": "success",
+        "blockNumber": "53754112",
+        "blockTimestamp": "1793672691"
+      },
+      "before": {
+        "block": "53754094",
+        "buyer": "19963000",
+        "seller": "36000"
+      },
+      "after": {
+        "block": "53754112",
+        "buyer": "19960000",
+        "seller": "39000"
+      }
+    }
+  ],
+  "passed": true,
+  "protocolVersion": 2,
+  "reportSha256": "d92ce99f60446ec7f2ae0b3fd84bca30b032e4133c7364da5ef07fd707953afa",
+  "upstreamPayments": 0,
+  "totalUpstreamAtomic": "0",
+  "sourceChecks": [
+    {
+      "service": "met-search",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=cat&limit=10&offset=0",
+      "resourceSha256": "33100d2f3f640f10e023807d73934d2ad973022ebb73303ef9b20cbd7785ef45",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork-search",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=cat&cc0=1&has_image=1&limit=10&skip=0",
+      "resourceSha256": "cefc8b8128f6d87f73af02b5379b73bba78c5d7eedc4b7b8e566e5d48197d192",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=cat&offset=0&rows=10&lang=en",
+      "resourceSha256": "a7343aac04f676bdd3b2f56458bcd955e7e35fd584a2e2a8c459958236cc8fb1",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/98363",
+      "resourceSha256": "9131346481d0ab7cf750e653707dc9daac09cab7c0b5b160399e61319bc45369",
+      "passed": true
+    },
+    {
+      "service": "smk-artwork",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KMS3402&lang=en",
+      "resourceSha256": "8bdc62570e35bae3ba96530aed6b548798f8a83c3b3edb481494f20e3636ee57",
+      "passed": true
+    },
+    {
+      "service": "met-artwork",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/552027",
+      "resourceSha256": "401490c66ee46103b45f343cef53c7c0fa044974c02161dcd431d3d69292e3e4",
+      "passed": true
+    }
+  ]
+}

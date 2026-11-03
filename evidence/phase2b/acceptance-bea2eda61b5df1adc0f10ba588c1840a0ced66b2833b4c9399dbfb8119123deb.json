@@ -1,0 +1,219 @@
+{
+  "protocolVersion": 2,
+  "at": "2026-11-03T02:25:26.834Z",
+  "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+  "baseUrl": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+  "status": "cloud_verified_pending_independent_audit",
+  "documentation": {
+    "url": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev/F-02.md",
+    "content": "Sensitive upstream diagnostic redacted",
+    "sha256": "625a9dad38f56a05edc3f3098154b7532f25f1d2f4e4e1afc323eabef327e93f",
+    "readAt": "2026-11-03T02:25:26.829Z"
+  },
+  "http": [
+    {
+      "paid": true,
+      "status": 202,
+      "receivedAt": "2026-11-03T02:25:31.046Z",
+      "headers": {
+        "x-request-id": "b42f2dcc-3160-4407-821f-d9a132de6a95"
+      }
+    }
+  ],
+  "before": {
+    "block": "53754306",
+    "buyer": "19960000",
+    "seller": "39000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "value": "3000",
+    "validAfter": "0",
+    "validBefore": "1793673030",
+    "nonce": "0xcaa7b77c2c33e3efb3eebb104c18ae4024e35668c304d536627e763c8e739f72"
+  },
+  "response": {
+    "protocolVersion": 2,
+    "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+    "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+    "status": "settling_payment",
+    "input": {
+      "protocolVersion": 2,
+      "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+      "maxCalls": 24
+    },
+    "createdAt": "2026-11-03T02:23:37.393Z",
+    "updatedAt": "2026-11-03T02:25:31.918Z",
+    "expiresAt": "2026-11-10T02:23:37.393Z",
+    "calls": [
+      {
+        "service": "met-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 693134
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork",
+        "parameters": {
+          "id": 125886
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-artwork",
+        "parameters": {
+          "id": "KMSst352"
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 693135
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 693136
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 12536
+        },
+        "state": "ok",
+        "attempts": 1
+      }
+    ],
+    "rounds": 1,
+    "modelCalls": 2,
+    "feeAtomic": "3000",
+    "totalUpstreamAtomic": "0",
+    "summary": {
+      "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+      "providers": [
+        "Met",
+        "CMA",
+        "SMK"
+      ],
+      "workCount": 3,
+      "generatedAt": "2026-11-03T02:23:59.169Z",
+      "priceAtomic": "3000",
+      "paymentPath": "/jobs/bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb/delivery"
+    },
+    "incoming": {
+      "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+      "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+      "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+      "at": "2026-11-03T02:25:31.918Z",
+      "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "network": "eip155:84532",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "before": {
+        "block": "53754315",
+        "buyer": "19960000",
+        "seller": "39000"
+      },
+      "authorization": {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000",
+        "validAfter": "0",
+        "validBefore": "1793673030",
+        "nonce": "0xcaa7b77c2c33e3efb3eebb104c18ae4024e35668c304d536627e763c8e739f72"
+      },
+      "status": "accepted_not_submitted",
+      "http": [
+        {
+          "paid": true,
+          "status": 202,
+          "receivedAt": "2026-11-03T02:25:31.918Z",
+          "headers": {
+            "x-request-id": "b42f2dcc-3160-4407-821f-d9a132de6a95"
+          }
+        }
+      ],
+      "response": {
+        "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+        "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+        "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd"
+      }
+    }
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0xde5d91b7e2998e27f40929f8eb95b77295060b28602ae37e4c90685166948ad1",
+    "network": "eip155:84532"
+  },
+  "cloudAudit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "3000",
+    "sellerDelta": "3000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-11-03T02:25:35.324Z",
+    "balanceChangesExplained": true,
+    "balanceMode": "all_interval_transfers",
+    "paymentVerified": true
+  }
+}

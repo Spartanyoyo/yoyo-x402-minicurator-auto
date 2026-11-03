@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { privateKeyToAccount } from "viem/accounts";
 import { encodePaymentSignatureHeader } from "@x402/core/http";
 import { JsonStore, taskInput, taskIdentity, sha256, validateCalls, callKey, mapLimited, readTextBounded } from "../src/agent-contract.mjs";
-import { CloudCuratorJob, PaymentClaims, validIngress, ingressRequirement } from "../src/agent-job.mjs";
+import { CloudCuratorJob, PaymentClaims, validIngress, ingressRequirement } from "../src/agent-legacy-job.mjs";
 import { modelJson, renderReport, detailedWorks } from "../src/agent-model.mjs";
 import { auditPurchase } from "../scripts/chain.mjs";
 import { purchaseCurator } from "../scripts/curator-purchase.mjs";

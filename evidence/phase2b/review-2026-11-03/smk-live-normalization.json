@@ -1,0 +1,371 @@
+{
+  "checkedAt": "2026-11-03T02:28:32.551Z",
+  "purpose": "Live official-SMK search normalization after thumbnail and rights-filter fix; no model or x402 request",
+  "modelRequests": 0,
+  "payments": 0,
+  "results": [
+    {
+      "resourceService": "smk-search",
+      "parameters": {
+        "q": "bird",
+        "offset": 0,
+        "limit": 10
+      },
+      "requestUrl": "https://api.smk.dk/api/v1/art/search/?keys=bird&offset=0&rows=10&lang=en&filters=%5Bpublic_domain%3Atrue%5D",
+      "access": "direct_free_api",
+      "upstreamPaymentAtomic": "0",
+      "startedAt": "2026-11-03T02:28:30.431Z",
+      "status": "ok",
+      "response": {
+        "resource": {
+          "schemaVersion": 1,
+          "service": "smk-search",
+          "provider": "SMK",
+          "kind": "artwork-search",
+          "query": {
+            "q": "bird",
+            "offset": 0,
+            "limit": 10
+          },
+          "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=bird&offset=0&rows=10&lang=en",
+          "retrievedAt": "2026-11-03T02:28:32.476Z",
+          "total": 310,
+          "returned": 9,
+          "excluded": 1,
+          "items": [
+            {
+              "museum": "SMK",
+              "id": "KMSst352",
+              "title": "Two Ducks",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Franz Roos"
+                }
+              ],
+              "date": "1687-1722",
+              "medium": [
+                "Oil on canvas"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://api.smk.dk/api/v1/thumbnail/c94da9b4-f459-4ccf-a614-77d79bdee5f2.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMSst352",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS8568",
+              "title": "En hane",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Johan Thomas Lundbye"
+                }
+              ],
+              "date": "1847",
+              "medium": [
+                "Oil on paper, mounted on wooden board"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/d504rm099_KMS8568.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS8568",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS5662",
+              "title": "Turkey",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Anne Marie Carl Nielsen"
+                }
+              ],
+              "date": "1910-1911",
+              "medium": [
+                "Bronze"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/dj52w794h_KMS5662-cropped.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS5662",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS1026",
+              "title": "Landscape with Birds",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Angelo Maria Crivelli"
+                }
+              ],
+              "date": "1665-1730",
+              "medium": [
+                "Oil on canvas"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/12579w40j_KMS1026.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS1026",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KKSgb4741",
+              "title": "Two flying birds",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Pandolfo Reschi"
+                }
+              ],
+              "date": "1640-1696",
+              "medium": [],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/m613n1842_kksgb4741.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb4741",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS1025",
+              "title": "Landscape with Birds",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Angelo Maria Crivelli"
+                }
+              ],
+              "date": "1665-1730",
+              "medium": [
+                "Oil on canvas"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/r207ts207_KMS1025.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS1025",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KKSgb16519",
+              "title": "En sanglærke (alauda arvensis)",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Pieter Holsteyn (I)"
+                }
+              ],
+              "date": "1600-1700",
+              "medium": [],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/9880vw11w_kksgb16519.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb16519",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS9132",
+              "title": "Still Life with a Peregrine Falcon and Birds",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Clara Peeters"
+                }
+              ],
+              "date": "1615",
+              "medium": [
+                "Oil on panel"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cz30pz30k_kms9132__1_.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS9132",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KKSgb6098",
+              "title": "Illustration til \"Halvhundrede Fabler for Børn\" af Hey",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Martinus Rørbye"
+                }
+              ],
+              "date": "1834",
+              "medium": [
+                "Etching"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/sq87bx370_kksgb6098.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb6098",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            }
+          ],
+          "cache": {
+            "status": "miss",
+            "stale": false
+          }
+        }
+      },
+      "resourceSha256": "bade0fe74619fbad8da2c109886670203bfd360284a09fcff922bdc5fa2865c1",
+      "completedAt": "2026-11-03T02:28:32.479Z"
+    },
+    {
+      "resourceService": "smk-search",
+      "parameters": {
+        "q": "landscape",
+        "offset": 0,
+        "limit": 10
+      },
+      "requestUrl": "https://api.smk.dk/api/v1/art/search/?keys=landscape&offset=0&rows=10&lang=en&filters=%5Bpublic_domain%3Atrue%5D",
+      "access": "direct_free_api",
+      "upstreamPaymentAtomic": "0",
+      "startedAt": "2026-11-03T02:28:30.440Z",
+      "status": "ok",
+      "response": {
+        "resource": {
+          "schemaVersion": 1,
+          "service": "smk-search",
+          "provider": "SMK",
+          "kind": "artwork-search",
+          "query": {
+            "q": "landscape",
+            "offset": 0,
+            "limit": 10
+          },
+          "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landscape&offset=0&rows=10&lang=en",
+          "retrievedAt": "2026-11-03T02:28:32.551Z",
+          "total": 14164,
+          "returned": 3,
+          "excluded": 7,
+          "items": [
+            {
+              "museum": "SMK",
+              "id": "KMS8575",
+              "title": "Evening Landscape",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Julius Paulsen"
+                }
+              ],
+              "date": "1886",
+              "medium": [
+                "Oil on canvas"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://api.smk.dk/api/v1/thumbnail/a1c414f9-7658-4984-8452-22f9a106cb24.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS8575",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMSsp163",
+              "title": "Wooded Landscape",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Alexander Keirincx"
+                }
+              ],
+              "date": "1615-1620",
+              "medium": [
+                "Oil on copper"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/765375081_KMSsp163_crop.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMSsp163",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            },
+            {
+              "museum": "SMK",
+              "id": "KMS9113",
+              "title": "Landscape",
+              "artists": [
+                {
+                  "id": null,
+                  "name": "Marie Henriques"
+                }
+              ],
+              "date": "1891",
+              "medium": [
+                "canvas"
+              ],
+              "culture": [],
+              "department": null,
+              "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/h415pg40w_kms9113.tif.jp2/full/!1024,/0/default.jpg",
+              "sourceUrl": "https://open.smk.dk/artwork/image/KMS9113",
+              "rights": {
+                "publicDomain": true,
+                "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                "evidence": "public_domain=true"
+              }
+            }
+          ],
+          "cache": {
+            "status": "miss",
+            "stale": false
+          }
+        }
+      },
+      "resourceSha256": "a6298745b471d36532e9df23e1e94b494dd3c95050b1ba16023929f67f32a547",
+      "completedAt": "2026-11-03T02:28:32.551Z"
+    }
+  ],
+  "passed": true
+}

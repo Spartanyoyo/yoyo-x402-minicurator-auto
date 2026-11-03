@@ -2,10 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "yoyo-x402-cloud-curator",
   "main": "src/agent-worker.mjs",
-  "compatibility_date": "2026-11-02",
+  "compatibility_date": "2026-11-03",
   "compatibility_flags": ["nodejs_compat"],
   "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
   "vars": {
+    // These two values are used only by existing protocol-1 jobs, not new jobs.
     "CURATOR_SERVER_URL": "https://yoyo-x402-minicurator.accessible-trip.workers.dev",
     "UPSTREAM_SELLER_ADDRESS": "0x303782B1b788527bE6cC28C6F16aA2A3Ba26b59f",
     "AGENT_LLM_BASE_URL": "https://api.deepseek.com",

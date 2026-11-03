@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-11-03T02:28:33.816Z",
+  "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+  "newPayments": 0,
+  "results": [
+    {
+      "provider": "Tenderly",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:28:37.584Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+        "status": "success",
+        "blockNumber": "53754891",
+        "blockTimestamp": "1793672847"
+      },
+      "before": {
+        "block": "53754872",
+        "buyer": "19954000",
+        "seller": "45000"
+      },
+      "after": {
+        "block": "53754891",
+        "buyer": "19951000",
+        "seller": "48000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:28:45.285Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+        "status": "success",
+        "blockNumber": "53754891",
+        "blockTimestamp": "1793672847"
+      },
+      "before": {
+        "block": "53754872",
+        "buyer": "19954000",
+        "seller": "45000"
+      },
+      "after": {
+        "block": "53754891",
+        "buyer": "19951000",
+        "seller": "48000"
+      }
+    }
+  ],
+  "passed": true,
+  "protocolVersion": 2,
+  "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6",
+  "upstreamPayments": 0,
+  "totalUpstreamAtomic": "0",
+  "sourceChecks": [
+    {
+      "service": "met-search",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=flowers+still+life&limit=10&offset=0",
+      "resourceSha256": "53007b14b9724df3e3ce2662f06221c23b04cbc4278abd0f4d5ce2fc4c8e422d",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork-search",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=flowers+still+life&cc0=1&has_image=1&limit=10&skip=0",
+      "resourceSha256": "86db44f0c5beb2aa0b1cdd67ad75aaefab183b1db5227661334ddee0eb8e3c15",
+      "passed": true
+    },
+    {
+      "service": "met-artwork",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436293",
+      "resourceSha256": "8757b56966a2bbbc7d583a2ee911dd0ec767fe537110b82c43e71416fa8eaaf6",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/314466",
+      "resourceSha256": "a531fa88055f47495dede032657c0cc8ba5130bcb629181c15b81d9c7800eef4",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=blomster&offset=0&rows=10&lang=en",
+      "resourceSha256": "7a87af66852a48314114fb371424335d3839e5fe78de3cb86af01106ec85cf84",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/150019",
+      "resourceSha256": "a01bc9a25836f437ae9ba60e0936ef14ce71365c80520dc2865d628b474c6edf",
+      "passed": true
+    },
+    {
+      "service": "smk-artwork",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KKS2013-44&lang=en",
+      "resourceSha256": "40bf8bce7c3600168aed5df5928d22bba19d2e4252658257261f2d8a0edc6277",
+      "passed": true
+    }
+  ]
+}

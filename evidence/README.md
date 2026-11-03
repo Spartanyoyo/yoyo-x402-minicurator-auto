@@ -1,5 +1,7 @@
 # 项目证据索引
 
+第二阶段 B 的当前材料见 [phase2b 证据索引](phase2b/README.md)和 [2026-11-03 修订检查摘要](phase2b/review-2026-11-03/final-verification.json)：四主题先生成后付费、上游零付款、独立链上重审、重复取件与部署版本核对。旧协议材料已单独标注为历史。
+
 第二阶段 MiniCurator 的出站、部署、报价、购买与异常对账证据集中在 [phase2a](phase2a/README.md)。下文保留第一阶段历史索引。
 
 本目录收录第一阶段在 Node、本地 Workers、Cloudflare 和 Base Sepolia 上产生的可复核记录。建议按下面的顺序阅读：
@@ -16,6 +18,7 @@
 
 | 目录 | 内容 |
 |---|---|
+| [phase2b](phase2b/README.md) | 当前云端策展协议 2、四主题验收和旧协议历史证据 |
 | [phase2a](phase2a/README.md) | MiniCurator 选题、云端实施与逐资源测试网采购 |
 | [transactions](transactions/README.md) | 三笔成功测试交易、链上复审、跨节点核验、钱包与地点证据 |
 | [verification](verification/README.md) | 自动化测试、接口边界、部署、RPC、依赖审计和发布检查 |

@@ -1,0 +1,449 @@
+{
+  "checkedAt": "2026-11-03T02:45:26.172Z",
+  "status": "functional_testnet_revision_verified",
+  "protocolVersion": 2,
+  "architecture": {
+    "upstream": "direct_free_official_museum_apis",
+    "payment": "prepare_then_pay_for_delivery",
+    "feeAtomic": "3000",
+    "network": "eip155:84532"
+  },
+  "automated": {
+    "checkedAt": "2026-11-03T02:39:39.149Z",
+    "command": "npm run verify",
+    "observedExitCode": 0,
+    "tests": {
+      "total": 211,
+      "passed": 211,
+      "failed": 0
+    },
+    "dryRunBuilds": [
+      "weather",
+      "phase2a-minicurator",
+      "phase2b-cloud-curator"
+    ],
+    "documentationCheckPassed": true,
+    "credentialScanPassed": true,
+    "verificationLogSha256": "b27a9db938fd932d8d562df12121007c248ebf8e977dd33f1cc26a74d26aded2",
+    "newProtocolRegressionTests": 26,
+    "passed": true
+  },
+  "preflightRegressionPassed": true,
+  "probeChecks": 8,
+  "probePassed": true,
+  "liveScenarios": {
+    "complete": 4,
+    "independentChecks": 8,
+    "payments": 4,
+    "totalIncomingAtomic": 12000,
+    "totalUpstreamAtomic": 0,
+    "freePreparations": 6,
+    "failedFreePreparations": 1,
+    "additionalVerifiedJobs": 1,
+    "additionalIncomingAtomic": 3000,
+    "totalPaymentsIncludingAdditional": 5,
+    "totalIncomingAtomicIncludingAdditional": 15000,
+    "independentChecksIncludingAdditional": 10,
+    "redeliveryChecksIncludingAdditional": 5
+  },
+  "smkNormalizationPassed": true,
+  "failedFreePreparationRetained": true,
+  "cloudVersion": [
+    {
+      "version_id": "40672b82-035f-48c2-a896-59aed334b1f8",
+      "percentage": 100
+    }
+  ],
+  "preservedDeployments": [
+    {
+      "worker": "yoyo-x402-weather",
+      "deploymentId": "103020af-c162-4e2c-911f-eb386a42d9d5",
+      "versions": [
+        {
+          "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+          "percentage": 100
+        }
+      ],
+      "unchanged": true
+    },
+    {
+      "worker": "yoyo-x402-minicurator",
+      "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+      "versions": [
+        {
+          "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+          "percentage": 100
+        }
+      ],
+      "unchanged": true
+    }
+  ],
+  "sourceHashesLineEndings": "LF",
+  "sourceHashes": [
+    {
+      "path": "package-lock.json",
+      "sha256": "83a46aa8d650a90a371452490966002c0342b63ba01698d14c21112756c59eea"
+    },
+    {
+      "path": "package.json",
+      "sha256": "cdfb90e220dbb966503dbd3b12544d4065fdd6be82a98ac47f5c0675e244366c"
+    },
+    {
+      "path": "scripts/agent-client.mjs",
+      "sha256": "0c1bd782b901da3a46a543b9f0bdf6ca2f4d0873ed038fc5c0b2153078c1e175"
+    },
+    {
+      "path": "scripts/agent.mjs",
+      "sha256": "2cc40a4cb6c4c0d4d843fe7153ce89cb6c4c8495a0a278b529cc2cb15a640ac6"
+    },
+    {
+      "path": "scripts/audit.mjs",
+      "sha256": "9ccfcd50b72308ca0490dbfa0c74c5d43a2af8fa96a560cf43e998103a08b026"
+    },
+    {
+      "path": "scripts/build-evidence-manifest.mjs",
+      "sha256": "5415705096a2b45c10e92c7d1d8a870fc67c69068cae05c04c60b225333a4a3f"
+    },
+    {
+      "path": "scripts/buy-curator.mjs",
+      "sha256": "637ce3154adc617c57aa83492ae0fca5d515c9fa64f52d7d2ccda682efae3192"
+    },
+    {
+      "path": "scripts/buy.mjs",
+      "sha256": "ee78264559bd60a06a2b8e0be80c00fc890bf48770ae07da17ad809e79375dc4"
+    },
+    {
+      "path": "scripts/chain.mjs",
+      "sha256": "6ffae1005e1c421603267dffa27162cf37477da6d2a2ada2e4f6a0f76552c7f8"
+    },
+    {
+      "path": "scripts/check-agent-model.mjs",
+      "sha256": "faaaa37426a9361e6de31103256dbfb8c4b537115a37572c7de39c4aa87fdd3d"
+    },
+    {
+      "path": "scripts/check-agent-redelivery.mjs",
+      "sha256": "ce975edf938bd1b247a04fde220fb44a9ce1602944e5bb25553fe6cd8cb49409"
+    },
+    {
+      "path": "scripts/check-docs.mjs",
+      "sha256": "f1294abc4a8e6091c37b9ddfc0a12de9cf80b8d6e4222970f664a278fec4924b"
+    },
+    {
+      "path": "scripts/check-public-files.mjs",
+      "sha256": "9f28e0a14178e514cf6b2b606d316c1492392ea2a55d93c2d4196e709cc9fd65"
+    },
+    {
+      "path": "scripts/create-wallets.mjs",
+      "sha256": "ef3964e2f1e4c75cf5f6c018ee151ece040a8d6bf5bd2b624f61b55e0b84b02a"
+    },
+    {
+      "path": "scripts/curator-egress-worker.mjs",
+      "sha256": "4fd4c131a88bb633d196be90d56782d7560205e2e0e550bd63e722cb43a288ba"
+    },
+    {
+      "path": "scripts/curator-purchase.mjs",
+      "sha256": "3104acb18858047823bc3e720d9476699f112da5d22f65908c4eb8af059fedbf"
+    },
+    {
+      "path": "scripts/curator-transport.mjs",
+      "sha256": "3d12f85536156cfcaa0760de4505c0ea8d13a00e5f6a58d669a9857279d2b0c7"
+    },
+    {
+      "path": "scripts/deploy-curator.mjs",
+      "sha256": "9ad1308120dbd084ad099f82514d0a67b6a36d41c439eec83091cfc6edf8dbab"
+    },
+    {
+      "path": "scripts/dev.mjs",
+      "sha256": "9b744e249c24505ac6c711de2bc81d268fd954963dbe1252f4bb9f7a70445388"
+    },
+    {
+      "path": "scripts/finalize-agent-evidence.mjs",
+      "sha256": "1554214aba5c6d1b430a96d83280f0c97f7bb90f1462d0480bba80d3b5bf97ee"
+    },
+    {
+      "path": "scripts/prepare-agent-secrets.mjs",
+      "sha256": "42d7fa24f6fd0732137e7aa5e68a6a201cedbc57ab53758a5d85121eff089189"
+    },
+    {
+      "path": "scripts/probe-agent.mjs",
+      "sha256": "def639490c46c63eac30f2080e22271e991c9525d989889adf1df389a23b7755"
+    },
+    {
+      "path": "scripts/probe-checks.mjs",
+      "sha256": "3ef18277df1a5f7f73484e4d8f2fc2009752a8dde988130a59bfddbaa7583c02"
+    },
+    {
+      "path": "scripts/probe-curator-egress.mjs",
+      "sha256": "90a4470ec8622e26aec1cf79ec9d9d6e9d72f112846edc6469d738064688237c"
+    },
+    {
+      "path": "scripts/probe-curator.mjs",
+      "sha256": "9a485da2221d0cb26a4773317b7bdb08c383231e706167f68b94ebe84856ed6d"
+    },
+    {
+      "path": "scripts/probe-phase2a.mjs",
+      "sha256": "2b9a2eb2451c23205c7f78bdaa28094be419cee57db45529597421f43d8b7bc0"
+    },
+    {
+      "path": "scripts/probe.mjs",
+      "sha256": "fe0ba593b019f83f898c851ffe9ab8ad547fe3544c6da8ee7075ca5ff7e3ad6c"
+    },
+    {
+      "path": "scripts/purchase.mjs",
+      "sha256": "e5126c3fee2decea26add58bc77a24d04374277273d460995bde7874f383930f"
+    },
+    {
+      "path": "scripts/reconcile-curator.mjs",
+      "sha256": "467d87224673ef45d5e8a76ec8290e5487dc9d4289c8f8547885ade996c231da"
+    },
+    {
+      "path": "scripts/reconcile.mjs",
+      "sha256": "c4fa23998b976eaf5d572f56f99a81410f6d3bb374c45fae617361c4f512aef6"
+    },
+    {
+      "path": "scripts/record-curator-deployment.mjs",
+      "sha256": "cc9ba117da868bf391818d3e3a715273da54c52112d9091e585c59874ddd30fb"
+    },
+    {
+      "path": "scripts/rpc-health.mjs",
+      "sha256": "74bc9fa5ad9157a6028a46834a4fe7d4cc419efc0bd567046f5476c819ac3de0"
+    },
+    {
+      "path": "scripts/setup-agent-wallet.mjs",
+      "sha256": "eb9821aca78794514876d1aef139f4f10c346e033a47a3fd7600197429ef3cc2"
+    },
+    {
+      "path": "scripts/snapshot-agent-deployment.mjs",
+      "sha256": "bfa6ec430883844731ed2da94893f330006d6910f8ced00beb2f8c72ac420120"
+    },
+    {
+      "path": "scripts/verify-agent.mjs",
+      "sha256": "f4b1ebe0d0271fb3f8a6bb79101a284a57fc71ad509961a88050355047427eb5"
+    },
+    {
+      "path": "scripts/verify-phase2a.mjs",
+      "sha256": "c01e6eab57c5922933058fea12548463ce939de21c5e1034c12349cd29360d04"
+    },
+    {
+      "path": "src/agent-contract.mjs",
+      "sha256": "33bad533adbd67c75bb1faed317e3e735ad171c31a3d6347c150db001cd001cf"
+    },
+    {
+      "path": "src/agent-evidence.mjs",
+      "sha256": "d5c38bb3a75429ae4319c7b2cbe41f37e6abb6ad6c593302ac9113ed46b30548"
+    },
+    {
+      "path": "src/agent-job.mjs",
+      "sha256": "e97fe940f6502d3134df3061c31bf484d24016b2482ade991c61b04c6d251412"
+    },
+    {
+      "path": "src/agent-legacy-job.mjs",
+      "sha256": "2e447281cd1a3edf9418bda4ce54acc231427242c91460d276064b7e14c251ea"
+    },
+    {
+      "path": "src/agent-model.mjs",
+      "sha256": "b9f9561cb1de715a557fd66f3bcc80b32ba21e18a00d4099662c8703a2d40ec8"
+    },
+    {
+      "path": "src/agent-payment.mjs",
+      "sha256": "50336c63eadfe7a40930bb91c8b462174e1539ec0a8944275e4e85746838aa95"
+    },
+    {
+      "path": "src/agent-tools.mjs",
+      "sha256": "4301ef4646b612f4bf11723ff2786fe235fc72aa358126ee502b5bc2c1b76c2d"
+    },
+    {
+      "path": "src/agent-worker.mjs",
+      "sha256": "8304f99a78a6cc65f031d41ca8386298a486d6de66b30db14b3bd339b9ced87a"
+    },
+    {
+      "path": "src/app.mjs",
+      "sha256": "00a5b3cf5e83fa315b92835a2b4bb50af8e66d657665333e46a51c810df0c024"
+    },
+    {
+      "path": "src/curator-app.mjs",
+      "sha256": "5604f0d8d451fdf08d3255d185f0a1a909f6db11ee2e08ea66f5fea1ca1f0855"
+    },
+    {
+      "path": "src/curator-catalog.mjs",
+      "sha256": "1b0d32b29cbdf4fe0fd89994b2eb751baa9493d0d6731cb4a52b5c42fcc086e5"
+    },
+    {
+      "path": "src/curator-worker.mjs",
+      "sha256": "eb82420c239911528ae760c6f39b689437a13c41e890e2bbcfd16815ed316a2a"
+    },
+    {
+      "path": "src/weather.mjs",
+      "sha256": "164cded66e257474e334d783fc280d3ed405af9f95d1412cd24c8f9806372866"
+    },
+    {
+      "path": "src/worker.mjs",
+      "sha256": "6b67096b9a60eb5a837d48100104a83e1283963cb3b8468aa2aa810cb016372b"
+    },
+    {
+      "path": "src/x402-policy.mjs",
+      "sha256": "fc04735024633122d7a33418f6c34cbfdb7fbdd5126a57fecb4e00f7feea2f5f"
+    },
+    {
+      "path": "test/agent-v2.test.mjs",
+      "sha256": "fd4d98442f26153f02528b5d761953c4206bf176a010c2902887e9a6a10306cc"
+    },
+    {
+      "path": "test/agent.test.mjs",
+      "sha256": "56d0e84b7c8b37dc480ff3e3eba4cdb5f1491c49cce363a64e316167392da238"
+    },
+    {
+      "path": "test/chain.test.mjs",
+      "sha256": "cbc88c71324a5829b91a4da482333fc9c7e7ca630c359c12d1f76647acb4ab6a"
+    },
+    {
+      "path": "test/curator-catalog.test.mjs",
+      "sha256": "27010dd1f3d044a33c33f635e5025a835802891a79c87f069518785741e204e7"
+    },
+    {
+      "path": "test/curator-fixtures.mjs",
+      "sha256": "26d5f7ddd8c6eeabe1b6c61c19ef780d5ccca71ad72fe59293afd136878c37d9"
+    },
+    {
+      "path": "test/curator-purchase.test.mjs",
+      "sha256": "2d98b4f77e6668d99a1d6f1dc4447ae509dcb7dbce35a26a6c48ff7ce77a528e"
+    },
+    {
+      "path": "test/curator-service.test.mjs",
+      "sha256": "377660220190e99cfe59bcebf0f5b55139de5914c9435a4b4d090336e2818ebb"
+    },
+    {
+      "path": "test/fixtures.mjs",
+      "sha256": "846ec3d1ec6158ac645fa6e449c1112ac8d4b932d5cb2b6f0010aec0236fbcfe"
+    },
+    {
+      "path": "test/probe.test.mjs",
+      "sha256": "b5af142b17f99dd783e4ef5daaf13a6808b0e885fe5885f447a8ea7ddf00ed4f"
+    },
+    {
+      "path": "test/purchase.test.mjs",
+      "sha256": "b73be5da27f79ed2a9ae01b8f4dcb15dbf05c3e257dea84a9f830a7453dcdf90"
+    },
+    {
+      "path": "test/reconcile.test.mjs",
+      "sha256": "0b809bdeeb4daea70779bd81ce28ef7e5466c8a63da19a09d7d231783adbbc4f"
+    },
+    {
+      "path": "test/rpc-health.test.mjs",
+      "sha256": "2f70fb29a104dfa35454bd932a021492d7f2dac574fe2ed8cacc824a987eb741"
+    },
+    {
+      "path": "test/service.test.mjs",
+      "sha256": "1360f3b99f5ce7c79c8e4ce967300ec4b4528231ed724a26a7b0f72ad52d5e02"
+    },
+    {
+      "path": "test/weather.test.mjs",
+      "sha256": "c161104638d2633b41b6a64b63b4c675a8191ed9cdac7aa2c8c6455c4a51f106"
+    },
+    {
+      "path": "wrangler.agent.jsonc",
+      "sha256": "462b9d65c04b7e4d7ebe6a76649c5e57afd749657b785221d77906db19d35dcd"
+    },
+    {
+      "path": "wrangler.curator.jsonc",
+      "sha256": "d8d3b1aca647c06f429a19b90414937d8a7f786979598b1335d564482834a74b"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "sha256": "d92cfb6a8a77de381b0bd15701cb12107deea0e2b49be422624cbc8c53027f33"
+    }
+  ],
+  "finalPublicFileChecks": {
+    "documentation": {
+      "checkedAt": "2026-11-03T02:45:24.105Z",
+      "filesChecked": 35,
+      "linksChecked": 526,
+      "failures": [],
+      "passed": true
+    },
+    "credentialScan": {
+      "checkedAt": "2026-11-03T02:45:24.476Z",
+      "filesScanned": 294,
+      "localComparisonsLoaded": 6,
+      "comparisonKinds": [
+        "agent_model_api_key",
+        "agent_wallet_private_key",
+        "buyer_private_key",
+        "cloudflare_account_id",
+        "cloudflare_api_token",
+        "seller_private_key"
+      ],
+      "missingOptionalLocalComparisons": [
+        "author_email"
+      ],
+      "matchingFiles": [],
+      "passed": true
+    },
+    "nodeSyntax": {
+      "file": "scripts/check-agent-redelivery.mjs",
+      "passed": true
+    }
+  },
+  "deployedSourceMatches": true,
+  "limits": {
+    "rpcHttpRequestsPerInvocation": 12,
+    "parallelFreeRequests": 3,
+    "defaultToolCalls": 24,
+    "freeGetAttempts": 3,
+    "planningRounds": 10,
+    "modelRequests": 14,
+    "consecutiveTransientRetries": 6,
+    "retentionDays": 7,
+    "globalFreePreparationsPerUtcDay": 10,
+    "perIpFreePreparationsPerUtcDay": 6
+  },
+  "limitations": [
+    "Base Sepolia testnet only; no production SLA",
+    "Generated commentary requires human review; image display depends on museum URLs and the viewer",
+    "v1 jobs retain their legacy handler; this revision does not claim to fix every legacy recovery limitation",
+    "Cats and flowers were prepared before the SMK thumbnail fix; birds covers that fix and the final landscape job covers the payment-preparation patch"
+  ],
+  "cases": [
+    {
+      "theme": "cats",
+      "jobId": "51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56",
+      "reportSha256": "d92ce99f60446ec7f2ae0b3fd84bca30b032e4133c7364da5ef07fd707953afa",
+      "transaction": "0xd8817ea5a7f4a42e256b0807aff3f09cd264b3f76899425b3d57388fd74e899b",
+      "independentAuditPassed": true,
+      "redeliveryPassed": true,
+      "noDeliveryBeforePayment": true,
+      "examplePath": "docs/examples/phase2b-v2-cats.md"
+    },
+    {
+      "theme": "birds",
+      "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+      "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+      "transaction": "0xde5d91b7e2998e27f40929f8eb95b77295060b28602ae37e4c90685166948ad1",
+      "independentAuditPassed": true,
+      "redeliveryPassed": true,
+      "noDeliveryBeforePayment": true,
+      "examplePath": "docs/examples/phase2b-v2-birds.md"
+    },
+    {
+      "theme": "landscape",
+      "jobId": "8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f",
+      "reportSha256": "be028d3f7bfd4cbc91b71f3b46d1b72cd00ef4e99a2f0987fe4d443cc210ddec",
+      "transaction": "0xb0852c40773e8bd63490d2c6c7501b1c5ceb843be7adf13eb73497faf0e4dade",
+      "independentAuditPassed": true,
+      "redeliveryPassed": true,
+      "noDeliveryBeforePayment": true,
+      "examplePath": "docs/examples/phase2b-v2-landscape.md"
+    },
+    {
+      "theme": "flowers",
+      "jobId": "9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff",
+      "reportSha256": "5c2e3972a98e6b5748a37f1fa4cdb97178d6c2bf98a19966dac0a36e73524ad6",
+      "transaction": "0xec76c244ccf1396ba7cd0d4c5aa8c32d230a41b9cabb82c1b84a38560685f90a",
+      "independentAuditPassed": true,
+      "redeliveryPassed": true,
+      "noDeliveryBeforePayment": true,
+      "examplePath": "docs/examples/phase2b-v2-flowers.md"
+    }
+  ],
+  "passed": true
+}

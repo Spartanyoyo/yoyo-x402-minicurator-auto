@@ -2,7 +2,7 @@
 
 此文件由 `npm run evidence:manifest` 生成。SHA256 对应仓库中脱敏后的公开证据文件；本机原始敏感诊断只保存在被忽略的 `local-only/` 目录。
 
-共 153 个证据文件。分类说明见 [README](README.md)。
+共 184 个证据文件。分类说明见 [README](README.md)。
 
 | 文件 | 字节数 | SHA256 |
 |---|---:|---|
@@ -107,18 +107,49 @@
 | [phase2a/rpc-health-2026-10-25.json](phase2a/rpc-health-2026-10-25.json) | 1630 | `b7dd1596977d133f55b7d1e34ea5ff2f57d329fe65512a13f8a0a425266d5c1b` |
 | [phase2a/rpc-health-2026-10-28.json](phase2a/rpc-health-2026-10-28.json) | 1066 | `11bdd4bcede1360d52c6d5b38910dd0cd038ae99954ab738a7b094e568390776` |
 | [phase2a/temporary-worker-cleanup-2026-10-25.json](phase2a/temporary-worker-cleanup-2026-10-25.json) | 632 | `663f0991a9cffd19ee5920f00e0db425d0caf8487998d71e4daf8759f92b42ca` |
+| [phase2b/acceptance-13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f.json](phase2b/acceptance-13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f.json) | 927 | `61213947b2ef2269d6008ab55e4b71781134e5b59b06e34c7c23f3becfdde2fa` |
 | [phase2b/acceptance-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/acceptance-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 7881 | `398a0d41711f7b004329a027f72861ba5e6a6f6ab1334828c2fcb935ae9c3f14` |
+| [phase2b/acceptance-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json](phase2b/acceptance-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json) | 6306 | `1eae37400c3f18747c09d08e7118a8022b1700f52247c4ad09761dd9af537001` |
 | [phase2b/acceptance-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/acceptance-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 7864 | `4db1c62c9ca0a56f8d95453709c3a2d92cb46783b6e5af8443f14e8c7ce86b39` |
+| [phase2b/acceptance-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json](phase2b/acceptance-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json) | 6059 | `692bfce8ca3a423897a2b2fa0f62ccd85069071be71a1f63018e783b6ac2204e` |
+| [phase2b/acceptance-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json](phase2b/acceptance-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json) | 6782 | `61804e42ec7662e29e933f659a046c4bfe11c5e339dfc2a15ecd8901420a6cc6` |
+| [phase2b/acceptance-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json](phase2b/acceptance-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json) | 6646 | `0f7b6d16aa17ea2b922331255b15b2017891969a0b5fe0dfe85568e74c596866` |
+| [phase2b/acceptance-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json](phase2b/acceptance-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json) | 8843 | `8cb1d71bb49c7bd1ea7279d063a6f38be51195d52ab6fcb3b10cb38a2f9636e7` |
 | [phase2b/deployment.json](phase2b/deployment.json) | 996 | `969088d7434b26465e2998e188e16929f4c74d2950e9808ce076d0873e2102a4` |
 | [phase2b/docs-check.json](phase2b/docs-check.json) | 127 | `65cb582b19962971407d9027d9b496815319305c6195efd855add8185d92b424` |
 | [phase2b/final-verification.json](phase2b/final-verification.json) | 3309 | `4b9dd7148b73707c256fcc9bcd754094c1c0c55e57ac6f24a16a45d1e1b21bb4` |
 | [phase2b/independent-audit-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/independent-audit-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 20282 | `69f2ac4b46e285160828b8c7f2694db0b2beb9781de251eecd2b643bf63d5008` |
+| [phase2b/independent-audit-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json](phase2b/independent-audit-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json) | 4521 | `dc919acc17d50572418e179937228334784b6e94b5d0dc672c788512e9740aad` |
 | [phase2b/independent-audit-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/independent-audit-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 18316 | `f0e79c25301404afe71fbf244cd003a167fa06d54aa34857002664792843747b` |
+| [phase2b/independent-audit-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json](phase2b/independent-audit-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json) | 4540 | `e1211776a9113831ab0724e0968a427667519a737de5f0b2a4c0e1670875a2aa` |
+| [phase2b/independent-audit-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json](phase2b/independent-audit-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json) | 4800 | `262ecebe9c899fc0c4ed3d1a0f69e7caf17c21802eb0947abd25523c409ec429` |
+| [phase2b/independent-audit-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json](phase2b/independent-audit-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json) | 4528 | `d9884ac942406ce07f952e88b53f58fd9065c82731e54d75ad5db6bc953f9508` |
+| [phase2b/independent-audit-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json](phase2b/independent-audit-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json) | 7113 | `01e3002e05a563abacfe6d3b9fcf32fa84f7e41208654a767fdf41469eafc8f9` |
 | [phase2b/independent-audit-first-pass-rate-limited.json](phase2b/independent-audit-first-pass-rate-limited.json) | 18248 | `282bf6ba5a43046af9442c844fb2244dffbaf102090d64e378fd7ac55ccdd968` |
+| [phase2b/job-13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f.json](phase2b/job-13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f.json) | 4777 | `9e8e0f5a0fd199d4ca7e89a80a146ddd3d31dd3cff6bddc7b37ff2d29420bea0` |
 | [phase2b/job-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json](phase2b/job-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json) | 87501 | `48fe3465d8df341bb1cd946be08ae1c71aefcb0d4dc69b7e5693f06d1f7a0ceb` |
+| [phase2b/job-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json](phase2b/job-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json) | 35609 | `0f92eab9e7a8a8480fdc9bd85d313ebb661215c3014e99a79602485f805989ab` |
 | [phase2b/job-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/job-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 83410 | `ce086feb21bd07d6eac4a58d531fe60431583904fa7d6c09018292a9d5b8d17c` |
+| [phase2b/job-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json](phase2b/job-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json) | 36741 | `bc4bbf85b82247aff30a396139ddb3f1fe67a2d27ac8d5eb2f1849a6c77e3e08` |
+| [phase2b/job-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json](phase2b/job-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json) | 30229 | `5760320586bf53a5ab15cd9078c9f683c1a1e18fc4e2d00f5e04dbd3e11b6ba4` |
+| [phase2b/job-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json](phase2b/job-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json) | 44324 | `5c3e6164c7a5b9ad9418131b02f1d5cc77cd15f0fe51b6e56b829829c4fe2994` |
+| [phase2b/job-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json](phase2b/job-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json) | 53138 | `f67376539eb26c60fed2a6d1c0dda56d0ddd363506e3206eaa3b12e3c4f7a584` |
 | [phase2b/probe.json](phase2b/probe.json) | 637 | `f95f567c0708a0049692586e39a0343d1d55708922e01d8b50d813b339b11b3b` |
+| [phase2b/redelivery-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json](phase2b/redelivery-51174f865a3a76fd1667267af84e67a3bb494362a68f603d4a24437881a5ce56.json) | 720 | `d8b406fc63542371b67ecf8c38df04ee13766bb0cb0cc046ce427c3f2d942059` |
 | [phase2b/redelivery-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json](phase2b/redelivery-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json) | 459 | `13726e95aa4e4f92142a1108504bb3387c0bf29271f7063d9d11cd97a4f538b1` |
+| [phase2b/redelivery-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json](phase2b/redelivery-8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f.json) | 720 | `4824bb2d405ccba395305443d75979d506b9f0e7981a4a3c6f36a1b7ebbd0797` |
+| [phase2b/redelivery-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json](phase2b/redelivery-9d2db2ed6396b8f53138cee8897dc4e62099f6c5515fe12f2e5bb128b47438ff.json) | 720 | `ef7513761854669f5d4ea066a7b7600e6952bef967e9daa17fcfe6d2496be4a6` |
+| [phase2b/redelivery-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json](phase2b/redelivery-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json) | 720 | `a6b1814d3902c46b0335f3358257f9332b29469214d5c1dbe6638ce72877ed7b` |
+| [phase2b/redelivery-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json](phase2b/redelivery-e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184.json) | 720 | `03a802c600ef8b746ceb2a8c64ee6e33a9b3263c977628908140fe62d628f170` |
+| [phase2b/review-2026-11-03/automated-checks.json](phase2b/review-2026-11-03/automated-checks.json) | 485 | `a095dbc1d9ac030415623104d77bca10fbb9fb76a4716e19cfeca0fd31233fe5` |
+| [phase2b/review-2026-11-03/credential-scan.json](phase2b/review-2026-11-03/credential-scan.json) | 398 | `c876b0afe6f6d854c74addeb084f8ba921fb405a63afe849d6e872183c8ab776` |
+| [phase2b/review-2026-11-03/deployment.json](phase2b/review-2026-11-03/deployment.json) | 996 | `0354447def6d11110a5c6f1262dfc915376f53b8d9bab2b0b317afd220a3766c` |
+| [phase2b/review-2026-11-03/docs-check.json](phase2b/review-2026-11-03/docs-check.json) | 127 | `f291994fdb701305aab798dca1c9ebb2bddc04955564c6704eb156b56b35bc0b` |
+| [phase2b/review-2026-11-03/final-verification.json](phase2b/review-2026-11-03/final-verification.json) | 15093 | `53ba4819e67b8d7d2d643c3c5c6c8b87fb1b6d4f1f00f2ae149d0fb932aa9918` |
+| [phase2b/review-2026-11-03/preflight-regression.json](phase2b/review-2026-11-03/preflight-regression.json) | 601 | `7ffeb54dc08e0f4617237d033b5c825a1023d537a819ad9ac08618000c2e8fb5` |
+| [phase2b/review-2026-11-03/probe.json](phase2b/review-2026-11-03/probe.json) | 851 | `8e937c35bf2b467920dd41302877b60da23ad93b999536c5b9bd596db05d5e3f` |
+| [phase2b/review-2026-11-03/scenarios.json](phase2b/review-2026-11-03/scenarios.json) | 7780 | `426662a533d4fb7d87adc0e978b38eccc058db5bcdde597ded9223cb334a353f` |
+| [phase2b/review-2026-11-03/smk-live-normalization.json](phase2b/review-2026-11-03/smk-live-normalization.json) | 13051 | `c5e48be7d6de379e561f7333011a11f6040b05b90fcc0c2455d5e35f49a043ef` |
 | [phase2b/security-check.json](phase2b/security-check.json) | 398 | `7dab5e949ce1e128b7a8514c7fd5aa3d6dd1660ff17721686a534c07b1b4dfe5` |
 | [transactions/final-chain-audit-1792155650115.json](transactions/final-chain-audit-1792155650115.json) | 2220 | `f679ab40b9cf0bd67ad868a866e49da0a8137f1abf9c4ee5b0fc946b741d4340` |
 | [transactions/location-beijing.json](transactions/location-beijing.json) | 5357 | `6d0bd12e03a2fd9a982f9db865ce1e4cdebc30d508a251729d8c1094ba40a8e6` |

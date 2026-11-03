@@ -1,0 +1,1099 @@
+{
+  "protocolVersion": 2,
+  "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+  "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+  "status": "complete",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "createdAt": "2026-11-03T02:23:37.393Z",
+  "updatedAt": "2026-11-03T02:25:35.324Z",
+  "expiresAt": "2026-11-10T02:23:37.393Z",
+  "calls": [
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "birds",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork-search",
+      "parameters": {
+        "q": "birds",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "birds",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 693134
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 125886
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-artwork",
+      "parameters": {
+        "id": "KMSst352"
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 693135
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 693136
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 12536
+      },
+      "state": "ok",
+      "attempts": 1
+    }
+  ],
+  "rounds": 1,
+  "modelCalls": 2,
+  "feeAtomic": "3000",
+  "totalUpstreamAtomic": "0",
+  "summary": {
+    "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+    "providers": [
+      "Met",
+      "CMA",
+      "SMK"
+    ],
+    "workCount": 3,
+    "generatedAt": "2026-11-03T02:23:59.169Z",
+    "priceAtomic": "3000",
+    "paymentPath": "/jobs/bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb/delivery"
+  },
+  "incoming": {
+    "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+    "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+    "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+    "at": "2026-11-03T02:25:31.918Z",
+    "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "network": "eip155:84532",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "before": {
+      "block": "53754315",
+      "buyer": "19960000",
+      "seller": "39000"
+    },
+    "authorization": {
+      "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "value": "3000",
+      "validAfter": "0",
+      "validBefore": "1793673030",
+      "nonce": "0xcaa7b77c2c33e3efb3eebb104c18ae4024e35668c304d536627e763c8e739f72"
+    },
+    "status": "verified",
+    "http": [
+      {
+        "paid": true,
+        "status": 202,
+        "receivedAt": "2026-11-03T02:25:31.918Z",
+        "headers": {
+          "x-request-id": "b42f2dcc-3160-4407-821f-d9a132de6a95"
+        }
+      }
+    ],
+    "response": {
+      "requestId": "b42f2dcc-3160-4407-821f-d9a132de6a95",
+      "jobId": "bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb",
+      "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd"
+    },
+    "submittedAt": "2026-11-03T02:25:32.918Z",
+    "settlement": {
+      "success": true,
+      "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "transaction": "0xde5d91b7e2998e27f40929f8eb95b77295060b28602ae37e4c90685166948ad1",
+      "network": "eip155:84532"
+    },
+    "receipt": {
+      "transactionHash": "0xde5d91b7e2998e27f40929f8eb95b77295060b28602ae37e4c90685166948ad1",
+      "status": "success",
+      "blockNumber": "53754323",
+      "blockTimestamp": "1793672733"
+    },
+    "transfers": [
+      {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000"
+      }
+    ],
+    "authorizationEvents": [
+      {
+        "authorizer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "nonce": "0xcaa7b77c2c33e3efb3eebb104c18ae4024e35668c304d536627e763c8e739f72"
+      }
+    ],
+    "beforeObserved": {
+      "block": "53754315",
+      "buyer": "19960000",
+      "seller": "39000"
+    },
+    "after": {
+      "block": "53754323",
+      "buyer": "19957000",
+      "seller": "42000"
+    },
+    "intervalTransfers": [
+      {
+        "transactionHash": "0xde5d91b7e2998e27f40929f8eb95b77295060b28602ae37e4c90685166948ad1",
+        "blockNumber": "53754323",
+        "logIndex": 9,
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000"
+      }
+    ],
+    "audit": {
+      "chainSuccess": true,
+      "exactTransfer": true,
+      "authorizationFieldsMatch": true,
+      "authorizationEventMatch": true,
+      "authorizationTimeMatch": true,
+      "settlementPayerMatches": true,
+      "declaredTermsMatch": true,
+      "initialBalancesMatch": true,
+      "noOtherTransfers": true,
+      "buyerDelta": "3000",
+      "sellerDelta": "3000",
+      "deliveryVerified": true,
+      "auditedAt": "2026-11-03T02:25:35.324Z",
+      "balanceChangesExplained": true,
+      "balanceMode": "all_interval_transfers",
+      "paymentVerified": true
+    }
+  },
+  "delivery": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "reportMarkdown": "# 三馆寻鸟：十五分钟小鸟艺术散步\n\n欢迎来到这场小鸟主题迷你展览！我们将走进三座博物馆，看三件作品里的鸟：美国大都会艺术博物馆（Met）的一件木雕鸟，丹麦国家美术馆（SMK）的一幅油画鸭子，克利夫兰艺术博物馆（CMA）的一幅日本花鸟屏风。每站约五分钟，一共十五分钟。看的时候请慢慢找、仔细比：鸟在哪里？它在做什么？画家或雕刻家想让我们注意到什么？下面的想法只是“一种可能的解读”，不是唯一答案——你看到的，也很重要。\n\n路线总时长：15 分钟；开场、观察问题和总结包含在各站时间内。\n\n## Birds — Met（5 分钟）\n\n第一站先看一只“被刻出来的鸟”。这件作品叫《Birds》，是威廉·希梅尔（Wilhelm Schimmel）用白松木彩绘做的，年代大约在1865到1890年之间，属于美国艺术。木头原本是整块的，艺术家用刀一点点削出鸟的形状，再涂上颜色。你可能会觉得它像标本，又像玩具；这是一种解读，也可能两者都不是。想想看：木头硬邦邦的，要做出羽毛、嘴巴、站立的姿态，得费多少功夫？\n\n观察问题：你最先注意到这只鸟身体的哪个部分？如果用手摸（想象一下），你觉得哪里最光滑、哪里最粗糙？\n\n![Birds](https://images.metmuseum.org/CRDImages/ad/web-large/97321.jpg)\n\n来源：https://www.metmuseum.org/art/collection/search/12536\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"isPublicDomain=true\"}；Met:12536\n数据获取：馆方免费 API；数据 SHA256：0c1858d9b55316e84ea27c18e13feec45e344c9d1eb3119239436ec73bb0c7c5\n\n## Two Ducks — SMK（5 分钟）\n\n第二站来到丹麦，看弗朗茨·罗斯（Franz Roos）的油画《Two Ducks》，创作年代约在1687到1722年。画里有两只鸭子，是用油彩画在画布上的。油画可以一层层叠颜色，所以羽毛的光泽、水面的反光都可能被画得很细。我们不确定画家为什么画这两只鸭子——也许是练习写生，也许是装饰房间，这些只是猜测。你可以对比上一站的木雕鸟：一个是立体的木头，一个是平面的画布，它们给人的感觉一样吗？\n\n观察问题：两只鸭子看起来在做什么？它们是在水里、岸上，还是别的地方？你从哪些细节看出来的？\n\n![Two Ducks](https://api.smk.dk/api/v1/thumbnail/c94da9b4-f459-4ccf-a614-77d79bdee5f2.jpg)\n\n来源：https://open.smk.dk/artwork/image/KMSst352\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/mark/1.0/\",\"evidence\":\"public_domain=true\"}；SMK:KMSst352\n数据获取：馆方免费 API；数据 SHA256：9af95047b7dbcb1447b4d579b239a942985b51557d97d32bb1a55dc4b7ed5b02\n\n## Birds and Flowers — CMA（5 分钟）\n\n最后一站去日本。狩野光信（Kano Mitsunobu，1565–1608）的《Birds and Flowers》创作于16世纪末，是六曲一双屏风中的一件，用墨、色彩和金色画在纸上，属于桃山时代。屏风很大，可以折叠，把房间分隔开。金色可能让画面发亮，鸟和花则散布在屏风的不同位置。这只是一种解读：金色也许是为了让房间更明亮，也可能是为了显示主人的身份——但我们不能确定，只能从画面上找线索。\n\n观察问题：在这幅大屏风上，你能找到几种不同的鸟或花？如果屏风折叠起来，画面会变成什么样子？你最喜欢哪一个角落？\n\n![Birds and Flowers](https://openaccess-cdn.clevelandart.org/1948.128.2/1948.128.2_web.jpg)\n\n来源：https://clevelandart.org/art/1948.128.2\n许可与署名：{\"publicDomain\":true,\"licenseUrl\":\"https://creativecommons.org/publicdomain/zero/1.0/\",\"evidence\":\"share_license_status=\\\"CC0\\\"\"}；CMA:125886\n数据获取：馆方免费 API；数据 SHA256：ef362750e7a40075f030ecbd12d3e76144ecb66467dd1809c180307c0e9498c1\n\n三站看完，我们见了木雕鸟、油画鸭和屏风上的花鸟。它们来自不同国家、不同年代，材料也不同：木头、油彩、纸和金色。相同的是，艺术家都在观察鸟、表现鸟。下次你看到真的鸟时，也可以像这三位艺术家一样，先找形状，再看细节，最后问自己：我想让别人看到什么？记住，展览里的解读只是邀请，真正的发现属于你自己的眼睛。\n\n## 来源与交付\n\n任务：bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb\n云端直接调用三馆免费 API，上游付款为 0；仅本地购买此成品通过 x402 支付 0.003 Base Sepolia 测试 USDC。图片以馆方 URL 引用。\n\n- met-search：ok；9be51a4d0697c02b43fe15fd549898d9d4a530fa07571c323f784b9d149a9429\n- cma-artwork-search：ok；14ba03bf0dfd3f27a3fe02e5bef3d7999a9d1799b33fb65608bae48ec2d5fbf9\n- smk-search：ok；48d3db5302ff618a968dc5ba372033f98c50d7936df038ac9757ab638b083864\n- met-artwork：unavailable；Artwork lacks an explicit public-domain/CC0 flag\n- cma-artwork：ok；ef362750e7a40075f030ecbd12d3e76144ecb66467dd1809c180307c0e9498c1\n- smk-artwork：ok；9af95047b7dbcb1447b4d579b239a942985b51557d97d32bb1a55dc4b7ed5b02\n- met-artwork：unavailable；Artwork lacks an explicit public-domain/CC0 flag\n- met-artwork：unavailable；Artwork lacks an explicit public-domain/CC0 flag\n- met-artwork：ok；0c1858d9b55316e84ea27c18e13feec45e344c9d1eb3119239436ec73bb0c7c5\n",
+    "reportSha256": "f0fbd9b4bacf41adf61c925a81dbeafc18ee073af7012c07044de78021bf1cdd",
+    "resources": [
+      {
+        "resourceService": "met-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "requestUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=birds&limit=10&offset=0",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:40.410Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-search",
+            "provider": "Met",
+            "kind": "identifiers",
+            "query": {
+              "q": "birds",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=birds&limit=10&offset=0",
+            "retrievedAt": "2026-11-03T02:23:40.593Z",
+            "total": 23317,
+            "returned": 10,
+            "excluded": 0,
+            "items": [
+              {
+                "id": "693134",
+                "rightsVerified": false
+              },
+              {
+                "id": "693135",
+                "rightsVerified": false
+              },
+              {
+                "id": "693136",
+                "rightsVerified": false
+              },
+              {
+                "id": "12536",
+                "rightsVerified": false
+              },
+              {
+                "id": "12535",
+                "rightsVerified": false
+              },
+              {
+                "id": "489277",
+                "rightsVerified": false
+              },
+              {
+                "id": "75158",
+                "rightsVerified": false
+              },
+              {
+                "id": "75162",
+                "rightsVerified": false
+              },
+              {
+                "id": "307742",
+                "rightsVerified": false
+              },
+              {
+                "id": "544584",
+                "rightsVerified": false
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "9be51a4d0697c02b43fe15fd549898d9d4a530fa07571c323f784b9d149a9429",
+        "completedAt": "2026-11-03T02:23:40.595Z"
+      },
+      {
+        "resourceService": "cma-artwork-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "requestUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=birds&cc0=1&has_image=1&limit=10&skip=0",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:40.410Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork-search",
+            "provider": "CMA",
+            "kind": "artwork-search",
+            "query": {
+              "q": "birds",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=birds&cc0=1&has_image=1&limit=10&skip=0",
+            "retrievedAt": "2026-11-03T02:23:41.120Z",
+            "total": 316,
+            "returned": 10,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "125886",
+                "title": "Birds and Flowers",
+                "artists": [
+                  {
+                    "id": "40892",
+                    "name": "Kano Mitsunobu (Japanese, 1565–1608)"
+                  }
+                ],
+                "date": "late 1500s",
+                "medium": [
+                  "One of a pair of six-panel folding screens; ink, color, and gold on paper"
+                ],
+                "culture": [
+                  "Japan, Momoyama period (1573–1615)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1948.128.2/1948.128.2_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1948.128.2",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "125884",
+                "title": "Birds and Flowers",
+                "artists": [
+                  {
+                    "id": "40892",
+                    "name": "Kano Mitsunobu (Japanese, 1565–1608)"
+                  },
+                  {
+                    "id": "5994",
+                    "name": "Kano Shōei (Japanese, 1519–1592)"
+                  }
+                ],
+                "date": "late 1500s",
+                "medium": [
+                  "Pair of six-panel folding screens; ink, color, and gold on paper"
+                ],
+                "culture": [
+                  "Japan, Momoyama period (1573–1615)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1948.128/1948.128_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1948.128",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "152818",
+                "title": "Wall Charger Depicting Two Birds",
+                "artists": [
+                  {
+                    "id": "388593",
+                    "name": "Edouard Lievre (French, 1829–1886)"
+                  },
+                  {
+                    "id": "14394",
+                    "name": "Fernand Thesmar (French, 1843–1912)"
+                  }
+                ],
+                "date": "1879",
+                "medium": [
+                  "cloisonné and painted enamel mounted in gilt metal frame"
+                ],
+                "culture": [
+                  "France, 19th century"
+                ],
+                "department": "Decorative Art and Design",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1985.69/1985.69_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1985.69",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "125885",
+                "title": "Birds and Flowers",
+                "artists": [
+                  {
+                    "id": "5994",
+                    "name": "Kano Shōei (Japanese, 1519–1592)"
+                  }
+                ],
+                "date": "late 1500s",
+                "medium": [
+                  "One of a pair of six-panel folding screens; ink, color, and gold on paper"
+                ],
+                "culture": [
+                  "Japan, Momoyama period (1573–1615)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1948.128.1/1948.128.1_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1948.128.1",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "147576",
+                "title": "Mirror with Phoenixes, Birds, Butterflies, and Floral Sprays",
+                "artists": [],
+                "date": "700s",
+                "medium": [
+                  "bronze with silver and gold inlaid lacquer"
+                ],
+                "culture": [
+                  "China, Tang dynasty (618-907)"
+                ],
+                "department": "Chinese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1973.74/1973.74_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1973.74",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "156160",
+                "title": "Birds and Flowers",
+                "artists": [],
+                "date": "late 1800s",
+                "medium": [
+                  "Ten-panel folding screen with designs and inscriptions burnt into paper (pyrography)"
+                ],
+                "culture": [
+                  "Korea, Joseon dynasty (1392–1910)"
+                ],
+                "department": "Korean Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1991.80/1991.80_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1991.80",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "136409",
+                "title": "A Myriad of Birds",
+                "artists": [],
+                "date": "1700s–1800s",
+                "medium": [
+                  "silk: satin weave with polychrome silk embroidery"
+                ],
+                "culture": [
+                  "China, Qing dynasty (1644–1911)"
+                ],
+                "department": "Textiles",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1960.276/1960.276_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1960.276",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "95046",
+                "title": "Bowl with Flying Birds",
+                "artists": [],
+                "date": "1280–1400",
+                "medium": [
+                  "Fritware with underglaze-painted design, Sultanabad ware"
+                ],
+                "culture": [
+                  "Iran, probably Kashan, Ilkhanid period (1256–1353)"
+                ],
+                "department": "Islamic Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1915.589/1915.589_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1915.589",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "132616",
+                "title": "Still Life with Birds and Fruit",
+                "artists": [
+                  {
+                    "id": "11930",
+                    "name": "Giovanna Garzoni (Italian, 1600–1670)"
+                  }
+                ],
+                "date": "c. 1650",
+                "medium": [
+                  "watercolor with graphite, heightened with lead white"
+                ],
+                "culture": [
+                  "Italy"
+                ],
+                "department": "Drawings",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1955.140/1955.140_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1955.140",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              },
+              {
+                "museum": "CMA",
+                "id": "147930",
+                "title": "Birds Gather under the Spring Willow",
+                "artists": [
+                  {
+                    "id": "22791",
+                    "name": "Yin Hong (Chinese, c. 1430-c. 1500)"
+                  }
+                ],
+                "date": "late 1400s–early 1500",
+                "medium": [
+                  "hanging scroll, ink and color on silk"
+                ],
+                "culture": [
+                  "China, Ming dynasty (1368–1644)"
+                ],
+                "department": "Chinese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1974.31/1974.31_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1974.31",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "14ba03bf0dfd3f27a3fe02e5bef3d7999a9d1799b33fb65608bae48ec2d5fbf9",
+        "completedAt": "2026-11-03T02:23:41.124Z"
+      },
+      {
+        "resourceService": "smk-search",
+        "parameters": {
+          "q": "birds",
+          "limit": 10,
+          "offset": 0
+        },
+        "requestUrl": "https://api.smk.dk/api/v1/art/search/?keys=birds&offset=0&rows=10&lang=en&filters=%5Bpublic_domain%3Atrue%5D",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:40.410Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-search",
+            "provider": "SMK",
+            "kind": "artwork-search",
+            "query": {
+              "q": "birds",
+              "limit": 10,
+              "offset": 0
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=birds&offset=0&rows=10&lang=en",
+            "retrievedAt": "2026-11-03T02:23:41.417Z",
+            "total": 310,
+            "returned": 9,
+            "excluded": 1,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KMSst352",
+                "title": "Two Ducks",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Franz Roos"
+                  }
+                ],
+                "date": "1687-1722",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://api.smk.dk/api/v1/thumbnail/c94da9b4-f459-4ccf-a614-77d79bdee5f2.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMSst352",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS8568",
+                "title": "En hane",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Johan Thomas Lundbye"
+                  }
+                ],
+                "date": "1847",
+                "medium": [
+                  "Oil on paper, mounted on wooden board"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/d504rm099_KMS8568.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS8568",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS5662",
+                "title": "Turkey",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Anne Marie Carl Nielsen"
+                  }
+                ],
+                "date": "1910-1911",
+                "medium": [
+                  "Bronze"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/dj52w794h_KMS5662-cropped.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS5662",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KKSgb4741",
+                "title": "Two flying birds",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Pandolfo Reschi"
+                  }
+                ],
+                "date": "1640-1696",
+                "medium": [],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/m613n1842_kksgb4741.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb4741",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS1026",
+                "title": "Landscape with Birds",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Angelo Maria Crivelli"
+                  }
+                ],
+                "date": "1665-1730",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/12579w40j_KMS1026.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS1026",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS1025",
+                "title": "Landscape with Birds",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Angelo Maria Crivelli"
+                  }
+                ],
+                "date": "1665-1730",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/r207ts207_KMS1025.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS1025",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KKSgb16519",
+                "title": "En sanglærke (alauda arvensis)",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Pieter Holsteyn (I)"
+                  }
+                ],
+                "date": "1600-1700",
+                "medium": [],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/9880vw11w_kksgb16519.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb16519",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KMS9132",
+                "title": "Still Life with a Peregrine Falcon and Birds",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Clara Peeters"
+                  }
+                ],
+                "date": "1615",
+                "medium": [
+                  "Oil on panel"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/cz30pz30k_kms9132__1_.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMS9132",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              },
+              {
+                "museum": "SMK",
+                "id": "KKSgb6098",
+                "title": "Illustration til \"Halvhundrede Fabler for Børn\" af Hey",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Martinus Rørbye"
+                  }
+                ],
+                "date": "1834",
+                "medium": [
+                  "Etching"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://iip-thumb.smk.dk/iiif/jp2/sq87bx370_kksgb6098.tif.reconstructed.tif.jp2/full/!1024,/0/default.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KKSgb6098",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "48d3db5302ff618a968dc5ba372033f98c50d7936df038ac9757ab638b083864",
+        "completedAt": "2026-11-03T02:23:41.421Z"
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 693134
+        },
+        "requestUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/693134",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:43.421Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Artwork lacks an explicit public-domain/CC0 flag",
+        "completedAt": "2026-11-03T02:23:43.591Z"
+      },
+      {
+        "resourceService": "cma-artwork",
+        "parameters": {
+          "id": 125886
+        },
+        "requestUrl": "https://openaccess-api.clevelandart.org/api/artworks/125886",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:43.421Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "cma-artwork",
+            "provider": "CMA",
+            "kind": "artwork",
+            "query": {
+              "id": 125886
+            },
+            "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/125886",
+            "retrievedAt": "2026-11-03T02:23:43.610Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "CMA",
+                "id": "125886",
+                "title": "Birds and Flowers",
+                "artists": [
+                  {
+                    "id": "40892",
+                    "name": "Kano Mitsunobu (Japanese, 1565–1608)"
+                  }
+                ],
+                "date": "late 1500s",
+                "medium": [
+                  "One of a pair of six-panel folding screens; ink, color, and gold on paper"
+                ],
+                "culture": [
+                  "Japan, Momoyama period (1573–1615)"
+                ],
+                "department": "Japanese Art",
+                "imageUrl": "https://openaccess-cdn.clevelandart.org/1948.128.2/1948.128.2_web.jpg",
+                "sourceUrl": "https://clevelandart.org/art/1948.128.2",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "share_license_status=\"CC0\""
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "ef362750e7a40075f030ecbd12d3e76144ecb66467dd1809c180307c0e9498c1",
+        "completedAt": "2026-11-03T02:23:43.619Z"
+      },
+      {
+        "resourceService": "smk-artwork",
+        "parameters": {
+          "id": "KMSst352"
+        },
+        "requestUrl": "https://api.smk.dk/api/v1/art/?object_number=KMSst352&lang=en",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:43.421Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "smk-artwork",
+            "provider": "SMK",
+            "kind": "artwork",
+            "query": {
+              "id": "KMSst352"
+            },
+            "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KMSst352&lang=en",
+            "retrievedAt": "2026-11-03T02:23:43.610Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "SMK",
+                "id": "KMSst352",
+                "title": "Two Ducks",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Franz Roos"
+                  }
+                ],
+                "date": "1687-1722",
+                "medium": [
+                  "Oil on canvas"
+                ],
+                "culture": [],
+                "department": null,
+                "imageUrl": "https://api.smk.dk/api/v1/thumbnail/c94da9b4-f459-4ccf-a614-77d79bdee5f2.jpg",
+                "sourceUrl": "https://open.smk.dk/artwork/image/KMSst352",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+                  "evidence": "public_domain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "9af95047b7dbcb1447b4d579b239a942985b51557d97d32bb1a55dc4b7ed5b02",
+        "completedAt": "2026-11-03T02:23:43.617Z"
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 693135
+        },
+        "requestUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/693135",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:45.619Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Artwork lacks an explicit public-domain/CC0 flag",
+        "completedAt": "2026-11-03T02:23:45.847Z"
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 693136
+        },
+        "requestUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/693136",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:47.847Z",
+        "status": "unavailable",
+        "httpStatus": 422,
+        "error": "Artwork lacks an explicit public-domain/CC0 flag",
+        "completedAt": "2026-11-03T02:23:48.010Z"
+      },
+      {
+        "resourceService": "met-artwork",
+        "parameters": {
+          "id": 12536
+        },
+        "requestUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/12536",
+        "access": "direct_free_api",
+        "upstreamPaymentAtomic": "0",
+        "startedAt": "2026-11-03T02:23:50.010Z",
+        "status": "ok",
+        "response": {
+          "resource": {
+            "schemaVersion": 1,
+            "service": "met-artwork",
+            "provider": "Met",
+            "kind": "artwork",
+            "query": {
+              "id": 12536
+            },
+            "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/12536",
+            "retrievedAt": "2026-11-03T02:23:50.195Z",
+            "total": 1,
+            "returned": 1,
+            "excluded": 0,
+            "items": [
+              {
+                "museum": "Met",
+                "id": "12536",
+                "title": "Birds",
+                "artists": [
+                  {
+                    "id": null,
+                    "name": "Wilhelm Schimmel"
+                  }
+                ],
+                "date": "1865–90",
+                "medium": [
+                  "White pine, painted"
+                ],
+                "culture": [
+                  "American"
+                ],
+                "department": "The American Wing",
+                "imageUrl": "https://images.metmuseum.org/CRDImages/ad/web-large/97321.jpg",
+                "sourceUrl": "https://www.metmuseum.org/art/collection/search/12536",
+                "rights": {
+                  "publicDomain": true,
+                  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "evidence": "isPublicDomain=true"
+                }
+              }
+            ],
+            "cache": {
+              "status": "miss",
+              "stale": false
+            }
+          }
+        },
+        "resourceSha256": "0c1858d9b55316e84ea27c18e13feec45e344c9d1eb3119239436ec73bb0c7c5",
+        "completedAt": "2026-11-03T02:23:50.196Z"
+      }
+    ],
+    "purchases": [],
+    "modelEvidence": [
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 608,
+          "completion_tokens": 77,
+          "total_tokens": 685,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 224
+        },
+        "responseId": "f5704c1d-b8ed-4154-a693-7cd84b933d55",
+        "outputHash": "ec839e4ddaae1c2515b01f508c355a59a4389f9848fe9e9de0228de5c26c55ef",
+        "at": "2026-11-03T02:23:39.410Z"
+      },
+      {
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 4583,
+          "completion_tokens": 722,
+          "total_tokens": 5305,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 4583
+        },
+        "responseId": "16efd8b8-5cb9-4299-bc50-9bd9694da877",
+        "outputHash": "0acfa0e6857485d6cc41a08a750edd65b58c6bb6520ee3368f7a4a46d587b6f5",
+        "at": "2026-11-03T02:23:59.169Z"
+      }
+    ],
+    "generatedAt": "2026-11-03T02:23:59.169Z",
+    "totalUpstreamAtomic": "0",
+    "feeAtomic": "3000"
+  }
+}

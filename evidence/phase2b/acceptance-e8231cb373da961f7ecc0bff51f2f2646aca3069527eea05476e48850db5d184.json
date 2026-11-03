@@ -1,0 +1,325 @@
+{
+  "protocolVersion": 2,
+  "at": "2026-11-03T02:26:29.669Z",
+  "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+  "baseUrl": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文风景主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+  "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+  "network": "eip155:84532",
+  "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+  "status": "cloud_verified_pending_independent_audit",
+  "documentation": {
+    "url": "https://yoyo-x402-cloud-curator.accessible-trip.workers.dev/F-02.md",
+    "content": "Sensitive upstream diagnostic redacted",
+    "sha256": "625a9dad38f56a05edc3f3098154b7532f25f1d2f4e4e1afc323eabef327e93f",
+    "readAt": "2026-11-03T02:26:29.666Z"
+  },
+  "http": [
+    {
+      "paid": true,
+      "status": 202,
+      "receivedAt": "2026-11-03T02:26:35.111Z",
+      "headers": {
+        "x-request-id": "0989f440-b60f-4540-b816-a86a16518976"
+      }
+    }
+  ],
+  "before": {
+    "block": "53754620",
+    "buyer": "19957000",
+    "seller": "42000"
+  },
+  "authorization": {
+    "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "value": "3000",
+    "validAfter": "0",
+    "validBefore": "1793673093",
+    "nonce": "0x1922c0040ac518122dda6066061bf3bb8a9a9aae580b129c638803bfe4f541de"
+  },
+  "response": {
+    "protocolVersion": 2,
+    "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+    "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+    "status": "settling_payment",
+    "input": {
+      "protocolVersion": 2,
+      "goal": "为十岁孩子制作15分钟中文风景主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+      "maxCalls": 24
+    },
+    "createdAt": "2026-11-03T02:15:56.474Z",
+    "updatedAt": "2026-11-03T02:26:35.818Z",
+    "expiresAt": "2026-11-10T02:15:56.474Z",
+    "calls": [
+      {
+        "service": "met-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landscape",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "met-artwork",
+        "parameters": {
+          "id": 340468
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "cma-artwork",
+        "parameters": {
+          "id": 139454
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landscape painting",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "beach",
+          "limit": 10,
+          "offset": 0
+        },
+        "state": "unavailable",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 10
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 20
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 30
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 40
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 50
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 60
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 70
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 80
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 90
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-search",
+        "parameters": {
+          "q": "landskab",
+          "limit": 10,
+          "offset": 100
+        },
+        "state": "ok",
+        "attempts": 1
+      },
+      {
+        "service": "smk-artwork",
+        "parameters": {
+          "id": "KKS2023-56"
+        },
+        "state": "ok",
+        "attempts": 1
+      }
+    ],
+    "rounds": 3,
+    "modelCalls": 4,
+    "feeAtomic": "3000",
+    "totalUpstreamAtomic": "0",
+    "summary": {
+      "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+      "providers": [
+        "Met",
+        "CMA",
+        "SMK"
+      ],
+      "workCount": 3,
+      "generatedAt": "2026-11-03T02:16:48.419Z",
+      "priceAtomic": "3000",
+      "paymentPath": "/jobs/e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184/delivery"
+    },
+    "incoming": {
+      "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+      "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+      "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542",
+      "at": "2026-11-03T02:26:35.818Z",
+      "buyer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+      "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+      "network": "eip155:84532",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "before": {
+        "block": "53754634",
+        "buyer": "19957000",
+        "seller": "42000"
+      },
+      "authorization": {
+        "from": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+        "to": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+        "value": "3000",
+        "validAfter": "0",
+        "validBefore": "1793673093",
+        "nonce": "0x1922c0040ac518122dda6066061bf3bb8a9a9aae580b129c638803bfe4f541de"
+      },
+      "status": "accepted_not_submitted",
+      "http": [
+        {
+          "paid": true,
+          "status": 202,
+          "receivedAt": "2026-11-03T02:26:35.818Z",
+          "headers": {
+            "x-request-id": "0989f440-b60f-4540-b816-a86a16518976"
+          }
+        }
+      ],
+      "response": {
+        "requestId": "0989f440-b60f-4540-b816-a86a16518976",
+        "jobId": "e8231cb373da961f7ecc0bff51f2f2646aca3069527eea05476e48850db5d184",
+        "reportSha256": "0c123fb7f6acbf17c4c068d6e83aa392ff8f39ff943b5e20744e242972ee1542"
+      }
+    }
+  },
+  "settlement": {
+    "success": true,
+    "payer": "0x6E209C1a3c0605DD178374908142921b2577E8E9",
+    "transaction": "0xb9d3bdd190bd0bb0fb812bb16ab86028200ebe0ea17382738ad871bac5b7d17b",
+    "network": "eip155:84532"
+  },
+  "cloudAudit": {
+    "chainSuccess": true,
+    "exactTransfer": true,
+    "authorizationFieldsMatch": true,
+    "authorizationEventMatch": true,
+    "authorizationTimeMatch": true,
+    "settlementPayerMatches": true,
+    "declaredTermsMatch": true,
+    "initialBalancesMatch": true,
+    "noOtherTransfers": true,
+    "buyerDelta": "3000",
+    "sellerDelta": "3000",
+    "deliveryVerified": true,
+    "auditedAt": "2026-11-03T02:26:45.111Z",
+    "balanceChangesExplained": true,
+    "balanceMode": "all_interval_transfers",
+    "paymentVerified": true
+  }
+}

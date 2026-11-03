@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-03T02:39:39.149Z",
+  "command": "npm run verify",
+  "observedExitCode": 0,
+  "tests": {
+    "total": 211,
+    "passed": 211,
+    "failed": 0
+  },
+  "dryRunBuilds": [
+    "weather",
+    "phase2a-minicurator",
+    "phase2b-cloud-curator"
+  ],
+  "documentationCheckPassed": true,
+  "credentialScanPassed": true,
+  "verificationLogSha256": "b27a9db938fd932d8d562df12121007c248ebf8e977dd33f1cc26a74d26aded2",
+  "newProtocolRegressionTests": 26,
+  "passed": true
+}

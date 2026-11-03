@@ -1,23 +1,25 @@
 # Mentor 审阅指南
 
-当前最新阶段：第二阶段B（2026-11-02）。下面先给出云端Agent的审阅路径，再保留第一阶段的历史验收指南。审阅源码、报告和已有证据无需付款，也不需要取得私钥或模型API密钥。
+当前最新阶段：第二阶段 B 的 mentor 修订版（2026-11-03，协议 2）。云端直接调用三馆免费 API，先生成，再由本地通过 x402 付费取件。审阅源码、报告和已有证据无需付款，也不需要取得私钥或模型 API 密钥。
 
 ## 第二阶段 B：建议的 5–10 分钟审阅顺序
 
-1. 阅读[2-B验收报告](第二阶段B_验收报告.md)，了解本地提交目标、云端采购与整合、最终交付的完整闭环。
-2. 查看[云端生成的15分钟猫主题展览](第二阶段B_云端生成猫主题展览.md)，确认三馆作品、来源、许可和交易引用。图片是馆方HTTPS外链；若预览器未显示，可打开图像链接检查。
-3. 查看[正常任务完整交付](../evidence/phase2b/job-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json)：本地只购买一次任务，云端自主完成6项资源采购，约32秒后交付；本地不逐个选择或购买博物馆API。
-4. 查看[双RPC独立重审](../evidence/phase2b/independent-audit-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json)：两跳共7笔付款，由两家RPC交叉验证，14/14通过。另有[故障恢复重审](../evidence/phase2b/independent-audit-181017958d850143f992122ffcfa0b8029b365e5f686818394dcac23b521ffde.json)，16/16通过，包括2个经证明未付款的授权尝试。
-5. 查看[最终检查摘要](../evidence/phase2b/final-verification.json)、[重复取件检查](../evidence/phase2b/redelivery-89a152f2e8d0bcb4e9826168da9ac7746698fe9c56a85177bec2690a51862b89.json)和[使用说明](第二阶段B_使用说明.md)，核对185项测试、存储、并行、恢复与运行边界。
+1. 阅读 [Mentor 反馈修订报告](第二阶段B_Mentor反馈修订报告.md)，按问题表核对架构、subrequest、临时 RPC、不可用作品与空页处理。
+2. 查看四个云端成品：[猫](examples/phase2b-v2-cats.md)、[鸟类](examples/phase2b-v2-birds.md)、[风景](examples/phase2b-v2-landscape.md)、[花卉](examples/phase2b-v2-flowers.md)。每个成品都包含三馆作品、15 分钟路线、观察问题、馆方图片与公版来源。
+3. 查看 [四主题场景矩阵](../evidence/phase2b/review-2026-11-03/scenarios.json)和[证据索引](../evidence/phase2b/README.md)：付款前只返回摘要和成品哈希；付款后哈希相同，且上游付款为 0。
+4. 查看[鸟类任务完整交付](../evidence/phase2b/job-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json)、[双 RPC 独立重审](../evidence/phase2b/independent-audit-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json)与[重复取件](../evidence/phase2b/redelivery-bea2eda61b5df1adc0f10ba588c1840a0ced66b2833b4c9399dbfb8119123deb.json)。两家 RPC 验证同一笔本地到云端的 3000 原子单位支付；此任务实际跳过了三件不可用 Met 作品。
+5. 查看[当前检查摘要](../evidence/phase2b/review-2026-11-03/final-verification.json)、[使用说明](第二阶段B_使用说明.md)和 [F-02](F-02_cloud-curator.md)，核对 211 项测试、持久化、并行上限和恢复边界。
 
 ### 关键代码
 
 | 文件 | 审阅重点 |
 |---|---|
-| [agent-job.mjs](../src/agent-job.mjs) | 持久化任务状态机、预算预留、nonce认领、付款队列与恢复 |
-| [agent-model.mjs](../src/agent-model.mjs) | 白名单工具规划、模型请求限制、基于采购记录生成交付 |
-| [chain.mjs](../scripts/chain.mjs) | 两跳付款审查、精确Transfer、授权事件与共享钱包余额解释 |
-| [agent.test.mjs](../test/agent.test.mjs) | 重放、崩溃、预算、并发、未知付款和重复取件测试 |
+| [agent-job.mjs](../src/agent-job.mjs) | 先准备后付款的持久化状态机、分阶段 alarm 与结果门控 |
+| [agent-tools.mjs](../src/agent-tools.mjs) | 免费官方 API、不可用作品替换、空页续翻与三馆详情检查 |
+| [agent-payment.mjs](../src/agent-payment.mjs) | 实际 RPC 请求上限、读取缓存、退避切换与只读查账 |
+| [agent-model.mjs](../src/agent-model.mjs) | 白名单规划、调用上限、来源与生成内容绑定 |
+| [chain.mjs](../scripts/chain.mjs) | 精确 Transfer、AuthorizationUsed、授权字段与余额核对 |
+| [agent-v2.test.mjs](../test/agent-v2.test.mjs) | 26 项新协议回归；旧协议测试另行保留 |
 
 本地只读验证（Node.js 24，不需要密钥，不会付款）：
 
@@ -26,7 +28,7 @@ npm ci
 npm run verify
 ```
 
-当前仅为Base Sepolia测试网；未用预付款不自动退款，模型讲解需人工审核，原有Zod依赖公告仍有记录。Cloudflare云端任务保留七天；仓库中的脱敏证据和展览文件可长期审阅。详细边界见[验收报告](第二阶段B_验收报告.md)。
+当前仅为 Base Sepolia 测试网，模型讲解仍需人工审核。任务和成品在 Durable Objects 保留七天；免费准备任务受每日配额限制，失败生成不收费。仓库中的脱敏证据和展览可长期审阅。2026-11-02 的两跳付款、预算预留和恢复材料保留在[协议 1 历史验收报告](第二阶段B_验收报告.md)，不代表当前新任务流程；旧存储任务继续使用兼容处理器。
 
 ---
 

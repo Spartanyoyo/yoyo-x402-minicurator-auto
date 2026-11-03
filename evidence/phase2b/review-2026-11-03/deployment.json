@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-03T02:41:27.206Z",
+  "deployments": [
+    {
+      "worker": "yoyo-x402-weather",
+      "deploymentId": "103020af-c162-4e2c-911f-eb386a42d9d5",
+      "versions": [
+        {
+          "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "worker": "yoyo-x402-minicurator",
+      "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+      "versions": [
+        {
+          "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "worker": "yoyo-x402-cloud-curator",
+      "deploymentId": "317f4d34-b6bd-4a3e-b46a-ef3f67cc7e85",
+      "versions": [
+        {
+          "version_id": "40672b82-035f-48c2-a896-59aed334b1f8",
+          "percentage": 100
+        }
+      ]
+    }
+  ],
+  "sourceHash": "e97fe940f6502d3134df3061c31bf484d24016b2482ade991c61b04c6d251412",
+  "configHash": "462b9d65c04b7e4d7ebe6a76649c5e57afd749657b785221d77906db19d35dcd"
+}

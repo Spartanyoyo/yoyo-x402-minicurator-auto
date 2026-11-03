@@ -1,0 +1,247 @@
+{
+  "protocolVersion": 2,
+  "jobId": "13cadba9348e3df3a63a509aa80da32ffcc5606d4262ed08175f2b5c4e00909f",
+  "requestId": "0406964e-0ac1-483f-9676-eded2bb1b7ab",
+  "status": "failed",
+  "input": {
+    "protocolVersion": 2,
+    "goal": "为十岁孩子制作15分钟中文鸟类主题展览，必须包含Met、CMA、SMK三馆各一件公版且有图片的作品、观察问题和可核查来源。",
+    "maxCalls": 24
+  },
+  "createdAt": "2026-11-03T02:15:55.142Z",
+  "updatedAt": "2026-11-03T02:17:00.245Z",
+  "expiresAt": "2026-11-10T02:15:55.142Z",
+  "calls": [
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "bird",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork-search",
+      "parameters": {
+        "q": "bird",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "bird",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 198843
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 128821
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "bird",
+        "limit": 10,
+        "offset": 10
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 126239
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "birds",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 362338
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "met-artwork",
+      "parameters": {
+        "id": 362386
+      },
+      "state": "unavailable",
+      "attempts": 1
+    },
+    {
+      "service": "cma-artwork",
+      "parameters": {
+        "id": 172541
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 10
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 20
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 30
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 40
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 50
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 60
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 70
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 80
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "fugl",
+        "limit": 10,
+        "offset": 90
+      },
+      "state": "failed",
+      "attempts": 3
+    },
+    {
+      "service": "smk-search",
+      "parameters": {
+        "q": "ornithology",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "met-search",
+      "parameters": {
+        "q": "bird painting",
+        "limit": 10,
+        "offset": 0
+      },
+      "state": "ok",
+      "attempts": 1
+    },
+    {
+      "service": "smk-artwork",
+      "parameters": {
+        "id": "KMS3402"
+      },
+      "state": "ok",
+      "attempts": 1
+    }
+  ],
+  "rounds": 7,
+  "modelCalls": 8,
+  "feeAtomic": "3000",
+  "totalUpstreamAtomic": "0",
+  "error": "Report must include Met, CMA and SMK"
+}

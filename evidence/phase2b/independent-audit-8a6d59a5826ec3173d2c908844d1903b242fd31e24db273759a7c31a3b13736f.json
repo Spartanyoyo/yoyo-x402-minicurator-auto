@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-11-03T02:42:56.064Z",
+  "jobId": "8a6d59a5826ec3173d2c908844d1903b242fd31e24db273759a7c31a3b13736f",
+  "newPayments": 0,
+  "results": [
+    {
+      "provider": "Tenderly",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xb0852c40773e8bd63490d2c6c7501b1c5ceb843be7adf13eb73497faf0e4dade",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:43:01.340Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xb0852c40773e8bd63490d2c6c7501b1c5ceb843be7adf13eb73497faf0e4dade",
+        "status": "success",
+        "blockNumber": "53759311",
+        "blockTimestamp": "1793673731"
+      },
+      "before": {
+        "block": "53759289",
+        "buyer": "19951000",
+        "seller": "48000"
+      },
+      "after": {
+        "block": "53759311",
+        "buyer": "19948000",
+        "seller": "51000"
+      }
+    },
+    {
+      "provider": "Pocket",
+      "hop": "local_to_cloud",
+      "service": "cloud-curation",
+      "transaction": "0xb0852c40773e8bd63490d2c6c7501b1c5ceb843be7adf13eb73497faf0e4dade",
+      "status": "verified",
+      "audit": {
+        "chainSuccess": true,
+        "exactTransfer": true,
+        "authorizationFieldsMatch": true,
+        "authorizationEventMatch": true,
+        "authorizationTimeMatch": true,
+        "settlementPayerMatches": true,
+        "declaredTermsMatch": true,
+        "initialBalancesMatch": true,
+        "noOtherTransfers": true,
+        "buyerDelta": "3000",
+        "sellerDelta": "3000",
+        "deliveryVerified": true,
+        "auditedAt": "2026-11-03T02:43:10.383Z",
+        "balanceChangesExplained": true,
+        "balanceMode": "all_interval_transfers",
+        "paymentVerified": true
+      },
+      "receipt": {
+        "transactionHash": "0xb0852c40773e8bd63490d2c6c7501b1c5ceb843be7adf13eb73497faf0e4dade",
+        "status": "success",
+        "blockNumber": "53759311",
+        "blockTimestamp": "1793673731"
+      },
+      "before": {
+        "block": "53759289",
+        "buyer": "19951000",
+        "seller": "48000"
+      },
+      "after": {
+        "block": "53759311",
+        "buyer": "19948000",
+        "seller": "51000"
+      }
+    }
+  ],
+  "passed": true,
+  "protocolVersion": 2,
+  "reportSha256": "be028d3f7bfd4cbc91b71f3b46d1b72cd00ef4e99a2f0987fe4d443cc210ddec",
+  "upstreamPayments": 0,
+  "totalUpstreamAtomic": "0",
+  "sourceChecks": [
+    {
+      "service": "met-search",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=landscape&limit=10&offset=0",
+      "resourceSha256": "39cf923b2dbcf6bc506de40d7c0083a3399ee5b6ef9782b86f543387570303c8",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork-search",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/?title=landscape&cc0=1&has_image=1&limit=10&skip=0",
+      "resourceSha256": "4bf427c7dfcee03d3a0f94f805389e01d852d0c1fa37dbdc9cc7d36c2fedf1e3",
+      "passed": true
+    },
+    {
+      "service": "smk-search",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/search/?keys=landscape&offset=0&rows=10&lang=en",
+      "resourceSha256": "bbd4e0f479ee2fe4dc4c51deef654add620afbaa10d15b969d04d3eaa327d9b3",
+      "passed": true
+    },
+    {
+      "service": "met-artwork",
+      "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/340468",
+      "resourceSha256": "2b26ede425f4c435a3f080d9dd18dc1a55756d0f8230f3f1a4829a77769cd4f4",
+      "passed": true
+    },
+    {
+      "service": "cma-artwork",
+      "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/139454",
+      "resourceSha256": "b18156cc83ccb19af8911d26a12d1bfc50641e8dbd72ceb72b1ee6b847f27b9a",
+      "passed": true
+    },
+    {
+      "service": "smk-artwork",
+      "sourceUrl": "https://api.smk.dk/api/v1/art/?object_number=KMS8575&lang=en",
+      "resourceSha256": "0f3692f85676c2a446e392bfe19900a807e249d7dc823ba39e65fb722edfcb72",
+      "passed": true
+    }
+  ]
+}

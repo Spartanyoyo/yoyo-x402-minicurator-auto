@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-03T02:41:33.554Z",
+  "health": {
+    "service": "yoyo-x402-cloud-curator",
+    "protocolVersion": 2,
+    "paymentFlow": "prepare_then_pay_for_delivery",
+    "upstreamAccess": "direct_free_api",
+    "ready": true,
+    "seller": "0xdb80BE1C9845067dD32981738A7D8823f03Fd834",
+    "network": "eip155:84532",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "feeAtomic": "3000",
+    "maxCalls": 24,
+    "rpcRequestsPerInvocation": 12,
+    "concurrency": 3,
+    "model": "deepseek-flash",
+    "docs": "/F-02.md"
+  },
+  "checks": {
+    "health": true,
+    "protocol": true,
+    "docs": true,
+    "missingJob": true,
+    "unauthorized": true,
+    "legacyProcurementBudgetRejected": true,
+    "oversizedHeader": true,
+    "invalidCallLimit": true
+  },
+  "passed": true,
+  "paymentsCreated": 0,
+  "modelJobsCreated": 0
+}

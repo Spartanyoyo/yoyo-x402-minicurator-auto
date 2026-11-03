@@ -1,6 +1,8 @@
-# Yoyo x402 Agent 数据采购
+# Yoyo x402 云端策展 Agent
 
-**第二阶段 B 云端 Agent 已实现并部署（2026-11-02）。** 本地只提交目标并购买一个 x402 任务，云端 DeepSeek Flash 自主采购、审计并整合三馆数据，最后交付可重复取件的展览。正常端到端样例用约32秒完成6项采购；任务、中间JSON、预算和证据由Durable Objects持久保存。查看[2-B使用说明](docs/第二阶段B_使用说明.md)、[云端生成展览](docs/第二阶段B_云端生成猫主题展览.md)、[2-B验收报告](docs/第二阶段B_验收报告.md)与[机器契约](docs/F-02_cloud-curator.md)。第一阶段和2-A线上版本保持原样。
+**第二阶段 B 已按 mentor 反馈修订并部署（2026-11-03，协议 2）。** 本地 Agent 提交目标，云端 DeepSeek Flash 直接调用 Met、CMA、SMK 的免费官方 API，先准备完整展览；本地再通过 x402 支付固定 0.003 测试 USDC 取件。云端按阶段保存进度，临时 RPC 故障自动退避续跑，明确不可用的作品自动替换，三馆详情未齐时拒绝提前结束。云端不再购买阶段 2-A 的收费资源。
+
+猫、鸟类、风景、花卉四个主题共五个真实任务已交付，10 项双 RPC 独立重审和 5 次重复取件检查通过，上游付款为 0。最后一次风景验证仅用 6 项免费调用完成，并实测了付款前余额准备的新恢复阶段。先读 [Mentor 反馈修订报告](docs/第二阶段B_Mentor反馈修订报告.md)、[使用说明](docs/第二阶段B_使用说明.md)与[机器契约](docs/F-02_cloud-curator.md)。成品：[猫](docs/examples/phase2b-v2-cats.md)、[鸟类](docs/examples/phase2b-v2-birds.md)、[风景](docs/examples/phase2b-v2-landscape.md)、[花卉](docs/examples/phase2b-v2-flowers.md)。原阶段 1 和阶段 2-A 的线上版本保持原样；[2026-11-02 验收报告](docs/第二阶段B_验收报告.md)保留为旧协议历史记录。
 
 **第二阶段 A 已完成测试网配置、端到端演示和取证复核（2026-10-25）。** Cross-Museum MiniCurator 已部署 Met、CMA、SMK 的九个独立 x402 资源，并完成九笔 `verified` 采购，总支付 0.009 测试 USDC；九笔历史交易随后由两个不同 Base Sepolia RPC 在不重新付款的情况下 9/9 重审通过。直接查看 [Mentor 配置验收报告](docs/第二阶段A_配置验收报告.md)、[15 分钟猫主题展览](docs/第二阶段A_猫主题迷你展览.md)、[独立链上重审](evidence/phase2a/independent-chain-reaudit-2026-10-25.json)或 [MiniCurator 使用说明](docs/第二阶段A_使用说明.md)。当前仍有 Zod 上游依赖公告，详见[依赖审计说明](docs/第二阶段A_依赖审计说明.md)。
 
@@ -16,7 +18,7 @@
 
 | 顺序 | 文件 | 看什么 |
 |---|---|---|
-| 0 | [发布前复核证据](evidence/phase2a/release-verification-2026-10-28.json) | 2026-10-28 的全量测试、线上检查与双 RPC 结果 |
+| 0 | [2-B 修订报告](docs/第二阶段B_Mentor反馈修订报告.md)与[修订证据](evidence/phase2b/review-2026-11-03/final-verification.json) | 当前架构、问题修复、四个主题与付款证明 |
 | 1 | [Mentor 审阅指南](docs/MENTOR_GUIDE.md) | 5–10 分钟内核对目标、完成度和交易证据 |
 | 2 | [最新完整复核报告](docs/第一阶段_复核报告_2026-10-22.md) | 发现的问题、修复、最终测试和真实交易 |
 | 3 | [最新购买原始证据](evidence/transactions/purchase-1792639327312.json) | `documentation`、`http`、`response`、`settlement`、`receipt`、`audit` |
@@ -73,7 +75,8 @@ flowchart LR
 ├── .github/workflows/ci.yml       GitHub Actions：自动测试、构建和证据清单检查
 ├── docs/                          接口契约、方案、使用说明、验收报告与主题展览
 ├── evidence/                      脱敏后的部署、探测、采购、链上审计与测试证据
-│   ├── phase2a/                   当前九 API 展示的最终证据
+│   ├── phase2b/                   云端策展协议 2 与旧协议的脱敏证据
+│   ├── phase2a/                   九 API 展示的历史证据
 │   ├── transactions/             真实测试网交易与独立 RPC 核验
 │   └── history/                  被替代的失败、重试和中间过程
 ├── scripts/                       探测、购买、查账、双 RPC 重审、部署与证据工具
@@ -85,12 +88,13 @@ flowchart LR
 ├── .env.cloudflare.example        Cloudflare 部署配置样例
 ├── wrangler.jsonc                 第一阶段天气 Worker 配置
 ├── wrangler.curator.jsonc         第二阶段 MiniCurator Worker 配置
+├── wrangler.agent.jsonc           第二阶段 B 云端策展 Worker 配置
 ├── SECURITY.md                    发布前安全边界与检查
 ├── package.json
 └── package-lock.json
 ```
 
-本机凭据不进入仓库。`.env*`（除两个 `.example` 文件）、`.dev.vars*`、`private/` 和 `local-only/` 均在 `.gitignore` 中；依赖、构建产物和 Wrangler 缓存也不会提交。
+本机凭据不进入仓库。`.env*`（除 `.example` 样例文件）、`.dev.vars*`、`private/` 和 `local-only/` 均在 `.gitignore` 中；依赖、构建产物和 Wrangler 缓存也不会提交。
 
 ## 本地验证
 
