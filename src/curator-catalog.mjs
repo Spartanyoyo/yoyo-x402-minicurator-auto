@@ -236,7 +236,7 @@ export async function catalogResource(service, query, { fetcher = fetch, cache, 
   try {
     if (rateLimiter && !(await rateLimiter.limit({ key: definition.provider })).success) throw new CatalogError("Provider request budget exceeded; use cached results or retry later", 429);
     const response = await fetcher(upstreamUrl(service, query), { redirect: "manual", headers: { Accept: "application/json", "User-Agent": "YoyoMiniCurator/0.1 (+https://github.com/Spartanyoyo/yoyo-x402-weather)" }, signal: AbortSignal.timeout(20000) });
-    if (!response.ok) throw new CatalogError(`Museum provider returned HTTP ${response.status}`, response.status === 404 ? 404 : 502);
+    if (!response.ok) throw new CatalogError(`Museum provider returned HTTP ${response.status}`, [404, 422].includes(response.status) ? response.status : 502);
     const result = validateCatalog(normalizeCatalog(service, query, await providerJson(response), new Date(now()).toISOString(), { skipInvalidSearchItems }), service, query, now());
     // Only validated data is cached. Paid response envelopes/receipts are never cached.
     let cacheWriteFailed = false;

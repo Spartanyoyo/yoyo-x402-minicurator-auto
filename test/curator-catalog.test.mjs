@@ -88,12 +88,13 @@ test("only retained valid data can be returned stale, preserving original retrie
   await assert.rejects(catalogResource("met-artwork", query("met-artwork"), { cache, now: () => clock + (MAX_STALE_SECONDS + 1) * 1000, fetcher: async () => { throw new Error("offline"); } }));
 });
 
-test("withdrawn rights and 404 never reuse previously open cached detail", async () => {
+test("withdrawn rights and HTTP 404/422 never reuse previously open cached detail", async () => {
   const cache = memoryCache(); const clock = Date.now();
   await catalogResource("met-artwork", query("met-artwork"), { cache, now: () => clock, fetcher: async () => Response.json(raw("met-artwork")) });
   const closed = raw("met-artwork"); closed.isPublicDomain = false;
   await assert.rejects(catalogResource("met-artwork", query("met-artwork"), { cache, now: () => clock + 2 * 86400000, fetcher: async () => Response.json(closed) }), error => error.status === 422);
   await assert.rejects(catalogResource("met-artwork", query("met-artwork"), { cache, now: () => clock + 2 * 86400000, fetcher: async () => new Response("missing", { status: 404 }) }), error => error.status === 404);
+  await assert.rejects(catalogResource("met-artwork", query("met-artwork"), { cache, now: () => clock + 2 * 86400000, fetcher: async () => new Response("unprocessable", { status: 422 }) }), error => error.status === 422);
 });
 
 test("malformed data is never cached and provider rate limit stops uncached fetch", async () => {

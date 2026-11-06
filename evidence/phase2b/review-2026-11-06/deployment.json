@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-11-06T02:12:18.303Z",
+  "deployments": [
+    {
+      "worker": "yoyo-x402-weather",
+      "deploymentId": "103020af-c162-4e2c-911f-eb386a42d9d5",
+      "versions": [
+        {
+          "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "worker": "yoyo-x402-minicurator",
+      "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+      "versions": [
+        {
+          "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "worker": "yoyo-x402-cloud-curator",
+      "deploymentId": "fea5ac95-5a57-43d1-a717-12df57c0b61f",
+      "versions": [
+        {
+          "version_id": "735cbbd1-b0d5-4604-8783-f88dc3dcc00c",
+          "percentage": 100
+        }
+      ]
+    }
+  ],
+  "before": {
+    "checkedAt": "2026-11-06T02:10:17.449Z",
+    "deployments": [
+      {
+        "worker": "yoyo-x402-weather",
+        "deploymentId": "103020af-c162-4e2c-911f-eb386a42d9d5",
+        "versions": [
+          {
+            "version_id": "15b034a3-a6bc-4850-befe-1d2f66fbae88",
+            "percentage": 100
+          }
+        ]
+      },
+      {
+        "worker": "yoyo-x402-minicurator",
+        "deploymentId": "3ee61084-a5e3-4e8f-bfdd-a3cd9c0222bf",
+        "versions": [
+          {
+            "version_id": "c2a576fc-6a36-4bb7-bf07-c47cde342f21",
+            "percentage": 100
+          }
+        ]
+      },
+      {
+        "worker": "yoyo-x402-cloud-curator",
+        "deploymentId": "317f4d34-b6bd-4a3e-b46a-ef3f67cc7e85",
+        "versions": [
+          {
+            "version_id": "40672b82-035f-48c2-a896-59aed334b1f8",
+            "percentage": 100
+          }
+        ]
+      }
+    ]
+  },
+  "phase1And2AUnchanged": true,
+  "agentSourceSha256": "805cf1a993f44c81ac0aa779db75e941c737e64d4a92baecfb5b41547f4e07f7"
+}

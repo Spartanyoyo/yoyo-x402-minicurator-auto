@@ -2,7 +2,7 @@
 
 此文件由 `npm run evidence:manifest` 生成。SHA256 对应仓库中脱敏后的公开证据文件；本机原始敏感诊断只保存在被忽略的 `local-only/` 目录。
 
-共 184 个证据文件。分类说明见 [README](README.md)。
+共 187 个证据文件。分类说明见 [README](README.md)。
 
 | 文件 | 字节数 | SHA256 |
 |---|---:|---|
@@ -150,6 +150,9 @@
 | [phase2b/review-2026-11-03/probe.json](phase2b/review-2026-11-03/probe.json) | 851 | `8e937c35bf2b467920dd41302877b60da23ad93b999536c5b9bd596db05d5e3f` |
 | [phase2b/review-2026-11-03/scenarios.json](phase2b/review-2026-11-03/scenarios.json) | 7780 | `426662a533d4fb7d87adc0e978b38eccc058db5bcdde597ded9223cb334a353f` |
 | [phase2b/review-2026-11-03/smk-live-normalization.json](phase2b/review-2026-11-03/smk-live-normalization.json) | 13051 | `c5e48be7d6de379e561f7333011a11f6040b05b90fcc0c2455d5e35f49a043ef` |
+| [phase2b/review-2026-11-06/deployment.json](phase2b/review-2026-11-06/deployment.json) | 1874 | `71868bbf804303e8fe48c5d11a39c7d35f40b2855ccc74d00353ee570ffd8235` |
+| [phase2b/review-2026-11-06/final-verification.json](phase2b/review-2026-11-06/final-verification.json) | 1170 | `522afd99795ad969db65b2b15d26f5b6d392e5fa24d2f34edb405bf97c39d5b8` |
+| [phase2b/review-2026-11-06/http422-regression.json](phase2b/review-2026-11-06/http422-regression.json) | 1676 | `45f0bc62b6b39826a4efe0b0885cd2e885d8ddea3522bafe5cd92610d06637bd` |
 | [phase2b/security-check.json](phase2b/security-check.json) | 398 | `7dab5e949ce1e128b7a8514c7fd5aa3d6dd1660ff17721686a534c07b1b4dfe5` |
 | [transactions/final-chain-audit-1792155650115.json](transactions/final-chain-audit-1792155650115.json) | 2220 | `f679ab40b9cf0bd67ad868a866e49da0a8137f1abf9c4ee5b0fc946b741d4340` |
 | [transactions/location-beijing.json](transactions/location-beijing.json) | 5357 | `6d0bd12e03a2fd9a982f9db865ce1e4cdebc30d508a251729d8c1094ba40a8e6` |

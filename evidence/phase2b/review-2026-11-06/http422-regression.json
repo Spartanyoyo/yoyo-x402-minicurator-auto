@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-06T02:05:52.333Z",
+  "baseCommit": "968afae69e892e693c0a72cd0e3ded75e4449c03",
+  "problem": "Raw museum HTTP 422 was rewritten to HTTP 502, retried as transient and could fall back to stale cached data.",
+  "fix": "Preserve raw HTTP 404/422 at the catalog boundary; existing unavailable handling skips the ID and selects a replacement.",
+  "before": {
+    "command": "node --test --test-name-pattern 'raw HTTP 422|withdrawn rights' test/agent-v2.test.mjs test/curator-catalog.test.mjs",
+    "tests": 5,
+    "passed": 0,
+    "failed": 5,
+    "toolStatus": "retryable",
+    "jobStatus": "fetching",
+    "staleCacheIncorrectlyReturned": true
+  },
+  "after": {
+    "command": "node --test --test-name-pattern 'raw HTTP 422|withdrawn rights|free GET transient' test/agent-v2.test.mjs test/curator-catalog.test.mjs",
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "toolStatus": "unavailable",
+    "httpStatus": 422,
+    "rejectedIdRequests": 1,
+    "replacementId": 552027,
+    "jobStatus": "ready",
+    "staleCacheIncorrectlyReturned": false,
+    "transientRetryPreserved": true
+  },
+  "coverage": [
+    "Met raw HTTP 422",
+    "CMA raw HTTP 422",
+    "SMK raw HTTP 422",
+    "persisted unavailable result survives object restart and selects another ID",
+    "stale cache cannot override HTTP 422",
+    "temporary failures retain three-attempt limit"
+  ],
+  "method": "Deterministic local HTTP fault injection with real catalog, direct-tool and job-state-machine code; not a claim that the live museum returned HTTP 422 during this check.",
+  "newTests": 4,
+  "extendedTests": 1,
+  "paymentsCreated": 0,
+  "modelJobsCreated": 0,
+  "passed": true
+}

@@ -148,6 +148,42 @@ test("blocked free artwork is classified unavailable, never sent through an x402
   const output = await directTool(calls[0], { fetcher: async (url, init) => { urls.push(url); assert.equal(new Headers(init.headers).has("payment-signature"), false); return Response.json(item); } });
   assert.equal(output.status, "unavailable"); assert.equal(output.httpStatus, 422); assert.equal(output.upstreamPaymentAtomic, "0"); assert.ok(urls[0].startsWith("https://collectionapi.metmuseum.org/"));
 });
+for (const call of calls) test(`${call.service}: raw HTTP 422 is immediately unavailable`, async () => {
+  let requests = 0;
+  const output = await directTool(call, { fetcher: async (_url, init) => {
+    requests++; assert.equal(new Headers(init.headers).has("payment-signature"), false);
+    return new Response("unprocessable", { status: 422 });
+  } });
+  assert.equal(output.status, "unavailable"); assert.equal(output.httpStatus, 422);
+  assert.equal(output.upstreamPaymentAtomic, "0"); assert.equal(requests, 1);
+});
+
+test("raw HTTP 422 skips after one attempt and selects a replacement across restart", async () => {
+  const requests = new Map();
+  const f = setup({
+    plan: async () => { f.stats.plans++; return { output: { finish: false, calls: [{ service: "met-search", parameters: { q: "cat", limit: 5, offset: 0 } }, ...calls.slice(1)] }, evidence: {} }; },
+    tool: call => directTool(call, { fetcher: async () => {
+      const key = callKey(call); requests.set(key, (requests.get(key) ?? 0) + 1);
+      if (call.service === "met-artwork" && call.parameters.id === 497126) return new Response("unprocessable", { status: 422 });
+      return Response.json(call.service === "met-search" ? { total: 2, objectIDs: [497126, 552027] } : raw(call.service));
+    } }),
+  });
+  await f.instance.fetch(request());
+  for (let i = 0; i < 4; i++) await f.instance.alarm();
+  const job = await f.instance.store.get("job");
+  const rejected = job.calls.find(call => call.service === "met-artwork" && call.parameters.id === 497126);
+  assert.equal(job.status, "queued"); assert.equal(rejected.state, "unavailable"); assert.equal(rejected.attempts, 1);
+  assert.equal((await f.instance.store.get(`resource:${rejected.key}`)).httpStatus, 422);
+  const restarted = new CloudCuratorJob({ storage: f.storage }, f.env, f.dependencies);
+  await restarted.alarm();
+  assert.deepEqual((await restarted.store.get("job")).batch.map(({ service, parameters }) => ({ service, parameters })), [calls[0]]);
+  for (let i = 0; i < 3; i++) await restarted.alarm();
+  const ready = await (await restarted.fetch(request("GET"))).json();
+  assert.equal(ready.status, "ready"); assert.equal(ready.calls.length, 5);
+  assert.equal(requests.get(rejected.key), 1); assert.equal(requests.get(callKey(calls[0])), 1);
+  assert.equal(f.stats.plans, 1); assert.equal(f.stats.settled, 0); assert.equal(f.stats.audits, 0);
+});
+
 test("SMK official API thumbnail URLs are accepted, rights filtering is requested and one malformed item does not discard a search page", async () => {
   const body = raw("smk-search"); const good = structuredClone(body.items.find(item => item.public_domain && item.image_thumbnail));
   good.image_thumbnail = "https://api.smk.dk/api/v1/thumbnail/c94da9b4-f459-4ccf-a614-77d79bdee5f2.jpg";

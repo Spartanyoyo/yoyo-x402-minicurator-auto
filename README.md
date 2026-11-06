@@ -1,5 +1,7 @@
 # Yoyo x402 云端策展 Agent
 
+**2026-11-06 补充修正：** 馆方直接返回 HTTP 422 时，立即将作品标记为不可用并选择替代作品，不再按临时故障重试；过期缓存也不会覆盖该拒绝。详见 [HTTP 422 修正与回归验证](docs/第二阶段B_Mentor反馈修订报告.md#2026-11-06-http-422-后续修正)。
+
 **第二阶段 B 已按 mentor 反馈修订并部署（2026-11-03，协议 2）。** 本地 Agent 提交目标，云端 DeepSeek Flash 直接调用 Met、CMA、SMK 的免费官方 API，先准备完整展览；本地再通过 x402 支付固定 0.003 测试 USDC 取件。云端按阶段保存进度，临时 RPC 故障自动退避续跑，明确不可用的作品自动替换，三馆详情未齐时拒绝提前结束。云端不再购买阶段 2-A 的收费资源。
 
 猫、鸟类、风景、花卉四个主题共五个真实任务已交付，10 项双 RPC 独立重审和 5 次重复取件检查通过，上游付款为 0。最后一次风景验证仅用 6 项免费调用完成，并实测了付款前余额准备的新恢复阶段。先读 [Mentor 反馈修订报告](docs/第二阶段B_Mentor反馈修订报告.md)、[使用说明](docs/第二阶段B_使用说明.md)与[机器契约](docs/F-02_cloud-curator.md)。成品：[猫](docs/examples/phase2b-v2-cats.md)、[鸟类](docs/examples/phase2b-v2-birds.md)、[风景](docs/examples/phase2b-v2-landscape.md)、[花卉](docs/examples/phase2b-v2-flowers.md)。原阶段 1 和阶段 2-A 的线上版本保持原样；[2026-11-02 验收报告](docs/第二阶段B_验收报告.md)保留为旧协议历史记录。

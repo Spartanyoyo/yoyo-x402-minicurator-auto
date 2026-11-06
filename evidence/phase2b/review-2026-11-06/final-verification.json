@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-06T02:18:22.620Z",
+  "scope": "Phase 2B raw museum HTTP 422 hotfix",
+  "verification": {
+    "command": "npm run verify",
+    "tests": 215,
+    "passed": 215,
+    "failed": 0,
+    "workerDryRunsPassed": 3,
+    "documentationLinksPassed": true,
+    "publicCredentialScanPassed": true
+  },
+  "regression": "http422-regression.json",
+  "deployed": true,
+  "workerVersion": "735cbbd1-b0d5-4604-8783-f88dc3dcc00c",
+  "phase1And2ADeploymentsUnchanged": true,
+  "runtimeProbe": {
+    "status": "not_completed",
+    "reason": "Local HTTPS transport to workers.dev failed during TLS handshake; no HTTP response was received. Cloudflare API independently confirmed the deployment. HTTP 422 behavior was verified by local deterministic fault injection.",
+    "passed": null
+  },
+  "sourceSha256": {
+    "src/curator-catalog.mjs": "2f27c3ebbb9162a92eaeef4cbf310386212fec53406a16e9a0b94f19fd9dc4dc",
+    "test/agent-v2.test.mjs": "506bf6d97b9aff62092bfd890c6e79a42e9c328cd5b8be163a57ad66250d1049",
+    "test/curator-catalog.test.mjs": "e36acaa1ce2540777af524506a2a5af0738c066c61e246cfd76cbf9b7bd03d48"
+  },
+  "paymentsCreated": 0,
+  "modelJobsCreated": 0
+}
